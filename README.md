@@ -57,7 +57,7 @@ Generate video-on-demand movie and TV series playlists effortlessly with this sc
 
 ## Getting Started
 
-[![Video Thumbnail](https://raw.githubusercontent.com/gogetta69/TMDB-To-VOD-Playlist/main/images/video%20thumbnail.PNG)]([https://vimeo.com/875236252?share=copy](https://player.vimeo.com/video/875236252?h=41464e6fe5))
+[![Video Thumbnail](https://raw.githubusercontent.com/gogetta69/TMDB-To-VOD-Playlist/main/images/video%20thumbnail.PNG)](https://vimeo.com/875236252?share=copy)
 
 1. **Configuration**: Begin by configuring the script with a mandatory free TMDB API key and an optional Real Debrid private key.
 
