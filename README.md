@@ -79,7 +79,9 @@ This project started as a weekend experiment to learn how to code. I'm committed
 
 This script retrieves movie information from TMDB and searches for related content on third-party websites. The legality of streaming or downloading content through these websites is uncertain. Please exercise caution and consider the legal and ethical implications of using this script to access and consume copyrighted content. Always respect copyright laws and the terms of service of the websites you visit.
 
-<p><span style="font-size:18px"><strong><span style="color:#e74c3c">Updated (10/20/2023):</span></strong> Added the TheTVApp through Xtream Codes Api. TheTVApp will be loaded as a Live TV source when adding your server. Verified to be working with Smarters and Tivimate. The streaming is great very little to no buffering, however the quality is in SD.</span><br />
+<p><span style="font-size:18px"><strong><span style="color:#e74c3c">Updated (10/31/2023):</span></strong> Added the TheTVApp through Xtream Codes Api. TheTVApp will be loaded as a Live TV source when adding your server. Verified to be working with Smarters and Tivimate. The streaming is great very little to no buffering, however the quality is in SD.</span><br /> <br />The TheTVApp have been constantly changing the way their free streams are being authenticated. I have once again updated the script and waited a few days to release it. Hopefully now it will stay working.<br />
+
+I also fixed an issue with the play url in playlist.m3u8 when running the create_playlist.php.
 <br />
 &nbsp;</p>
 
