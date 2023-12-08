@@ -75,17 +75,20 @@ Generate video-on-demand movie and TV series playlists effortlessly with this sc
 
 This project started as a weekend experiment to learn how to code. I'm committed to refining and expanding it if there's enough interest from users like you. Your feedback and support are invaluable!
 
-## Updated (11/13/2023): 
+## Updated (12/08/2023):
 
-- **Bug Fixes**: Addressed and resolved numerous bugs, significantly improving script performance and stability.
+Added the Premiumize service as an alternative to Real-Debrid. (used only with torrent sites)
+Added threads when searching torrent sites for magnet links. (speeds up the time it takes to find a link)
+Added and fixed direct movie and tv show sources as well as more link extractors.
+Added TheTvApp sports section in the Live TV Playlist (set your app to load epg and playlist every 12 hours or less.)
+Added PlutoTV to the live tv playlist (Multi Languages Here: https://github.com/matthuisman/i.mjh.nz)
+Redesigned the Live TV and DaddyLive functions and playlist. (all of the images in the playlist are working)
+Fixed a lot of bugs in the torrent search and filtering functions. (it finds links much more often now)
+Fixed the sorting by resolution and more likely to get higher quality links (torrent sites)
 
-- **New Logging Feature**: Introduced `detailed_log.html` for a clearer view of the script’s link-searching activities. Note: Continuous enhancements are being made to the logging feature.
+After installation open the Read Me.txt or load the http://YOUR_IP_ADDRESS/info.php in your browser.
 
-- **Enhanced Non Real-Debrid Version**: Expanded the Non Real-Debrid version with more sites and extractors.
-
-- **TheTVAPP Stability**: Achieved consistent and reliable performance from TheTVAPP, maintaining stability for over a week with the new updates.
-
-- **Fresh Install Required**: Important changes in Global variables and other key script components necessitate a fresh installation for optimal performance of this update.
+Overall this update should fix a lot of the problems I am sure that you were having. I'm learning as I go and the old code had a lot of mistakes that I have now fixed.
 
 <p><strong><span style="font-size:18px">TheTVApp&nbsp; Channel List:</span></strong></p>
 
