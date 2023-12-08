@@ -77,14 +77,14 @@ This project started as a weekend experiment to learn how to code. I'm committed
 
 ## Updated (12/08/2023):
 
-Added the Premiumize service as an alternative to Real-Debrid. (used only with torrent sites)
-Added threads when searching torrent sites for magnet links. (speeds up the time it takes to find a link)
-Added and fixed direct movie and tv show sources as well as more link extractors.
-Added TheTvApp sports section in the Live TV Playlist (set your app to load epg and playlist every 12 hours or less.)
-Added PlutoTV to the live tv playlist (Multi Languages Here: https://github.com/matthuisman/i.mjh.nz)
-Redesigned the Live TV and DaddyLive functions and playlist. (all of the images in the playlist are working)
-Fixed a lot of bugs in the torrent search and filtering functions. (it finds links much more often now)
-Fixed the sorting by resolution and more likely to get higher quality links (torrent sites)
+- Added the Premiumize service as an alternative to Real-Debrid. (used only with torrent sites)
+- Added threads when searching torrent sites for magnet links. (speeds up the time it takes to find a link)
+- Added and fixed direct movie and TV show sources as well as more link extractors.
+- Added TheTvApp sports section in the Live TV Playlist (set your app to load EPG and playlist every 12 hours or less.)
+- Added PlutoTV to the live TV playlist (Multi Languages Here: https://github.com/matthuisman/i.mjh.nz)
+- Redesigned the Live TV and DaddyLive functions and playlist. (all of the images in the playlist are working)
+- Fixed a lot of bugs in the torrent search and filtering functions. (it finds links much more often now)
+- Fixed the sorting by resolution and more likely to get higher quality links (torrent sites)
 
 After installation open the Read Me.txt or load the http://YOUR_IP_ADDRESS/info.php in your browser.
 
