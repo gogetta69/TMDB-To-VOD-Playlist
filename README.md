@@ -90,10 +90,6 @@ After installation open the Read Me.txt or load the http://YOUR_IP_ADDRESS/info.
 
 Overall this update should fix a lot of the problems I am sure that you were having. I'm learning as I go and the old code had a lot of mistakes that I have now fixed.
 
-<p><strong><span style="font-size:18px">TheTVApp&nbsp; Channel List:</span></strong></p>
-
-<img src="https://raw.githubusercontent.com/gogetta69/TMDB-To-VOD-Playlist/main/images/Screenshot%202023-10-20%20at%2012-56-30%20All%20Live%20TV%20Channels%20-%20Thetvapp.to.png" width="213" height="2462.81" loading="lazy">
-
 
 ## Legal Disclaimer
 
