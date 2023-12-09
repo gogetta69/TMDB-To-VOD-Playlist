@@ -94,3 +94,6 @@ Overall this update should fix a lot of the problems I am sure that you were hav
 ## Legal Disclaimer
 
 This script retrieves movie information from TMDB and searches for related content on third-party websites. The legality of streaming or downloading content through these websites is uncertain. Please exercise caution and consider the legal and ethical implications of using this script to access and consume copyrighted content. Always respect copyright laws and the terms of service of the websites you visit.
+
+
+My Contact: https://t.me/gogetta69
