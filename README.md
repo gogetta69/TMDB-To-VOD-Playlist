@@ -94,7 +94,7 @@ Overall this update should fix a lot of the problems I am sure that you were hav
 
 Fixed the DaddyLive as well fixed an issue that was stopping the EPG from updating now that i.mjh.nz has disabled Pluto. Once they start updating Pluto again the links should start showing back within your app.
 
-DaddyLive has now started using AES Encryption within their playlist and i have added a fix within the hls_proxy.php for this. However, if you are using Tivimate you will need to use the included DADDYLIVE (tivimate).m3u8 file instead. I will continue to look for a more permanet solution but this is what I have for now.
+DaddyLive has now started using AES Encryption within their playlist and i have added a fix within the hls_proxy.php for this. However, if you are using Tivimate you will need to use the included DADDYLIVE (tivimate).m3u8 file instead. I will continue to look for a more permanent solution, but this is what I have for now.
 
 Files changed:
 
