@@ -85,7 +85,7 @@ This project started as a weekend experiment to learn how to code. I'm committed
 - Fixed the sorting by resolution and more likely to get higher quality links (torrent sites)
 
 
-Updated (06/14/2024):
+## Updated (06/14/2024):
 
 Alright everyone, I know it's been a while since the last update. I've been juggling a few other projects and life in general. But with this update, I'm happy to report that DaddyLive and TheTVApp are both working again. I've also removed the dead, non-working websites and replaced them with some new sites for link extraction.
 
@@ -93,10 +93,16 @@ Currently, TheTVApp and other websites like Showbox depend on HeadlessVidX. Head
 
 ## What is HeadlessVidX?​
 HeadlessVidX is a tool designed to simplify the development of video extractors for streaming websites. It provides an easy-to-use solution for users, regardless of their programming skills, to quickly add video streaming sites to tools such as 'TMDB TO VOD'.
-
-Screenshot 2024-06-14 at 16-41-13 HeadlessVidX - Home.png
-Screenshot 2024-06-14 at 16-40-15 HeadlessVidX - Trainer.png
-
+<table>
+  <tr>
+<td align="center">
+        <img src="https://raw.githubusercontent.com/gogetta69/TMDB-To-VOD-Playlist/main/images/Screenshot%202024-06-14%20at%2016-41-13%20HeadlessVidX%20-%20Home.png" width="400">
+    </td>
+    <td align="center">
+     <img src="https://raw.githubusercontent.com/gogetta69/TMDB-To-VOD-Playlist/main/images/Screenshot%202024-06-14%20at%2016-40-15%20HeadlessVidX%20-%20Trainer.png" width="400">   
+    </td>
+  </tr>
+</table>
 
 ## Creating Playlist:​
 You no longer need to manually run `create_playlist.php` and `create_tv_playlist.php`. With the workflow set up on GitHub, these playlists are automatically generated twice every day. Simply set `$userCreatePlaylist` to `false` in the `config.php` file to use this feature.
@@ -106,5 +112,3 @@ You no longer need to manually run `create_playlist.php` and `create_tv_playlist
 
 This script retrieves movie information from TMDB and searches for related content on third-party websites. The legality of streaming or downloading content through these websites is uncertain. Please exercise caution and consider the legal and ethical implications of using this script to access and consume copyrighted content. Always respect copyright laws and the terms of service of the websites you visit.
 
-
-My Contact: https://t.me/gogetta69
