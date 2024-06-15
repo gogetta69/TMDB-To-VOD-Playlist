@@ -75,8 +75,6 @@ Generate video-on-demand movie and TV series playlists effortlessly with this sc
 
 This project started as a weekend experiment to learn how to code. I'm committed to refining and expanding it if there's enough interest from users like you. Your feedback and support are invaluable!
 
-## Updated (12/08/2023):
-
 - Added the Premiumize service as an alternative to Real-Debrid. (used only with torrent sites)
 - Added threads when searching torrent sites for magnet links. (speeds up the time it takes to find a link)
 - Added and fixed direct movie and TV show sources as well as more link extractors.
@@ -86,23 +84,22 @@ This project started as a weekend experiment to learn how to code. I'm committed
 - Fixed a lot of bugs in the torrent search and filtering functions. (it finds links much more often now)
 - Fixed the sorting by resolution and more likely to get higher quality links (torrent sites)
 
-After installation open the Read Me.txt or load the http://YOUR_IP_ADDRESS/info.php in your browser.
 
-Overall this update should fix a lot of the problems I am sure that you were having. I'm learning as I go and the old code had a lot of mistakes that I have now fixed.
+Updated (06/14/2024):
 
-## Updated (01/11/2024):
+Alright everyone, I know it's been a while since the last update. I've been juggling a few other projects and life in general. But with this update, I'm happy to report that DaddyLive and TheTVApp are both working again. I've also removed the dead, non-working websites and replaced them with some new sites for link extraction.
 
-Fixed the DaddyLive as well fixed an issue that was stopping the EPG from updating now that i.mjh.nz has disabled Pluto. Once they start updating Pluto again the links should start showing back within your app.
+Currently, TheTVApp and other websites like Showbox depend on HeadlessVidX. HeadlessVidX is another project I've been working on that uses headless browsers to extract video links. I've made the installation process as straightforward as possible for Windows, Linux, and Mac. Using VirtualBox, I've tested the installation on both Windows 10 and Ubuntu 22, so you shouldn't have any issues getting everything set up and running.
 
-DaddyLive has now started using AES Encryption within their playlist and i have added a fix within the hls_proxy.php for this. However, if you are using Tivimate you will need to use the included DADDYLIVE (tivimate).m3u8 file instead. I will continue to look for a more permanent solution, but this is what I have for now.
+## What is HeadlessVidX?​
+HeadlessVidX is a tool designed to simplify the development of video extractors for streaming websites. It provides an easy-to-use solution for users, regardless of their programming skills, to quickly add video streaming sites to tools such as 'TMDB TO VOD'.
 
-Files changed:
+Screenshot 2024-06-14 at 16-41-13 HeadlessVidX - Home.png
+Screenshot 2024-06-14 at 16-40-15 HeadlessVidX - Trainer.png
 
-hls_proxy.php<br>
-xmltv.php<br>
-live_play.php<br>
-generate_live_playlist.php<br>
-DADDYLIVE (tivimate).m3u8 - Included the DaddyLive m3u8 since Tivimate keeps restarting the stream when a key is used while proxing. If you are using Tivimate and notice the stream restarting every 5 seconds try using this m3u8.
+
+## Creating Playlist:​
+You no longer need to manually run `create_playlist.php` and `create_tv_playlist.php`. With the workflow set up on GitHub, these playlists are automatically generated twice every day. Simply set `$userCreatePlaylist` to `false` in the `config.php` file to use this feature.
 
 
 ## Legal Disclaimer
