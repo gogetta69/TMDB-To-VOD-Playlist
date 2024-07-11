@@ -87,14 +87,14 @@ This project started as a weekend experiment to learn how to code. I'm committed
 
 ## Updated (07/11/2024):
 
-Added adult movies to vod (disabled by default)
-Added more direct movie scrapers
-Added more browsers to HeadlessVidX
-Fixed some bugs in HeadlessVidX
-Fixed Daddylive 
-Fixed EPG for DaddyLive
-Fixed TheTVApp Sports section
-Fixed showBox_media
+Added adult movies to vod (disabled by default)<br>
+Added more direct movie scrapers<br>
+Added more browsers to HeadlessVidX<br>
+Fixed some bugs in HeadlessVidX<br>
+Fixed Daddylive <br>
+Fixed EPG for DaddyLive<br>
+Fixed TheTVApp Sports section<br>
+Fixed showBox_media<br><br>
 
 showBox_media requires a login and a cookie string to be added to sessions/showbox_media_cookies.txt
 in order to extract links. Taking the time to add these cookies is well worth it if you aren't using
