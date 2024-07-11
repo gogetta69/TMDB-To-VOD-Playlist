@@ -85,11 +85,20 @@ This project started as a weekend experiment to learn how to code. I'm committed
 - Fixed the sorting by resolution and more likely to get higher quality links (torrent sites)
 
 
-## Updated (06/14/2024):
+## Updated (07/11/2024):
 
-Alright everyone, I know it's been a while since the last update. I've been juggling a few other projects and life in general. But with this update, I'm happy to report that DaddyLive and TheTVApp are both working again. I've also removed the dead, non-working websites and replaced them with some new sites for link extraction.
+Added adult movies to vod (disabled by default)
+Added more direct movie scrapers
+Added more browsers to HeadlessVidX
+Fixed some bugs in HeadlessVidX
+Fixed Daddylive 
+Fixed EPG for DaddyLive
+Fixed TheTVApp Sports section
+Fixed showBox_media
 
-Currently, TheTVApp and other websites like Showbox depend on HeadlessVidX. HeadlessVidX is another project I've been working on that uses headless browsers to extract video links. I've made the installation process as straightforward as possible for Windows, Linux, and Mac. Using VirtualBox, I've tested the installation on both Windows 10 and Ubuntu 22, so you shouldn't have any issues getting everything set up and running.
+showBox_media requires a login and a cookie string to be added to sessions/showbox_media_cookies.txt
+in order to extract links. Taking the time to add these cookies is well worth it if you aren't using
+a premium link service and are seeking the best quality possible. How to: videos/how_to_showbox_media_cookie.mp4
 
 ## What is HeadlessVidX?​
 HeadlessVidX is a tool designed to simplify the development of video extractors for streaming websites. It provides an easy-to-use solution for users, regardless of their programming skills, to quickly add video streaming sites to tools such as 'TMDB TO VOD'.
