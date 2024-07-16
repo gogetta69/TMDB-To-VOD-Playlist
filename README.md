@@ -114,7 +114,8 @@ HeadlessVidX is a tool designed to simplify the development of video extractors 
 ## Creating Playlist:​
 You no longer need to manually run create_playlist.php and create_tv_playlist.php. With the workflow set up on GitHub, these playlists are automatically generated twice a day. To create your own movies and series playlist, simply set $userCreatePlaylist to true in the config.php file.
 
-https://github.com/gogetta69/public-files/raw/main/videos/user_create_movies_series_playlist.mp4
+[Download & Watch User Create Movies & Series Playlist](https://github.com/gogetta69/public-files/raw/main/videos/user_create_movies_series_playlist.mp4)
+
 
 
 ## Legal Disclaimer
