@@ -1,0 +1,16 @@
+New: Go into the /HeadlessVidX direcory and read the Install Instructions.txt TheTVApp as well as scraping 11+ streaming sites depend on HeadlessVidX being installed.
+
+Open and configure the config.php and then load http://YOUR_IP_ADDRESS/info.php into your browser.
+
+File Permissions (755): Ensure the files have `755` permissions to allow the owner full read, write, and execute access, while others have read and execute access. This ensures that the files can be used and modified by the script without exposing them to unnecessary risks.
+
+cURL Setup: Most servers come with cURL pre-configured, so you usually don't
+need to set it up manually. cURL is a standard tool for web data retrieval.
+
+-----------------------------------------------------------------
+
+Tivimate Users: For live streams, use the External Player option to avoid playback issues. The built-in player with Xtream Codes may cause the stream to freeze. Alternatively, you can load the DADDYLIVE (tivimate).m3u8 as an M3U8 playlist if you prefer not to use the External Player.
+
+-----------------------------------------------------------------
+
+

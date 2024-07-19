@@ -1,0 +1,774 @@
+#EXTM3U url-tvg="http://m3u4u.com/xml/jwmzn1wx72cj6m8dn721"
+#EXTINF:-1 tvg-id="WABC.us2" tvg-name="ABC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/abc-us.png" group-title="USA (DADDY LIVE)" streamId="112" channel-number="112",ABC
+https://webhdrunns.onlinehdhls.ru/lb/premium51/index.m3u8|Referer="https://lewblivehdplay.ru/"|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0"|Origin="https://lewblivehdplay.ru"'
+
+#EXTINF:-1 tvg-id="AandE.us" tvg-name="A&E" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/a-and-e-us.png" group-title="USA (DADDY LIVE)" streamId="113" channel-number="113",A&E
+https://webudit.webhd.ru/lb/premium302/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="AMC.us" tvg-name="AMC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/amc-us.png" group-title="USA (DADDY LIVE)" streamId="114" channel-number="114",AMC
+https://webudit.webhd.ru/lb/premium303/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="AnimalPlanet.us" tvg-name="Animal Planet" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/animal-planet-us.png" group-title="USA (DADDY LIVE)" streamId="115" channel-number="115",Animal Planet
+https://webudit.webhd.ru/lb/premium304/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Adult Swim" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/adult-swim-us.png" group-title="USA (DADDY LIVE)" streamId="116" channel-number="116",Adult Swim
+https://webudit.webhd.ru/lb/premium295/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="AXSTV.us" tvg-name="AXS TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/axs-tv-us.png" group-title="USA (DADDY LIVE)" streamId="117" channel-number="117",AXS TV
+https://webudit.webhd.ru/lb/premium742/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="WABC.us2" tvg-name="ABCNY" tvg-logo="https://www.freepnglogos.com/uploads/abc-png-logo/abc-gold-media-kit-png-logo-17.png" group-title="USA (DADDY LIVE)" streamId="118" channel-number="118",ABCNY
+https://webudit.webhd.ru/lb/premium766/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Boomerang.us" tvg-name="Boomerang" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/boomerang-us.png" group-title="USA (DADDY LIVE)" streamId="119" channel-number="119",Boomerang
+https://webudit.webhd.ru/lb/premium648/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="BBCAmerica.us" tvg-name="BBC America (BBCA)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bbc-america-us.png" group-title="USA (DADDY LIVE)" streamId="120" channel-number="120",BBC America (BBCA)
+https://webudit.webhd.ru/lb/premium305/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="BET.us" tvg-name="BET" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bet-us.png" group-title="USA (DADDY LIVE)" streamId="121" channel-number="121",BET
+https://webudit.webhd.ru/lb/premium306/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Bravo.us" tvg-name="Bravo" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bravo-us.png" group-title="USA (DADDY LIVE)" streamId="122" channel-number="122",Bravo
+https://webudit.webhd.ru/lb/premium307/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="COZITV.us" tvg-name="COZI TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cozi-tv-us.png" group-title="USA (DADDY LIVE)" streamId="123" channel-number="123",COZI TV
+https://webudit.webhd.ru/lb/premium748/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="CMT.us" tvg-name="CMT" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cmt-us.png" group-title="USA (DADDY LIVE)" streamId="124" channel-number="124",CMT
+https://webudit.webhd.ru/lb/premium647/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="WCBS.us2" tvg-name="CBS" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cbs-logo-white-us.png" group-title="USA (DADDY LIVE)" streamId="125" channel-number="125",CBS
+https://webudit.webhd.ru/lb/premium52/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="CW(WPSG).us2" tvg-name="CW" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cw-us.png" group-title="USA (DADDY LIVE)" streamId="126" channel-number="126",CW
+https://webudit.webhd.ru/lb/premium300/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="CNBC.us" tvg-name="CNBC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cnbc-us.png" group-title="USA (DADDY LIVE)" streamId="127" channel-number="127",CNBC
+https://webudit.webhd.ru/lb/premium309/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="ComedyCentral.us" tvg-name="Comedy Central" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/comedy-central-us.png" group-title="USA (DADDY LIVE)" streamId="128" channel-number="128",Comedy Central
+https://webudit.webhd.ru/lb/premium310/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="CartoonNetwork.us" tvg-name="Cartoon Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cartoon-network-us.png" group-title="USA (DADDY LIVE)" streamId="129" channel-number="129",Cartoon Network
+https://webudit.webhd.ru/lb/premium339/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="CNN.us" tvg-name="CNN" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cnn-us.png" group-title="USA (DADDY LIVE)" streamId="130" channel-number="130",CNN
+https://webudit.webhd.ru/lb/premium345/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Cinemax.us" tvg-name="Cinemax" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cinemax-us.png" group-title="USA (DADDY LIVE)" streamId="131" channel-number="131",Cinemax
+https://webudit.webhd.ru/lb/premium374/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="CrimeplusInvestigation.us" tvg-name="Crime+ Investigation" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/crime-and-investigation-uk.png?raw=true" group-title="USA (DADDY LIVE)" streamId="132" channel-number="132",Crime+ Investigation
+https://webudit.webhd.ru/lb/premium669/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Comet.us" tvg-name="Comet" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/comet-us.png" group-title="USA (DADDY LIVE)" streamId="133" channel-number="133",Comet
+https://webudit.webhd.ru/lb/premium696/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="CookingChannel.us" tvg-name="Cooking Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cooking-channel-us.png" group-title="USA (DADDY LIVE)" streamId="134" channel-number="134",Cooking Channel
+https://webudit.webhd.ru/lb/premium697/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="WCBS.us2" tvg-name="CBSNY" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/0/09/75851A45-4183-4103-B130-19864D1E84A3.png/revision/latest?cb=20200122220933" group-title="USA (DADDY LIVE)" streamId="135" channel-number="135",CBSNY
+https://webudit.webhd.ru/lb/premium767/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="DiscoveryLifeChannel.us" tvg-name="Discovery Life Channel" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/3/3a/Discovery_Life_Channel_logo_official_png.png/revision/latest?cb=20150131181202" group-title="USA (DADDY LIVE)" streamId="136" channel-number="136",Discovery Life Channel
+https://webudit.webhd.ru/lb/premium311/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="DisneyChannel.us" tvg-name="Disney Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/disney-channel-us.png" group-title="USA (DADDY LIVE)" streamId="137" channel-number="137",Disney Channel
+https://webudit.webhd.ru/lb/premium312/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="DiscoveryChannel.us" tvg-name="Discovery Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/discovery-channel-us.png" group-title="USA (DADDY LIVE)" streamId="138" channel-number="138",Discovery Channel
+https://webudit.webhd.ru/lb/premium313/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Discovery Family.us2" tvg-name="Discovery Family" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/discovery-family-us.png" group-title="USA (DADDY LIVE)" streamId="139" channel-number="139",Discovery Family
+https://webudit.webhd.ru/lb/premium657/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="DisneyXD.us" tvg-name="Disney XD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/disney-xd-us.png" group-title="USA (DADDY LIVE)" streamId="140" channel-number="140",Disney XD
+https://webudit.webhd.ru/lb/premium314/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="DestinationAmerica.us" tvg-name="Destination America" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/destination-america-us.png" group-title="USA (DADDY LIVE)" streamId="141" channel-number="141",Destination America
+https://webudit.webhd.ru/lb/premium651/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Disney Junior.us2" tvg-name="Disney JR" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/disney-junior-us.png" group-title="USA (DADDY LIVE)" streamId="142" channel-number="142",Disney JR
+https://webudit.webhd.ru/lb/premium652/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="EEntertainmentTelevision.us" tvg-name="E! Entertainment Television" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/e-entertainment-us.png" group-title="USA (DADDY LIVE)" streamId="143" channel-number="143",E! Entertainment Television
+https://webudit.webhd.ru/lb/premium315/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="FoxBusiness.us" tvg-name="Fox Business" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-business-us.png" group-title="USA (DADDY LIVE)" streamId="144" channel-number="144",Fox Business
+https://webudit.webhd.ru/lb/premium297/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="WNYW.us2" tvg-name="FOX" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-us.png" group-title="USA (DADDY LIVE)" streamId="145" channel-number="145",FOX
+https://webudit.webhd.ru/lb/premium54/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="FX.us" tvg-name="FX" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fx-us.png" group-title="USA (DADDY LIVE)" streamId="146" channel-number="146",FX
+https://webudit.webhd.ru/lb/premium317/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="FXX.us" tvg-name="FXX" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fxx-us.png" group-title="USA (DADDY LIVE)" streamId="147" channel-number="147",FXX
+https://webudit.webhd.ru/lb/premium298/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Freeform.us" tvg-name="Freeform" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" group-title="USA (DADDY LIVE)" streamId="148" channel-number="148",Freeform
+https://webudit.webhd.ru/lb/premium301/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Fox News.us2" tvg-name="Fox News" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-news-us.png" group-title="USA (DADDY LIVE)" streamId="149" channel-number="149",Fox News
+https://webudit.webhd.ru/lb/premium347/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="FXMovieChannel.us" tvg-name="FX Movie Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fxm-movie-channel-us.png" group-title="USA (DADDY LIVE)" streamId="150" channel-number="150",FX Movie Channel
+https://webudit.webhd.ru/lb/premium381/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="FYI.us" tvg-name="FYI" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fyi-us.png" group-title="USA (DADDY LIVE)" streamId="151" channel-number="151",FYI
+https://webudit.webhd.ru/lb/premium665/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="WNYW.us2" tvg-name="FOXNY" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-us.png" group-title="USA (DADDY LIVE)" streamId="152" channel-number="152",FOXNY
+https://webudit.webhd.ru/lb/premium768/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="FoxWeather.us" tvg-name="Fox Weather Channel" tvg-logo="https://provider-static.plex.tv/epg/cms/production/5822536e-f8a5-44ea-a82f-a73be1b983e8/fox_weather_horizontal.png" group-title="USA (DADDY LIVE)" streamId="153" channel-number="153",Fox Weather Channel
+https://webudit.webhd.ru/lb/premium775/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="GameShowNetwork.us" tvg-name="Game Show Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/game-show-network-us.png" group-title="USA (DADDY LIVE)" streamId="154" channel-number="154",Game Show Network
+https://webudit.webhd.ru/lb/premium319/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="GritTV.us2" tvg-name="Grit Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/grit-us.png" group-title="USA (DADDY LIVE)" streamId="155" channel-number="155",Grit Channel
+https://webudit.webhd.ru/lb/premium752/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="HallmarkChannel.us" tvg-name="The Hallmark Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hallmark-channel-us.png" group-title="USA (DADDY LIVE)" streamId="156" channel-number="156",The Hallmark Channel
+https://webudit.webhd.ru/lb/premium320/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="HallmarkMoviesandMysteries.us" tvg-name="Hallmark Movies & Mysterie" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hallmark-movies-and-mysteries-us.png" group-title="USA (DADDY LIVE)" streamId="157" channel-number="157",Hallmark Movies & Mysterie
+https://webudit.webhd.ru/lb/premium296/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="HBO.us" tvg-name="HBO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hbo-us.png" group-title="USA (DADDY LIVE)" streamId="158" channel-number="158",HBO
+https://webudit.webhd.ru/lb/premium321/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="HBO2.us" tvg-name="HBO2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hbo-2-us.png" group-title="USA (DADDY LIVE)" streamId="159" channel-number="159",HBO2
+https://webudit.webhd.ru/lb/premium689/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="HBOComedy.us" tvg-name="HBO Comedy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hbo-comedy-us.png" group-title="USA (DADDY LIVE)" streamId="160" channel-number="160",HBO Comedy
+https://webudit.webhd.ru/lb/premium690/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="HBOFamily.us" tvg-name="HBO Family" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hbo-family-us.png" group-title="USA (DADDY LIVE)" streamId="161" channel-number="161",HBO Family
+https://webudit.webhd.ru/lb/premium691/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="HBOSignature.us" tvg-name="HBO Signature" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hbo-signature-us.png" group-title="USA (DADDY LIVE)" streamId="162" channel-number="162",HBO Signature
+https://webudit.webhd.ru/lb/premium693/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="HBOZone.us" tvg-name="HBO Zone" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hbo-zone-us.png" group-title="USA (DADDY LIVE)" streamId="163" channel-number="163",HBO Zone
+https://webudit.webhd.ru/lb/premium694/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="History.us" tvg-name="History" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/History_Logo.svg/1000px-History_Logo.svg.png" group-title="USA (DADDY LIVE)" streamId="164" channel-number="164",History
+https://webudit.webhd.ru/lb/premium322/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="HLN.us2" tvg-name="Headline News" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hln-us.png" group-title="USA (DADDY LIVE)" streamId="165" channel-number="165",Headline News
+https://webudit.webhd.ru/lb/premium323/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="HGTV.us" tvg-name="HGTV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hgtv-us.png" group-title="USA (DADDY LIVE)" streamId="166" channel-number="166",HGTV
+https://webudit.webhd.ru/lb/premium382/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="InvestigationDiscovery.us" tvg-name="Investigation Discovery (ID)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/investigation-discovery-us.png" group-title="USA (DADDY LIVE)" streamId="167" channel-number="167",Investigation Discovery (ID)
+https://webudit.webhd.ru/lb/premium324/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="ION.us2" tvg-name="ION" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/ion-television-us.png" group-title="USA (DADDY LIVE)" streamId="168" channel-number="168",ION
+https://webudit.webhd.ru/lb/premium325/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="IFC.us2" tvg-name="IFC TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/ifc-us.png" group-title="USA (DADDY LIVE)" streamId="169" channel-number="169",IFC TV
+https://webudit.webhd.ru/lb/premium656/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Lifetime.us2" tvg-name="Lifetime Network" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_Lifetime_2020.svg/2560px-Logo_Lifetime_2020.svg.png" group-title="USA (DADDY LIVE)" streamId="170" channel-number="170",Lifetime Network
+https://webudit.webhd.ru/lb/premium326/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Lifetime Movies.us2" tvg-name="Lifetime Movies Network" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/LMN_logo_2016.svg/1200px-LMN_logo_2016.svg.png" group-title="USA (DADDY LIVE)" streamId="171" channel-number="171",Lifetime Movies Network
+https://webudit.webhd.ru/lb/premium389/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="MSNBC.us" tvg-name="MSNBC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/msnbc-alt-us.png" group-title="USA (DADDY LIVE)" streamId="172" channel-number="172",MSNBC
+https://webudit.webhd.ru/lb/premium327/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="MagnoliaNetwork.us" tvg-name="Magnolia Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/magnolia-network-us.png" group-title="USA (DADDY LIVE)" streamId="173" channel-number="173",Magnolia Network
+https://webudit.webhd.ru/lb/premium299/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="MTV.us" tvg-name="MTV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/mtv-us.png" group-title="USA (DADDY LIVE)" streamId="174" channel-number="174",MTV
+https://webudit.webhd.ru/lb/premium371/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="MavTV.us" tvg-name="MAVTV" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTowwKlIECbPIzGyK6WcOyg7FRXPP_7ips1MhqsUEk6&s" group-title="USA (DADDY LIVE)" streamId="175" channel-number="175",MAVTV
+https://webudit.webhd.ru/lb/premium646/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="MY9TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/WWOR_NewJersey.svg/640px-WWOR_NewJersey.svg.png" group-title="USA (DADDY LIVE)" streamId="176" channel-number="176",MY9TV
+https://webudit.webhd.ru/lb/premium654/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="MOTORTREND.us" tvg-name="Motor Trend" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/motor-trend-us.png" group-title="USA (DADDY LIVE)" streamId="177" channel-number="177",Motor Trend
+https://webudit.webhd.ru/lb/premium661/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="METV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/me-tv-us.png" group-title="USA (DADDY LIVE)" streamId="178" channel-number="178",METV
+https://webudit.webhd.ru/lb/premium662/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="WNBC.us2" tvg-name="NBC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbc-us.png" group-title="USA (DADDY LIVE)" streamId="179" channel-number="179",NBC
+https://webudit.webhd.ru/lb/premium53/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="WNBC.us2" tvg-name="NBCNY" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NBC_logo.svg/2077px-NBC_logo.svg.png" group-title="USA (DADDY LIVE)" streamId="180" channel-number="180",NBCNY
+https://webudit.webhd.ru/lb/premium769/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="NationalGeographic.us" tvg-name="National Geographic (NGC)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/national-geographic-us.png" group-title="USA (DADDY LIVE)" streamId="181" channel-number="181",National Geographic (NGC)
+https://webudit.webhd.ru/lb/premium328/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="NickJr.us" tvg-name="NICK JR" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nick-jr-us.png" group-title="USA (DADDY LIVE)" streamId="182" channel-number="182",NICK JR
+https://webudit.webhd.ru/lb/premium329/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Nickelodeon.us2" tvg-name="NICK" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nick-us.png" group-title="USA (DADDY LIVE)" streamId="183" channel-number="183",NICK
+https://webudit.webhd.ru/lb/premium330/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Nicktoons.us" tvg-name="Nicktoons" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/6e/Nicktoons.png" group-title="USA (DADDY LIVE)" streamId="184" channel-number="184",Nicktoons
+https://webudit.webhd.ru/lb/premium649/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="NewsMax.us2" tvg-name="Newsmax" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/newsmax-tv-us.png" group-title="USA (DADDY LIVE)" streamId="185" channel-number="185",Newsmax
+https://webudit.webhd.ru/lb/premium613/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="National Geographic Wild.us2" tvg-name="Nat Geo Wild" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nat-geo-wild-us.png" group-title="USA (DADDY LIVE)" streamId="186" channel-number="186",Nat Geo Wild
+https://webudit.webhd.ru/lb/premium745/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="WPIX.us2" tvg-name="New! CWPIX 11" tvg-logo="https://pix11.com/wp-content/uploads/sites/25/2021/02/PIX11_White_600x248.png" group-title="USA (DADDY LIVE)" streamId="187" channel-number="187",New! CWPIX 11
+https://webudit.webhd.ru/lb/premium771/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="OprahWinfreyNetwork.us" tvg-name="Oprah Winfrey Network (OWN)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/oprah-winfrey-network-us.png" group-title="USA (DADDY LIVE)" streamId="188" channel-number="188",Oprah Winfrey Network (OWN)
+https://webudit.webhd.ru/lb/premium331/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="OxygenTrueCrime.us" tvg-name="Oxygen True Crime" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/oxygen-true-crime-us.png" group-title="USA (DADDY LIVE)" streamId="189" channel-number="189",Oxygen True Crime
+https://webudit.webhd.ru/lb/premium332/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="ParamountNetwork.us" tvg-name="Paramount Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/paramount-network-us.png" group-title="USA (DADDY LIVE)" streamId="190" channel-number="190",Paramount Network
+https://webudit.webhd.ru/lb/premium334/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="POP.us2" tvg-name="POP TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/pop-us.png" group-title="USA (DADDY LIVE)" streamId="191" channel-number="191",POP TV
+https://webudit.webhd.ru/lb/premium653/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="ReelzChannel.us" tvg-name="Reelz Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/reelz-us.png" group-title="USA (DADDY LIVE)" streamId="192" channel-number="192",Reelz Channel
+https://webudit.webhd.ru/lb/premium293/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SECNetwork.us" tvg-name="SEC Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sec-network-us.png" group-title="USA (DADDY LIVE)" streamId="193" channel-number="193",SEC Network
+https://webudit.webhd.ru/lb/premium385/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="ScienceChannel.us" tvg-name="Science Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/discovery-science-us.png" group-title="USA (DADDY LIVE)" streamId="194" channel-number="194",Science Channel
+https://webudit.webhd.ru/lb/premium294/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Showtime.us" tvg-name="Showtime" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/showtime-us.png" group-title="USA (DADDY LIVE)" streamId="195" channel-number="195",Showtime
+https://webudit.webhd.ru/lb/premium333/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Starz.us" tvg-name="Starz" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/starz-us.png" group-title="USA (DADDY LIVE)" streamId="196" channel-number="196",Starz
+https://webudit.webhd.ru/lb/premium335/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SYFY.us" tvg-name="SYFY" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/syfy-us.png" group-title="USA (DADDY LIVE)" streamId="197" channel-number="197",SYFY
+https://webudit.webhd.ru/lb/premium373/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SundanceTV.us" tvg-name="Sundance TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sundance-tv-us.png" group-title="USA (DADDY LIVE)" streamId="198" channel-number="198",Sundance TV
+https://webudit.webhd.ru/lb/premium658/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Telemundo(Spanish).us" tvg-name="Telemundo" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/telemundo-us.png" group-title="USA (DADDY LIVE)" streamId="199" channel-number="199",Telemundo
+https://webudit.webhd.ru/lb/premium131/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="TBS.us" tvg-name="TBS" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tbs-us.png" group-title="USA (DADDY LIVE)" streamId="200" channel-number="200",TBS
+https://webudit.webhd.ru/lb/premium336/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="TLC.us" tvg-name="TLC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tlc-us.png" group-title="USA (DADDY LIVE)" streamId="201" channel-number="201",TLC
+https://webudit.webhd.ru/lb/premium337/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="TNT.us" tvg-name="TNT" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tnt-us.png" group-title="USA (DADDY LIVE)" streamId="202" channel-number="202",TNT
+https://webudit.webhd.ru/lb/premium338/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="TheTravelChannel.us" tvg-name="Travel Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/travel-channel-us.png" group-title="USA (DADDY LIVE)" streamId="203" channel-number="203",Travel Channel
+https://webudit.webhd.ru/lb/premium340/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="truTV.us" tvg-name="TruTV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/tru-tv-us.png" group-title="USA (DADDY LIVE)" streamId="204" channel-number="204",TruTV
+https://webudit.webhd.ru/lb/premium341/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="TVLand.us" tvg-name="TVLAND" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Travel_Channel_-_Logo.svg/1200px-Travel_Channel_-_Logo.svg.png" group-title="USA (DADDY LIVE)" streamId="205" channel-number="205",TVLAND
+https://webudit.webhd.ru/lb/premium342/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="TMC.us3" tvg-name="TCM" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tcm-us.png" group-title="USA (DADDY LIVE)" streamId="206" channel-number="206",TCM
+https://webudit.webhd.ru/lb/premium644/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="TMC.us3" tvg-name="TMC Channel" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/5/54/TMC_logo.svg/1200px-TMC_logo.svg.png" group-title="USA (DADDY LIVE)" streamId="207" channel-number="207",TMC Channel
+https://webudit.webhd.ru/lb/premium698/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Food Network.us2" tvg-name="The Food Network" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Food_Network_logo.svg/1200px-Food_Network_logo.svg.png" group-title="USA (DADDY LIVE)" streamId="208" channel-number="208",The Food Network
+https://webudit.webhd.ru/lb/premium384/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="TheWeatherChannel.us" tvg-name="The Weather Channel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Weather_Channel_logo_2005-present.svg/1200px-The_Weather_Channel_logo_2005-present.svg.png" group-title="USA (DADDY LIVE)" streamId="209" channel-number="209",The Weather Channel
+https://webudit.webhd.ru/lb/premium394/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="TeenNick.us" tvg-name="TeenNick" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/teen-nick-us.png" group-title="USA (DADDY LIVE)" streamId="210" channel-number="210",TeenNick
+https://webudit.webhd.ru/lb/premium650/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="TVONE.us" tvg-name="TV ONE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/TV_One.svg/2560px-TV_One.svg.png" group-title="USA (DADDY LIVE)" streamId="211" channel-number="211",TV ONE
+https://webudit.webhd.ru/lb/premium660/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="USA Network.us2" tvg-name="USA Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/usa-us.png" group-title="USA (DADDY LIVE)" streamId="212" channel-number="212",USA Network
+https://webudit.webhd.ru/lb/premium343/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="UniversalKids.us" tvg-name="Universal Kids" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/universal-kids-us.png" group-title="USA (DADDY LIVE)" streamId="213" channel-number="213",Universal Kids
+https://webudit.webhd.ru/lb/premium668/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Univision.us2" tvg-name="Univision" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/univision-us.png" group-title="USA (DADDY LIVE)" streamId="214" channel-number="214",Univision
+https://webudit.webhd.ru/lb/premium132/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="UniMas(Spanish).us" tvg-name="Unimas" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/unimas-us.png" group-title="USA (DADDY LIVE)" streamId="215" channel-number="215",Unimas
+https://webudit.webhd.ru/lb/premium133/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="VH1.us" tvg-name="VH1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/vh1-us.png" group-title="USA (DADDY LIVE)" streamId="216" channel-number="216",VH1
+https://webudit.webhd.ru/lb/premium344/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="WEtv.us" tvg-name="WETV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/we-tv-us.png" group-title="USA (DADDY LIVE)" streamId="217" channel-number="217",WETV
+https://webudit.webhd.ru/lb/premium655/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="ACCNetwork.us" tvg-name="ACC Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/acc-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="218" channel-number="218",ACC Network
+https://webudit.webhd.ru/lb/premium666/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="ACCNetwork.us" tvg-name="ACC Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/acc-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="218" channel-number="218",ACC Network
+https://webudit.webhd.ru/lb/premium664/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="beINSports.us" tvg-name="BeIN SPORTS" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-us.png" group-title="SPORTS (DADDY LIVE)" streamId="219" channel-number="219",BeIN SPORTS
+https://webudit.webhd.ru/lb/premium425/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="beINSportsEnEspanol(Spanish).us" tvg-name="beIN SPORTS en Espanol" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-espanol-us.png" group-title="SPORTS (DADDY LIVE)" streamId="220" channel-number="220",beIN SPORTS en Espanol
+https://webudit.webhd.ru/lb/premium372/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="BigTenNetwork.us" tvg-name="BIG TEN Network (BTN)" tvg-logo="https://btn.com/wp-content/uploads/2022/01/share-image.png" group-title="SPORTS (DADDY LIVE)" streamId="221" channel-number="221",BIG TEN Network (BTN)
+https://webudit.webhd.ru/lb/premium397/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="CBSSportsNetwork.us" tvg-name="CBS Sports Network (CBSSN)" tvg-logo="https://pbs.twimg.com/profile_images/1356268043941380099/QHq2W42n_400x400.jpg" group-title="SPORTS (DADDY LIVE)" streamId="222" channel-number="222",CBS Sports Network (CBSSN)
+https://webudit.webhd.ru/lb/premium308/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="ESPN.us" tvg-name="ESPN" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/espn-us.png" group-title="SPORTS (DADDY LIVE)" streamId="223" channel-number="223",ESPN
+https://webudit.webhd.ru/lb/premium44/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="ESPN2(src01).us" tvg-name="ESPN 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/espn-2-us.png" group-title="SPORTS (DADDY LIVE)" streamId="224" channel-number="224",ESPN 2
+https://webudit.webhd.ru/lb/premium45/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="ESPNU.us" tvg-name="ESPNU" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/ESPN_U_logo.svg/1200px-ESPN_U_logo.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="225" channel-number="225",ESPNU
+https://webudit.webhd.ru/lb/premium316/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Eurosport1.uk" tvg-name="EuroSport 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/eurosport-1-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="226" channel-number="226",EuroSport 1
+https://webudit.webhd.ru/lb/premium41/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Eurosport2.uk" tvg-name="EuroSport 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/eurosport-2-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="227" channel-number="227",EuroSport 2
+https://webudit.webhd.ru/lb/premium42/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="ESPNDeportes(Spanish).us" tvg-name="ESPN Deportes" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/espn-deportes-us.png" group-title="SPORTS (DADDY LIVE)" streamId="228" channel-number="228",ESPN Deportes
+https://webudit.webhd.ru/lb/premium375/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="ESPNEWS.us" tvg-name="ESPNews" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/espnews-us.png" group-title="SPORTS (DADDY LIVE)" streamId="229" channel-number="229",ESPNews
+https://webudit.webhd.ru/lb/premium288/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Fox Sports 1.us2" tvg-name="Fox Sports 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-sports-1-us.png" group-title="SPORTS (DADDY LIVE)" streamId="230" channel-number="230",Fox Sports 1
+https://webudit.webhd.ru/lb/premium39/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Fox Sports 2.us2" tvg-name="Fox Sports 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-sports-2-us.png" group-title="SPORTS (DADDY LIVE)" streamId="231" channel-number="231",Fox Sports 2
+https://webudit.webhd.ru/lb/premium758/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="FoxSoccerPlus.us" tvg-name="FOX Soccer Plus" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-soccer-plus-us.png" group-title="SPORTS (DADDY LIVE)" streamId="232" channel-number="232",FOX Soccer Plus
+https://webudit.webhd.ru/lb/premium756/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="FOXCRICKET(src04).au" tvg-name="Fox Cricket" tvg-logo="https://media.info/i/lf/0/1489224113/6550.png" group-title="SPORTS (DADDY LIVE)" streamId="233" channel-number="233",Fox Cricket
+https://webudit.webhd.ru/lb/premium369/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="FoxDeportes(Spanish).us" tvg-name="FOX Deportes" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/FOX_Deportes_logo.svg/800px-FOX_Deportes_logo.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="234" channel-number="234",FOX Deportes
+https://webudit.webhd.ru/lb/premium643/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SP2" tvg-name="FOX Sports 502" tvg-logo="https://www.sec.gov/Archives/edgar/data/1564708/000156470822000051/image_151a.jpg" group-title="SPORTS (DADDY LIVE)" streamId="235" channel-number="235",FOX Sports 502
+https://webudit.webhd.ru/lb/premium820/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="FoxSports503(src04).au" tvg-name="FOX Sports 503" tvg-logo="https://i.imgur.com/MyUVsam.png" group-title="SPORTS (DADDY LIVE)" streamId="236" channel-number="236",FOX Sports 503
+https://webudit.webhd.ru/lb/premium821/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="FAF" tvg-name="FOX Sports 504" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/1/1c/Foxsports_aus2008.png/revision/latest/scale-to-width-down/1200?cb=20170521151438" group-title="SPORTS (DADDY LIVE)" streamId="237" channel-number="237",FOX Sports 504
+https://webudit.webhd.ru/lb/premium822/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="FoxSports505(src04).au" tvg-name="FOX Sports 505" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/australia/fox-sports-505-au.png" group-title="SPORTS (DADDY LIVE)" streamId="238" channel-number="238",FOX Sports 505
+https://webudit.webhd.ru/lb/premium823/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="FoxSports506(src04).au" tvg-name="FOX Sports 506" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/2/2c/SPE_290x170.png/revision/latest?cb=20180916115509" group-title="SPORTS (DADDY LIVE)" streamId="239" channel-number="239",FOX Sports 506
+https://webudit.webhd.ru/lb/premium824/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="FSS" tvg-name="FOX Sports 507" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/d/d7/Fox-sports-more-colour.png/revision/latest?cb=20170428053105" group-title="SPORTS (DADDY LIVE)" streamId="240" channel-number="240",FOX Sports 507
+https://webudit.webhd.ru/lb/premium825/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="GolfChannel.us" tvg-name="GOLF Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbc-golf-us.png" group-title="SPORTS (DADDY LIVE)" streamId="241" channel-number="241",GOLF Channel
+https://webudit.webhd.ru/lb/premium318/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="LiverpoolTV(src01).uk" tvg-name="Liverpool TV (LFC TV)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/lfctv-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="242" channel-number="242",Liverpool TV (LFC TV)
+https://webudit.webhd.ru/lb/premium826/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="LonghornNetwork.us" tvg-name="Longhorn Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/longhorn-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="243" channel-number="243",Longhorn Network
+https://webudit.webhd.ru/lb/premium667/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="MSG.us2" tvg-name="MSG" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/msg-us.png" group-title="SPORTS (DADDY LIVE)" streamId="244" channel-number="244",MSG
+https://webudit.webhd.ru/lb/premium765/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="MarqueeSportsNetwork.us" tvg-name="Marquee Sports Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/marquee-sports-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="245" channel-number="245",Marquee Sports Network
+https://webudit.webhd.ru/lb/premium770/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="MLBNetwork.us" tvg-name="MLB Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/mlb-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="246" channel-number="246",MLB Network
+https://webudit.webhd.ru/lb/premium399/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="MASN.us" tvg-name="MASN" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/masn-us.png" group-title="SPORTS (DADDY LIVE)" streamId="247" channel-number="247",MASN
+https://webudit.webhd.ru/lb/premium829/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="NHLNetwork.us" tvg-name="NHL Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nhl-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="248" channel-number="248",NHL Network
+https://webudit.webhd.ru/lb/premium663/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="NESN.us2" tvg-name="NESN" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nesn-us.png" group-title="SPORTS (DADDY LIVE)" streamId="249" channel-number="249",NESN
+https://webudit.webhd.ru/lb/premium762/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="NBATV.us" tvg-name="NBA TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-tv-us.png" group-title="SPORTS (DADDY LIVE)" streamId="250" channel-number="250",NBA TV
+https://webudit.webhd.ru/lb/premium404/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="NBCSportsChicago.us" tvg-name="NBC Sports Chicago" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbc-sports-chicago-us.png" group-title="SPORTS (DADDY LIVE)" streamId="251" channel-number="251",NBC Sports Chicago
+https://webudit.webhd.ru/lb/premium776/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="NBCSportsPhiladelphia.us2" tvg-name="NBC Sports Philadelphia" tvg-logo="https://yt3.googleusercontent.com/ytc/AOPolaR3dIX4Fk1CMsTddY38X33HXDShJi0YbLMVvtgJJA=s900-c-k-c0x00ffffff-no-rj" group-title="SPORTS (DADDY LIVE)" streamId="252" channel-number="252",NBC Sports Philadelphia
+https://webudit.webhd.ru/lb/premium777/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="NBCSportsWashington.us2" tvg-name="NBC Sports Washington" tvg-logo="https://pbs.twimg.com/profile_images/1367596860861542401/fdWpkAcK_400x400.jpg" group-title="SPORTS (DADDY LIVE)" streamId="253" channel-number="253",NBC Sports Washington
+https://webudit.webhd.ru/lb/premium778/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="NFLNetwork.us" tvg-name="NFL Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nfl-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="254" channel-number="254",NFL Network
+https://webudit.webhd.ru/lb/premium405/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="NBCSportsBayArea.us" tvg-name="NBC Sports Bay Area" tvg-logo="https://yt3.googleusercontent.com/ytc/AGIKgqPKBIwtsWNk1xYFad1i_BGKZLEsUOm19_Pa70L3_g=s900-c-k-c0x00ffffff-no-rj" group-title="SPORTS (DADDY LIVE)" streamId="255" channel-number="255",NBC Sports Bay Area
+https://webudit.webhd.ru/lb/premium753/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="NBCSportsBoston.us" tvg-name="NBC Sports Boston" tvg-logo="https://yt3.googleusercontent.com/8XU7EqHLEP8Q_k2yAN9V2lMG-eTDHI2M1sXIXQ3-8MhCdjeWsOeadA5wdrQypK7qiYwm-F-xIg=s900-c-k-c0x00ffffff-no-rj" group-title="SPORTS (DADDY LIVE)" streamId="256" channel-number="256",NBC Sports Boston
+https://webudit.webhd.ru/lb/premium754/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="NBCSportsCalifornia.us2" tvg-name="NBC Sportslifornia" tvg-logo="https://cms.nhl.bamgrid.com/images/photos/288216018/1024x576/cut.jpg" group-title="SPORTS (DADDY LIVE)" streamId="257" channel-number="257",NBC Sportslifornia
+https://webudit.webhd.ru/lb/premium755/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="RacingTV.uk" tvg-name="Racing Tv" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/racing-tv-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="258" channel-number="258",Racing Tv
+https://webudit.webhd.ru/lb/premium555/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkySportsFootball.uk" tvg-name="Sky Sports Football" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-football-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="259" channel-number="259",Sky Sports Football
+https://webudit.webhd.ru/lb/premium35/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkySportsArena.uk" tvg-name="Sky Sports Arena" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-arena-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="260" channel-number="260",Sky Sports Arena
+https://webudit.webhd.ru/lb/premium36/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkySportsAction.uk" tvg-name="Sky Sports Action" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-action-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="261" channel-number="261",Sky Sports Action
+https://webudit.webhd.ru/lb/premium37/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkySportsMainEvent.uk" tvg-name="Sky Sports Main Event" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e8/Sky-sports-main-event.jpg" group-title="SPORTS (DADDY LIVE)" streamId="262" channel-number="262",Sky Sports Main Event
+https://webudit.webhd.ru/lb/premium38/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkySportsPremierLeague.uk" tvg-name="Sky sports Premier League" tvg-logo="https://e0.365dm.com/22/11/1600x900/skysports-premier-league-badge_5958904.jpg?20221108211627" group-title="SPORTS (DADDY LIVE)" streamId="263" channel-number="263",Sky sports Premier League
+https://webudit.webhd.ru/lb/premium130/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkySportsF1.uk" tvg-name="Sky Sports F1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-f1-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="264" channel-number="264",Sky Sports F1
+https://webudit.webhd.ru/lb/premium60/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkySportsCricket.uk" tvg-name="Sky Sports Cricket" tvg-logo="https://e0.365dm.com/20/04/192x192/skysports-sky-sports-cricket_4967063.jpg?20200411112851" group-title="SPORTS (DADDY LIVE)" streamId="265" channel-number="265",Sky Sports Cricket
+https://webudit.webhd.ru/lb/premium65/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkySportsGolf.uk" tvg-name="Sky Sports Golf" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-golf-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="266" channel-number="266",Sky Sports Golf
+https://webudit.webhd.ru/lb/premium70/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkySportsNews.uk" tvg-name="Sky Sports News" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-news-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="267" channel-number="267",Sky Sports News
+https://webudit.webhd.ru/lb/premium366/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SportsNetNewYork.us" tvg-name="SportsNet New York (SNY)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/SNY_logo.svg/1200px-SNY_logo.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="268" channel-number="268",SportsNet New York (SNY)
+https://webudit.webhd.ru/lb/premium759/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SportsnetOntario(English).ca" tvg-name="Sportsnet Ontario" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/b/be/Rogers_Sportsnet_Ontario_thumb.png/revision/latest?cb=20160514183500" group-title="SPORTS (DADDY LIVE)" streamId="269" channel-number="269",Sportsnet Ontario
+https://webudit.webhd.ru/lb/premium406/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SportsnetOne(English).ca" tvg-name="Sportsnet One" tvg-logo="https://cdn.tvpassport.com/image/station/240x135/v2/s68859_h15_ac.png" group-title="SPORTS (DADDY LIVE)" streamId="270" channel-number="270",Sportsnet One
+https://webudit.webhd.ru/lb/premium411/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="13130" tvg-name="Sportsnet West" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/9/95/Rogers_sportsnet_west.png/revision/latest?cb=20120212022740" group-title="SPORTS (DADDY LIVE)" streamId="271" channel-number="271",Sportsnet West
+https://webudit.webhd.ru/lb/premium407/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="12722" tvg-name="Sportsnet East" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/3/3a/Rogers_sportsnet_east_thumb.png/revision/latest?cb=20160514183643" group-title="SPORTS (DADDY LIVE)" streamId="272" channel-number="272",Sportsnet East
+https://webudit.webhd.ru/lb/premium408/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Sportsnet360(English).ca" tvg-name="Sportsnet 360" tvg-logo="https://w7.pngwing.com/pngs/746/852/png-transparent-sportsnet-360-cfac-calgary-flames-national-hockey-league-others-text-logo-world.png" group-title="SPORTS (DADDY LIVE)" streamId="273" channel-number="273",Sportsnet 360
+https://webudit.webhd.ru/lb/premium409/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SportsnetWorld(English).ca" tvg-name="Sportsnet World" tvg-logo="https://cdn.tvpassport.com/image/station/240x135/v2/s68946_h15_aa.png" group-title="SPORTS (DADDY LIVE)" streamId="274" channel-number="274",Sportsnet World
+https://webudit.webhd.ru/lb/premium410/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SpectrumSportsNetLA.us" tvg-name="Spectrum Sportsnet LA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/spectrum-sportsnet-la-us.png" group-title="SPORTS (DADDY LIVE)" streamId="275" channel-number="275",Spectrum Sportsnet LA
+https://webudit.webhd.ru/lb/premium764/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="9188" tvg-name="BT Sport 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bt-sport-1-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="276" channel-number="276",BT Sport 1
+https://webudit.webhd.ru/lb/premium31/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="9350" tvg-name="BT Sport 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bt-sport-2-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="277" channel-number="277",BT Sport 2
+https://webudit.webhd.ru/lb/premium32/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="9202" tvg-name="BT Sport 3" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bt-sport-3-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="278" channel-number="278",BT Sport 3
+https://webudit.webhd.ru/lb/premium33/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="9529" tvg-name="BT Sport 4" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bt-sport-4-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="279" channel-number="279",BT Sport 4
+https://webudit.webhd.ru/lb/premium34/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="TSN1(English).ca" tvg-name="TSN1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/TSN1.svg/2560px-TSN1.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="280" channel-number="280",TSN1
+https://webudit.webhd.ru/lb/premium111/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="TSN2(English).ca" tvg-name="TSN2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/TSN2_New_Logo.svg/2560px-TSN2_New_Logo.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="281" channel-number="281",TSN2
+https://webudit.webhd.ru/lb/premium112/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="TSN3(English).ca" tvg-name="TSN3" tvg-logo="https://cdn.tvpassport.com/image/station/240x135/v2/s90119_h15_aa.png" group-title="SPORTS (DADDY LIVE)" streamId="282" channel-number="282",TSN3
+https://webudit.webhd.ru/lb/premium113/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="TSN4(English).ca" tvg-name="TSN4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/TSN4.svg/1280px-TSN4.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="283" channel-number="283",TSN4
+https://webudit.webhd.ru/lb/premium114/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="TSN5(English).ca" tvg-name="TSN5" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/TSN5.svg/1200px-TSN5.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="284" channel-number="284",TSN5
+https://webudit.webhd.ru/lb/premium115/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="TennisChannel.us" tvg-name="Tennis Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tennis-channel-us.png" group-title="SPORTS (DADDY LIVE)" streamId="285" channel-number="285",Tennis Channel
+https://webudit.webhd.ru/lb/premium40/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="TUDN(Spanish).us" tvg-name="TUDN" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tudn-us.png" group-title="SPORTS (DADDY LIVE)" streamId="286" channel-number="286",TUDN
+https://webudit.webhd.ru/lb/premium66/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 1" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="287" channel-number="287",Tennis+ 1
+https://webudit.webhd.ru/lb/premium700/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 2" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="288" channel-number="288",Tennis+ 2
+https://webudit.webhd.ru/lb/premium701/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 3" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="289" channel-number="289",Tennis+ 3
+https://webudit.webhd.ru/lb/premium702/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 4" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="290" channel-number="290",Tennis+ 4
+https://webudit.webhd.ru/lb/premium703/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 5" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="291" channel-number="291",Tennis+ 5
+https://webudit.webhd.ru/lb/premium704/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 6" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="292" channel-number="292",Tennis+ 6
+https://webudit.webhd.ru/lb/premium705/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 7" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="293" channel-number="293",Tennis+ 7
+https://webudit.webhd.ru/lb/premium706/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 8" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="294" channel-number="294",Tennis+ 8
+https://webudit.webhd.ru/lb/premium707/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 9" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="295" channel-number="295",Tennis+ 9
+https://webudit.webhd.ru/lb/premium708/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 10" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="296" channel-number="296",Tennis+ 10
+https://webudit.webhd.ru/lb/premium709/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 11" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="297" channel-number="297",Tennis+ 11
+https://webudit.webhd.ru/lb/premium710/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 12" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="298" channel-number="298",Tennis+ 12
+https://webudit.webhd.ru/lb/premium711/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 13" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="299" channel-number="299",Tennis+ 13
+https://webudit.webhd.ru/lb/premium712/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 14" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="300" channel-number="300",Tennis+ 14
+https://webudit.webhd.ru/lb/premium713/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 15" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="301" channel-number="301",Tennis+ 15
+https://webudit.webhd.ru/lb/premium714/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="ViaplaySports1.uk" tvg-name="Viaplay Sports 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/viaplay-sports-1-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="302" channel-number="302",Viaplay Sports 1
+https://webudit.webhd.ru/lb/premium451/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="ViaplaySports2.uk" tvg-name="Viaplay Sports 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/viaplay-sports-2-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="303" channel-number="303",Viaplay Sports 2
+https://webudit.webhd.ru/lb/premium550/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="ViaplayXtra.uk" tvg-name="Viaplay Xtra" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/viaplay-xtra-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="304" channel-number="304",Viaplay Xtra
+https://webudit.webhd.ru/lb/premium597/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="WillowCricket.us" tvg-name="Willow Cricket" tvg-logo="https://aimages.willow.tv/wlo_logo_200_200.jpg" group-title="SPORTS (DADDY LIVE)" streamId="305" channel-number="305",Willow Cricket
+https://webudit.webhd.ru/lb/premium346/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="WillowXtra.us" tvg-name="Willow XTRA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/willow-xtra-us.png" group-title="SPORTS (DADDY LIVE)" streamId="306" channel-number="306",Willow XTRA
+https://webudit.webhd.ru/lb/premium598/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="WWENetwork(English).ca" tvg-name="WWE Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/wwe-us.png" group-title="SPORTS (DADDY LIVE)" streamId="307" channel-number="307",WWE Network
+https://webudit.webhd.ru/lb/premium376/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="YesNetwork.us" tvg-name="YES Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/yes-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="308" channel-number="308",YES Network
+https://webudit.webhd.ru/lb/premium763/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="9591" tvg-name="BBC News Channel HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-news-uk.png" group-title="UK (DADDY LIVE)" streamId="309" channel-number="309",BBC News Channel HD
+https://webudit.webhd.ru/lb/premium349/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="BBCOne.uk" tvg-name="BBC One" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-one-uk.png" group-title="UK (DADDY LIVE)" streamId="310" channel-number="310",BBC One
+https://webudit.webhd.ru/lb/premium356/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="BBCTwo.uk" tvg-name="BBC Two" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-two-uk.png" group-title="UK (DADDY LIVE)" streamId="311" channel-number="311",BBC Two
+https://webudit.webhd.ru/lb/premium357/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="BBCThree.uk" tvg-name="BBC Three" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-three-uk.png" group-title="UK (DADDY LIVE)" streamId="312" channel-number="312",BBC Three
+https://webudit.webhd.ru/lb/premium358/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="BBCFour.uk" tvg-name="BBC Four" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-four-uk.png" group-title="UK (DADDY LIVE)" streamId="313" channel-number="313",BBC Four
+https://webudit.webhd.ru/lb/premium359/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Channel4.uk" tvg-name="Channel 4" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/channel-4-uk.png" group-title="UK (DADDY LIVE)" streamId="314" channel-number="314",Channel 4
+https://webudit.webhd.ru/lb/premium354/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Channel5.uk" tvg-name="Channel 5" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/channel-5-uk.png" group-title="UK (DADDY LIVE)" streamId="315" channel-number="315",Channel 5
+https://webudit.webhd.ru/lb/premium355/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Dave.uk" tvg-name="Dave" tvg-logo="https://res.cloudinary.com/uktv/image/upload/v1390389612/nnjpehbj2a2qvyxoda0z.jpg" group-title="UK (DADDY LIVE)" streamId="316" channel-number="316",Dave
+https://webudit.webhd.ru/lb/premium348/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="9316" tvg-name="E4 Channel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/0/06/E4_Logo.png" group-title="UK (DADDY LIVE)" streamId="317" channel-number="317",E4 Channel
+https://webudit.webhd.ru/lb/premium363/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="Film4.uk" tvg-name="Film4" tvg-logo="https://cdn.comedy.co.uk/images/channels/film4.jpg" group-title="UK (DADDY LIVE)" streamId="318" channel-number="318",Film4
+https://webudit.webhd.ru/lb/premium688/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="GOLD.uk" tvg-name="Gold" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/gold-uk.png" group-title="UK (DADDY LIVE)" streamId="319" channel-number="319",Gold
+https://webudit.webhd.ru/lb/premium687/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="ITV1(West).uk" tvg-name="ITV 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/itv-1-uk.png" group-title="UK (DADDY LIVE)" streamId="320" channel-number="320",ITV 1
+https://webudit.webhd.ru/lb/premium350/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="ITV2.uk" tvg-name="ITV 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/itv-2-uk.png" group-title="UK (DADDY LIVE)" streamId="321" channel-number="321",ITV 2
+https://webudit.webhd.ru/lb/premium351/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="ITV3.uk" tvg-name="ITV 3" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/itv-3-uk.png" group-title="UK (DADDY LIVE)" streamId="322" channel-number="322",ITV 3
+https://webudit.webhd.ru/lb/premium352/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="ITV4.uk" tvg-name="ITV 4" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/itv-4-uk.png" group-title="UK (DADDY LIVE)" streamId="323" channel-number="323",ITV 4
+https://webudit.webhd.ru/lb/premium353/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="MTV.uk" tvg-name="MTV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/mtv-uk.png" group-title="UK (DADDY LIVE)" streamId="324" channel-number="324",MTV
+https://webudit.webhd.ru/lb/premium367/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="MUTV(src01).uk" tvg-name="MUTV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/mutv-uk.png" group-title="UK (DADDY LIVE)" streamId="325" channel-number="325",MUTV
+https://webudit.webhd.ru/lb/premium377/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="RTE 1" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/5/53/RTE_One_Stacked.svg/revision/latest/scale-to-width-down/250?cb=20210310105314" group-title="UK (DADDY LIVE)" streamId="326" channel-number="326",RTE 1
+https://webudit.webhd.ru/lb/premium364/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="RTE2.uk" tvg-name="RTE 2" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/11/RT%C3%892_logo.svg/1200px-RT%C3%892_logo.svg.png" group-title="UK (DADDY LIVE)" streamId="327" channel-number="327",RTE 2
+https://webudit.webhd.ru/lb/premium365/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="S4C.uk" tvg-name="S4C" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/s4c-uk.png" group-title="UK (DADDY LIVE)" streamId="328" channel-number="328",S4C
+https://webudit.webhd.ru/lb/premium670/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkyCinemaPremiere.uk" tvg-name="Sky Cinema Premiere" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-premiere-uk.png" group-title="UK (DADDY LIVE)" streamId="329" channel-number="329",Sky Cinema Premiere
+https://webudit.webhd.ru/lb/premium671/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkyCinemaSelect.uk" tvg-name="Sky Cinema Select" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-select-uk.png" group-title="UK (DADDY LIVE)" streamId="330" channel-number="330",Sky Cinema Select
+https://webudit.webhd.ru/lb/premium672/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkyCinemaHits.uk" tvg-name="Sky Cinema Hits" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-hits-uk.png" group-title="UK (DADDY LIVE)" streamId="331" channel-number="331",Sky Cinema Hits
+https://webudit.webhd.ru/lb/premium673/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkyCinemaGreats.uk" tvg-name="Sky Cinema Greats" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-greats-uk.png" group-title="UK (DADDY LIVE)" streamId="332" channel-number="332",Sky Cinema Greats
+https://webudit.webhd.ru/lb/premium674/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkyCinemaAnimation.uk" tvg-name="Sky Cinema Animation" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-animation-uk.png" group-title="UK (DADDY LIVE)" streamId="333" channel-number="333",Sky Cinema Animation
+https://webudit.webhd.ru/lb/premium675/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkyCinemaFamily.uk" tvg-name="Sky Cinema Family" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-family-uk.png" group-title="UK (DADDY LIVE)" streamId="334" channel-number="334",Sky Cinema Family
+https://webudit.webhd.ru/lb/premium676/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkyCinemaAction.uk" tvg-name="Sky Cinema Action" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-action-uk.png" group-title="UK (DADDY LIVE)" streamId="335" channel-number="335",Sky Cinema Action
+https://webudit.webhd.ru/lb/premium677/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkyCinemaThriller.uk" tvg-name="Sky Cinema Thriller" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-thriller-uk.png" group-title="UK (DADDY LIVE)" streamId="336" channel-number="336",Sky Cinema Thriller
+https://webudit.webhd.ru/lb/premium679/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkyCinemaScifiHorror(src01).uk" tvg-name="Sky Cinema Sci-Fi Horror" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-sci-fi-and-horror-uk.png" group-title="UK (DADDY LIVE)" streamId="337" channel-number="337",Sky Cinema Sci-Fi Horror
+https://webudit.webhd.ru/lb/premium681/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkyShowcase.uk" tvg-name="Sky Showcase" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-showcase-uk.png" group-title="UK (DADDY LIVE)" streamId="338" channel-number="338",Sky Showcase
+https://webudit.webhd.ru/lb/premium682/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkyArts.uk" tvg-name="Sky Arts" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-arts-uk.png" group-title="UK (DADDY LIVE)" streamId="339" channel-number="339",Sky Arts
+https://webudit.webhd.ru/lb/premium683/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkyComedy.uk" tvg-name="Sky Comedy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-comedy-uk.png" group-title="UK (DADDY LIVE)" streamId="340" channel-number="340",Sky Comedy
+https://webudit.webhd.ru/lb/premium684/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkyCrime.uk" tvg-name="Sky Crime" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-crime-uk.png" group-title="UK (DADDY LIVE)" streamId="341" channel-number="341",Sky Crime
+https://webudit.webhd.ru/lb/premium685/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkyHistory.uk" tvg-name="Sky History" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-history-uk.png" group-title="UK (DADDY LIVE)" streamId="342" channel-number="342",Sky History
+https://webudit.webhd.ru/lb/premium686/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkyWitness.uk" tvg-name="Sky Witness HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-witness-uk.png" group-title="UK (DADDY LIVE)" streamId="343" channel-number="343",Sky Witness HD
+https://webudit.webhd.ru/lb/premium361/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="SkyAtlantic.uk" tvg-name="Sky Atlantic" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Sky_Atlantic_-_Logo_2020.svg/2560px-Sky_Atlantic_-_Logo_2020.svg.png" group-title="UK (DADDY LIVE)" streamId="344" channel-number="344",Sky Atlantic
+https://webudit.webhd.ru/lb/premium362/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="CTVToronto(English).ca" tvg-name="CTV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/ctv-ca.png" group-title="Canada (DADDY LIVE)" streamId="345" channel-number="345",CTV
+https://webudit.webhd.ru/lb/premium602/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="CTVTwoToronto(English).ca" tvg-name="CTV 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/ctv-2-ca.png" group-title="Canada (DADDY LIVE)" streamId="346" channel-number="346",CTV 2
+https://webudit.webhd.ru/lb/premium838/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="CityTv(English).ca" tvg-name="Citytv" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/city-tv-ca.png" group-title="Canada (DADDY LIVE)" streamId="347" channel-number="347",Citytv
+https://webudit.webhd.ru/lb/premium831/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="CBCToronto(English).ca" tvg-name="CBC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/cbc-ca.png" group-title="Canada (DADDY LIVE)" streamId="348" channel-number="348",CBC
+https://webudit.webhd.ru/lb/premium832/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="CBCToronto(English).ca" tvg-name="CBC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/cbc-ca.png" group-title="Canada (DADDY LIVE)" streamId="348" channel-number="348",CBC
+https://webudit.webhd.ru/lb/premium699/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="GlobalToronto(English).ca" tvg-name="Global" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/global-ca.png" group-title="Canada (DADDY LIVE)" streamId="349" channel-number="349",Global
+https://webudit.webhd.ru/lb/premium836/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="9244" tvg-name="Sky Sports MIX" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-mix-uk.png" group-title="SPORTS MISC (DADDY LIVE)" streamId="350" channel-number="350",Sky Sports MIX
+https://webudit.webhd.ru/lb/premium449/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Sky Sport Top Event DE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Sky_Sport_Top_Event_Logo_2022.svg/2560px-Sky_Sport_Top_Event_Logo_2022.svg.png" group-title="SPORTS MISC (DADDY LIVE)" streamId="351" channel-number="351",Sky Sport Top Event DE
+https://webudit.webhd.ru/lb/premium556/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="8306" tvg-name="SuperSport Grandstand" tvg-logo="https://www.thesportsdb.com/images/media/channel/tvlogo/aitip41642604897.png" group-title="SPORTS MISC (DADDY LIVE)" streamId="352" channel-number="352",SuperSport Grandstand
+https://webudit.webhd.ru/lb/premium412/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="8220" tvg-name="SuperSport PSL" tvg-logo="https://icdb.tv/images/a6e0c64e01399cbce556408a41b6333c.jpg" group-title="SPORTS MISC (DADDY LIVE)" streamId="353" channel-number="353",SuperSport PSL
+https://webudit.webhd.ru/lb/premium413/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="50781" tvg-name="SuperSport Premier league" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/6/66/Supersport2012.jpg/250px-Supersport2012.jpg" group-title="SPORTS MISC (DADDY LIVE)" streamId="354" channel-number="354",SuperSport Premier league
+https://webudit.webhd.ru/lb/premium414/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="8327" tvg-name="SuperSport LaLiga" tvg-logo="https://icdb.tv/images/a8a882fb16572f8d4c1980b75b27201d.jpg" group-title="SPORTS MISC (DADDY LIVE)" streamId="355" channel-number="355",SuperSport LaLiga
+https://webudit.webhd.ru/lb/premium415/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="8300" tvg-name="SuperSport Variety 1" tvg-logo="https://www.thesportsdb.com/images/media/channel/tvlogo/0lwdq31638048788.png" group-title="SPORTS MISC (DADDY LIVE)" streamId="356" channel-number="356",SuperSport Variety 1
+https://webudit.webhd.ru/lb/premium416/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="8258" tvg-name="SuperSport Variety 2" tvg-logo="https://i.postimg.cc/J0qpLcQy/ezgif-6-1b9deb8476fe.webp" group-title="SPORTS MISC (DADDY LIVE)" streamId="357" channel-number="357",SuperSport Variety 2
+https://webudit.webhd.ru/lb/premium417/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="8218" tvg-name="SuperSport Variety 3" tvg-logo="https://i.postimg.cc/c4GJPV03/download-1.jpg" group-title="SPORTS MISC (DADDY LIVE)" streamId="358" channel-number="358",SuperSport Variety 3
+https://webudit.webhd.ru/lb/premium418/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="8259" tvg-name="SuperSport Variety 4" tvg-logo="https://www.thesportsdb.com/images/media/channel/tvlogo/jz5jpt1638048871.png" group-title="SPORTS MISC (DADDY LIVE)" streamId="359" channel-number="359",SuperSport Variety 4
+https://webudit.webhd.ru/lb/premium419/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="8209" tvg-name="SuperSport Action" tvg-logo="https://k.crichd.tv/assets/uploads/channels/99.png" group-title="SPORTS MISC (DADDY LIVE)" streamId="360" channel-number="360",SuperSport Action
+https://webudit.webhd.ru/lb/premium420/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="8233" tvg-name="SuperSport Rugby" tvg-logo="https://www.thesportsdb.com/images/media/channel/tvlogo/scvqpc1642604954.png" group-title="SPORTS MISC (DADDY LIVE)" streamId="361" channel-number="361",SuperSport Rugby
+https://webudit.webhd.ru/lb/premium421/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="8326" tvg-name="SuperSport Golf" tvg-logo="https://upload.wikimedia.org/wikipedia/en/6/66/Supersport2012.jpg" group-title="SPORTS MISC (DADDY LIVE)" streamId="362" channel-number="362",SuperSport Golf
+https://webudit.webhd.ru/lb/premium422/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="8305" tvg-name="SuperSport Tennis" tvg-logo="https://archive.org/download/supersport-tennis/supersport-tennis.png" group-title="SPORTS MISC (DADDY LIVE)" streamId="363" channel-number="363",SuperSport Tennis
+https://webudit.webhd.ru/lb/premium423/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="8331" tvg-name="SuperSport Motorsport" tvg-logo="https://img2.sport-tv-guide.live/images/stations/a298.png" group-title="SPORTS MISC (DADDY LIVE)" streamId="364" channel-number="364",SuperSport Motorsport
+https://webudit.webhd.ru/lb/premium424/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="8236" tvg-name="Supersport Football" tvg-logo="https://upload.wikimedia.org/wikipedia/en/6/66/Supersport2012.jpg" group-title="SPORTS MISC (DADDY LIVE)" streamId="365" channel-number="365",Supersport Football
+https://webudit.webhd.ru/lb/premium56/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="8270" tvg-name="SuperSport Cricket" tvg-logo="https://www.thesportsdb.com/images/media/channel/tvlogo/srtijz1643382350.png" group-title="SPORTS MISC (DADDY LIVE)" streamId="366" channel-number="366",SuperSport Cricket
+https://webudit.webhd.ru/lb/premium368/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"
+
+#EXTINF:-1 tvg-id="8228" tvg-name="SuperSport MaXimo 1" tvg-logo="https://upload.wikimedia.org/wikipedia/en/6/66/Supersport2012.jpg" group-title="SPORTS MISC (DADDY LIVE)" streamId="367" channel-number="367",SuperSport MaXimo 1
+https://webudit.webhd.ru/lb/premium572/index.m3u8|Referer="https://weblivehdplay.ru/"|Origin="https://weblivehdplay.ru"

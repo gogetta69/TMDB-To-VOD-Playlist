@@ -1,0 +1,3 @@
+theajack.github.io/disable-devtool
+ondevtoolclose
+hasDevToolsOpen

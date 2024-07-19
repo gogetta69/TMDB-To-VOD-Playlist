@@ -1,0 +1,12 @@
+https://vidsrc.pro/embed/tv/[[TMDB]]/[[S]]/[[E]]
+https://moviesapi.club/tv/[[TMDB]]-[[S]]-[[E]]
+https://www.braflix.so/tv/[[TMDB]]/[[S]]/[[E]]?play=true
+https://vidsrc.net/embed/tv?tmdb=[[TMDB]]&season=[[S]]&episode=[[E]]
+https://movies.levrx.lol/media/tmdb-tv-[[TMDB]]/[[SID]]/[[EID]]
+https://www.watching.zone/watch/tv/_[[TMDB]]/[[S]]/[[E]]
+https://sudo-flix.lol/media/tmdb-tv-[[TMDB]]/[[SID]]/[[EID]]
+https://primeflix.lol/tv/[[TMDB]]/season/[[S]/stream/[[E]]
+https://binged.live/watch/tv/[[TMDB]]?season=[[S]]&ep=[[E]]
+https://cinexplore.net/#/media/tmdb-tv-[[TMDB]]/[[SID]]/[[EID]]
+https://www.essential.wtf/media/tmdb-tv-[[TMDB]]/[[SID]]/[[EID]]
+https://play2.123embed.net/tv/[[TMDB]]/[[S]]/[[E]]

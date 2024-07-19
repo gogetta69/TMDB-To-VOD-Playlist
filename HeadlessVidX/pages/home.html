@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeadlessVidX - Home</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #17181b;
+            color: #fff;
+            margin: 0;
+        }
+        .logo {
+            font-size: 60px;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 0px 0px 30px rgba(151, 151, 151, 0.4);
+            margin-bottom: 40px;
+        }
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .input-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .input-field {
+            width: 400px;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px 0 0 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s;
+            font-size: 19px;
+            color: #b2b2b2;
+			background-color: #202122;
+        }
+        .input-field:focus {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+            outline: none;
+        }
+        .extract-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #186cd7;
+            border: none;
+            border-radius: 0 25px 25px 0;
+            cursor: pointer;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, box-shadow 0.3s;
+            margin-bottom: 20px;
+        }
+        .extract-button:hover {
+            background-color: #1561c2;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+        }
+        .links {
+            margin-top: 40px;
+        }
+        .links a {
+            color: #3b99d1;
+            text-decoration: none;
+            margin: 0 5px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        .links a:hover {
+            color: #2a73a0;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #aaaaaa;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: #000000a1;
+        }
+        .modal-content {
+            background-color: #17181b;
+            margin: 15% auto;
+            padding: 20px;
+            border: none;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+			color:#c9c8c8;
+        }
+        .close {
+            color: #186cd7;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: -20px;
+        }
+        .code {
+            color: #bac2c6;
+            background-color: #0f0e0e;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 7px;
+            display: block;
+            overflow-x: auto;
+            white-space: pre-wrap; /* Allow line breaks */
+        }
+        .close:hover,
+        .close:focus {
+            color: #1561c2;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        @media (max-width: 600px) {
+            .input-container {
+                flex-direction: column;
+            }
+            .input-field {
+                width: 100%;
+                border-radius: 25px;
+                margin-bottom: 10px;
+            }
+            .extract-button {
+                width: 100%;
+                border-radius: 25px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">HeadlessVidX</div>
+    <div class="container">
+        <form id="videoForm">
+            <div class="input-container">
+                <input type="text" id="videoUrl" class="input-field" placeholder="Enter the URL of the video page..." required>
+                <button type="button" id="getVideoButton" class="extract-button">Get Video</button>
+            </div>
+        </form>
+        <div class="links">
+            <a href="#" id="howToUseLink">How To Use</a> -
+            <a href="trainer">Website Trainer </a> - <a href="training-guide">Training Guide</a> -
+            <a href="https://github.com/gogetta69" target="_blank">GitHub</a>
+        </div>
+        <div class="footer">By Gogetta69</div>
+    </div>
+
+    <div id="howToModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h3>So, what is it?</h3>
+            <p>HeadlessVidX aims to simplify the task of developing video extractors for video streaming websites. It provides an easy-to-use solution for users, regardless of their programming skills, to quickly add video streaming sites to tools such as 'TMDB TO VOD'.</p>
+            <h3>How can I use it?</h3>
+            <p>Just send a GET request to the URL below:</p>
+            <p><code class="code"><span id="dynamicUrl1"></span></code></p>
+            <p>Be sure to attach the video page URL on the end:</p>
+            <p><code class="code"><span id="dynamicUrl2"></span>https://thetvapp.to/tv/amc-live-stream/</code></p>
+            <p>The successful return would produce a JSON:</p>
+            <p><code class="code">{"status":"ok","url":"https://v4.thetvapp.to/hls/AMCEast.m3u8?token=iGBW2Dns73mXj2C2n1KBRQ&expires=1717403418","Referer":"https://thetvapp.to/","Origin":"https://thetvapp.to","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"}</code></p>
+			<p>This JSON will contain the link to the video file and some of the headers that were used when HeadlessVidX accessed it.</p>
+			<h3>Why does the JSON return an error?</h3>
+			<p>Some websites, ecspecially video streaming websites, go to extreme measures to protect people from accessing their streams. However, you can still try and get around these measures by clicking on the "Website Trainer" and by creating a site definition for HeadlessVidX to use when accessing a video url on that site. </p>
+			<h3>What are the pro's?</h3>
+
+				<p>HeadlessVidX, as a headless browser, can execute the necessary JavaScript to access video streams. This capability is particularly crucial when website owners employ advanced encryption methods to safeguard their streams. </p>
+				
+				<p>Also, it eliminates the need to spend hours developing custom functions and extractors for each website. Its versatility allows it to handle a wide variety of video websites right out of the box. </p>
+				
+			<h3>What are the con's?</h3>	
+			<p>Evern though its headless, but still being browser-based, the response time can be slower than web requests, as it requires rendering and executing JavaScript.</p>
+			<p>Headless browsers tend to consume more system resources, such as CPU and memory, compared to traditional web requests.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('howToUseLink').addEventListener('click', function() {
+            const host = window.location.hostname;
+            const port = window.location.port;
+            const dynamicUrl = `http://${host}:${port}/get-video?url=`;
+            document.getElementById('dynamicUrl1').textContent = dynamicUrl;
+            document.getElementById('dynamicUrl2').textContent = dynamicUrl;
+            document.getElementById('howToModal').style.display = "block";
+        });
+
+        document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('howToModal').style.display = "none";
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target == document.getElementById('howToModal')) {
+                document.getElementById('howToModal').style.display = "none";
+            }
+        });
+
+document.getElementById('getVideoButton').addEventListener('click', function() {
+    const host = window.location.hostname;
+    const port = window.location.port;
+    const videoUrl = document.getElementById('videoUrl').value;
+    
+    if (videoUrl) {
+        const form = document.createElement('form');
+        form.method = 'GET';
+        form.action = `http://${host}:${port}/get-video`;
+        form.target = '_blank';
+        
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'url';
+        input.value = videoUrl;
+        
+        form.appendChild(input);
+        document.body.appendChild(form);
+        form.submit();
+    } else {
+        alert('Please enter a video URL.');
+    }
+});
+
+    </script>
+</body>
+</html>

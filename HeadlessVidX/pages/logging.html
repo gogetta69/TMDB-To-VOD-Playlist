@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HeadlessVidX - Logs</title>
+<style>
+  body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #191919;
+    color: #d4d4d4;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    flex-grow: 1;
+	margin-top: -20px;
+  }
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  margin-left: 0; /* Removed extra margin */
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: relative;
+  height: 15px;  /* Adjust size as needed */
+  width: 15px;   /* Adjust size as needed */
+  background-color: #bac2c66e;
+  margin-left: -9px; /* Ensure it's closer to the label */
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: #145a9c;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.custom-checkbox .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.nav-buttons {
+  padding: 5px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  color: #b2b2b2;
+}
+
+.top-bar input[type="text"]:focus {
+  outline: none; /* Remove focus border */
+}
+
+#toggle-highlight {
+  font-size: 11px;
+  color: #b2b2b2;
+}
+
+#match-count {
+  font-size: 11px;
+  color: #b2b2b2;
+}
+
+.top-bar {
+  width: 100%;
+  background-color: #17181b;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center;     /* Center the content vertically */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  white-space: nowrap;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Consistent spacing between all items */
+}
+
+.highlight-container {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Adjust the gap as needed */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+
+}
+
+.search-container input[type="text"] {
+  padding: 5px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  width: 100%;
+  background-color: #202122;
+  color: #b2b2b2;
+}
+
+.search-container button {
+  padding: 5px;
+  font-size: 12px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #186cd7ad;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.top-bar label,
+.top-bar input[type="checkbox"] {
+  display: inline-block;
+  font-size: 11px;
+  color: #b2b2b2;
+}
+
+.top-bar button {
+  padding: 5px;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #186cd766;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.top-bar button:hover {
+  background-color: #145a9c;
+}
+  .log-container {
+    margin-top: 60px;
+    width: 100%;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    background-color: #191919;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    flex-grow: 1;
+  }
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #bac2c6;
+    background-color: #191919;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 7px;
+    overflow-x: auto;
+	margin-top: -13px;
+  }
+  .highlight {
+    background-color: #186cd7ad;
+    color: white;
+  }
+  .footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #aaaaaa;
+  }
+  .loading-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #17181b;
+    z-index: 1000;
+    flex-direction: column;
+    color: #b2b2b2;
+    z-index: 2000;
+  }
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .loading-message p {
+    margin-top: 10px;
+  }
+	/* For WebKit browsers (Chrome, Safari, Edge) */
+	::-webkit-scrollbar {
+		width: 12px;
+		height: 12px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: #2e2f30;  /* Darker background for the track */
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #202122;  /* Custom color for the thumb */
+		border-radius: 6px;
+		border: 2px solid #2e2f30;  /* Match track color for a seamless look */
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: #3a3b3c;  /* Slightly lighter color on hover */
+	}
+
+	/* For Firefox */
+	html {
+		scrollbar-color: #2e2f30 #202122;  /* Thumb color, track color */
+		scrollbar-width: thin;  /* Thin scrollbar */
+	}
+	.custom-checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+  }
+
+  .custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+.checkmark {
+  position: absolute;
+  top: 5;
+  left: 10;
+  height: 11px;
+  width: 11px;
+  background-color: #bac2c66e;
+}
+
+  .custom-checkbox input:checked ~ .checkmark {
+    background-color: #145a9c;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .custom-checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .custom-checkbox .checkmark:after {
+    left: 0px;
+    top: 0px;
+    width: 0px;
+    height: 0px;
+    border: solid #145a9c;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+  .nav-buttons {
+	padding: 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    color: #b2b2b2;
+  }
+
+</style>
+</head>
+<body>
+  <div class="loading-message" id="loadingMessage">
+    <div class="spinner"></div>
+    <p>Please wait...</p>
+  </div>
+
+ <div class="container">
+  <div class="top-bar">
+    <div class="left-section">
+	<div class="highlight-container">
+      <label for="toggle-highlight">Highlight:</label>
+		<label class="custom-checkbox">
+        <input type="checkbox" id="toggle-highlight">
+        <span class="checkmark"></span>
+      </label>
+	  </div>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search...">
+        <button id="search-btn">&#128269</button>
+		</div>
+      <div class="nav-buttons">
+      <button id="prev-btn">&laquo;</button>
+      <button id="next-btn">&raquo;</button>    
+	   </div>
+      <span id="match-count"></span>
+	 
+    </div>
+  </div>
+
+  <div class="log-container">
+    <pre id="log"></pre>
+    <div id="bottom"></div>
+  </div>
+</div>
+
+<script>
+  const logElement = document.getElementById('log');
+  const bottomElement = document.getElementById('bottom');
+  const loadingMessage = document.getElementById('loadingMessage');
+  const hostname = window.location.hostname;
+  const port = window.location.port || 3202;
+  const socket = new WebSocket('ws://' + hostname + ':' + port);
+
+  let highlightEnabled = false;
+  let searchResults = [];
+  let currentIndex = 0;
+
+  socket.onmessage = (event) => {
+    logElement.textContent += event.data + '\n';
+    loadingMessage.style.display = 'none';
+    if (highlightEnabled) {
+      const searchTerm = document.getElementById('search-input').value;
+      if (searchTerm) {
+        applyHighlight(searchTerm);
+      }
+    }
+  };
+
+  socket.onopen = () => {
+    console.log('Connected to WebSocket server');
+  };
+
+  socket.onerror = (error) => {
+    console.error('WebSocket Error:', error);
+  };
+
+  socket.onclose = () => {
+    console.log('Disconnected from WebSocket server');
+  };
+
+  document.getElementById('toggle-highlight').addEventListener('change', (event) => {
+    highlightEnabled = event.target.checked;
+    if (highlightEnabled) {
+      const searchTerm = document.getElementById('search-input').value;
+      if (searchTerm) {
+        applyHighlight(searchTerm);
+      }
+    } else {
+      clearHighlight();
+    }
+  });
+
+  document.getElementById('search-btn').addEventListener('click', () => {
+    const searchTerm = document.getElementById('search-input').value;
+    if (searchTerm) {
+      searchResults = [];
+      currentIndex = 0;
+      document.getElementById('toggle-highlight').checked = true;
+      highlightEnabled = true;
+      applyHighlight(searchTerm);
+    }
+  });
+
+  document.getElementById('prev-btn').addEventListener('click', () => {
+    if (searchResults.length > 0) {
+      currentIndex = (currentIndex - 1 + searchResults.length) % searchResults.length;
+      highlightCurrentMatch();
+    }
+  });
+
+  document.getElementById('next-btn').addEventListener('click', () => {
+    if (searchResults.length > 0) {
+      currentIndex = (currentIndex + 1) % searchResults.length;
+      highlightCurrentMatch();
+    }
+  });
+
+  function applyHighlight(searchTerm) {
+    if (!searchTerm) return;
+    const regex = new RegExp(searchTerm, 'gi');
+    logElement.innerHTML = logElement.textContent.replace(regex, (match) => {
+      searchResults.push(match);
+      return `<span class="highlight">${match}</span>`;
+    });
+    updateMatchCount();
+    if (searchResults.length > 0) {
+      highlightCurrentMatch();
+    }
+  }
+
+  function clearHighlight() {
+    logElement.innerHTML = logElement.textContent.replace(/<span class="highlight">(.*?)<\/span>/g, '$1');
+    searchResults = [];
+    currentIndex = 0;
+    updateMatchCount();
+  }
+
+  function highlightCurrentMatch() {
+    const highlights = document.querySelectorAll('.highlight');
+    highlights.forEach((highlight, index) => {
+      if (index === currentIndex) {
+        highlight.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        highlight.style.backgroundColor = '#a418d7ad';
+        highlight.style.color = '#fff';
+      } else {
+        highlight.style.backgroundColor = '#186cd7ad';
+        highlight.style.color = '#fff';
+      }
+    });
+    updateMatchCount();
+  }
+
+  function updateMatchCount() {
+    const matchCountElement = document.getElementById('match-count');
+    if (searchResults.length > 0) {
+      matchCountElement.textContent = `${currentIndex + 1} of ${searchResults.length}`;
+    } else {
+      matchCountElement.textContent = '';
+    }
+  }
+</script>
+</body>
+</html>

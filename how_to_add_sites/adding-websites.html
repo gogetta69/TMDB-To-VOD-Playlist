@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Websites to TMDB to VOD Using HeadlessVidX</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        code {
+            background-color: #f9f9f9;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .variables, .example-commands {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 4px;
+        }
+        .variables code, .example-commands code {
+            display: block;
+            margin: 5px 0;
+        }
+        a {
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Adding Websites to TMDB to VOD Using HeadlessVidX </h1>
+
+    <div class="section">
+        <h2>Introduction</h2>
+        <p>Located in <code>/HeadlessVidX_sitelists</code>, there are two files containing a list of url's:</p>
+        <ul>
+            <li><code>movies.txt</code></li>
+            <li><code>series.txt</code></li>
+        </ul>
+        <p>As indicated by their names, these files are for movies and TV shows, respectively. You can add a site by including it in these two files.</p>
+    </div>
+
+    <div class="section">
+        <h2>Types of Sites to Add</h2>
+        <p>You can add movie and TV show websites that are structured around TMDB and IMDB IDs. For example:</p>
+        <p><a href="https://www.essential.wtf/media/tmdb-movie-105">https://www.essential.wtf/media/tmdb-movie-105</a></p>
+        <p>Note the <code>105</code> at the end. This is a TMDB ID that can be replaced with the <code>[[TMDB]]</code> variable. In order to add a site like this, you would first open the HeadlessVidX folder and follow the Install Instructions.txt. Once the HeadlessVidX server has been installed and is up and running, you can load the '<a href="http://localhost:3202/trainer" target=_blank">Website Trainer</a>' in your browser. However, it would be best to visit the '<a href="http://localhost:3202/training-guide" target=_blank">Traing Guide</a>' first to gain a better understanding on how it works. </p>
+
+        <p>After you have trained HeadlessVidX for extracting the videos streams of a website, you would next need to add the url patterns to both movies.txt and series.txt, so that TMDB to VOD can begin sending and requesting links.</p>
+
+        <p><strong>On this url, For Movies use:</strong></p>
+        <div class="example-commands">
+            <code>https://www.essential.wtf/media/tmdb-movie-[[TMDB]]</code>
+        </div>
+
+        <p><strong>On this url, For TV Series use:</strong></p>
+        <div class="example-commands">
+            <code>https://www.essential.wtf/media/tmdb-tv-[[TMDB]]/[[SID]]/[[EID]]</code>
+        </div>
+        <p>Now of course the url structuring will be different from site to site. You will need to first, visit the website and examine how they pass the TMDB or IMDB,
+         along with the way the season and episodes codes are used when dynamically loading the page.</p>
+        
+        <p>For a list of multi-server and single-server websites to check, you can use the following resource:</p>
+        <p><a href="https://fmhy.net/videopiracyguide">https://fmhy.net/videopiracyguide</a></p>
+       
+        <p>Not all the websites listed on this site will work, since a lot of website owners use anti-bot methods to prevent scraping. However, you can try different variations with HeadlessVidX to try and side step those measures.
+    <div class="section">
+        <h2>Using Variables</h2>
+        <p>You can use the following variables in the command files. These variables will be replaced with the appropriate values when the site is processed:</p>
+        <div class="variables">
+	    <code>[[DASH-TITLE]] - Strips the non alphanumerical characters of the title and replaces the spaces with dashes (e.g., back-to-the-future).</code>
+	    <code>[[YEAR]] - Replaced with the release year of a movie or series (e.g., 1985).</code>
+            <code>[[TMDB]] - Replaced with The Movie Database ID (e.g., 105 for movies and series).</code>
+            <code>[[IMDB]] - Replaced with the IMDB ID (e.g., tt0088763).</code>
+            <code>[[SID]] - Replaced with the Season ID (the unique season ID returned by TMDB).</code>
+            <code>[[EID]] - Replaced with the Episode ID (the unique episode ID returned by TMDB).</code>
+            <code>[[S]] - Replaced with the season number.</code>
+            <code>[[E]] - Replaced with the episode number.</code>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <h2>A Few More Examples </h2>
+        <p>Below are some examples of how the urls should look when adding them to /HeadlessVidX_sitelists</p>
+        <div class="variables">
+
+           <strong>A movies.txt Pattern:</strong> <code>http://example.com/movie/[[TMDB]]</code>
+          <strong>That Would Become: </strong><code>http://example.com/movie/105</code>
+			<br>
+            <strong>A movies.txt Pattern:</strong>  <code>http://example.com/watch-movie/[[DASH-TITLE]]-[[YEAR]]</code>
+          <strong>That Would Become: </strong><code>http://example.com/watch-movie/back-to-the-future-1985</code>
+			<br>
+           <strong>A series.txt Pattern:</strong><code>http://example.com/show/[[IMDB]]/season/[[S]]/episode/[[E]]</code>
+		  <strong> That Would Become: </strong><code>http://example.com/show/4658/season/2/episode/1</code>
+			<br>
+            <strong>A series.txt Pattern: </strong><code>http://example.com/series/[[TMDB]]]/[[SID]]/[[EID]]</code>
+           <strong>That Would Become: </strong><code>http://example.com/series/4658/14229/338886</code>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+/disable-devtool
+/devtools-detect
+google-analytics.com
+whos.amung.us
+/tinkleswearfranz
+histats.com
+lewblivehdplay.ru/blast.js
+/js/dd.js

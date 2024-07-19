@@ -1,0 +1,101 @@
+HeadlessVidX By Gogetta69 - https://github.com/gogetta69
+##########################################################
+
+# Windows User: Installation Instructions for HeadlessVidX
+
+This document provides instructions for setting up HeadlessVidX using the provided `install-win.bat` script. The script will install Node Version Manager (nvm), the required Node.js version, and HeadlessVidX dependencies.
+
+## Prerequisites
+
+1. Ensure you have an internet connection.
+2. PowerShell must be available on your system (included by default on Windows 7 and later).
+3. Administrator privileges required to install software and modify system paths.
+
+## Steps to Run `install.bat`
+
+1. **Open Command Prompt as Administrator**:
+   To avoid permission issues, it is recommended to run the script as an administrator.
+   - Click on the Start menu.
+   - Type `cmd`.
+   - Right-click on `Command Prompt` and select `Run as administrator`.
+
+2. **Navigate to the HeadlessVidX Directory**:
+   Use the `cd` command to change the directory to the location where the HeadlessVidX files are stored. For example:
+   cd C:\path\to\HeadlessVidX
+
+3. **Run the Install Script**:
+Execute the `install.bat` script by typing the following command and pressing Enter:
+install.bat
+
+##########################################################
+
+# Linux & Mac User: Installation Instructions for HeadlessVidX
+
+This document provides instructions for setting up HeadlessVidX using the provided `install-linux.sh` and `install-mac.sh`
+scripts. The script will install Node Version Manager (nvm), the required Node.js version, and HeadlessVidX dependencies.
+
+## Prerequisites
+
+1. Ensure you have an internet connection.
+2. Make sure you have the necessary permissions to execute the script.
+
+## Steps to Run `install.sh`
+
+1. **Open Terminal**:
+   Open your terminal application. This can typically be done by searching for "Terminal" in your application menu or using the keyboard shortcut `Ctrl+Alt+T`.
+
+2. **Navigate to the HeadlessVidX Directory**:
+   Use the `cd` command to change the directory to the location where the HeadlessVidX files are stored. For example:
+   ```sh
+   cd /path/to/HeadlessVidX
+
+3. Make the Install Script Executable:
+Ensure the install.sh script has execute permissions. Run the following command:
+
+chmod +x install.sh
+
+4. Run the Install Script:
+Execute the install.sh script by typing the following command and pressing Enter:
+
+./install.sh
+   
+##########################################################
+
+## What the Install Script Does
+
+1. **Checks for `nvm` Installation**:
+- If `nvm-windows` is not installed, it downloads and installs it.
+
+2. **Sets Up Environment Variables for `nvm`**:
+- Configures `NVM_HOME` and `NVM_SYMLINK` to include `nvm` in the system PATH.
+
+3. **Installs Node.js v20.13.1**:
+- Uses `nvm` to install the specified Node.js version.
+
+4. **Switches to Node.js v20.13.1**:
+- Ensures the current session uses the installed Node.js version.
+
+5. **Creates a `.nvmrc` File**:
+- Creates a `.nvmrc` file specifying the Node.js version for the HeadlessVidX.
+
+6. **Installs HeadlessVidX Dependencies**:
+- Runs `npm install` to install all HeadlessVidX dependencies as defined in `package.json`.
+
+7. **Installs PM2 Globally**:
+-Installs PM2 globally using npm install -g pm2.
+
+8. **Starts the HeadlessVidX Server with PM2**:
+- Starts the HeadlessVidX server 
+
+9. **Sets Up PM2 to Restart on Reboot**:
+- Configures PM2 to restart the server on system reboot using pm2 startup and saves the PM2 process list with pm2 save.
+
+## Post-Installation
+
+After the script completes, you should see a message indicating the installation was successful. Your HeadlessVidX is now set up and ready to use. You can verify that your server is online by going to http://localhost:3202/ping
+
+
+
+
+
+

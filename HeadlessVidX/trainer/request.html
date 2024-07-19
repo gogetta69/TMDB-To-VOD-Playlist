@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeadlessVidX - Response</title>
+	 <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #17181b;
+        color: #b2b2b2;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        padding-top: 0px;
+        margin: 0;
+    }
+
+    .container {
+        background-color: #2a2e38;
+        padding: 0px;
+        border-radius: 8px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 800px;
+        position: relative;
+    }
+    .success, .error {
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 0px;
+    }
+    .success {
+        background-color: #0f68024a;
+        color: #e3dcdc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .error {
+        background-color: #fb00003b;
+        color: #e3dcdc;
+    }
+    .response, .duration, .submitted-data, .video-container {
+        background-color: #17181b;
+        padding: 10px;
+        border-radius: 4px;
+        overflow-x: auto;
+        margin-bottom: 3px;
+		color: #bac2c6;
+    }
+	.player-message {
+		font-size: 14px;
+	}
+	
+	.lrg-add-site-button {
+		background-color: #1c930b6b;
+		color: white;
+		border: none;
+		padding: 0px;
+		border-radius: 4px;
+		cursor: pointer;
+		width: 100%;
+		box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+		transition: background-color 0.3s, box-shadow 0.3s;
+		font-size: 14px;
+		margin-top: 15px;
+		margin-bottom: 0px;
+		padding: 7px;
+	}
+
+	.lrg-add-site-button:hover {
+		background-color: #167408; /* Slightly darker shade of the original color */
+		box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+	}
+	
+.button {
+    background-color: #2f9b07b5;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-size: 12px;
+}
+
+.button:hover {
+    background-color: #257f0599; /* Slightly darker shade of the original color */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+    .loading-message {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #17181b;
+        z-index: 1000;
+        flex-direction: column;
+		color:#b2b2b2;
+    }
+    .spinner {
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    .loading-message p {
+        margin-top: 10px;
+    }
+	/* For WebKit browsers (Chrome, Safari, Edge) */
+	::-webkit-scrollbar {
+		width: 12px;
+		height: 12px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: #2e2f30;  /* Darker background for the track */
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #202122;  /* Custom color for the thumb */
+		border-radius: 6px;
+		border: 2px solid #2e2f30;  /* Match track color for a seamless look */
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: #3a3b3c;  /* Slightly lighter color on hover */
+	}
+
+	/* For Firefox */
+	html {
+		scrollbar-color: #2e2f30 #202122;  /* Thumb color, track color */
+		scrollbar-width: thin;  /* Thin scrollbar */
+	}
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="response-container"></div>
+    </div>
+    <div class="loading-message" id="loadingMessage" style="display: none;">
+        <div class="spinner"></div>
+        <p>Please wait...</p>
+    </div>
+	<script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
+<script>
+ document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const formData = Object.fromEntries(urlParams.entries());
+
+    console.log("Form data received:", formData);
+
+    sendRequest(formData);
+});
+
+async function sendRequest(data) {
+    document.getElementById('loadingMessage').style.display = 'flex';
+    const host = window.location.hostname;
+    const port = window.location.port;
+
+    if (!port) {
+        alert('Port number is not specified in the URL.');
+        document.getElementById('loadingMessage').style.display = 'none';
+        return;
+    }
+
+    console.log("Data before conversion:", data);
+
+    data.timeout = parseInt(data.timeout) * 1000;
+    data.stealth = String(data.stealth);
+    data.frame = String(data.frame);
+    data.adblock = String(data.adblock);
+
+    const uniqueId = 'requestData';
+    data.uniqueId = uniqueId;
+
+    console.log("Data after conversion:", data);
+
+    const endpoint = `http://${host}:${port}/extract-video`;
+    const jsonData = JSON.stringify(data);
+
+    try {
+        const startTime = performance.now();
+
+        const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: jsonData
+        });
+
+        const endTime = performance.now();
+        const duration = (endTime - startTime) / 1000;
+
+        const responseData = await response.json();
+        document.getElementById('loadingMessage').style.display = 'none';
+
+        if (responseData.url) {
+            const { site, ...submittedData } = data;
+            document.querySelector('.response-container').innerHTML = `
+                <div class='success'>Success! Found the video url. 
+                    <button class='button add-site-button' onclick="handleAddSiteButton('${site}', ${JSON.stringify(submittedData).replace(/"/g, '&quot;')})">Add Site Profile</button>
+                </div>
+            `;
+            console.log('Add Site button rendered.');
+
+            const videoType = responseData["Content-Type"];
+            document.querySelector('.response-container').innerHTML += `
+                <div class='duration'><strong>Duration:</strong> ${duration.toFixed(2)} seconds</div>
+                <div class='response'><strong>Response:</strong><pre>${JSON.stringify(responseData, null, 2)}</pre></div> 
+                <div class="video-container">										
+                <video id="video-player" class="video-js vjs-default-skin" controls muted width="560" height="315">
+                    <source src="${responseData.proxy}" type="${videoType}" />
+                </video>
+                
+                    <button class='lrg-add-site-button' onclick="handleAddSiteButton('${site}', ${JSON.stringify(submittedData).replace(/"/g, '&quot;')})">Add Site Profile</button>
+                    <p><span class="player-message">Please note that the m3u8 proxy may not function perfectly for all videos. This script was primarily designed for extraction purposes and may have limitations when used for proxying video streams. If the video does not start playing, you may need to find a more reliable method to proxy the videos from this website.</span></p>
+                </div>
+            `;
+
+            try {
+                // Initialize Video.js
+                videojs('video-player', {
+                    autoplay: true,
+                    controls: true,
+                    muted: true,
+                    fluid: true
+                });
+            } catch (videoError) {
+                console.error('Video.js initialization error:', videoError);
+                document.querySelector('.response-container').innerHTML += `<div class='error'>Couldn't load the video.</div>`;
+            }
+        } else {
+            document.querySelector('.response-container').innerHTML = `
+                <div class='error'>Error: Couldn't locate a video url.</div>
+                <div class='duration'><strong>Duration:</strong> ${duration.toFixed(2)} seconds</div>
+                <div class='response'><strong>Response:</strong><pre>${JSON.stringify(responseData, null, 2)}</pre></div>
+                <div class='submitted-data'><strong>Request:</strong><pre>${JSON.stringify(data, null, 2)}</pre></div>
+            `;
+        }
+
+        const messageData = {
+            action: 'requestCompleted',
+            uniqueId: uniqueId,
+            responseData: responseData,
+            duration: duration
+        };
+
+        window.parent.postMessage(messageData, window.location.origin);
+        console.log("Request completed message posted to parent window:", messageData);
+    } catch (error) {
+        document.getElementById('loadingMessage').style.display = 'none';
+        document.querySelector('.response-container').innerHTML = `
+            <div class='error'>Fetch Error: ${error.message}</div>
+            <div class='submitted-data'><strong>Request:</strong><pre>${JSON.stringify(data, null, 2)}</pre></div>
+        `;
+
+        const messageData = {
+            action: 'requestError',
+            uniqueId: uniqueId,
+            error: error.message
+        };
+
+        window.parent.postMessage(messageData, window.location.origin);
+        console.log("Request error message posted to parent window:", messageData);
+    }
+}
+
+async function handleAddSiteButton(site, submittedData) {
+    console.log('Add Site button click event triggered');
+
+    // Ensure showBrowser is always set to false
+    submittedData.showBrowser = false;
+
+    console.log('Sending data to /trainer/add_site:', { site, submitted_data: submittedData });
+    try {
+        let response = await fetch('/trainer/add_site', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ site: site, submitted_data: submittedData })
+        });
+        console.log('Fetch request sent to /trainer/add_site.');
+        let data = await response.json();
+        console.log('Response from /trainer/add_site:', data);
+        if (data.status === 'success') {
+            alert(data.message);
+        } else {
+            alert('Failed to add site.');
+        }
+    } catch (error) {
+        console.error('Error updating site:', error);
+    }
+}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeadlessVidX - Training Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #131212;
+            color: #c9c8c8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+			font-size: 16px;
+        }
+        .container {
+            background-color: #17181b;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 800px;
+        }
+        .logo {
+            font-size: 60px;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 0px 0px 30px rgba(151, 151, 151, 0.4);
+            margin-bottom: 40px;
+			text-align: center;
+        }
+		li {
+		  color: #d4d4d4;
+		  padding: 5px;
+		  font-size: 16px;
+		}
+
+        h1, h2, h3 {
+            color: #fff;
+        }
+        p, ul{
+            color: #d4d4d4;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .links {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .links a {
+            color: #3b99d1;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        .links a:hover {
+            color: #2a73a0;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #aaaaaa;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .links a {
+                margin: 0 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">HeadlessVidX</div>
+        <h1>How to Train and Add Websites</h1>
+<p>Please note that while extracting video streaming links from many websites is possible, not all will be compatible or trainable. Many websites won’t require a site definition to extract the video. The easiest sites are those where the video starts playing as soon as the page loads, and these usually don't need any training.</p>
+<p>However, if you don't see a video start playing immediately, it doesn't necessarily mean HeadlessVidX needs training. Many video players use preloading, which begins loading the video in the browser before the user clicks the play button. Preloading can make it appear as though the video isn't playing when it is actually being prepared for playback in the background. This process simplifies the task of intercepting the video’s location since the video data is already being loaded by the browser. As a result, HeadlessVidX can more easily detect and return the streaming link, allowing for seamless extraction and playback without needing to click a button.</p>
+<p>Furthermore, while HeadlessVidX can handle a vast array of websites, some will inevitably employ advanced anti-scraping measures or sophisticated encryption methods. In these cases, manual intervention and training might be required to successfully extract the video streams.</p>
+<p>To optimize HeadlessVidX for your specific needs, you can configure various settings. These settings allow you to fine-tune the behavior and capabilities of HeadlessVidX, ensuring it performs effectively across different scenarios. Let’s take a look at each setting and how it can enhance your video extraction process:</p>
+
+        <p></p>
+		
+		 <h2>Site Profile</h2>
+		 
+		 <p>After running a test, the 'Response Data' will display the results. If the test is successful and a video is found, an 'Add Site' button will appear. If the test fails the button will not be shown, and you will need to adjust the settings and try again. Once a site has been added it will be listed in the 'Load Profile' section. Adding a site that already exists will not be duplicated, instead it will be overwritten with the new entry.</p>
+        
+        <h2>Video Page URL</h2>
+        <p>The url leading to the page that the video is located on. If the video has to be clicked, or a page naviation needs to take place before getting to the video page, use the css click selectors.</p>
+		
+		<h2>Show Browser</h2>		
+		 <p>Choose whether or not to display the browser during testing. Enabling this option allows you to visually inspect the process. Note that the show Browser value is not saved when adding the site, and by default, the browser will be hidden.</p>
+        
+        <h2>Page Timeout</h2>
+        <p>The timeout value in seconds for the page operations. This is how long to wait before abandoning the request and returning it as a failed attempt.</p>
+		
+		<h2>Select Browser</h2>
+		
+		<p>
+			Choosing the right browser is an important step for the overall success of the extraction of the video url.
+		</p>
+		<p>
+			<strong>Firefox:</strong> Firefox is the most reliable browser because its fingerprinting looks the most human, making it less likely to be detected as a bot. However, Firefox can be slower when running tasks. When running in 'Show Browser' mode, it is even slower, but it will be faster during a production run.
+		</p>
+		<p>
+			<strong>Chrome:</strong> Chrome is much faster than Firefox but is more often identified as a bot by anti-bot detection systems. If you notice HeadlessVidX is being blocked because of a devtool detection script, try adding a string to the blacklist/javascripts-loading.txt that identifies and blocks the script from loading.</p>
+		<p>
+			<strong>WebKit:</strong> WebKit may sometimes be identified as an unsupported browser, but it is included as an option for those who might need it.
+		</p>
+        
+        <h2>Video Must Contain</h2>
+        <p>The video URL that needs to be extracted 'must' contain this string, or strings. You can use a list of comma separated strings. Example: If the video I wanted was located at http://example.com/video.mp4 I could use the string 'example'. Any other video files found on the page will be ignored.</p>
+        
+        <h2>Video 'Not' Contain</h2>
+        <p>The returned video URL must 'not' contain this string, or strings. You can use a list of comma separated strings. Example: If an ad video is on the video page located at http://advertise-example.com/video.mp4 I could use 'advertise' to blacklist any video containing that string.</p>
+        
+      <h2>Click Selectors</h2>
+<p>The click Selectors provide various methods to target and click the elements on a webpage. You can use general CSS selectors like class, ID, or tag selectors (e.g., .btn-play, #main-content), or you can use XPath selectors to target the elements on the page that requires a click. Running JavaScript on a page is also possible by using the 'javascript:' scheme.</p>	
+
+				<p>If you need HeadlessVidX to click on multiple items or navigate through pages, you can use a comma to separate the selectors. By using comma-separated selectors can be very helpful, like when you need to interact with several elements on the page, such as navigating through different sections or pages, clicking multiple buttons, or performing a series of actions in a specific order. </p>
+
+		<p><strong>Some Examples:</strong></p>
+
+		<p>CSS:<br>
+		<code>play-btn</code></p>
+
+		<p>Xpath:<br>
+		<code>//*[@id='play-btn']</code></p>
+
+		  
+		<p>Javascript:<br>
+		<code>javascript:document.getElementById('play-btn').click();</code></p>
+
+		<p>Tip: Try the free version of the SelectorsHub plugin for Chrome and Firefox. By clicking on an element, this tool will automatically generate multiple expressions for you.</p>
+
+		<h3>Using Multiple Selectors</h3>
+		<p>You can pass multiple selectors separated by commas. For example:</p>
+		<p><code>.btn-play, #main-content, //button[@class='btn-play'], //div[text()='Welcome']</code></p>
+
+		<h2>Brute Click</h2>
+		
+		<p>Brute Click is a feature that uses x and y coordinates to click a specific point on a webpage. This can be useful when you need to interact with an element that cannot be easily targeted with a standard selector. However, for Brute Click to work effectively, at least one Click Selector is required. The Click Selector serves as an element to wait for, ensuring that the page has loaded sufficiently before the x and y coordinates are clicked.</p>
+        
+         <h2>Stealth Mode</h2>
+        <p>Enable stealth mode to avoid detection by anti-bot measures. Set this option to true or false. Be aware that some websites can detect the stealth browser, but not the regular browser. If you encounter issues, try switching between stealth mode and the regular browser.</p>
+        
+        <h2>Embed Video</h2>
+        <p>Replace the body content with an iframe containing the specified URL. Set this option to true or false. Enabling this setting is useful if HeadlessVidX needs to interact with the video player within an iframe. This can be particularly helpful for sites that require embedding the video player to function correctly.</p>
+        
+        <h2>Include Referer</h2>
+        <p>The referrer is the URL of the previous web page from which a link to the current page was followed. Some websites use the referrer information to enhance security and prevent direct access from outside sources. Specify the referrer URL to be included in the request headers if needed.</p>
+        
+        <h2>Block Resources </h2>
+        <p>List resource types to block during the process, separated by commas. Puppeteer supports blocking the following resource types: document, stylesheet, image, media, font, script, texttrack, xhr, fetch, eventsource, websocket, manifest, and other. Be careful when blocking 'script' as it may cause the video to not load.</p>
+        
+        <h2>Block Ads</h2>
+        <p>Enable ad blocking using the EasyList. When this option is enabled, all URLs are filtered through the Adblock Plus EasyList, which blocks known ad domains and prevents advertisements from loading. This helps to speed up page load times and reduce page distractions from ads.</p>
+		
+		<h2>Block JS Contains</h2>
+        <p>Enable blocking of JavaScript content based on a blacklist. When this option is enabled, the process inspects and searches each loading JavaScript file for strings listed in blacklist/javascripts-contains.txt. Be aware that enabling this feature may slow down the process due to the additional inspection required.</p>
+		
+		<h2>Custom Useragent</h2>
+		
+		<p>If the website hosting the video blocks HeadlessVidX when it uses random user agents, you can set a custom user agent to try and bypass this issue. Many streaming sites employ 'theajack/disable-devtool,' which may cause the browser to close the page immediately. If you encounter this problem try switching the browser to another one, or even switching to a custom useragent like a Googlebot ua has worked.</p>
+		
+		<h2>Include Referer</h2>
+		
+		<p>The Referer is the URL of the previous web page from which a link to the current page was followed. Some websites use the referrer information to enhance security and prevent direct access from outside sources. Specify the referrer URL to be included in the request headers if needed.</p>
+        
+        <div class="links">
+            <a href="/">Home</a>
+        </div>
+        <div class="footer">By Gogetta69</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeadlessVidX - Trainer</title>
+    <style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #17181b;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 2px;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping */
+    white-space: normal; /* Allow text to wrap */
+    width: 100%; /* Ensure container takes full width */
+}
+
+.container > div {
+    width: 49%;
+    margin-bottom: 10px; /* Add some space between stacked items */
+}
+
+#dselectors {
+    width: 100%; /* Ensure full width */
+}
+
+#statusMessage {
+    float: right;
+    margin-left: 133px;
+    margin-bottom: -18px;
+    font-size: 11px;
+    color: #84baff;
+}
+
+.topButtons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    gap: 5px;
+	overflow: auto;
+	padding-bottom: 5px;
+}
+
+.topButtons button {
+    flex: 0 1 auto; 
+    margin: 0; /* Remove additional margin from buttons */
+}
+
+.leftContent, .rightContent {
+    width: 100%; /* Full width on smaller screens */
+    margin-top: 15px;
+}
+
+.container select, .container input[type="text"] {
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.info-icon {
+    display: block;
+    margin-bottom: 10px;
+}
+
+code {
+    color: #bac2c6;
+    background-color: #191919;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 7px;
+    display: block;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
+.links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.links a {
+    color: #3b99d1;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #2a73a0;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+.form-container {
+    width: 100%;
+    background-color: #17181b;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.form-header {
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    background-color: #2c3138;
+    font-weight: bold;
+}
+
+.form-content {
+    padding: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: small;
+    color: #b2b2b2;
+}
+
+input[type="text"], select, input[type="submit"] {
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;   
+    font-size: 14px;    
+    background-color: #202122;
+    color: #b2b2b2;
+}
+
+input[type="text"]:focus, select:focus {  
+    outline: none;
+    background-color: #202122;
+}
+
+input[type="submit"] {
+    background-color: #1c930b6b;
+    color: white;
+    cursor: pointer;
+    margin-top: 7px;
+}
+
+input[type="submit"]:hover {
+    background-color: #167408;
+}
+
+.deleteBtn, .resetBtn, .testBtn, .loadBtn {
+    background-color: #d718184a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 5px;
+    float: right;
+    margin-left: 8px;
+	padding-right: 5%;
+	padding-left: 5%;
+}
+
+.deleteBtn:hover {
+    background-color: #b51616;
+}
+
+.resetBtn {
+    background-color: #d7721878;
+}
+
+.resetBtn:hover {
+    background-color: #b35a14;
+}
+
+.testBtn {
+    background-color: #1c930b6b;
+}
+
+.testBtn:hover {
+    background-color: #167408;
+}
+
+.loadBtn {
+    background-color: #186cd766;
+}
+
+.loadBtn:hover {
+    background-color: #145a9c;
+}
+
+.required-field::after {
+    content: '*';
+    color: red;
+    margin-left: 5px;
+}
+
+.logo {
+    font-size: 60px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+}
+
+.info-icon:hover {
+    color: #2a73a0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 0;
+    border: none;
+    transform: none;
+}
+
+.modal-content {
+    background-color: #2c3138;
+    margin: 10% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; 
+    max-width: 500px; 
+    color: #c9c8c8;
+    border-radius: 10px;
+    border: none;
+}
+
+.close {
+    color: #186cd7;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -20px;
+}
+
+.close:hover,
+.close:focus {
+    color: #1561c2;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+code {
+    color: #bac2c6;
+    background-color: #191919;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 7px;
+    display: block;
+    overflow-x: auto;
+    white-space: pre-wrap; /* Allow line breaks */
+}
+
+/* For WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2e2f30;  /* Darker background for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #202122;  /* Custom color for the thumb */
+    border-radius: 6px;
+    border: 2px solid #2e2f30;  /* Match track color for a seamless look */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3a3b3c;  /* Slightly lighter color on hover */
+}
+
+/* For Firefox */
+html {
+    scrollbar-color: #2e2f30 #202122;  /* Thumb color, track color */
+    scrollbar-width: thin;  /* Thin scrollbar */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 256) {
+    .container {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .container > div {
+        width: 100%; /* Full width for stacked items */
+    }
+
+    .leftContent, .rightContent {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .topButtons {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .topButtons button {
+        width: 100%; /* Full width for buttons */
+        margin-bottom: 5px; /* Add some space between buttons */
+    }
+
+    #statusMessage {
+        float: none;
+        margin-left: 0;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+		.info-icon {
+		  cursor: pointer;
+		  margin-left: 0px;
+		  width: 18px;
+		  height: 18px;
+		  display: inline-block;
+		  vertical-align: middle;
+		  background-image: url('data:image/png;base64,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'); 
+			background-size: contain;
+			background-repeat: no-repeat;
+			margin-top: 1px; 
+			margin-bottom: 0; 
+			text-indent: -9999px;
+			overflow: hidden;
+			float: left;
+			margin-right: 3px;
+		}
+    </style>
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-content">
+	<form id="dataForm">
+	<div id="statusMessage"></div>
+	
+	
+<div class="container">
+    <div class="leftContent" style="margin-top:5px;">
+        <span class="info-icon">
+            <p>After running a test, the 'Response Data' will display the results. If the test is successful and a video is found, an 'Add Site' button will appear. If the test fails the button will not be shown, and you will need to adjust the settings and try again. Once a site has been added it will be listed in the 'Load Site Profile' section. Adding a site that already exists will not be duplicated, instead it will be overwritten with the new entry.</p>
+        </span>
+        
+        <label for="siteDropdown">Site Profile:</label>
+        <select id="siteDropdown">
+            <option value="" disabled selected>- Select a site -</option>
+        </select>
+    </div>
+    <div class="rightContent">
+        <div class="topButtons">				
+			<button class="testBtn" type="button" onclick="handleFormSubmission()">Run Test</button>					
+            <button class="resetBtn" type="button" id="resetButton" onclick="resetFields()">Reset</button>
+            <button class="deleteBtn" type="button" id="deleteButton" onclick="deleteSite()">Delete</button>
+        </div>
+    </div>
+</div>
+		<span class="info-icon">The url leading to the page that the video is located on. If the video has to be clicked, or a page naviation needs to take place before getting to the video page, use the css click selectors.</span>
+		<label class="required-field" for="url">Video Page URL:</label>
+		<input type="text" id="url" name="url" placeholder="Enter the URL of the video page." required><br>
+		
+		
+		
+<div class="container">
+    <div>
+        <span class="info-icon">
+            Choose whether or not to display the browser during testing. Enabling this option allows you to visually inspect the process. Note that the show Browser value is not saved when adding the site, and by default, the browser will be hidden.
+        </span>
+        <label for="showBrowser">Show Browser:</label>
+        <select id="showBrowser" name="showBrowser">
+            <option value="true">On</option>
+            <option value="false" selected>Off</option>
+        </select>
+    </div>
+
+    <div>
+        <span class="info-icon">
+            The timeout value in seconds for the page operations. This is how long to wait before abandoning the request and returning it as a failed attempt.
+        </span>
+        <label for="timeout">Page Timeout:</label>
+        <select id="timeout" name="timeout">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15" selected>15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
+            <option value="45">45</option>
+            <option value="50">50</option>
+            <option value="55">55</option>
+            <option value="60">60</option>
+            <option value="65">65</option>
+            <option value="70">70</option>
+            <option value="75">75</option>
+            <option value="80">80</option>
+            <option value="85">85</option>
+            <option value="90">90</option>
+            <option value="95">95</option>
+            <option value="100">100</option>
+            <option value="105">105</option>
+            <option value="110">110</option>
+            <option value="115">115</option>
+            <option value="120">120</option>
+        </select>
+    </div>
+</div>	
+		
+<div class="container">
+    <div>
+				<span class="info-icon"><p>
+					Choosing the right browser is an important step for the overall success of the extraction of the video url.
+		</p>
+		<p>
+			<strong>Firefox:</strong> Firefox is the most reliable browser because its fingerprinting looks the most human, making it less likely to be detected as a bot. However, Firefox can be slower when running tasks. When running in 'Show Browser' mode, it is even slower, but it will be faster during a production run.
+		</p>
+		<p>
+			<strong>Chrome:</strong> Chrome is much faster than Firefox but is more often identified as a bot by anti-bot detection systems. If you notice HeadlessVidX is being blocked because of a devtool detection script, try adding a string to the blacklist/javascripts-loading.txt that identifies and blocks the script from loading.</p>
+		<p>
+			<strong>WebKit:</strong> WebKit may sometimes be identified as an unsupported browser, but it is included as an option for those who might need it.
+		</p>
+		</span>
+				<label for="browserType">Select Browser:</label>
+				<select id="browserType" name="browserType">
+				  <option value="Chrome">Chrome</option>
+				  <option value="Chrome Beta">Chrome Beta</option>
+				  <option value="Chrome Canary">Chrome Canary</option>
+				  <option value="Chrome Dev">Chrome Dev</option>
+				  <option value="Chromium">Chromium</option>
+				  <option value="Edge">Edge</option>
+				  <option value="Edge Beta">Edge Beta</option>
+				  <option value="Edge Canary">Edge Canary</option>
+				  <option value="Edge Dev">Edge Dev</option>
+				  <option value="Firefox" selected>Firefox</option>
+				  <option value="Webkit">Webkit</option>
+				</select>
+			</div>
+
+			<div>
+			<span class="info-icon">Enable stealth mode to avoid detection by anti-bot measures. Set this option to true or false. Be aware that some websites can detect the stealth browser, but not the regular browser. If you encounter issues, try switching between stealth mode and the regular browser.</span>
+			<label for="stealth">Stealth Mode:</label>
+			<select id="stealth" name="stealth">
+				<option value="true" selected>On</option>
+				<option value="false">Off</option>
+			</select>
+			</div>
+		</div>	
+<div class="container">
+		<div>
+				<span class="info-icon"><p>The click Selectors provide various methods to target and click the elements on a webpage. You can use general CSS selectors like class, ID, or tag selectors (e.g., .btn-play, #main-content), or you can use XPath selectors to target the elements on the page that requires a click. Running JavaScript on a page is also possible by using the 'javascript:' scheme.</p>	
+
+				<p>If you need HeadlessVidX to click on multiple items or navigate through pages, you can use a comma to separate the selectors. By using comma-separated selectors can be very helpful, like when you need to interact with several elements on the page, such as navigating through different sections or pages, clicking multiple buttons, or performing a series of actions in a specific order. </p>
+
+		<p><strong>Some Examples:</strong></p>
+
+		<p>CSS:<br>
+		<code>play-btn</code></p>
+
+		<p>Xpath:<br>
+		<code>//*[@id='play-btn']</code></p>
+
+		  
+		<p>Javascript:<br>
+		<code>javascript:document.getElementById('play-btn').click();</code></p>
+
+		<p>Tip: Try the free version of the SelectorsHub plugin for Chrome and Firefox. By clicking on an element, this tool will automatically generate multiple expressions for you.</p></span>
+		<label for="selectors">Click Selectors:</label>
+		<input type="text" id="selectors" name="selectors" placeholder="CSS, Xpath, or Javscript..."></div>
+		
+					<div>
+				<span class="info-icon">Brute Click is a feature that uses x and y coordinates to click a specific point on a webpage. This can be useful when you need to interact with an element that cannot be easily targeted with a standard selector. However, for Brute Click to work effectively, at least one Click Selector is required. The Click Selector serves as an element to wait for, ensuring that the page has loaded sufficiently before the x and y coordinates are clicked.</span>
+				<label for="bruteClick">Brute Click:</label>
+				<select id="bruteClick" name="bruteClick">
+					<option value="false" selected>off</option>
+					<option value="by-element">click selector</option>
+					<option value="upper-left">upper left</option>
+					<option value="upper-center">upper center</option>
+					<option value="upper-right">upper right</option>
+					<option value="center-left">center left</option>
+					<option value="center">center</option>
+					<option value="center-right">center right</option>
+					<option value="lower-left">lower left</option>
+					<option value="lower-center">lower center</option>
+					<option value="lower-right">lower right</option>
+				</select>
+			</div>
+			</div>
+<div class="container">	
+<div>
+		<span class="info-icon">The video URL that needs to be extracted 'must' contain this string, or strings. You can use a list of comma separated strings. Example: If the video I wanted was located at http://example.com/video.mp4 I could use the string 'example'. Any other video files found on the page will be ignored.</span>
+		<label for="mustContain">Video 'Must' Contain:</label>
+		<input type="text" id="mustContain" name="mustContain" placeholder="Video url must contain..."><br>
+</div>
+<div>
+		<span class="info-icon">The returned video URL must 'not' contain this string, or strings. You can use a list of comma separated strings. Example: If an ad video is on the video page located at http://advertise-example.com/video.mp4 I could use 'advertise' to blacklist any video containing that string.</span>
+		<label for="notContain">Video 'Not' Contain:</label>
+		<input type="text" id="notContain" name="notContain" placeholder="Video url does not contain..."><br>
+</div>
+</div>
+<div class="container">		
+<div>
+		<span class="info-icon">If the website hosting the video blocks HeadlessVidX when it uses random user agents, you can set a custom user agent to try and bypass this issue. Many streaming sites employ 'theajack/disable-devtool,' which may cause the browser to close the page immediately. If you encounter this problem try switching the browser to another one, or even switching to a custom useragent like a Googlebot ua has worked.</span>
+		<label for="cusUseragent">Custom Useragent:</label>
+		<input type="text" id="cusUseragent" name="cusUseragent" placeholder="Enter a custom useragent..."><br>
+
+</div>
+<div>
+		<span class="info-icon">The Referer is the URL of the previous web page from which a link to the current page was followed. Some websites use the referrer information to enhance security and prevent direct access from outside sources. Specify the referrer URL to be included in the request headers if needed.</span>
+		<label for="ref">Include Referer:</label>
+		<input type="text" id="ref" name="ref" placeholder="Enter the needed referer..."><br>
+</div>
+</div>
+<div class="container">		
+<div>
+		<span class="info-icon">List resource types to block during the process, separated by commas. HeadlessVidX supports blocking the following resource types: document, stylesheet, image, media, font, script, texttrack, xhr, fetch, eventsource, websocket, manifest, and other. Be careful when blocking 'script' as it may cause the video to not load.</span>
+		<label for="block">Block Resource:</label>
+		<input type="text" id="block" name="block" placeholder="Enter resources to block...">
+</div>
+<div>		
+		<span class="info-icon">Enable blocking of JavaScript content based on a blacklist. When this option is enabled, the process inspects and searches each loading JavaScript file for strings listed in blacklist/javascripts-contains.txt. Be aware that enabling this feature may slow down the process due to the additional inspection required.</span>
+		<label for="blistjs">Block JS Contains:</label>
+		<select id="blistjs" name="blistjs">
+			<option value="true">On</option>
+			<option value="false" selected>Off</option>
+		</select>
+</div>
+</div>
+<div class="container">
+			<div>
+			
+			<span class="info-icon">Enable ad blocking using the EasyList. When this option is enabled, all URLs are filtered through the Adblock Plus EasyList, which blocks known ad domains and prevents advertisements from loading. This helps to speed up page load times and reduce page distractions from ads.</span>
+		<label for="adblocks">Block Ads:</label>
+		<select id="adblock" name="adblock">
+			<option value="true" selected>On</option>
+			<option value="false">Off</option>
+		</select>
+
+</div>
+<div>
+
+		
+				<span class="info-icon">Replace the body content with an iframe containing the specified URL. Set this option to true or false. Enabling this setting is useful if HeadlessVidX needs to interact with the video player within an iframe. This can be particularly helpful for sites that require embedding the video player to function correctly.</span>
+		<label for="frame">Embed Video:</label>
+		<select id="frame" name="frame">
+			<option value="true">On</option>
+			<option value="false" selected>Off</option>
+		</select>
+
+</div>
+</div>
+
+		<input type="submit" value="Run Test">
+	</form>
+  
+    </div>
+</div>
+
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modal-text"></p>
+    </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const siteDropdown = document.getElementById('siteDropdown');
+    siteDropdown.addEventListener('change', loadSite);
+
+    // Load site names on page load
+    loadSiteNames();
+});
+
+
+    // Scripts from train-sites.html
+    function loadSiteNames() {
+        fetch('/trainer/get_all_sites')
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const siteNames = data.sites.sort();
+                    const dropdown = document.getElementById('siteDropdown');
+                    dropdown.innerHTML = '<option value="" disabled selected>- Select a site -</option>';
+                    siteNames.forEach(siteName => {
+                        const option = document.createElement('option');
+                        option.value = siteName;
+                        option.textContent = siteName;
+                        dropdown.appendChild(option);
+                    });
+                } else {
+                    document.getElementById('statusMessage').innerText = 'Error loading site names...';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('statusMessage').innerText = 'A problem occurred...';
+            });
+    }
+
+function loadSite() {
+    const dropdown = document.getElementById('siteDropdown');
+    const siteName = dropdown.value;
+    const statusMessage = document.getElementById('statusMessage');
+
+    console.log('Loading site:', siteName);
+
+    fetch(`/trainer/get_site?hostname=${siteName}`)
+        .then(response => {
+            console.log('Response status:', response.status);
+            if (response.ok) {
+                return response.json();
+            } else if (response.status === 404) {
+                statusMessage.innerText = 'No profile was found..';
+                return Promise.reject('No data found.');
+            } else {
+                statusMessage.innerText = 'A problem occurred ...';
+                return Promise.reject('Network response was not ok.');
+            }
+        })
+        .then(data => {
+            console.log('Data received:', data);
+            if (data.success) {
+                const site = data.site.submitted_data;
+                console.log('Site data:', site);
+
+                // Ensure all elements exist before trying to set their values
+                const urlElement = document.getElementById('url');
+                const timeoutElement = document.getElementById('timeout');
+                const selectorsElement = document.getElementById('selectors');
+                const mustContainElement = document.getElementById('mustContain');
+                const notContainElement = document.getElementById('notContain');
+                const cusUseragentElement = document.getElementById('cusUseragent');
+                const refElement = document.getElementById('ref');
+                const browserTypeElement = document.getElementById('browserType');
+                const bruteClickElement = document.getElementById('bruteClick');
+                const blockElement = document.getElementById('block');
+                const stealthElement = document.getElementById('stealth');
+                const frameElement = document.getElementById('frame');
+                const adblockElement = document.getElementById('adblock');
+                const blistjsElement = document.getElementById('blistjs');
+
+                if (urlElement) urlElement.value = site.url || '';
+                if (timeoutElement) timeoutElement.value = site.timeout ? site.timeout / 1000 : '';
+                if (selectorsElement) selectorsElement.value = site.selectors || '';
+                if (mustContainElement) mustContainElement.value = site.mustContain || '';
+                if (notContainElement) notContainElement.value = site.notContain || '';
+                if (cusUseragentElement) cusUseragentElement.value = site.cusUseragent === 'random' ? '' : site.cusUseragent || '';
+                if (refElement) refElement.value = site.ref || '';
+                if (browserTypeElement) browserTypeElement.value = site.browserType || false;
+                if (bruteClickElement) bruteClickElement.value = site.bruteClick || false;
+                if (blockElement) blockElement.value = site.block || '';
+                if (stealthElement) stealthElement.value = site.stealth ? site.stealth.toString() : true;
+                if (frameElement) frameElement.value = site.frame ? site.frame.toString() : false;
+                if (adblockElement) adblockElement.value = site.adblock ? site.adblock.toString() : true;
+                if (blistjsElement) blistjsElement.value = site.blistjs ? site.blistjs.toString() : false;
+
+                statusMessage.innerText = `${siteName} has been loaded...`;
+            } else {
+                console.error('Data success false:', data);
+                statusMessage.innerText = `Error: ${data.error}`;
+            }
+        })
+        .catch(error => {
+            console.error('Fetch error:', error);
+            if (error !== 'No data found.' && error !== 'Network response was not ok.') {
+                statusMessage.innerText = 'A problem occurred...';
+            }
+        });
+}
+
+
+function resetFields() {
+    fetch('/trainer/get_default_values')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const defaultValues = data.defaultValues;
+
+                // Ensure all elements exist before trying to set their values
+                const urlElement = document.getElementById('url');
+                const timeoutElement = document.getElementById('timeout');
+                const selectorsElement = document.getElementById('selectors');
+                const mustContainElement = document.getElementById('mustContain');
+                const notContainElement = document.getElementById('notContain');
+                const cusUseragentElement = document.getElementById('cusUseragent');
+                const refElement = document.getElementById('ref');
+                const browserTypeElement = document.getElementById('browserType');
+                const bruteClickElement = document.getElementById('bruteClick');
+                const blockElement = document.getElementById('block');
+                const stealthElement = document.getElementById('stealth');
+                const frameElement = document.getElementById('frame');
+                const adblockElement = document.getElementById('adblock');
+                const blistjsElement = document.getElementById('blistjs');
+
+                if (urlElement) urlElement.value = '';
+                if (timeoutElement) timeoutElement.value = defaultValues.timeout ? defaultValues.timeout / 1000 : '';
+                if (selectorsElement) selectorsElement.value = defaultValues.selectors || '';
+                if (mustContainElement) mustContainElement.value = defaultValues.mustContain || '';
+                if (notContainElement) notContainElement.value = defaultValues.notContain || '';
+                if (cusUseragentElement) cusUseragentElement.value = defaultValues.cusUseragent === 'random' ? '' : defaultValues.cusUseragent || '';
+                if (refElement) refElement.value = defaultValues.ref || '';
+                if (browserTypeElement) browserTypeElement.value = defaultValues.browserType || false;
+                if (bruteClickElement) bruteClickElement.value = defaultValues.bruteClick || false;
+                if (blockElement) blockElement.value = defaultValues.block || '';
+                if (stealthElement) stealthElement.value = defaultValues.stealth ? defaultValues.stealth.toString() : true;
+                if (frameElement) frameElement.value = defaultValues.frame ? defaultValues.frame.toString() : false;
+                if (adblockElement) adblockElement.value = defaultValues.adblock ? defaultValues.adblock.toString() : true;
+                if (blistjsElement) blistjsElement.value = defaultValues.blistjs ? defaultValues.blistjs.toString() : false;
+				loadSiteNames();
+                document.getElementById('statusMessage').innerText = 'Fields have been reset...';
+            } else {
+                document.getElementById('statusMessage').innerText = `Error: ${data.error}`;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById('statusMessage').innerText = 'A problem occurred...';
+        });
+}
+
+
+    function deleteSite() {
+        const dropdown = document.getElementById('siteDropdown');
+        const siteName = dropdown.value;
+
+        if (confirm('Are you sure you want to delete ' + `${siteName}` + '?')) {
+            fetch(`/trainer/delete_site?hostname=${siteName}`, { method: 'DELETE' })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById('statusMessage').innerText = `${siteName} has been removed...`;
+                        loadSiteNames();
+                    } else {
+                        document.getElementById('statusMessage').innerText = `Error: ${data.error}`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('statusMessage').innerText = 'A problem occurred...';
+                });
+        }
+    }
+
+    window.onload = loadSiteNames;
+
+document.addEventListener("DOMContentLoaded", () => {
+    const infoButtons = document.querySelectorAll(".info-icon");
+    infoButtons.forEach(button => {
+        button.addEventListener("click", (event) => {
+            event.stopPropagation();
+            event.preventDefault();
+
+            const infoHtml = button.innerHTML.trim();
+            const label = button.nextElementSibling;
+            const labelText = label ? label.textContent.trim() : 'No label';
+
+            const messageData = {
+                action: 'openModal',
+                uniqueId: 'infoModalTrigger',
+                content: `<h3>${labelText}</h3>${infoHtml}`
+            };
+
+            window.parent.postMessage(messageData, window.location.origin);
+            console.log("Info button click message posted to parent window:", messageData);
+        });
+    });
+});
+
+// Function to handle form submission
+function handleFormSubmission(event) {
+    // Check if the parent frame's isSubmitting is true
+    if (window.parent.isSubmitting) {
+        alert("You can only submit one request at a time while using the trainer.");
+        return;
+    }
+
+    if (event) event.preventDefault();
+
+    const formData = new FormData(document.getElementById('dataForm'));
+    const url = formData.get('url');
+    const bruteClick = formData.get('bruteClick');
+    const selectors = formData.get('selectors');
+    let hostname;
+
+    try {
+        hostname = new URL(url).hostname;
+    } catch (e) {
+        alert('Invalid URL. Please enter a valid URL.');
+        return;
+    }
+
+    if (bruteClick !== 'false' && (!selectors || selectors.trim() === '')) {
+        alert('At least one \'Click Selector\' is required to use \'Brute Click\'.');
+        return;
+    }
+
+    formData.append('site', hostname);
+
+    const queryString = new URLSearchParams(formData).toString();
+    const baseUrl = window.location.origin;
+
+    const responseFrame = window.parent.document.getElementById('responseFrame');
+    responseFrame.src = `${baseUrl}/trainer/request.html?${queryString}`;
+
+    console.log("Updated response frame src to:", responseFrame.src);
+
+    const messageData = {
+        action: "formSubmitted",
+        uniqueId: 'formSubmission'
+    };
+
+    window.parent.postMessage(messageData, window.location.origin);
+    console.log("Form submission message posted to parent window:", messageData);
+}
+
+document.getElementById('dataForm').addEventListener('submit', handleFormSubmission);
+
+</script>
+
+</body>
+</html>

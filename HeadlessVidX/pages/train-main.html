@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeadlessVidX - Trainer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #17181b;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 100%;
+            height: 100vh;
+        }
+        .frame-container {
+            width: 33.33%;
+            height: 100vh;
+            background-color: #17181b;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .frame-header {
+            color: #bac2c6;
+            padding: 5px;
+            text-align: center;
+            font-size: 1.0em;
+            background-color: #17181b;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        iframe {
+            width: 100%;
+            height: calc(100% - 40px); /* Subtract the height of the header */
+            border: none;
+            overflow: hidden;
+            flex-grow: 1;
+        }
+				.modal {
+			display: none;
+			position: fixed;
+			z-index: 1;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: rgba(0, 0, 0, 0.4);
+			padding-top: 0;
+			border: none;
+			transform: none;
+		}
+		.modal-content {
+			background-color: #17181b;
+			margin: 10% auto; 
+			padding: 20px;
+			border: 1px solid #888;
+			width: 50%; 
+			max-width: 500px; 
+			color: #c9c8c8;
+			border-radius: 10px;
+			border: none;
+		}
+		.code {
+            color: #bac2c6;
+            background-color: #0f0e0e;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 7px;
+            display: block;
+            overflow-x: auto;
+            white-space: pre-wrap; /* Allow line breaks */
+        }
+        .close {
+            color: #186cd766;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #145a9c;
+            text-decoration: none;
+            cursor: pointer;
+        }
+		        .close {
+            color: #186cd7;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: -20px;
+        }
+		
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="frame-container">
+            <div class="frame-header">Server Log</div>
+            <iframe id="logFrame" src="../client"></iframe>
+        </div>
+        <div class="frame-container">
+            <div class="frame-header">Website Trainer</div>
+            <iframe id="trainerFrame" src="../trainer-form"></iframe>
+        </div>
+        <div class="frame-container">
+            <div class="frame-header">Response Data</div>
+            <iframe id="responseFrame" src="../request"></iframe>
+        </div>
+    </div>
+	
+	<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modal-text"></p>
+    </div>
+</div>
+
+<script>
+    console.log("Script loaded");
+
+    // Declare isSubmitting in the global scope
+    window.isSubmitting = false;
+
+    function handleTrainerRequest(event) {
+        event.preventDefault(); // Prevent default form submission immediately
+
+        console.log("Form submit triggered, isSubmitting:", window.isSubmitting);
+        if (window.isSubmitting) {
+            alert("You can only submit one request at a time while using the 'Website Trainer'.");
+            return;
+        }
+
+        // Set isSubmitting to true and log it
+        window.isSubmitting = true;
+        console.log("isSubmitting set to true");
+
+        console.log("handleTrainerRequest called");
+        const logFrame = document.getElementById('logFrame');
+        const responseFrame = document.getElementById('responseFrame');
+
+        const trainerFrame = document.getElementById('trainerFrame');
+        if (trainerFrame) {
+            trainerFrame.contentWindow.postMessage({ action: 'startSubmission' }, window.location.origin);
+        }
+    }
+
+    const trainerFrame = document.getElementById('trainerFrame');
+    if (trainerFrame) {
+        trainerFrame.addEventListener('load', function() {
+            console.log("trainerFrame loaded");
+            const trainerFrameContent = trainerFrame.contentWindow.document;
+
+            const trainerForm = trainerFrameContent.getElementById('trainerForm');
+            if (trainerForm) {
+                console.log("trainerForm found");
+                trainerForm.addEventListener('submit', handleTrainerRequest);
+                console.log("Event listener attached to trainerForm");
+            } else {
+                console.log("trainerForm not found");
+            }
+        });
+    } else {
+        console.log("trainerFrame not found");
+    }
+
+    window.addEventListener("message", function(event) {
+        const expectedOrigin = window.location.origin;
+        console.log("Message received from:", event.origin);
+        console.log("Message data:", event.data);
+
+        if (event.origin !== expectedOrigin) {
+            console.log("Origin mismatch:", event.origin, "!==", expectedOrigin);
+            return;
+        }
+
+        if (event.data.action === 'requestCompleted' && event.data.uniqueId === 'requestData') {
+            console.log("Handling request completed message");
+            // Reset isSubmitting to false and log it
+            window.isSubmitting = false;
+            console.log("isSubmitting set to false");
+        } else if (event.data.action === 'formSubmitted' && event.data.uniqueId === 'formSubmission') {
+            console.log("Handling form submission message");
+            const logFrame = document.getElementById('logFrame');
+            if (logFrame) {
+                logFrame.src = "../client";
+                console.log("logFrame src set to ../client");
+            } else {
+                console.log("logFrame not found");
+            }
+            handleTrainerRequest(event);
+        } else if (event.data.action === 'openModal' && event.data.uniqueId === 'infoModalTrigger') {
+            console.log("Opening modal with content:", event.data.content);
+            openModal(event.data.content);
+        } else {
+            console.log("Unknown message received:", event.data);
+        }
+    }, false);
+
+    document.addEventListener("DOMContentLoaded", function() {
+        console.log("DOMContentLoaded event triggered");
+        const logFrame = document.getElementById('logFrame');
+        const responseFrame = document.getElementById('responseFrame');
+
+        if (logFrame) {
+            logFrame.src = "../ready";
+            console.log("logFrame src set to ../ready");
+        } else {
+            console.log("logFrame not found");
+        }
+
+        if (responseFrame) {
+            responseFrame.src = "../ready";
+            console.log("responseFrame src set to ../ready");
+        } else {
+            console.log("responseFrame not found");
+        }
+    });
+
+    function openModal(content) {
+        const modal = document.getElementById("infoModal");
+        const modalText = document.getElementById("modal-text");
+        modalText.innerHTML = content;
+        modal.style.display = "block";
+    }
+
+    function closeModal() {
+        const modal = document.getElementById("infoModal");
+        modal.style.display = "none";
+    }
+
+    document.querySelector(".close").onclick = closeModal;
+    window.onclick = function(event) {
+        const modal = document.getElementById("infoModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+</script>
+
+
+</body>
+</html>
