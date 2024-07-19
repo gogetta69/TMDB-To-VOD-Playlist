@@ -3,6 +3,11 @@ Create Movies and TV Series Video on Demand (VOD) Playlist's using Xtream Codes 
 
 Generate video-on-demand movie and TV series playlists effortlessly with this script. The script utilizes TMDB and Real Debrid (with a few direct sources that do not require a Real Debrid API key) to dynamically create playlists. By emulating Xtream Codes apps like Tivimate, IPTV Streamers Pro, XCIPTV Player, and others, it provides comprehensive metadata including descriptions, cast and crew details, trailers, poster images, and backdrop images.
 
+[![Download ZIP](https://img.shields.io/badge/Download%20ZIP-latest-blue?style=for-the-badge&logo=github)](https://github.com/gogetta69/TMDB-To-VOD-Playlist/archive/refs/heads/main.zip)
+<br>
+
+## Screenshots
+
 <table>
   <tr>
     <td align="center">
