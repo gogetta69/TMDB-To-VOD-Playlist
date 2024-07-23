@@ -1,1 +1,173 @@
-const _0x4b8642=_0x22cc;(function(_0xb7ada8,_0x3e568e){const _0x33c159=_0x22cc,_0x4130a1=_0xb7ada8();while(!![]){try{const _0x5341ad=-parseInt(_0x33c159(0x15c))/0x1*(parseInt(_0x33c159(0x15b))/0x2)+-parseInt(_0x33c159(0x157))/0x3+-parseInt(_0x33c159(0x160))/0x4*(-parseInt(_0x33c159(0x132))/0x5)+parseInt(_0x33c159(0x15e))/0x6+parseInt(_0x33c159(0x158))/0x7*(parseInt(_0x33c159(0x165))/0x8)+parseInt(_0x33c159(0x131))/0x9+parseInt(_0x33c159(0x136))/0xa*(parseInt(_0x33c159(0x150))/0xb);if(_0x5341ad===_0x3e568e)break;else _0x4130a1['push'](_0x4130a1['shift']());}catch(_0x4e3d26){_0x4130a1['push'](_0x4130a1['shift']());}}}(_0x26f8,0xb35ad));const fs=require('fs'),path=require('path'),{firefox}=require('playwright'),crypto=require('crypto');class LRUCache{constructor(_0x5a49e4){const _0x31c14e=_0x22cc;this['limit']=_0x5a49e4,this[_0x31c14e(0x14a)]=new Map();}[_0x4b8642(0x142)](_0x1a7e79){const _0x2f6d09=_0x4b8642;if(!this[_0x2f6d09(0x14a)]['has'](_0x1a7e79))return null;const _0x491e46=this['cache'][_0x2f6d09(0x142)](_0x1a7e79);return this[_0x2f6d09(0x14a)][_0x2f6d09(0x146)](_0x1a7e79),this[_0x2f6d09(0x14a)]['set'](_0x1a7e79,_0x491e46),_0x491e46;}[_0x4b8642(0x13e)](_0x4b3897,_0x58cad6){const _0x4946f0=_0x4b8642;if(this[_0x4946f0(0x14a)]['size']>=this[_0x4946f0(0x14d)]){const _0x461e86=this[_0x4946f0(0x14a)][_0x4946f0(0x134)]()['next']()[_0x4946f0(0x155)];this['cache']['delete'](_0x461e86);}this[_0x4946f0(0x14a)]['set'](_0x4b3897,_0x58cad6);}}function _0x26f8(){const _0x3bb3d9=['createHash','No\x20matching\x20URL\x20found\x20within\x20the\x20timeout\x20period.','timestamp','cf_clearance','cf-chl-bypass','--ignore-certificate-errors','digest','newPage','Matching\x20URL\x20found:','Error\x20saving\x20cookies:','goto','newContext','response','sha256','7745328KsBXXr','129255WYxXLb','url','keys','Browser\x20closed\x20due\x20to\x20error.','40dsWKrU','Cookies\x20saved.','--disable-setuid-sandbox','request','close','addCookies','writeFileSync','argv','set','launch','exit','existsSync','get','name','log','Launching\x20browser...','delete','resolve','headers','--disable-infobars','cache','No\x20matching\x20URL\x20found.','token','limit','catch','update','383878aPrXVm','Browser\x20closed.','includes','find','parse','value','error','3353487PoILfL','35YEGepj','cookies','Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64;\x20rv:126.0)\x20Gecko/20100101\x20Firefox/126.0','35918MzFCMc','43TzjDwl','Response\x20cached\x20for\x20URL:','4402218JIXqlg','then','44uByoPr','Cloudflare\x20detected\x20on:','now','cookies.json','CF\x20Clearance\x20Cookie:','970328jEOklZ','stringify','Cookies\x20loaded.','Request:'];_0x26f8=function(){return _0x3bb3d9;};return _0x26f8();}const COOKIES_FILE=path[_0x4b8642(0x147)](__dirname,_0x4b8642(0x163)),CACHE_DURATION_MS=0x1d4c0,CACHE_LIMIT=0x64,cache=new LRUCache(CACHE_LIMIT);function _0x22cc(_0x5df0dc,_0x49b458){const _0x26f87b=_0x26f8();return _0x22cc=function(_0x22ccb3,_0x485771){_0x22ccb3=_0x22ccb3-0x12c;let _0x3d5fe9=_0x26f87b[_0x22ccb3];return _0x3d5fe9;},_0x22cc(_0x5df0dc,_0x49b458);}async function saveCookies(_0x56adb8){const _0x171f21=_0x4b8642,_0x40e4c3=await _0x56adb8[_0x171f21(0x159)]();fs[_0x171f21(0x13c)](COOKIES_FILE,JSON[_0x171f21(0x166)](_0x40e4c3,null,0x2)),console[_0x171f21(0x156)](_0x171f21(0x137));}async function loadCookies(_0x58b7c1){const _0x5af769=_0x4b8642;if(fs[_0x5af769(0x141)](COOKIES_FILE)){const _0xcb81b1=JSON[_0x5af769(0x154)](fs['readFileSync'](COOKIES_FILE));await _0x58b7c1[_0x5af769(0x13b)](_0xcb81b1),console[_0x5af769(0x156)](_0x5af769(0x167));}}function getCacheKey(_0x26907d){const _0x6a99f5=_0x4b8642;return crypto[_0x6a99f5(0x169)](_0x6a99f5(0x130))[_0x6a99f5(0x14f)](_0x26907d)[_0x6a99f5(0x16f)]('hex');}function getCachedResponse(_0x5c2300){const _0x1d5178=_0x4b8642,_0x3bb6b5=getCacheKey(_0x5c2300),_0x4a093b=cache[_0x1d5178(0x142)](_0x3bb6b5);if(_0x4a093b&&Date[_0x1d5178(0x162)]()-_0x4a093b[_0x1d5178(0x16b)]<CACHE_DURATION_MS)return _0x4a093b[_0x1d5178(0x12f)];return null;}function setCacheResponse(_0x5e9f51,_0x1931b8){const _0x44e528=_0x4b8642,_0x54837c=getCacheKey(_0x5e9f51);cache['set'](_0x54837c,{'response':_0x1931b8,'timestamp':Date[_0x44e528(0x162)]()}),console[_0x44e528(0x156)](_0x44e528(0x15d),_0x5e9f51);}((async()=>{const _0x29057f=_0x4b8642,_0x24686e=process[_0x29057f(0x13d)][0x2];!_0x24686e&&(console[_0x29057f(0x156)]('No\x20URL\x20provided.'),process[_0x29057f(0x140)](0x1));const _0xb3a22f=getCachedResponse(_0x24686e);_0xb3a22f&&(console['log'](JSON[_0x29057f(0x166)](_0xb3a22f)),process['exit'](0x0));let _0x456190;try{console[_0x29057f(0x156)](_0x29057f(0x145)),_0x456190=await firefox[_0x29057f(0x13f)]({'headless':!![],'args':['--no-sandbox',_0x29057f(0x138),_0x29057f(0x149),_0x29057f(0x16e),'--ignore-certificate-errors-spki-list']});const _0x4a83fe=await _0x456190[_0x29057f(0x12e)]({'userAgent':_0x29057f(0x15a)});await loadCookies(_0x4a83fe);const _0x5b2f37=await _0x4a83fe[_0x29057f(0x170)]();_0x5b2f37['on']('request',_0xe08cc8=>{const _0x38718c=_0x29057f;console[_0x38718c(0x156)](_0x38718c(0x168),_0xe08cc8[_0x38718c(0x133)]());}),_0x5b2f37['on']('response',async _0x1598a0=>{const _0x3274f6=_0x29057f,_0x41af3d=_0x1598a0[_0x3274f6(0x148)]();(_0x41af3d[_0x3274f6(0x16d)]||_0x41af3d['cf-cache-status'])&&console[_0x3274f6(0x156)](_0x3274f6(0x161),_0x1598a0[_0x3274f6(0x133)]());const _0xf18fd3=await _0x4a83fe[_0x3274f6(0x159)](),_0x1a299f=_0xf18fd3[_0x3274f6(0x153)](_0x19b317=>_0x19b317[_0x3274f6(0x143)]===_0x3274f6(0x16c));_0x1a299f&&(console[_0x3274f6(0x156)](_0x3274f6(0x164),_0x1a299f['value']),await saveCookies(_0x4a83fe));});let _0x19cba9=null;_0x5b2f37['on'](_0x29057f(0x139),_0x1dd2c2=>{const _0x3d1187=_0x29057f,_0x5f30ee=_0x1dd2c2['url']();_0x5f30ee[_0x3d1187(0x152)]('thetvapp')&&_0x5f30ee[_0x3d1187(0x152)](_0x3d1187(0x14c))&&(console[_0x3d1187(0x156)](_0x3d1187(0x171),_0x5f30ee),_0x19cba9=_0x5f30ee,saveCookies(_0x4a83fe)[_0x3d1187(0x15f)](async()=>{const _0x2839bb=_0x3d1187,_0x1ecae3={'status':'ok','url':_0x19cba9};setCacheResponse(_0x24686e,_0x1ecae3),await _0x456190[_0x2839bb(0x13a)](),console[_0x2839bb(0x156)](_0x2839bb(0x151)),console[_0x2839bb(0x144)](JSON[_0x2839bb(0x166)](_0x1ecae3)),process[_0x2839bb(0x140)](0x0);})[_0x3d1187(0x14e)](_0x58ea29=>{const _0xde64cf=_0x3d1187;console[_0xde64cf(0x156)](_0xde64cf(0x12c),_0x58ea29);}));}),console[_0x29057f(0x156)]('Navigating\x20to\x20URL:',_0x24686e),await _0x5b2f37[_0x29057f(0x12d)](_0x24686e,{'waitUntil':'domcontentloaded'}),setTimeout(async()=>{const _0x571b42=_0x29057f;if(!_0x19cba9){const _0x1107e4={'status':_0x571b42(0x156),'message':_0x571b42(0x14b)};setCacheResponse(_0x24686e,_0x1107e4),console[_0x571b42(0x156)](_0x571b42(0x16a)),await _0x456190[_0x571b42(0x13a)](),console[_0x571b42(0x156)]('Browser\x20closed\x20after\x20timeout.'),console[_0x571b42(0x144)](JSON[_0x571b42(0x166)](_0x1107e4)),process['exit'](0x1);}},0x7530);}catch(_0x20de85){console[_0x29057f(0x156)]('An\x20error\x20occurred:',_0x20de85),_0x456190&&(await _0x456190[_0x29057f(0x13a)](),console[_0x29057f(0x156)](_0x29057f(0x135)));}})());
+const fs = require('fs');
+const path = require('path');
+const { firefox } = require('playwright');
+const crypto = require('crypto');
+
+// Define the LRU Cache class
+class LRUCache {
+    constructor(limit) {
+        this.limit = limit;
+        this.cache = new Map();
+    }
+
+    get(key) {
+        if (!this.cache.has(key)) return null;
+        const value = this.cache.get(key);
+        this.cache.delete(key);
+        this.cache.set(key, value);
+        return value;
+    }
+
+    set(key, value) {
+        if (this.cache.size >= this.limit) {
+            const firstKey = this.cache.keys().next().value;
+            this.cache.delete(firstKey);
+        }
+        this.cache.set(key, value);
+    }
+}
+
+const COOKIES_FILE = path.resolve(__dirname, 'cookies.json');
+const CACHE_DURATION_MS = 120000; // 120 seconds
+const CACHE_LIMIT = 100; // Limit the cache to 100 entries
+
+// Initialize the LRU Cache
+const cache = new LRUCache(CACHE_LIMIT);
+
+async function saveCookies(context) {
+    const cookies = await context.cookies();
+    fs.writeFileSync(COOKIES_FILE, JSON.stringify(cookies, null, 2));
+    console.error('Cookies saved.');
+}
+
+async function loadCookies(context) {
+    if (fs.existsSync(COOKIES_FILE)) {
+        const cookies = JSON.parse(fs.readFileSync(COOKIES_FILE));
+        await context.addCookies(cookies);
+        console.error('Cookies loaded.');
+    }
+}
+
+function getCacheKey(url) {
+    return crypto.createHash('sha256').update(url).digest('hex');
+}
+
+function getCachedResponse(url) {
+    const cacheKey = getCacheKey(url);
+    const cachedEntry = cache.get(cacheKey);
+    if (cachedEntry && (Date.now() - cachedEntry.timestamp) < CACHE_DURATION_MS) {
+        return cachedEntry.response;
+    }
+    return null;
+}
+
+function setCacheResponse(url, response) {
+    const cacheKey = getCacheKey(url);
+    cache.set(cacheKey, { response, timestamp: Date.now() });
+    console.error('Response cached for URL:', url);
+}
+
+(async () => {
+    const targetUrlArg = process.argv[2];
+
+    if (!targetUrlArg) {
+        console.error('No URL provided.');
+        process.exit(1);
+    }
+
+    const cachedResponse = getCachedResponse(targetUrlArg);
+    if (cachedResponse) {
+        console.log(JSON.stringify(cachedResponse));
+        process.exit(0);
+    }
+
+    let browser;
+    try {
+        console.error('Launching browser...');
+        browser = await firefox.launch({
+            headless: true,
+            args: [
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
+                '--disable-infobars',
+                '--ignore-certificate-errors',
+                '--ignore-certificate-errors-spki-list'
+            ]
+        });
+
+        const context = await browser.newContext({
+            userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0'
+        });
+
+        await loadCookies(context);
+        const page = await context.newPage();
+
+        // Intercept and print all requests to the console
+        page.on('request', request => {
+            console.error('Request:', request.url());
+        });
+
+        // Intercept responses to detect Cloudflare and capture cf_clearance cookie
+        page.on('response', async response => {
+            const headers = response.headers();
+            if (headers['cf-chl-bypass'] || headers['cf-cache-status']) {
+                console.error('Cloudflare detected on:', response.url());
+            }
+
+            const cookies = await context.cookies();
+            const cfClearance = cookies.find(cookie => cookie.name === 'cf_clearance');
+            if (cfClearance) {
+                console.error('CF Clearance Cookie:', cfClearance.value);
+                await saveCookies(context);
+            }
+        });
+
+        // Monitor requests for specific strings
+        let matchingUrl = null;
+        page.on('request', request => {
+            const requestUrl = request.url();
+            if ((requestUrl.includes('.m3u8') || requestUrl.includes('expires')) && requestUrl.includes('thetvapp')) {
+                console.error('Matching URL found:', requestUrl);
+                matchingUrl = requestUrl;
+                saveCookies(context).then(async () => {
+                    const response = { status: 'ok', url: matchingUrl };
+                    setCacheResponse(targetUrlArg, response);
+                    await browser.close();
+                    console.error('Browser closed.');
+                    console.log(JSON.stringify(response));
+                    process.exit(0);  // Ensure the script exits
+                }).catch(error => {
+                    console.error('Error saving cookies:', error);
+                });
+            }
+        });
+
+        // Navigate to the provided URL
+        console.error('Navigating to URL:', targetUrlArg);
+        await page.goto(targetUrlArg, { waitUntil: 'domcontentloaded' });
+
+        // Click the button with ID #loadVideoBtnTwo
+        await page.click('#loadVideoBtnTwo');
+        console.error('Clicked button #loadVideoBtnTwo.');
+
+        // Keep the browser open for the timeout period to inspect URLs
+        setTimeout(async () => {
+            if (!matchingUrl) {
+                const errorResponse = { status: 'error', message: 'No matching URL found.' };
+                setCacheResponse(targetUrlArg, errorResponse);
+                console.error('No matching URL found within the timeout period.');
+                await browser.close();
+                console.error('Browser closed after timeout.');
+                console.log(JSON.stringify(errorResponse));
+                process.exit(1);  // Ensure the script exits
+            }
+        }, 30000); // 30 seconds
+
+    } catch (error) {
+        console.error('An error occurred:', error);
+        if (browser) {
+            await browser.close();
+            console.error('Browser closed due to error.');
+        }
+    }
+})();
