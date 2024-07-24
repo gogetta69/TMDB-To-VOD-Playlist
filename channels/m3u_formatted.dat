@@ -24,7 +24,7 @@ http://fl2.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8
 http://fl2.moveonjoy.com/BEIN_SPORTS/index.m3u8
 
 #EXTINF:-1 tvg-id="BET.us" tvg-name="BET" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s10051_dark_360w_270h.png" group-title="Live TV (MoveOnJoy)" streamId="8" channel-number="8",BET
-http://170.254.18.106/BET/index.m3u8
+http://fl2.moveonjoy.com/BET_EAST/index.m3u8
 
 #EXTINF:-1 tvg-id="BETGospel.us" tvg-name="BET_GOSPEL" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/bet-gospel-us.png?raw=true" group-title="Live TV (MoveOnJoy)" streamId="9" channel-number="9",BET Gospel
 http://fl2.moveonjoy.com/BET_GOSPEL/index.m3u8
@@ -305,7 +305,7 @@ http://fl2.moveonjoy.com/SHOWTIME_2/index.m3u8
 #EXTINF:-1 tvg-id="ShowtimeExtreme.us" tvg-name="Showtime Extreme East" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/showtime-extreme-us.png?raw=true" group-title="Live TV (MoveOnJoy)" streamId="101" channel-number="101",Showtime Extreme East
 http://fl2.moveonjoy.com/SHOWTIME_EXTREME/index.m3u8
 
-#EXTINF:-1 tvg-id="ShowtimeNext.us" tvg-name="Showtime Next East" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/showtime-next-us.png?raw=true" group-title="Live TV (MoveOnJoy)" streamId="102" channel-number="102",Showtime Next East
+#EXTINF:-1 tvg-id="ShowtimeNext(Pacific).us" tvg-name="Showtime Next" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/showtime-next-us.png?raw=true" group-title="Live TV (MoveOnJoy)" streamId="102" channel-number="102",Showtime Next
 http://fl2.moveonjoy.com/SHOWTIME_NEXT/index.m3u8
 
 #EXTINF:-1 tvg-id="ShowtimeWomen.us" tvg-name="Showtime Women East" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/showtime-women-us.png?raw=true" group-title="Live TV (MoveOnJoy)" streamId="103" channel-number="103",Showtime Women East
@@ -324,7 +324,7 @@ http://fl2.moveonjoy.com/STARZ_COMEDY/index.m3u8
 http://fl2.moveonjoy.com/STARZ_EDGE/index.m3u8
 
 #EXTINF:-1 tvg-id="StarzEncore.us" tvg-name="Starz Encore East" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/starz-encore-us.png?raw=true" group-title="Live TV (MoveOnJoy)" streamId="108" channel-number="108",Starz Encore East
-http://fl2.moveonjoy.com/STARZ_ENCORE/index.m3u8
+http://streamsy.online:2999/live/carlosbermudez/oZLRHZHL0z/1468.m3u8
 
 #EXTINF:-1 tvg-id="StarzEncoreAction.us" tvg-name="Starz Encore Action" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/starz-encore-action-us.png?raw=true" group-title="Live TV (MoveOnJoy)" streamId="109" channel-number="109",Starz Encore Action
 http://fl2.moveonjoy.com/STARZ_ENCORE_ACTION/index.m3u8
