@@ -1645,6 +1645,7 @@ function torrentSites($movieId, $imdbId, $title, $year=null){
 function checkLinkStatusCode($url, $verify = false)
 {
 	global $HTTP_PROXY, $USE_HTTP_PROXY;
+		
     // Existing code for checking 'video_proxy.php' and 'hls_proxy.php'
     if (strpos($url, 'video_proxy.php') !== false || strpos($url, 'hls_proxy.php') !== false) {
         /* return true; */
@@ -2124,13 +2125,13 @@ function throttleMxPlayerRequests($movieId) {
     
     $movieId = intval($movieId);
 	
-	if($type === 'movies'){
-		$keyPart = '_tmdb_url';
-	} elseif($type === 'series'){
-		$keyPart = '_series_' . $episodeId . '_url';
-	} else {
+	if(intval($movieId) > 10000000){
 		$keyPart = '_adult_url';
-	}
+	}  elseif($type === 'movies'){
+		$keyPart = '_tmdb_url';
+	} else {
+		$keyPart = '_series_' . $episodeId . '_url';
+	} 
     
     $key = $movieId . $keyPart;
     $keyB = ($movieId + 1) . $keyPart;
@@ -6197,6 +6198,8 @@ function FindVideoExtractor($urlToCheck, $tSite, $referer, $identifier=null) {
 		'dood.yt' => 'DoodExtract',
 		'dooood.com' => 'DoodExtract',
 		'dood.stream' => 'DoodExtract',
+		'dood' => 'DoodExtract',
+		'dood.li' => 'DoodExtract',
 		'ds2play.com' => 'DoodExtract',
 		'doods.pro' => 'DoodExtract',
 		'ds2video.com' => 'DoodExtract',
