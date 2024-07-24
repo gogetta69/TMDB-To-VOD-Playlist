@@ -146,9 +146,15 @@ function setCacheResponse(url, response) {
         console.error('Navigating to URL:', targetUrlArg);
         await page.goto(targetUrlArg, { waitUntil: 'domcontentloaded' });
 
-        // Click the button with ID #loadVideoBtnTwo
-        await page.click('#loadVideoBtnTwo');
-        console.error('Clicked button #loadVideoBtnTwo.');
+
+        // Click the button with class .video-button
+        const videoButton = await page.$('.video-button');
+        if (videoButton) {
+            await videoButton.click();
+            console.error('Clicked visible video button.');
+        } else {
+            console.error('No visible video button found.');
+        }
 
         // Keep the browser open for the timeout period to inspect URLs
         setTimeout(async () => {
