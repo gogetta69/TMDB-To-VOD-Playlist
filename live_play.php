@@ -29,8 +29,12 @@ function getLiveStream($streamId)
 	if (stripos($urlParam, 'thetvapp.to') !== false)   {
 		$urlparts = getTheTvAppStream($urlParam, $streamId);
 		
-/* 		$base = locateBaseURL();        
-		$urlparts = $base . 'hls_proxy.php?url=' . urlencode($urlparts) . '&data=' . base64_encode('https://thetvapp.to/') . '&streamId=' . $streamId;   */
+		$headers = 'User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0"';
+		$headers .= '|Origin="https://thetvapp.to"';
+		$headers .= '|Referer="https://thetvapp.to/"';
+
+		$base = locateBaseURL();        
+		$urlparts = $base . 'hls_proxy.php?url=' . urlencode($urlparts) . '&data=' . urlencode(base64_encode($headers)) . '&streamId=' . $streamId;  
 		
 		header('Location: ' . $urlparts, true, 302);
 		exit;
