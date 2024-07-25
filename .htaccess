@@ -1,6 +1,10 @@
 RewriteEngine On
 RewriteBase /
 
+# Deny access to specific extensions for movie, series, and live URLs (Prevent MX Player's multiple requests)
+RewriteCond %{REQUEST_URI} \.(srt|ssa|ass|sub|smi|txt|idx|mpl|vtt|psb|sami|pjs|sup)$ [NC]
+RewriteRule ^(movie|series|live)/ - [R=404,L]
+
 # For movies
 RewriteCond %{REQUEST_URI} ^(.*/)(movie/.*) 
 RewriteRule ^movie/.*/([0-9]+)\.[a-z0-9]+$ %1play.php?movieId=$1 [R=302,L]
