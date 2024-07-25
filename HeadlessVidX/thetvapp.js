@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { firefox } = require('playwright');
 const crypto = require('crypto');
+const UserAgent = require('user-agents');
 
 // Define the LRU Cache class
 class LRUCache {
@@ -67,6 +68,20 @@ function setCacheResponse(url, response) {
     console.error('Response cached for URL:', url);
 }
 
+function getRandomOffset() {
+    return Math.floor(Math.random() * 21) - 10; // Random number between -10 and 10
+}
+
+function getViewportSize(userAgentString) {
+    if (/Mobile|Android/.test(userAgentString)) {
+        return { width: 375, height: 667 }; // mobile devices
+    } else if (/Tablet|iPad/.test(userAgentString)) {
+        return { width: 768, height: 1024 }; // tablet devices
+    } else {
+        return { width: 1280, height: 720 }; // desktop computer
+    }
+}
+
 (async () => {
     const targetUrlArg = process.argv[2];
 
@@ -95,8 +110,14 @@ function setCacheResponse(url, response) {
             ]
         });
 
+        // Generate a random user agent
+        const userAgent = new UserAgent();
+        const userAgentString = userAgent.toString();
+        const viewportSize = getViewportSize(userAgentString);
+
         const context = await browser.newContext({
-            userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0'
+            viewport: viewportSize,
+            userAgent: userAgentString
         });
 
         await loadCookies(context);
@@ -135,7 +156,7 @@ function setCacheResponse(url, response) {
                     await browser.close();
                     console.error('Browser closed.');
                     console.log(JSON.stringify(response));
-                    process.exit(0);  // Ensure the script exits
+                    process.exit(0); 
                 }).catch(error => {
                     console.error('Error saving cookies:', error);
                 });
@@ -146,15 +167,20 @@ function setCacheResponse(url, response) {
         console.error('Navigating to URL:', targetUrlArg);
         await page.goto(targetUrlArg, { waitUntil: 'domcontentloaded' });
 
-
-        // Click the button with class .video-button
-        const videoButton = await page.$('.video-button');
-        if (videoButton) {
-            await videoButton.click();
-            console.error('Clicked visible video button.');
-        } else {
-            console.error('No visible video button found.');
+        // Adjust click coordinates based on viewport size
+        let baseX = 490;
+        let baseY = 340;
+        if (viewportSize.width < 768) { // Mobile
+            baseX = 240; 
+            baseY = 300; 
+        } else if (viewportSize.width < 1024) { // Tablet
+            baseX = 370;
+            baseY = 320;
         }
+        const offsetX = baseX + getRandomOffset();
+        const offsetY = baseY + getRandomOffset();
+        await page.mouse.click(offsetX, offsetY);
+        console.error(`Clicked at position (${offsetX}, ${offsetY}) for viewport size (${viewportSize.width}, ${viewportSize.height}).`);
 
         // Keep the browser open for the timeout period to inspect URLs
         setTimeout(async () => {
@@ -165,7 +191,7 @@ function setCacheResponse(url, response) {
                 await browser.close();
                 console.error('Browser closed after timeout.');
                 console.log(JSON.stringify(errorResponse));
-                process.exit(1);  // Ensure the script exits
+                process.exit(1); 
             }
         }, 30000); // 30 seconds
 
