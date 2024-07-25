@@ -108,11 +108,6 @@ if (isset($_GET['action']) && $_GET['action'] == 'get_series_categories') {
 	$output = [];
 	
 	// Setup a top level category for the networks. 
-/* 	$output[] = [
-		'category_id' => 199999, // Need to figure this out still.
-		'category_name' => 'Networks',
-		'parent_id' => 0
-	]; */
 
 	$tvNetworks = [
 		"Apple Tv" => 2552,
@@ -169,6 +164,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'get_series_categories') {
 
 // Send the request to the playlist.
 if (isset($_GET['action']) && $_GET['action'] == 'get_vod_streams') {
+
 	
 	if ($GLOBALS['INCLUDE_ADULT_VOD']) {
 		$jsonUrl = "https://raw.githubusercontent.com/gogetta69/public-files/main/adult-movies.json";
@@ -548,6 +544,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'get_series_info') {
   ],
 		"episodes" => []
 	];
+	
 
 // Add seasons
 foreach (range(1, $totalSeasons) as $seasonNumber) {
@@ -579,7 +576,8 @@ foreach (range(1, $totalSeasons) as $seasonNumber) {
 					continue; // If the episode's air date is in the future, skip it
 				}		
 				
-                $result["episodes"][$seasonNumber - 1][] = [
+								
+                $result["episodes"][$seasonNumber][] = [
                     "id" => $episode['id'],
                     "episode_num" => $episode['episode_number'],
                     "title" => "S" . str_pad($seasonNumber, 2, '0', STR_PAD_LEFT) . "E" . str_pad($episode['episode_number'], 2, '0', STR_PAD_LEFT).' - ' . $episode['name'],
