@@ -1435,15 +1435,15 @@ function torrentSites($movieId, $imdbId, $title, $year=null){
 	// The order of lines must match the same order & number of 	 
 	// lines in the $processingFunctions array or errors will occur.
  	$requests = [];
-	$requests[] = initialize_MagnetDL_com($movieId, $imdbId, $title, $year);
+	//$requests[] = initialize_MagnetDL_com($movieId, $imdbId, $title, $year);
 	$requests[] = initialize_bitLordSearch_com($movieId, $imdbId, $title, $year);
  	$requests[] = initialize_thepiratebay_org($movieId, $imdbId, $title, $year);
 	$requests[] = initialize_torrentDownload_info($movieId, $imdbId, $title, $year);
 	$requests[] = initialize_popcornTime($movieId, $imdbId, $title);
-	$requests[] = initialize_torrentGalaxy_to($movieId, $imdbId, $title);
+	//$requests[] = initialize_torrentGalaxy_to($movieId, $imdbId, $title);
 	$requests[] = initialize_glodls_to($movieId, $imdbId, $title, $year);
 	$requests[] = initialize_limetorrents_cc($movieId, $imdbId, $title, $year);
-	$requests[] = initialize_torrentz2_nz($movieId, $imdbId, $title, $year);
+	//$requests[] = initialize_torrentz2_nz($movieId, $imdbId, $title, $year);
 	$requests[] = initialize_knaben_eu($movieId, $imdbId, $title, $year);	
 	$requests[] = ($type == "series") ? initialize_ezTV_re($movieId, $imdbId, $title) : null;	
 	$requests[] = ($type == "movies") ? initialize_yts_mx($movieId, $imdbId, $title) : null;
@@ -1452,15 +1452,15 @@ function torrentSites($movieId, $imdbId, $title, $year=null){
 	
 	$seasonTitle = preg_replace('/s\d{2}e\d{2}/i', 'Season ' . $seasonNoPad, $title);
 	
-	$requests[] = ($type == "series") ? initialize_MagnetDL_com($movieId, $imdbId, $seasonTitle, $year, true) : null;
+	//$requests[] = ($type == "series") ? initialize_MagnetDL_com($movieId, $imdbId, $seasonTitle, $year, true) : null;
 	$requests[] = ($type == "series") ? initialize_bitLordSearch_com($movieId, $imdbId, $seasonTitle, $year, true) : null;
 	$requests[] = ($type == "series") ? initialize_thepiratebay_org($movieId, $imdbId, $seasonTitle, $year, true) : null;
 	$requests[] = ($type == "series") ? initialize_torrentDownload_info($movieId, $imdbId, $seasonTitle, $year, true) : null;
 	$requests[] = ($type == "series") ? initialize_popcornTime($movieId, $imdbId, $title, true) : null;		
-	$requests[] = ($type == "series") ? initialize_torrentGalaxy_to($movieId, $imdbId, $seasonTitle, true) : null;
+	//$requests[] = ($type == "series") ? initialize_torrentGalaxy_to($movieId, $imdbId, $seasonTitle, true) : null;
 	$requests[] = ($type == "series") ? initialize_glodls_to($movieId, $imdbId, $seasonTitle, $year, true) : null;
 	$requests[] = ($type == "series") ? initialize_limetorrents_cc($movieId, $imdbId, $seasonTitle, $year, true) : null;
-	$requests[] = ($type == "series") ? initialize_torrentz2_nz($movieId, $imdbId, $seasonTitle, $year, true) : null;	
+	//$requests[] = ($type == "series") ? initialize_torrentz2_nz($movieId, $imdbId, $seasonTitle, $year, true) : null;	
 	$requests[] = ($type == "series") ? initialize_knaben_eu($movieId, $imdbId, $seasonTitle, $year, true) : null;	
 	$requests[] = ($type == "series") ? initialize_ezTV_re($movieId, $imdbId, $seasonTitle, true) : null;	
 
@@ -1513,27 +1513,27 @@ function torrentSites($movieId, $imdbId, $title, $year=null){
 
 	// Mapping the response processing functions
 	$processingFunctions = [
-		'magnetdl_com' => 'magnetdl_com',
+		//'magnetdl_com' => 'magnetdl_com',
 		'bitLordSearch_com' => 'bitLordSearch_com',
 		'thepiratebay_org' => 'thepiratebay_org',
 		'torrentDownload_info' => 'torrentDownload_info',
 		'popcornTime' => 'popcornTime',
-		'torrentGalaxy_to' => 'torrentGalaxy_to',
+		//'torrentGalaxy_to' => 'torrentGalaxy_to',
 		'glodls_to' => 'glodls_to',
 		'limetorrents_cc' => 'limetorrents_cc',
-		'torrentz2_nz' => 'torrentz2_nz',	
+		//'torrentz2_nz' => 'torrentz2_nz',	
 		'knaben_eu' => 'knaben_eu',		
  		'ezTV_re' => ($type == "series") ? 'ezTV_re' : null,
 		'yts_mx' => ($type == "movies") ? 'yts_mx' : null,
-		'magnetdl_com_TVPack' => ($type == "series") ? 'magnetdl_com' : null,
+		//'magnetdl_com_TVPack' => ($type == "series") ? 'magnetdl_com' : null,
 		'bitLordSearch_com_TVPack' => ($type == "series") ? 'bitLordSearch_com' : null,
  		'thepiratebay_org_TVPack' => ($type == "series") ? 'thepiratebay_org' : null,
 		'torrentDownload_info_TVPack' => ($type == "series") ? 'torrentDownload_info' : null,
 		'popcornTime_TVPack' => ($type == "series") ? 'popcornTime' : null,
-		'torrentGalaxy_to_TVPack' => ($type == "series") ? 'torrentGalaxy_to' : null ,
+		//'torrentGalaxy_to_TVPack' => ($type == "series") ? 'torrentGalaxy_to' : null ,
 		'glodls_to_TVPack' => ($type == "series") ? 'glodls_to' : null,
 		'limetorrents_cc_TVPack' => ($type == "series") ? 'glodls_to' : null,
-		'torrentz2_nz_TVPack' => ($type == "series") ? 'torrentz2_nz' : null,	
+		//'torrentz2_nz_TVPack' => ($type == "series") ? 'torrentz2_nz' : null,	
 		'knaben_eu_TVPack' => ($type == "series") ? 'knaben_eu' : null,		
 		'ezTV_re_TVPack' => ($type == "series") ? 'ezTV_re' : null,	
 		
@@ -2122,7 +2122,7 @@ function throttleRequest($key) {
 
 function throttleMxPlayerRequests($movieId) {
     global $type, $episodeId;
-    
+	    
     $movieId = intval($movieId);
 	
 	if(intval($movieId) > 10000000){
