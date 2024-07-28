@@ -1354,7 +1354,9 @@ function highlightMatch($text, $pattern) {
 
 function filterCompareTitles($firstTitle, $secondTitle, $tvpack=false){
 	
-	global $season, $seasonNoPad, $globalTitle, $globalSeriesYear, $type;	
+	global $season, $seasonNoPad, $globalTitle, $globalSeriesYear, $type;
+
+	$showFiltered = false;
 		
 	//Replace non alphanumeric characters
     $firstTitle_adjusted = preg_replace('/[^a-zA-Z0-9]/', '', $firstTitle);
@@ -1365,7 +1367,7 @@ function filterCompareTitles($firstTitle, $secondTitle, $tvpack=false){
 	
 	// Check the first 3 characters match. Prevents 'Fear the Walking Dead' from matching 'The Walking Dead'.	
 	if(substr($firstTitle_adjusted, 0, 3) !== substr($secondTitle_adjusted, 0, 3)){
-		if ($GLOBALS['DEBUG']) {
+		if ($GLOBALS['DEBUG'] && $showFiltered) {
 			echo "<br>Original: ". $firstTitle . "<br>FILTERED! - Compare: " . $firstTitle_adjusted . ' to ' . $secondTitle_adjusted . "<br><br>";
 		}		
 		return false;
@@ -1373,7 +1375,7 @@ function filterCompareTitles($firstTitle, $secondTitle, $tvpack=false){
 
 	//If no year is found or the year doesn't match return false. (good for movies, not for tv shows)
 	if ($type == 'movies' && strpos($firstTitle_adjusted, $GLOBALS['globalYear']) === false) {
-		if ($GLOBALS['DEBUG']) {
+		if ($GLOBALS['DEBUG'] && $showFiltered) {
 			echo "<br>Original: ". $firstTitle . "<br>FILTERED! - Compare: " . $firstTitle_adjusted . ' to ' . $secondTitle_adjusted . "<br><br>";
 		}
 		return false;
@@ -1404,7 +1406,7 @@ function filterCompareTitles($firstTitle, $secondTitle, $tvpack=false){
 		// Prevent double digit matching, this will match "season1" but not "season11
 		$seasonRegex = "/season" . preg_quote($seasonNoPad, '/') . "(?!\d)/";
 		if (!preg_match($seasonRegex, $firstTitle_adjusted)) {
-			if ($GLOBALS['DEBUG']) {
+			if ($GLOBALS['DEBUG'] && $showFiltered) {
 				echo "<br>Original: ". $firstTitle . "<br>FILTERED! - Compare: " . $firstTitle_adjusted . ' to ' . $secondTitle_adjusted . "<br><br>";
 			}
 			return false;
@@ -1413,7 +1415,7 @@ function filterCompareTitles($firstTitle, $secondTitle, $tvpack=false){
 	}
 	
     if (stripos($firstTitle_adjusted, $secondTitle_adjusted) !== false) {  
-	if ($GLOBALS['DEBUG']) {
+	if ($GLOBALS['DEBUG'] && $showFiltered) {
 		$match = $secondTitle_adjusted;
 		$highlightedFirstTitle = highlightMatch($firstTitle_adjusted, $match);
 		$highlightedSecondTitle = highlightMatch($secondTitle_adjusted, $match);
@@ -1421,7 +1423,7 @@ function filterCompareTitles($firstTitle, $secondTitle, $tvpack=false){
 	}	
         return true;
     } else {  
-		if ($GLOBALS['DEBUG']) {
+		if ($GLOBALS['DEBUG'] && $showFiltered) {
 			echo "<br>Original: ". $firstTitle . "<br>FILTERED! - Compare: " . $firstTitle_adjusted . ' to ' . $secondTitle_adjusted . "<br><br>";
 		}
 			return false;
@@ -1429,217 +1431,240 @@ function filterCompareTitles($firstTitle, $secondTitle, $tvpack=false){
     }
 }	
 
-function torrentSites($movieId, $imdbId, $title, $year=null){
-	global $timeOut, $maxResolution, $torrentData, $type, $season, $episode, $seasonNoPad, $episodeNoPad, $useRealDebrid, $usePremiumize, $deleteRDFiles;	
-		
-	// The order of lines must match the same order & number of 	 
-	// lines in the $processingFunctions array or errors will occur.
- 	$requests = [];
-	//$requests[] = initialize_MagnetDL_com($movieId, $imdbId, $title, $year);
-	$requests[] = initialize_bitLordSearch_com($movieId, $imdbId, $title, $year);
- 	$requests[] = initialize_thepiratebay_org($movieId, $imdbId, $title, $year);
-	$requests[] = initialize_torrentDownload_info($movieId, $imdbId, $title, $year);
-	$requests[] = initialize_popcornTime($movieId, $imdbId, $title);
-	//$requests[] = initialize_torrentGalaxy_to($movieId, $imdbId, $title);
-	$requests[] = initialize_glodls_to($movieId, $imdbId, $title, $year);
-	$requests[] = initialize_limetorrents_cc($movieId, $imdbId, $title, $year);
-	//$requests[] = initialize_torrentz2_nz($movieId, $imdbId, $title, $year);
-	$requests[] = initialize_knaben_eu($movieId, $imdbId, $title, $year);	
-	$requests[] = ($type == "series") ? initialize_ezTV_re($movieId, $imdbId, $title) : null;	
-	$requests[] = ($type == "movies") ? initialize_yts_mx($movieId, $imdbId, $title) : null;
+function torrentSites($movieId, $imdbId, $title, $year = null)
+{
+    global $timeOut, $maxResolution, $torrentData, $type, $season, $episode, $seasonNoPad, $episodeNoPad, $useRealDebrid, $usePremiumize, $deleteRDFiles;
 	
-	//Run addional threads to search for Season TV Pack.
-	
-	$seasonTitle = preg_replace('/s\d{2}e\d{2}/i', 'Season ' . $seasonNoPad, $title);
-	
-	//$requests[] = ($type == "series") ? initialize_MagnetDL_com($movieId, $imdbId, $seasonTitle, $year, true) : null;
-	$requests[] = ($type == "series") ? initialize_bitLordSearch_com($movieId, $imdbId, $seasonTitle, $year, true) : null;
-	$requests[] = ($type == "series") ? initialize_thepiratebay_org($movieId, $imdbId, $seasonTitle, $year, true) : null;
-	$requests[] = ($type == "series") ? initialize_torrentDownload_info($movieId, $imdbId, $seasonTitle, $year, true) : null;
-	$requests[] = ($type == "series") ? initialize_popcornTime($movieId, $imdbId, $title, true) : null;		
-	//$requests[] = ($type == "series") ? initialize_torrentGalaxy_to($movieId, $imdbId, $seasonTitle, true) : null;
-	$requests[] = ($type == "series") ? initialize_glodls_to($movieId, $imdbId, $seasonTitle, $year, true) : null;
-	$requests[] = ($type == "series") ? initialize_limetorrents_cc($movieId, $imdbId, $seasonTitle, $year, true) : null;
-	//$requests[] = ($type == "series") ? initialize_torrentz2_nz($movieId, $imdbId, $seasonTitle, $year, true) : null;	
-	$requests[] = ($type == "series") ? initialize_knaben_eu($movieId, $imdbId, $seasonTitle, $year, true) : null;	
-	$requests[] = ($type == "series") ? initialize_ezTV_re($movieId, $imdbId, $seasonTitle, true) : null;	
+	$torrentTimeOut = 5;
 
-	
-	$headers = [
-		'Connection: keep-alive',
-		'Accept: text/html, application/json'
-	];
-	
-	// Initialize the multi cURL handler
-	$mh = curl_multi_init();
-	$curlHandles = [];
-	$responses = [];
+    // The order of lines must match the same order & number of 
+    // lines in the $processingFunctions array or errors will occur.
+    $requests = [];
+    $requests[] = initialize_bitsearch_to($movieId, $imdbId, $title, $year);	
+    $requests[] = initialize_torrents_csv_com($movieId, $imdbId, $title, $year);
+    //$requests[] = initialize_MagnetDL_com($movieId, $imdbId, $title, $year);
+    $requests[] = initialize_bitLordSearch_com($movieId, $imdbId, $title, $year);
+    $requests[] = initialize_thepiratebay_org($movieId, $imdbId, $title, $year);
+    $requests[] = initialize_torrentDownload_info($movieId, $imdbId, $title, $year);
+    $requests[] = initialize_popcornTime($movieId, $imdbId, $title);
+    //$requests[] = initialize_torrentGalaxy_to($movieId, $imdbId, $title);
+    $requests[] = initialize_glodls_to($movieId, $imdbId, $title, $year);
+    $requests[] = initialize_limetorrents_cc($movieId, $imdbId, $title, $year);
+    //$requests[] = initialize_torrentz2_nz($movieId, $imdbId, $title, $year);
+    $requests[] = initialize_knaben_eu($movieId, $imdbId, $title, $year);
+    $requests[] = ($type == "series") ? initialize_ezTV_re($movieId, $imdbId, $title) : null;
+    $requests[] = ($type == "movies") ? initialize_yts_mx($movieId, $imdbId, $title) : null;
+	$requests[] = ($type == "movies") ? initialize_rutor_info($movieId, $imdbId, $title, $year) : null;
 
-	foreach ($requests as $request) {
-		if ($request === null) {
-			continue;
-		}
-		$url = $request;		
-			
-		$ch = curl_init($url);
-		
-		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($ch, CURLOPT_TIMEOUT, $timeOut);
-		curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0");
-		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-		
-		curl_multi_add_handle($mh, $ch);
-		$curlHandles[] = $ch;
-	}
+    // Run additional threads to search for Season TV Pack.
+    $seasonTitle = preg_replace('/s\d{2}e\d{2}/i', 'Season ' . $seasonNoPad, $title);
 
-	// Execute all queries simultaneously
-	$running = null;
-	do {
-		curl_multi_exec($mh, $running);
-		
-	} while ($running);
+    $requests[] = ($type == "series") ? initialize_bitsearch_to($movieId, $imdbId, $title, $year, true) : null;
+    $requests[] = ($type == "series") ? initialize_rutor_info($movieId, $imdbId, $title, $year, true) : null;
+    $requests[] = ($type == "series") ? initialize_torrents_csv_com($movieId, $imdbId, $title, $year, true) : null;
+    //$requests[] = ($type == "series") ? initialize_MagnetDL_com($movieId, $imdbId, $seasonTitle, $year, true) : null;
+    $requests[] = ($type == "series") ? initialize_bitLordSearch_com($movieId, $imdbId, $seasonTitle, $year, true) : null;
+    $requests[] = ($type == "series") ? initialize_thepiratebay_org($movieId, $imdbId, $seasonTitle, $year, true) : null;
+    $requests[] = ($type == "series") ? initialize_torrentDownload_info($movieId, $imdbId, $seasonTitle, $year, true) : null;
+    //$requests[] = ($type == "series") ? initialize_torrentGalaxy_to($movieId, $imdbId, $seasonTitle, true) : null;
+    $requests[] = ($type == "series") ? initialize_glodls_to($movieId, $imdbId, $seasonTitle, $year, true) : null;
+    $requests[] = ($type == "series") ? initialize_limetorrents_cc($movieId, $imdbId, $seasonTitle, $year, true) : null;
+    //$requests[] = ($type == "series") ? initialize_torrentz2_nz($movieId, $imdbId, $seasonTitle, $year, true) : null;
+    $requests[] = ($type == "series") ? initialize_knaben_eu($movieId, $imdbId, $seasonTitle, $year, true) : null;
+    $requests[] = ($type == "series") ? initialize_ezTV_re($movieId, $imdbId, $seasonTitle, true) : null;
 
-	// Collect responses
-	foreach ($curlHandles as $ch) {
-		$response = curl_multi_getcontent($ch);
-		$responses[] = $response;
-		curl_multi_remove_handle($mh, $ch);
-		curl_close($ch);
-	}
+    $headers = [
+        'Connection: keep-alive',
+        'Accept: text/html, application/json'
+    ];
 
-	curl_multi_close($mh);		
+    // Initialize the multi cURL handler
+    $mh = curl_multi_init();
+    $curlHandles = [];
+    $responses = [];
+    $startTimes = [];
+    $endTimes = [];
 
-	// Mapping the response processing functions
-	$processingFunctions = [
-		//'magnetdl_com' => 'magnetdl_com',
-		'bitLordSearch_com' => 'bitLordSearch_com',
-		'thepiratebay_org' => 'thepiratebay_org',
-		'torrentDownload_info' => 'torrentDownload_info',
-		'popcornTime' => 'popcornTime',
-		//'torrentGalaxy_to' => 'torrentGalaxy_to',
-		'glodls_to' => 'glodls_to',
-		'limetorrents_cc' => 'limetorrents_cc',
-		//'torrentz2_nz' => 'torrentz2_nz',	
-		'knaben_eu' => 'knaben_eu',		
- 		'ezTV_re' => ($type == "series") ? 'ezTV_re' : null,
-		'yts_mx' => ($type == "movies") ? 'yts_mx' : null,
-		//'magnetdl_com_TVPack' => ($type == "series") ? 'magnetdl_com' : null,
-		'bitLordSearch_com_TVPack' => ($type == "series") ? 'bitLordSearch_com' : null,
- 		'thepiratebay_org_TVPack' => ($type == "series") ? 'thepiratebay_org' : null,
-		'torrentDownload_info_TVPack' => ($type == "series") ? 'torrentDownload_info' : null,
-		'popcornTime_TVPack' => ($type == "series") ? 'popcornTime' : null,
-		//'torrentGalaxy_to_TVPack' => ($type == "series") ? 'torrentGalaxy_to' : null ,
-		'glodls_to_TVPack' => ($type == "series") ? 'glodls_to' : null,
-		'limetorrents_cc_TVPack' => ($type == "series") ? 'glodls_to' : null,
-		//'torrentz2_nz_TVPack' => ($type == "series") ? 'torrentz2_nz' : null,	
-		'knaben_eu_TVPack' => ($type == "series") ? 'knaben_eu' : null,		
-		'ezTV_re_TVPack' => ($type == "series") ? 'ezTV_re' : null,	
-		
-		
-	];
-	
-	$results = [];
-	$i = 0;
-	foreach ($processingFunctions as $key => $func) {
-		if ($func !== null && isset($responses[$i])) {
-			// Check if the key contains 'Pack'
-			if (strpos($key, 'TVPack') !== false) {
-				// Call the function with $responses[$i] and true
-				$results[$key] = $func($responses[$i], true) ?: 0;
-			} else {
-				// Call the function normally
-				$results[$key] = $func($responses[$i]) ?: 0;
-			}
-			$i++;
-		}
-	}
+    foreach ($requests as $index => $request) {
+        if ($request === null) {
+            continue;
+        }
+        $url = $request;
 
-	$randomId = uniqid('id_', true);
-	$hashedRandomId = md5($randomId . rand());
+        $ch = curl_init($url);
 
-	$htmlContent = '<div id="'.$hashedRandomId.'" style="display: none;">';
-	foreach ($results as $functionName => $value) {
-		$htmlContent .= "<li>$functionName: $value</li>";
-	}  
-	
-	$service = 'RealDebrid';
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_TIMEOUT, $torrentTimeOut);
+        curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/128.0");
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
-	if (!empty($torrentData && count($torrentData) > 0)) {		
-		
-		$returnedPremiumLink = '';
-		
-		//Run real debrid service.
-		if($useRealDebrid === true && $service == 'RealDebrid'){
-		$returnedPremiumLink = selectHashByPreferences($torrentData, $maxResolution, 'torrentSites', 'RealDebrid'); 
-			if (count($deleteRDFiles) > 0) {
-				// Run the deleteFiles_RD function to clean up.
-				deleteFiles_RD($deleteRDFiles);
-			}
-		}	
-		
-		if(empty($returnedPremiumLink)){		
-			if($useRealDebrid === true && $service == 'RealDebrid'){
-				$pageUrl = 'https://real-debrid.com/';
-				$htmlContent .= "<li>RealDebrid: 0</li>";
-			}
-			$service = 'Premiumize';
-		}	
-		
-		//Run premiumize service.
-		if($usePremiumize === true && $service == 'Premiumize'){
-			$returnedPremiumLink = selectHashByPreferences($torrentData, $maxResolution, 'torrentSites', 'Premiumize'); 
-		}	
-		
-		if($returnedPremiumLink !== false) {     
+        curl_multi_add_handle($mh, $ch);
+        $curlHandles[$index] = $ch;
+        $startTimes[$index] = microtime(true);
+    }
 
-			if($useRealDebrid === true && $service == 'RealDebrid'){
-				$pageUrl = 'https://real-debrid.com/';
-				$htmlContent .= "<li>RealDebrid: $returnedPremiumLink[1]</li>";
-			}
-			if($usePremiumize === true && $service == 'Premiumize'){
-				$pageUrl = 'https://premiumize.me/';
-				$htmlContent .= "<li>Premiumize: $returnedPremiumLink[1]</li>";
-			}		
-			$htmlContent .= '</div><a href="javascript:void(0);" onclick="openPopup(\''.$hashedRandomId.'\')">Click to view...</a>'; 
-			logDetails('torrentSites', $htmlContent, 'successful',$GLOBALS['logTitle'], $pageUrl, $returnedPremiumLink[0], $type, $GLOBALS['movieId'], $type === 'series' ? $GLOBALS['seriesCode'] : 'n/a');		
-			
-			return $returnedPremiumLink[0];
-			
-		} else {
+    // Execute all queries simultaneously
+    $running = null;
+    do {
+        curl_multi_exec($mh, $running);
+        curl_multi_select($mh);
 
-			if($useRealDebrid === true && $service == 'RealDebrid'){
-				$pageUrl = 'https://real-debrid.com/';
-				$htmlContent .= "<li>RealDebrid: 0</li>";
-			}
-			if($usePremiumize === true && $service == 'Premiumize'){
-				$pageUrl = 'https://premiumize.me/';
-				$htmlContent .= "<li>Premiumize: 0</li>";
-			}			
+        // Check for completed requests
+        while ($info = curl_multi_info_read($mh)) {
+            $ch = $info['handle'];
+            $index = array_search($ch, $curlHandles, true);
+            if ($index !== false) {
+                $endTimes[$index] = microtime(true);
+                $responses[$index] = curl_multi_getcontent($ch);
+                curl_multi_remove_handle($mh, $ch);
+                curl_close($ch);
+            }
+        }
+    } while ($running > 0);
 
-			$htmlContent .= '</div><a href="javascript:void(0);" onclick="openPopup(\''.$hashedRandomId.'\')">Click to view...</a>'; 
-			logDetails('torrentSites', $htmlContent, 'failed', $GLOBALS['logTitle'], $pageUrl, 'n/a', $type, $GLOBALS['movieId'], $type === 'series' ? $GLOBALS['seriesCode'] : 'n/a');	
+    curl_multi_close($mh);
 
-			return false;
-		}
-	} else {
-		
-		if($useRealDebrid === true && $service == 'RealDebrid'){
-			$pageUrl = 'https://real-debrid.com/';
-			$htmlContent .= "<li>RealDebrid: 0</li>";
-		}
-		if($usePremiumize === true && $service == 'Premiumize'){
-			$pageUrl = 'https://premiumize.me/';
-			$htmlContent .= "<li>Premiumize: 0</li>";
-		}	
+    // Mapping the response processing functions
+    $processingFunctions = [
+        'bitsearch_to' => 'bitsearch_to',	
+        'torrents_csv_com' => 'torrents_csv_com',
+        //'magnetdl_com' => 'magnetdl_com',
+        'bitLordSearch_com' => 'bitLordSearch_com',
+        'thepiratebay_org' => 'thepiratebay_org',
+        'torrentDownload_info' => 'torrentDownload_info',
+        'popcornTime' => 'popcornTime',
+        //'torrentGalaxy_to' => 'torrentGalaxy_to',
+        'glodls_to' => 'glodls_to',
+        'limetorrents_cc' => 'limetorrents_cc',
+        //'torrentz2_nz' => 'torrentz2_nz',
+        'knaben_eu' => 'knaben_eu',
+        'ezTV_re' => ($type == "series") ? 'ezTV_re' : null,
+        'yts_mx' => ($type == "movies") ? 'yts_mx' : null,
+		'rutor_info' => ($type == "movies") ? 'rutor_info' : null,
+		'bitsearch_to_TVPack' => ($type == "series") ? 'bitsearch_to' : null,		
+        'rutor_info_TVPack' => ($type == "series") ? 'rutor_info' : null,		
+        'torrents_csv_com_TVPack' => ($type == "series") ? 'torrents_csv_com' : null,
+        //'magnetdl_com_TVPack' => ($type == "series") ? 'magnetdl_com' : null,
+        'bitLordSearch_com_TVPack' => ($type == "series") ? 'bitLordSearch_com' : null,
+        'thepiratebay_org_TVPack' => ($type == "series") ? 'thepiratebay_org' : null,
+        'torrentDownload_info_TVPack' => ($type == "series") ? 'torrentDownload_info' : null,       
+        //'torrentGalaxy_to_TVPack' => ($type == "series") ? 'torrentGalaxy_to' : null,
+        'glodls_to_TVPack' => ($type == "series") ? 'glodls_to' : null,
+        'limetorrents_cc_TVPack' => ($type == "series") ? 'glodls_to' : null,
+        //'torrentz2_nz_TVPack' => ($type == "series") ? 'torrentz2_nz' : null,
+        'knaben_eu_TVPack' => ($type == "series") ? 'knaben_eu' : null,
+        'ezTV_re_TVPack' => ($type == "series") ? 'ezTV_re' : null,
+    ];
 
-		$htmlContent .= '</div><a href="javascript:void(0);" onclick="openPopup(\''.$hashedRandomId.'\')">Click to view...</a>'; 
-		logDetails('torrentSites', $htmlContent, 'failed', $GLOBALS['logTitle'], $pageUrl, 'n/a', $type, $GLOBALS['movieId'], $type === 'series' ? $GLOBALS['seriesCode'] : 'n/a');	
+    $results = [];
+    foreach ($processingFunctions as $key => $func) {
+        $index = array_search($key, array_keys($processingFunctions));
+        if ($func !== null && isset($responses[$index])) {
+            $startTime = $startTimes[$index];
+            $endTime = $endTimes[$index];
+            $timeDifference = round($endTime - $startTime, 2);
 
-		return false;
-	}	
+            // Check if the key contains 'Pack'
+            if (strpos($key, 'TVPack') !== false) {
+                // Call the function with $responses[$index] and true
+                $totalAdded = $func($responses[$index], true) ?: 0;
+            } else {
+                // Call the function normally
+                $totalAdded = $func($responses[$index]) ?: 0;
+            }
 
+            // Format the result
+            $results[$key] = '(' . $totalAdded . ') - ' . $timeDifference . ' sec.';
+        }
+    }
+
+    $randomId = uniqid('id_', true);
+    $hashedRandomId = md5($randomId . rand());
+
+    $htmlContent = '<div id="' . $hashedRandomId . '" style="display: none;">';
+    foreach ($results as $functionName => $value) {
+        $htmlContent .= "<li>$functionName $value</li>";
+    }
+
+    $service = 'RealDebrid';
+
+    if (!empty($torrentData) && count($torrentData) > 0) {
+
+        $returnedPremiumLink = '';
+
+        // Run real debrid service.
+        if ($useRealDebrid === true && $service == 'RealDebrid') {
+			$premStartTime = microtime(true);
+            $returnedPremiumLink = selectHashByPreferences($torrentData, $maxResolution, 'torrentSites', 'RealDebrid');
+			$premEndTime= microtime(true);
+			$premTimeDifference = round($premEndTime - $premStartTime, 2);
+            if (count($deleteRDFiles) > 0) {
+                // Run the deleteFiles_RD function to clean up.
+                deleteFiles_RD($deleteRDFiles);
+            }
+        }
+
+        if (empty($returnedPremiumLink)) {
+            if ($useRealDebrid === true && $service == 'RealDebrid') {
+                $pageUrl = 'https://real-debrid.com/';
+                $htmlContent .= "<li>RealDebrid (0) - $premTimeDifference sec.</li>";
+            }
+            $service = 'Premiumize';
+        }
+
+        // Run premiumize service.
+        if ($usePremiumize === true && $service == 'Premiumize') {
+            $returnedPremiumLink = selectHashByPreferences($torrentData, $maxResolution, 'torrentSites', 'Premiumize');
+        }
+
+        if ($returnedPremiumLink !== false) {
+
+            if ($useRealDebrid === true && $service == 'RealDebrid') {
+                $pageUrl = 'https://real-debrid.com/';
+                $htmlContent .= "<li>RealDebrid ($returnedPremiumLink[1]) - $premTimeDifference sec.</li>";
+            }
+            if ($usePremiumize === true && $service == 'Premiumize') {
+                $pageUrl = 'https://premiumize.me/';
+                $htmlContent .= "<li>Premiumize ($returnedPremiumLink[1]) - $premTimeDifference sec.</li>";
+            }
+            $htmlContent .= '</div><a href="javascript:void(0);" onclick="openPopup(\'' . $hashedRandomId . '\')">Click to view...</a>';
+            logDetails('torrentSites', $htmlContent, 'successful', $GLOBALS['logTitle'], $pageUrl, $returnedPremiumLink[0], $type, $GLOBALS['movieId'], $type === 'series' ? $GLOBALS['seriesCode'] : 'n/a');
+
+            return $returnedPremiumLink[0];
+        } else {
+
+            if ($useRealDebrid === true && $service == 'RealDebrid') {
+                $pageUrl = 'https://real-debrid.com/';
+                $htmlContent .= "<li>RealDebrid (0) - $premTimeDifference sec.</li>";
+            }
+            if ($usePremiumize === true && $service == 'Premiumize') {
+                $pageUrl = 'https://premiumize.me/';
+                $htmlContent .= "<li>Premiumize (0) - $premTimeDifference sec.</li>";
+            }
+
+            $htmlContent .= '</div><a href="javascript:void(0);" onclick="openPopup(\'' . $hashedRandomId . '\')">Click to view...</a>';
+            logDetails('torrentSites', $htmlContent, 'failed', $GLOBALS['logTitle'], $pageUrl, 'n/a', $type, $GLOBALS['movieId'], $type === 'series' ? $GLOBALS['seriesCode'] : 'n/a');
+
+            return false;
+        }
+    } else {
+
+        if ($useRealDebrid === true && $service == 'RealDebrid') {
+            $pageUrl = 'https://real-debrid.com/';
+            $htmlContent .= "<li>RealDebrid: 0</li>";
+        }
+        if ($usePremiumize === true && $service == 'Premiumize') {
+            $pageUrl = 'https://premiumize.me/';
+            $htmlContent .= "<li>Premiumize: 0</li>";
+        }
+
+        $htmlContent .= '</div><a href="javascript:void(0);" onclick="openPopup(\'' . $hashedRandomId . '\')">Click to view...</a>';
+        logDetails('torrentSites', $htmlContent, 'failed', $GLOBALS['logTitle'], $pageUrl, 'n/a', $type, $GLOBALS['movieId'], $type === 'series' ? $GLOBALS['seriesCode'] : 'n/a');
+
+        return false;
+    }
 }
 
 function checkLinkStatusCode($url, $verify = false)
@@ -4656,6 +4681,340 @@ function theMovieArchive_site($movieId, $title)
 
 ////////////////////////////// Torrents Movies & Tv Shows Websites ///////////////////////////////
 
+function initialize_bitsearch_to($movieId, $imdbId, $title, $year, $tvpack=false)
+{	
+    global $timeOut, $maxResolution, $torrentData, $language, $languageMapping, $type, $season, $seasonNoPad, $episode;
+
+    $tSite = 'bitsearch_to';
+	
+	if ($GLOBALS['DEBUG']) {
+        echo 'Started running bitsearch_to </br></br>';
+    }
+	
+    $key = $movieId . 'bitsearch_to';
+	$cleanedTitle = preg_replace('/[^a-zA-Z0-9 ]/', '', $title);
+	
+	if($type == "movies"){	
+			
+		$searchQuery = urlencode($cleanedTitle . ' ' . $year);		
+		$apiUrl = 'https://bitsearch.to/search?q='. $searchQuery;
+		
+	} else {
+
+		$searchQuery = urlencode($cleanedTitle);			
+		$apiUrl = 'https://bitsearch.to/search?q='. $searchQuery;
+	}
+	
+	return $apiUrl;
+
+}
+
+function bitsearch_to($response, $tvpack=false)
+{
+    global $timeOut, $maxResolution, $torrentData, $language, $languageMapping, $type, $season, $seasonNoPad, $episode;
+
+    $tSite = 'bitsearch_to';	
+
+    $data = $response;
+
+    try {
+        // Perform pattern matching to extract torrent data
+        preg_match_all('/(?<=<li class="card search-result)[\s\S]*?(?=<\/li>)/', $data, $matches);
+		
+
+        if (count($matches[0]) === 0) {
+            throw new Exception("No links found on bitsearch_to."); // Throw a custom exception
+        }
+		$totalAdded = 0;
+         // Loop through the 'matches' array
+        for ($i = 0; $i < count($matches[0]); $i++) {
+			
+			// Extracted data from 'matches'
+            $extractedData = $matches[0][$i];				
+			
+			// Replace '4K' or '4k' with '2160p' before extracting the resolution
+			$extractedData = str_ireplace("4K", "2160p", $extractedData);
+
+            // Apply the regex patterns to extract 'matchedRes' and 'matchedHash'
+            preg_match('/(2160|1080|720|480|360|240)[pP]/i', $extractedData, $matchedRes);
+            preg_match('/(?<=:btih:)([A-F|a-z\d]{40})/', $extractedData, $matchedHash);
+			$extractedData = preg_replace('/<a[^>]*class="category"[^>]*>.*?<\/a>/i', '', $extractedData);
+			if(preg_match('/<a[^>]*>([^<]*)<\/a>/', $extractedData, $matchedTitle)){
+				
+				$extractedTitle = html_entity_decode($matchedTitle[1]);
+				
+			} else {
+				 continue;
+			}	
+			
+			// If matchedRes wasn't found, set it to 480p
+			if ($tvpack) {
+				$matchedRes[0] = 'unknown';
+			} else if (!$matchedRes) {
+				$matchedRes[0] = '480p';
+			}
+			
+            // Check if both 'matchedRes' and 'matchedHash' were found
+            if (($matchedRes && $matchedRes[0] && $matchedHash && $matchedHash[0]) || ($tvpack === true && $matchedHash[0])){
+/*                 if ($GLOBALS['DEBUG']) {
+                    echo "matchedRes: " . $matchedRes[0] . "</br></br>";
+                    echo "matchedHash: " . $matchedHash[0] . "</br></br>";
+                } */
+				if ($tvpack) {           
+					$title = preg_replace('/s\d{2}e\d{2}/i', 'Season ' . $GLOBALS['seasonNoPad'], $GLOBALS['globalTitle']);
+				} else {
+					$title = $GLOBALS['globalTitle'];
+				}
+				if(filterCompareTitles($extractedTitle, $title, $tvpack)){
+					
+					$torrentData[] = [
+						'title_long' => $title, 
+						'hash' => $matchedHash[0], 
+						'quality' => $matchedRes[0],
+						'extracted_title' => $extractedTitle,						
+						'tvpack' => $tvpack
+					];				
+					$totalAdded++;
+				}
+            }
+        }
+
+		if ($GLOBALS['DEBUG']) {
+			echo 'Finished running bitsearch_to (' .  $totalAdded . ') </br></br>';
+		}
+
+        return $totalAdded;
+    }
+    catch (exception $error) {
+        if ($GLOBALS['DEBUG']) {
+            echo 'Error: ' . $error->getMessage() . "</br></br>";
+            echo 'Finished running bitsearch_to </br></br>';
+        }
+
+        return false;
+    }
+}
+
+function initialize_rutor_info($movieId, $imdbId, $title, $year, $tvpack=false)
+{	
+    global $timeOut, $maxResolution, $torrentData, $language, $languageMapping, $type, $season, $seasonNoPad, $episode;
+
+    $tSite = 'rutor_info';
+	
+	if ($GLOBALS['DEBUG']) {
+        echo 'Started running rutor_info </br></br>';
+    }
+	
+    $key = $movieId . 'rutor_info';
+	$cleanedTitle = preg_replace('/[^a-zA-Z0-9 ]/', '', $title);
+	
+	if($type == "movies"){	
+			
+		$searchQuery = urlencode($cleanedTitle . ' ' . $year);		
+		$apiUrl = 'https://rutor.info/search/0/1/000/0/'. $searchQuery;
+		
+	} else {
+		$cleanedTitle = preg_replace('/s\d{2}e\d{2}/i', '', $cleanedTitle);
+		$searchQuery = urlencode($cleanedTitle);			
+		$apiUrl = 'https://rutor.info/search/0/4/000/0/'. $searchQuery;
+	}
+	
+	return $apiUrl;
+
+}
+
+function rutor_info($response, $tvpack=false)
+{
+    global $timeOut, $maxResolution, $torrentData, $language, $languageMapping, $type, $season, $seasonNoPad, $episode;
+
+    $tSite = 'rutor_info';	
+
+    $data = $response;
+
+    try {
+        // Perform pattern matching to extract torrent data
+        preg_match_all('/(?<=<tr class="(gai|tum)">)[\s\S]*?(?=<\/tr>)/', $data, $matches);
+
+        if (count($matches[0]) === 0) {
+            throw new Exception("No links found on rutor_info."); // Throw a custom exception
+        }
+		$totalAdded = 0;
+         // Loop through the 'matches' array
+        for ($i = 0; $i < count($matches[0]); $i++) {
+			
+			// Extracted data from 'matches'
+            $extractedData = $matches[0][$i];				
+			
+			// Replace '4K' or '4k' with '2160p' before extracting the resolution
+			$extractedData = str_ireplace("4K", "2160p", $extractedData);
+
+            // Apply the regex patterns to extract 'matchedRes' and 'matchedHash'
+            preg_match('/(2160|1080|720|480|360|240)[pP]/i', $extractedData, $matchedRes);
+            preg_match('/(?<=magnet:\?xt=urn:btih:)([A-F|a-z\d]{40})/', $extractedData, $matchedHash);
+			if(preg_match('/<a[^>]*>([^<]*)<\/a>/', $extractedData, $matchedTitle)){
+
+				$extractedTitle = html_entity_decode($matchedTitle[1]);
+				
+			} else {
+				 continue;
+			}	
+			
+			// If matchedRes wasn't found, set it to 480p
+			if ($tvpack) {
+				$matchedRes[0] = 'unknown';
+			} else if (!$matchedRes) {
+				$matchedRes[0] = '480p';
+			}
+			
+            // Check if both 'matchedRes' and 'matchedHash' were found
+            if (($matchedRes && $matchedRes[0] && $matchedHash && $matchedHash[0]) || ($tvpack === true && $matchedHash[0])){
+/*                 if ($GLOBALS['DEBUG']) {
+                    echo "matchedRes: " . $matchedRes[0] . "</br></br>";
+                    echo "matchedHash: " . $matchedHash[0] . "</br></br>";
+                } */
+				if ($tvpack) {           
+					$title = preg_replace('/s\d{2}e\d{2}/i', 'Season ' . $GLOBALS['seasonNoPad'], $GLOBALS['globalTitle']);
+				} else {
+					$title = $GLOBALS['globalTitle'];
+				}
+				if(filterCompareTitles($extractedTitle, $title, $tvpack)){
+					
+					$torrentData[] = [
+						'title_long' => $title, 
+						'hash' => $matchedHash[0], 
+						'quality' => $matchedRes[0],
+						'extracted_title' => $extractedTitle,						
+						'tvpack' => $tvpack
+					];				
+					$totalAdded++;
+				}
+            }
+        }
+
+		if ($GLOBALS['DEBUG']) {
+			echo 'Finished running rutor_info (' .  $totalAdded . ') </br></br>';
+		}
+
+        return $totalAdded;
+    }
+    catch (exception $error) {
+        if ($GLOBALS['DEBUG']) {
+            echo 'Error: ' . $error->getMessage() . "</br></br>";
+            echo 'Finished running rutor_info </br></br>';
+        }
+
+        return false;
+    }
+}
+
+function initialize_torrents_csv_com($movieId, $imdbId, $title, $year, $tvpack=false)
+{	
+    global $timeOut, $maxResolution, $torrentData, $language, $languageMapping, $type, $season, $seasonNoPad, $episode;
+
+    $tSite = 'torrents-csv_com';
+	
+	if ($GLOBALS['DEBUG']) {
+        echo 'Started running torrents-csv_com </br></br>';
+    }
+	
+    $key = $movieId . 'torrents-csv_com';
+	$cleanedTitle = preg_replace('/[^a-zA-Z0-9 ]/', '', $title);
+	
+	if($type == "movies"){	
+			
+		$searchQuery = urlencode($cleanedTitle . ' ' . $year);		
+		$apiUrl = 'https://torrents-csv.com/service/search?q='. $searchQuery;
+		
+	} else {
+
+		$searchQuery = urlencode($cleanedTitle);			
+		$apiUrl = 'https://torrents-csv.com/service/search?q='. $searchQuery;
+	}
+	
+	return $apiUrl;
+
+}
+
+function torrents_csv_com($response, $tvpack = false)
+{
+    global $timeOut, $maxResolution, $torrentData, $type, $season, $episode;
+    $tSite = 'torrents-csv_com';
+
+    try {
+        if ($response === false) {
+            throw new Exception('HTTP Error: torrents-csv_com');
+        }
+
+        $data = json_decode($response, true);
+
+        if (!isset($data['torrents']) || !is_array($data['torrents'])) {
+            return false;
+        }
+
+        $torrents = $data['torrents'];
+
+        if ($type == 'series') {
+            $filtered = array_filter($torrents, function ($ep) use ($season, $episode) {
+                $seasonEpisodeStr = sprintf("S%02dE%02d", $season, $episode);
+                $seasonStr = sprintf("Season %d", $season);
+                return isset($ep['name']) && (strpos($ep['name'], $seasonEpisodeStr) !== false || strpos($ep['name'], $seasonStr) !== false);
+            });
+
+            if (empty($filtered)) {
+                return false;
+            }
+
+            $torrents = $filtered;
+        }
+
+        if ($tvpack) {
+            $title = preg_replace('/s\d{2}e\d{2}/i', 'Season ' . $GLOBALS['seasonNoPad'], $GLOBALS['globalTitle']);
+        } else {
+            $title = $GLOBALS['globalTitle'];
+        }
+
+        $totalAdded = 0;
+        if (is_array($torrents) && !empty($torrents)) {
+            foreach ($torrents as $torrentInfo) {
+                $extractedTitle = $torrentInfo['name'];
+                $matchedHash = $torrentInfo['infohash'];
+
+                // Extract quality from the title using regex
+                preg_match('/(2160|1080|720|480|360|240)[pP]/i', $extractedTitle, $matches);
+                $quality = $tvpack ? 'unknown' : (isset($matches[1]) ? $matches[1] : '480');
+
+                if (isset($matchedHash) && isset($extractedTitle)) {
+                    if (filterCompareTitles($extractedTitle, $title, $tvpack)) {
+                        $torrentData[] = [
+                            'title_long' => $title,
+                            'hash' => $matchedHash,
+                            'quality' => $quality,
+                            'extracted_title' => $extractedTitle,
+                            'tvpack' => $tvpack
+                        ];
+                        $totalAdded++;
+                    }
+                }
+            }
+        } else {
+            throw new Exception('Data does not meet criteria');
+        }
+
+        if ($GLOBALS['DEBUG']) {
+            echo 'Finished running torrents-csv_com (' . $totalAdded . ') </br></br>';
+        }
+        return $totalAdded;
+
+    } catch (Exception $error) {
+        if ($GLOBALS['DEBUG']) {
+            echo 'Error: ' . $error->getMessage() . "</br></br>";
+            echo 'Finished running torrents-csv_com </br></br>';
+        }
+
+        return false;
+    }
+}
+
 function initialize_knaben_eu($movieId, $imdbId, $title, $year, $tvpack=false)
 {	
     global $timeOut, $maxResolution, $torrentData, $language, $languageMapping, $type, $season, $seasonNoPad, $episode;
@@ -5126,74 +5485,116 @@ function popcornTime($response, $tvpack=false)
         }
 
         $data = json_decode($response, true);
-		
 
 		if ($type == 'series'){
-		//Run for series.
-		if (!isset($data['episodes']) || !is_array($data['episodes'])) {			
-			return false;
-		}
+			//Run for series.
+			if (!isset($data['episodes']) || !is_array($data['episodes'])) {
+				throw new Exception('Couldn\'t locate episodes');		
+				
+			}
+			
+			$filtered = array_filter($data['episodes'], function ($ep) use ($season, $episode) {
+				$hasAllKeys = isset($ep['season'], $ep['episode'], $ep['torrents']);
+				return $hasAllKeys && $ep['season'] == $season && $ep['episode'] == $episode;
+			});			
 		
-		$filtered = array_filter($data['episodes'], function ($ep) use ($season, $episode) {
-			$hasAllKeys = isset($ep['season'], $ep['episode'], $ep['torrents']);
-			return $hasAllKeys && $ep['season'] == $season && $ep['episode'] == $episode;
-		});
-		
-		if (empty($filtered) || !isset(current($filtered)['torrents'])) {
-			return false;
-		}	
+			if (empty($filtered) || !isset(current($filtered)['torrents'])) {
+				throw new Exception('No matching episodes found or torrents are missing.');
+			}
 
 		} else {
 
-		//Run for movies.
-        if (!isset($data['torrents'])) {
-            throw new Exception('Data does not meet criteria');
-        }
+			//Run for movies.
+			if (!isset($data['torrents'])) {
+				throw new Exception('Data does not meet criteria');
+			}
 
-/*         if ($GLOBALS['DEBUG']) {
-            echo 'The Json Response: ' . print_r($response) . '</br></br>';
-        } */
-        		
-		if (isset($data['torrents']['en'])) {
-			$torrents = $data['torrents']['en'];
-			
-		} else {
-			
-		if ($GLOBALS['DEBUG']) {
-            echo 'Couldn\'t locate any torrents on popcornTime. </br></br>';
-        }
+	/*         if ($GLOBALS['DEBUG']) {
+				echo 'The Json Response: ' . print_r($response) . '</br></br>';
+			} */
+					
+			if (isset($data['torrents']['en'])) {
+				$torrents = $data['torrents']['en'];
+				
+			} else {
+				
+				if ($GLOBALS['DEBUG']) {
+					echo 'Couldn\'t locate any torrents on popcornTime. </br></br>';
+				}
 
-		return false;
-		}
+				return false;
+			}
 		}
 		if ($tvpack) {           
 			$title = preg_replace('/s\d{2}e\d{2}/i', 'Season ' . $GLOBALS['seasonNoPad'], $GLOBALS['globalTitle']);
 		} else {
 			$title = $GLOBALS['globalTitle'];
 		}
+		
+		if ($type == 'series'){
+			
+			$totalAdded = 0;			
+			$filtered = array_filter($data['episodes'], function ($ep) use ($season, $episode) {
+				$hasAllKeys = isset($ep['season'], $ep['episode'], $ep['torrents']);
+				return $hasAllKeys && $ep['season'] == $season && $ep['episode'] == $episode;
+			});
 
-        $totalAdded = 0;
-		if (isset($torrents) && is_array($torrents) && !empty($torrents)) {
-			foreach ($torrents as $resolutionKey => $torrentInfo) {
-				
-				$extractedTitle = $torrentInfo['title'];				
-				preg_match('/(?<=urn:btih:)([A-F|a-z\d]{40})/', $torrentInfo['url'], $matchedHash);				
+			if (empty($filtered) || !isset(current($filtered)['torrents'])) {
+				throw new Exception('No matching episodes or torrents found');
+			}
 
-				if (isset($matchedHash[0]) && isset($extractedTitle)) {
-					if(filterCompareTitles($extractedTitle, $title, $tvpack)){
-						$torrentData[] = [
-							'title_long' => $title,
-							'hash' => $matchedHash[0],
-							'quality' => $resolutionKey,
-							'extracted_title' => $extractedTitle,								
-							'tvpack' => $tvpack
-						];
-						$totalAdded++;
+			$torrents = current($filtered)['torrents'];
+
+			if (isset($torrents) && is_array($torrents) && !empty($torrents)) {
+				foreach ($torrents as $resolutionKey => $torrentInfo) {
+					$extractedTitle = $torrentInfo['title'] . ' (' . $data['year'] . ')';
+
+					preg_match('/(?<=btih:)([A-F|a-z\d]{40})/', $torrentInfo['url'], $matchedHash);
+
+					if (isset($matchedHash[0]) && isset($extractedTitle)) {
+						if (filterCompareTitles($extractedTitle, $title, $tvpack)) {
+							$torrentData[] = [
+								'title_long' => $title,
+								'hash' => $matchedHash[0],
+								'quality' => $resolutionKey,
+								'extracted_title' => $extractedTitle,
+								'tvpack' => $tvpack
+							];
+							$totalAdded++;
+						}
 					}
 				}
+			} else {
+				throw new Exception('Data does not meet criteria');
 			}
+			
 		} else {
-			throw new Exception('Data does not meet criteria');
+
+			$totalAdded = 0;
+			if (isset($torrents) && is_array($torrents) && !empty($torrents)) {
+				foreach ($torrents as $resolutionKey => $torrentInfo) {
+					
+					$extractedTitle = $torrentInfo['title'].' ('.$data['year'].')';	
+					
+					preg_match('/(?<=btih:)([A-F|a-z\d]{40})/', $torrentInfo['url'], $matchedHash);				
+
+					if (isset($matchedHash[0]) && isset($extractedTitle)) {
+						if(filterCompareTitles($extractedTitle, $title, $tvpack)){
+							$torrentData[] = [
+								'title_long' => $title,
+								'hash' => $matchedHash[0],
+								'quality' => $resolutionKey,
+								'extracted_title' => $extractedTitle,								
+								'tvpack' => $tvpack
+							];
+							$totalAdded++;
+						}
+					}
+				}
+			} else {
+				throw new Exception('Data does not meet criteria');
+			}
+		
 		}
 /*      if ($GLOBALS['DEBUG']) {
             echo 'Torrents: ' . json_encode($torrentData) . "</br></br>";
@@ -5850,6 +6251,7 @@ function ezTV_re($response, $tvpack=false)
         }
 
         $data = json_decode($response, true);
+		
 
         if (isset($data['torrents']) && is_array($data['torrents'])) {
 			
@@ -8020,7 +8422,7 @@ function logDetails($siteFunction, $extractor, $status, $title, $pageUrl, $video
 
 			function openPopup(divId) {   
 				var content = document.getElementById(divId).innerHTML;    
-				var windowFeatures = "width=300,height=370,scrollbars=yes,resizable=no,toolbar=no,location=no,directories=no,status=no,menubar=no";    
+				var windowFeatures = "width=350,height=420,scrollbars=yes,resizable=no,toolbar=no,location=no,directories=no,status=no,menubar=no";    
 				var popupWindow = window.open("", "_blank", windowFeatures);
 				popupWindow.document.write("<html><head><title>Torrent Extractors<\/title><\/head><body>" + content + "<\/body><\/html>");
 				popupWindow.document.close();
