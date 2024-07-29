@@ -4,17 +4,16 @@ set_time_limit(300);
 ini_set('memory_limit', '512M');
 
 $epgUrls = [
-    "http://m3u4u.com/xml/jwmzn1wx72cj6m8dn721",
-    "https://magnetic.website/jet/epg.xml",
+    "http://m3u4u.com/xml/jwmzn1wx72cj6m8dn721",   
     "https://raw.githubusercontent.com/matthuisman/i.mjh.nz/master/PlutoTV/us.xml",
-    "https://magnetic.website/jet/merged_epg.xml.gz"
+    "https://epg.pw/xmltv/epg_ZA.xml"
     // "channels/thetvapp_sports_epg.xml" // Disabled until a better sync method is found.
 ];
 
 $mergedEpgFile = "channels/epg.xml";
 $lastUpdatedFile = "channels/last_updated_epg.txt";
 
-if (!file_exists($lastUpdatedFile) || (time() - file_get_contents($lastUpdatedFile)) > 120) {
+if (!file_exists($lastUpdatedFile) || (time() - file_get_contents($lastUpdatedFile)) > 10800) {
     $mergedXml = new SimpleXMLElement('<tv/>');
 
     foreach ($epgUrls as $url) {
