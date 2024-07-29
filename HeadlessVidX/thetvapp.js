@@ -97,6 +97,7 @@ function getViewportSize(userAgentString) {
     }
 
     let browser;
+    let timeoutId;
     try {
         console.error('Launching browser...');
         browser = await firefox.launch({
@@ -153,10 +154,11 @@ function getViewportSize(userAgentString) {
                 saveCookies(context).then(async () => {
                     const response = { status: 'ok', url: matchingUrl };
                     setCacheResponse(targetUrlArg, response);
+                    clearTimeout(timeoutId); // Clear the timeout if a matching URL is found
                     await browser.close();
                     console.error('Browser closed.');
                     console.log(JSON.stringify(response));
-                    process.exit(0); 
+                    process.exit(0);
                 }).catch(error => {
                     console.error('Error saving cookies:', error);
                 });
@@ -183,7 +185,7 @@ function getViewportSize(userAgentString) {
         console.error(`Clicked at position (${offsetX}, ${offsetY}) for viewport size (${viewportSize.width}, ${viewportSize.height}).`);
 
         // Keep the browser open for the timeout period to inspect URLs
-        setTimeout(async () => {
+        timeoutId = setTimeout(async () => {
             if (!matchingUrl) {
                 const errorResponse = { status: 'error', message: 'No matching URL found.' };
                 setCacheResponse(targetUrlArg, errorResponse);
@@ -191,7 +193,7 @@ function getViewportSize(userAgentString) {
                 await browser.close();
                 console.error('Browser closed after timeout.');
                 console.log(JSON.stringify(errorResponse));
-                process.exit(1); 
+                process.exit(1);
             }
         }, 30000); // 30 seconds
 
@@ -201,5 +203,6 @@ function getViewportSize(userAgentString) {
             await browser.close();
             console.error('Browser closed due to error.');
         }
+        process.exit(1);
     }
 })();
