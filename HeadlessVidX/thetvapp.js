@@ -98,6 +98,7 @@ function getViewportSize(userAgentString) {
 
     let browser;
     let timeoutId;
+
     try {
         console.error('Launching browser...');
         browser = await firefox.launch({
@@ -145,23 +146,18 @@ function getViewportSize(userAgentString) {
         });
 
         // Monitor requests for specific strings
-        let matchingUrl = null;
-        page.on('request', request => {
+        page.on('request', async request => {
             const requestUrl = request.url();
             if ((requestUrl.includes('.m3u8') || requestUrl.includes('expires')) && requestUrl.includes('thetvapp')) {
                 console.error('Matching URL found:', requestUrl);
-                matchingUrl = requestUrl;
-                saveCookies(context).then(async () => {
-                    const response = { status: 'ok', url: matchingUrl };
-                    setCacheResponse(targetUrlArg, response);
-                    clearTimeout(timeoutId); // Clear the timeout if a matching URL is found
-                    await browser.close();
-                    console.error('Browser closed.');
-                    console.log(JSON.stringify(response));
-                    process.exit(0);
-                }).catch(error => {
-                    console.error('Error saving cookies:', error);
-                });
+                clearTimeout(timeoutId); // Clear the timeout if a matching URL is found
+                const response = { status: 'ok', url: requestUrl };
+                setCacheResponse(targetUrlArg, response);
+                await saveCookies(context);
+                await browser.close();
+                console.error('Browser closed.');
+                console.log(JSON.stringify(response));
+                process.exit(0);
             }
         });
 
@@ -186,15 +182,13 @@ function getViewportSize(userAgentString) {
 
         // Keep the browser open for the timeout period to inspect URLs
         timeoutId = setTimeout(async () => {
-            if (!matchingUrl) {
-                const errorResponse = { status: 'error', message: 'No matching URL found.' };
-                setCacheResponse(targetUrlArg, errorResponse);
-                console.error('No matching URL found within the timeout period.');
-                await browser.close();
-                console.error('Browser closed after timeout.');
-                console.log(JSON.stringify(errorResponse));
-                process.exit(1);
-            }
+            const errorResponse = { status: 'error', message: 'No matching URL found.' };
+            setCacheResponse(targetUrlArg, errorResponse);
+            console.error('No matching URL found within the timeout period.');
+            await browser.close();
+            console.error('Browser closed after timeout.');
+            console.log(JSON.stringify(errorResponse));
+            process.exit(1);
         }, 30000); // 30 seconds
 
     } catch (error) {
