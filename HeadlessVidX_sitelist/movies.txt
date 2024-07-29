@@ -1,15 +1,11 @@
 https://vidsrc.pro/embed/movie/[[TMDB]]
-https://www.braflix.so/movie/[[TMDB]]?play=true
 https://moviesapi.club/movie/[[TMDB]]
 https://vidsrc.net/embed/movie?tmdb=[[TMDB]]
-https://movies.levrx.lol/media/tmdb-movie-[[TMDB]]
 https://www.watching.zone/watch/movie/_[[TMDB]]
 https://nunflix.com/movie/[[TMDB]]
-https://sudo-flix.lol/media/tmdb-movie-[[TMDB]]
 https://primeflix.lol/movie/[[TMDB]]/stream
 https://watchwave-v2.vercel.app/watch/movie/[[TMDB]]
-https://criaflix.live/movie/[[TMDB]]
 https://binged.live/watch/movie/[[TMDB]]
-https://cinexplore.net/#/media/tmdb-movie-[[TMDB]]
 https://www.essential.wtf/media/tmdb-movie-[[TMDB]]
 https://play2.123embed.net/movie/[[TMDB]]
+https://v2.nontongo.win/torrent/[[TMDB]]
