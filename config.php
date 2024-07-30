@@ -11,8 +11,7 @@ $GLOBALS['DEBUG'] = false; // Developer option.
 
 // Next, go into the HeadlessVidX/Install Instructions.txt and follow the instructions on setting up HeadlessVidX. TheTvApp // which is a Live TV playlist needs to have this installed before it can be used. 
 
-// Replace 'YOUR_API_KEY' with your TMDb API key - https://www.themoviedb.org/
-//Entering your key here may be visible through google drive. Check your sharing settings.
+// Replace 'YOUR_API_KEY' with your TMDb API key - https://developer.themoviedb.org/docs/getting-started
 $apiKey = '';
 
 // Replace this with your Real-Debrid Private API token - https://real-debrid.com/apitoken
