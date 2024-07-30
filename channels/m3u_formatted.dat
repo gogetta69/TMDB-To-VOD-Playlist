@@ -194,7 +194,7 @@ http://fl2.moveonjoy.com/HLN/index.m3u8
 #EXTINF:-1 tvg-id="InvestigationDiscovery.us" tvg-name="ID (Investigation Discovery) East" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16615_dark_360w_270h.png" group-title="Live TV (MoveOnJoy)" streamId="64" channel-number="64",ID (Investigation Discovery) East
 http://fl2.moveonjoy.com/INVESTIGATION_DISCOVERY/index.m3u8
 
-#EXTINF:-1 tvg-id="ION.us2" tvg-name="ION" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/ion-television-us.png?raw=true" group-title="Live TV (MoveOnJoy)" streamId="65" channel-number="65",ION
+#EXTINF:-1 tvg-id="IONTelevision.us" tvg-name="ION" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/ion-television-us.png?raw=true" group-title="Live TV (MoveOnJoy)" streamId="65" channel-number="65",ION
 http://fl2.moveonjoy.com/ION_TV/index.m3u8
 
 #EXTINF:-1 tvg-id="Laff.us" tvg-name="Laff TV" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/laff-us.png?raw=true" group-title="Live TV (MoveOnJoy)" streamId="66" channel-number="66",Laff TV
@@ -721,8 +721,8 @@ https://thetvapp.to/tv/vice-live-stream/
 
 #EXTINF:-1 tvg-id="WEtv.us" tvg-name="WE tv" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16409_dark_360w_270h.png" group-title="Live TV (TheTVApp)" streamId="235" channel-number="240",WE tv
 https://thetvapp.to/tv/we-tv-live-stream/
-#[THETVAPP_SPORTS]#
 
+#[THETVAPP_SPORTS]#
 #EXTINF:-1 tvg-id="WABC.us" tvg-name="ABC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/abc-us.png" group-title="USA (DADDY LIVE)" streamId="238" channel-number="241",ABC
 https://dlhd.sx/stream/stream-51.php
 
@@ -783,712 +783,726 @@ https://dlhd.sx/stream/stream-345.php
 #EXTINF:-1 tvg-id="Cinemax.us" tvg-name="Cinemax" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cinemax-us.png" group-title="USA (DADDY LIVE)" streamId="257" channel-number="260",Cinemax
 https://dlhd.sx/stream/stream-374.php
 
-#EXTINF:-1 tvg-id="CrimeplusInvestigation(English).pr" tvg-name="Crime+ Investigation" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/crime-and-investigation-uk.png?raw=true" group-title="USA (DADDY LIVE)" streamId="258" channel-number="261",Crime+ Investigation
+#EXTINF:-1 tvg-id="CleoTV.us" tvg-name="Cleo TV" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/cleo-tv-us.png?raw=true" group-title="USA (DADDY LIVE)" streamId="499" channel-number="261",Cleo TV
+https://dlhd.sx/stream/stream-715.php
+
+#EXTINF:-1 tvg-id="CrimeplusInvestigation(English).pr" tvg-name="Crime+ Investigation" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/crime-and-investigation-uk.png?raw=true" group-title="USA (DADDY LIVE)" streamId="258" channel-number="262",Crime+ Investigation
 https://dlhd.sx/stream/stream-669.php
 
-#EXTINF:-1 tvg-id="Comet.us" tvg-name="Comet" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/comet-us.png" group-title="USA (DADDY LIVE)" streamId="259" channel-number="262",Comet
+#EXTINF:-1 tvg-id="Comet.us" tvg-name="Comet" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/comet-us.png" group-title="USA (DADDY LIVE)" streamId="259" channel-number="263",Comet
 https://dlhd.sx/stream/stream-696.php
 
-#EXTINF:-1 tvg-id="CookingChannel.us" tvg-name="Cooking Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cooking-channel-us.png" group-title="USA (DADDY LIVE)" streamId="260" channel-number="263",Cooking Channel
+#EXTINF:-1 tvg-id="CookingChannel.us" tvg-name="Cooking Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/cooking-channel-us.png" group-title="USA (DADDY LIVE)" streamId="260" channel-number="264",Cooking Channel
 https://dlhd.sx/stream/stream-697.php
 
-#EXTINF:-1 tvg-id="WCBSDT.us" tvg-name="CBSNY" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/0/09/75851A45-4183-4103-B130-19864D1E84A3.png/revision/latest?cb=20200122220933" group-title="USA (DADDY LIVE)" streamId="261" channel-number="264",CBSNY
+#EXTINF:-1 tvg-id="WCBSDT.us" tvg-name="CBSNY" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/0/09/75851A45-4183-4103-B130-19864D1E84A3.png/revision/latest?cb=20200122220933" group-title="USA (DADDY LIVE)" streamId="261" channel-number="265",CBSNY
 https://dlhd.sx/stream/stream-767.php
 
-#EXTINF:-1 tvg-id="DiscoveryLifeChannel.us" tvg-name="Discovery Life Channel" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/3/3a/Discovery_Life_Channel_logo_official_png.png/revision/latest?cb=20150131181202" group-title="USA (DADDY LIVE)" streamId="262" channel-number="265",Discovery Life Channel
+#EXTINF:-1 tvg-id="CSPAN.us" tvg-name="C SPAN 1" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/c-span-1-us.png?raw=true" group-title="USA (DADDY LIVE)" streamId="498" channel-number="266",C SPAN 1
+https://dlhd.sx/stream/stream-750.php
+
+#EXTINF:-1 tvg-id="DiscoveryLifeChannel.us" tvg-name="Discovery Life Channel" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/3/3a/Discovery_Life_Channel_logo_official_png.png/revision/latest?cb=20150131181202" group-title="USA (DADDY LIVE)" streamId="262" channel-number="267",Discovery Life Channel
 https://dlhd.sx/stream/stream-311.php
 
-#EXTINF:-1 tvg-id="DisneyChannel.us" tvg-name="Disney Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/disney-channel-us.png" group-title="USA (DADDY LIVE)" streamId="263" channel-number="266",Disney Channel
+#EXTINF:-1 tvg-id="DisneyChannel.us" tvg-name="Disney Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/disney-channel-us.png" group-title="USA (DADDY LIVE)" streamId="263" channel-number="268",Disney Channel
 https://dlhd.sx/stream/stream-312.php
 
-#EXTINF:-1 tvg-id="DiscoveryChannel.us" tvg-name="Discovery Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/discovery-channel-us.png" group-title="USA (DADDY LIVE)" streamId="264" channel-number="267",Discovery Channel
+#EXTINF:-1 tvg-id="DiscoveryChannel.us" tvg-name="Discovery Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/discovery-channel-us.png" group-title="USA (DADDY LIVE)" streamId="264" channel-number="269",Discovery Channel
 https://dlhd.sx/stream/stream-313.php
 
-#EXTINF:-1 tvg-id="DiscoveryFamilyChannel.us" tvg-name="Discovery Family" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/discovery-family-us.png" group-title="USA (DADDY LIVE)" streamId="265" channel-number="268",Discovery Family
+#EXTINF:-1 tvg-id="DiscoveryFamilyChannel.us" tvg-name="Discovery Family" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/discovery-family-us.png" group-title="USA (DADDY LIVE)" streamId="265" channel-number="270",Discovery Family
 https://dlhd.sx/stream/stream-657.php
 
-#EXTINF:-1 tvg-id="DisneyXD.us" tvg-name="Disney XD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/disney-xd-us.png" group-title="USA (DADDY LIVE)" streamId="266" channel-number="269",Disney XD
+#EXTINF:-1 tvg-id="DisneyXD.us" tvg-name="Disney XD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/disney-xd-us.png" group-title="USA (DADDY LIVE)" streamId="266" channel-number="271",Disney XD
 https://dlhd.sx/stream/stream-314.php
 
-#EXTINF:-1 tvg-id="DestinationAmerica.us" tvg-name="Destination America" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/destination-america-us.png" group-title="USA (DADDY LIVE)" streamId="267" channel-number="270",Destination America
+#EXTINF:-1 tvg-id="DestinationAmerica.us" tvg-name="Destination America" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/destination-america-us.png" group-title="USA (DADDY LIVE)" streamId="267" channel-number="272",Destination America
 https://dlhd.sx/stream/stream-651.php
 
-#EXTINF:-1 tvg-id="DisneyJunior.us" tvg-name="Disney JR" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/disney-junior-us.png" group-title="USA (DADDY LIVE)" streamId="268" channel-number="271",Disney JR
+#EXTINF:-1 tvg-id="DisneyJunior.us" tvg-name="Disney JR" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/disney-junior-us.png" group-title="USA (DADDY LIVE)" streamId="268" channel-number="273",Disney JR
 https://dlhd.sx/stream/stream-652.php
 
-#EXTINF:-1 tvg-id="EEntertainmentTelevision.us" tvg-name="E! Entertainment Television" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/e-entertainment-us.png" group-title="USA (DADDY LIVE)" streamId="269" channel-number="272",E! Entertainment Television
+#EXTINF:-1 tvg-id="EEntertainmentTelevision.us" tvg-name="E! Entertainment Television" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/e-entertainment-us.png" group-title="USA (DADDY LIVE)" streamId="269" channel-number="274",E! Entertainment Television
 https://dlhd.sx/stream/stream-315.php
 
-#EXTINF:-1 tvg-id="FoxBusiness.us" tvg-name="Fox Business" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-business-us.png" group-title="USA (DADDY LIVE)" streamId="270" channel-number="273",Fox Business
+#EXTINF:-1 tvg-id="FoxBusiness.us" tvg-name="Fox Business" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-business-us.png" group-title="USA (DADDY LIVE)" streamId="270" channel-number="275",Fox Business
 https://dlhd.sx/stream/stream-297.php
 
-#EXTINF:-1 tvg-id="FOXNet.us" tvg-name="FOX" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-us.png" group-title="USA (DADDY LIVE)" streamId="271" channel-number="274",FOX
+#EXTINF:-1 tvg-id="FOXNet.us" tvg-name="FOX" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-us.png" group-title="USA (DADDY LIVE)" streamId="271" channel-number="276",FOX
 https://dlhd.sx/stream/stream-54.php
 
-#EXTINF:-1 tvg-id="FX.us" tvg-name="FX" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fx-us.png" group-title="USA (DADDY LIVE)" streamId="272" channel-number="275",FX
+#EXTINF:-1 tvg-id="FX.us" tvg-name="FX" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fx-us.png" group-title="USA (DADDY LIVE)" streamId="272" channel-number="277",FX
 https://dlhd.sx/stream/stream-317.php
 
-#EXTINF:-1 tvg-id="FXX.us" tvg-name="FXX" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fxx-us.png" group-title="USA (DADDY LIVE)" streamId="273" channel-number="276",FXX
+#EXTINF:-1 tvg-id="FXX.us" tvg-name="FXX" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fxx-us.png" group-title="USA (DADDY LIVE)" streamId="273" channel-number="278",FXX
 https://dlhd.sx/stream/stream-298.php
 
-#EXTINF:-1 tvg-id="Freeform.us" tvg-name="Freeform" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" group-title="USA (DADDY LIVE)" streamId="274" channel-number="277",Freeform
+#EXTINF:-1 tvg-id="Freeform.us" tvg-name="Freeform" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/freeform-us.png" group-title="USA (DADDY LIVE)" streamId="274" channel-number="279",Freeform
 https://dlhd.sx/stream/stream-301.php
 
-#EXTINF:-1 tvg-id="FoxNewsChannel.us" tvg-name="Fox News" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-news-us.png" group-title="USA (DADDY LIVE)" streamId="275" channel-number="278",Fox News
+#EXTINF:-1 tvg-id="FoxNewsChannel.us" tvg-name="Fox News" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-news-us.png" group-title="USA (DADDY LIVE)" streamId="275" channel-number="280",Fox News
 https://dlhd.sx/stream/stream-347.php
 
-#EXTINF:-1 tvg-id="FXMovieChannel.us" tvg-name="FX Movie Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fxm-movie-channel-us.png" group-title="USA (DADDY LIVE)" streamId="276" channel-number="279",FX Movie Channel
+#EXTINF:-1 tvg-id="FXMovieChannel.us" tvg-name="FX Movie Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fxm-movie-channel-us.png" group-title="USA (DADDY LIVE)" streamId="276" channel-number="281",FX Movie Channel
 https://dlhd.sx/stream/stream-381.php
 
-#EXTINF:-1 tvg-id="FYI.us" tvg-name="FYI" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fyi-us.png" group-title="USA (DADDY LIVE)" streamId="277" channel-number="280",FYI
+#EXTINF:-1 tvg-id="FYI.us" tvg-name="FYI" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fyi-us.png" group-title="USA (DADDY LIVE)" streamId="277" channel-number="282",FYI
 https://dlhd.sx/stream/stream-665.php
 
-#EXTINF:-1 tvg-id="FOX(WNYW)NewYorkNY(src01).us" tvg-name="FOXNY" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-us.png" group-title="USA (DADDY LIVE)" streamId="278" channel-number="281",FOXNY
+#EXTINF:-1 tvg-id="FOX(WNYW)NewYorkNY(src01).us" tvg-name="FOXNY" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-us.png" group-title="USA (DADDY LIVE)" streamId="278" channel-number="283",FOXNY
 https://dlhd.sx/stream/stream-768.php
 
-#EXTINF:-1 tvg-id="FoxWeather.us" tvg-name="Fox Weather Channel" tvg-logo="https://provider-static.plex.tv/epg/cms/production/5822536e-f8a5-44ea-a82f-a73be1b983e8/fox_weather_horizontal.png" group-title="USA (DADDY LIVE)" streamId="279" channel-number="282",Fox Weather Channel
+#EXTINF:-1 tvg-id="FoxWeather.us" tvg-name="Fox Weather Channel" tvg-logo="https://provider-static.plex.tv/epg/cms/production/5822536e-f8a5-44ea-a82f-a73be1b983e8/fox_weather_horizontal.png" group-title="USA (DADDY LIVE)" streamId="279" channel-number="284",Fox Weather Channel
 https://dlhd.sx/stream/stream-775.php
 
-#EXTINF:-1 tvg-id="GameShowNetwork.us" tvg-name="Game Show Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/game-show-network-us.png" group-title="USA (DADDY LIVE)" streamId="280" channel-number="283",Game Show Network
+#EXTINF:-1 tvg-id="GameShowNetwork.us" tvg-name="Game Show Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/game-show-network-us.png" group-title="USA (DADDY LIVE)" streamId="280" channel-number="285",Game Show Network
 https://dlhd.sx/stream/stream-319.php
 
-#EXTINF:-1 tvg-id="Grit.us" tvg-name="Grit Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/grit-us.png" group-title="USA (DADDY LIVE)" streamId="281" channel-number="284",Grit Channel
+#EXTINF:-1 tvg-id="Grit.us" tvg-name="Grit Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/grit-us.png" group-title="USA (DADDY LIVE)" streamId="281" channel-number="286",Grit Channel
 https://dlhd.sx/stream/stream-752.php
 
-#EXTINF:-1 tvg-id="HallmarkChannel.us" tvg-name="The Hallmark Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hallmark-channel-us.png" group-title="USA (DADDY LIVE)" streamId="282" channel-number="285",The Hallmark Channel
+#EXTINF:-1 tvg-id="HallmarkChannel.us" tvg-name="The Hallmark Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hallmark-channel-us.png" group-title="USA (DADDY LIVE)" streamId="282" channel-number="287",The Hallmark Channel
 https://dlhd.sx/stream/stream-320.php
 
-#EXTINF:-1 tvg-id="HallmarkMystery.us" tvg-name="Hallmark Movies & Mysterie" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hallmark-mystery-us.png" group-title="USA (DADDY LIVE)" streamId="283" channel-number="286",Hallmark Movies & Mysterie
+#EXTINF:-1 tvg-id="HallmarkMystery.us" tvg-name="Hallmark Movies & Mysterie" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hallmark-mystery-us.png" group-title="USA (DADDY LIVE)" streamId="283" channel-number="288",Hallmark Movies & Mysterie
 https://dlhd.sx/stream/stream-296.php
 
-#EXTINF:-1 tvg-id="HBO.us" tvg-name="HBO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hbo-us.png" group-title="USA (DADDY LIVE)" streamId="284" channel-number="287",HBO
+#EXTINF:-1 tvg-id="HBO.us" tvg-name="HBO" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hbo-us.png" group-title="USA (DADDY LIVE)" streamId="284" channel-number="289",HBO
 https://dlhd.sx/stream/stream-321.php
 
-#EXTINF:-1 tvg-id="HBO2.us" tvg-name="HBO2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hbo-2-us.png" group-title="USA (DADDY LIVE)" streamId="285" channel-number="288",HBO2
+#EXTINF:-1 tvg-id="HBO2.us" tvg-name="HBO2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hbo-2-us.png" group-title="USA (DADDY LIVE)" streamId="285" channel-number="290",HBO2
 https://dlhd.sx/stream/stream-689.php
 
-#EXTINF:-1 tvg-id="HBOComedy.us" tvg-name="HBO Comedy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hbo-comedy-us.png" group-title="USA (DADDY LIVE)" streamId="286" channel-number="289",HBO Comedy
+#EXTINF:-1 tvg-id="HBOComedy.us" tvg-name="HBO Comedy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hbo-comedy-us.png" group-title="USA (DADDY LIVE)" streamId="286" channel-number="291",HBO Comedy
 https://dlhd.sx/stream/stream-690.php
 
-#EXTINF:-1 tvg-id="HBOFamily.us" tvg-name="HBO Family" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hbo-family-us.png" group-title="USA (DADDY LIVE)" streamId="287" channel-number="290",HBO Family
+#EXTINF:-1 tvg-id="HBOFamily.us" tvg-name="HBO Family" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hbo-family-us.png" group-title="USA (DADDY LIVE)" streamId="287" channel-number="292",HBO Family
 https://dlhd.sx/stream/stream-691.php
 
-#EXTINF:-1 tvg-id="HBOSignature.us" tvg-name="HBO Signature" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hbo-signature-us.png" group-title="USA (DADDY LIVE)" streamId="288" channel-number="291",HBO Signature
+#EXTINF:-1 tvg-id="HBOSignature.us" tvg-name="HBO Signature" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hbo-signature-us.png" group-title="USA (DADDY LIVE)" streamId="288" channel-number="293",HBO Signature
 https://dlhd.sx/stream/stream-693.php
 
-#EXTINF:-1 tvg-id="HBOZone.us" tvg-name="HBO Zone" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hbo-zone-us.png" group-title="USA (DADDY LIVE)" streamId="289" channel-number="292",HBO Zone
+#EXTINF:-1 tvg-id="HBOZone.us" tvg-name="HBO Zone" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hbo-zone-us.png" group-title="USA (DADDY LIVE)" streamId="289" channel-number="294",HBO Zone
 https://dlhd.sx/stream/stream-694.php
 
-#EXTINF:-1 tvg-id="History.us" tvg-name="History" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/History_Logo.svg/1000px-History_Logo.svg.png" group-title="USA (DADDY LIVE)" streamId="290" channel-number="293",History
+#EXTINF:-1 tvg-id="History.us" tvg-name="History" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/History_Logo.svg/1000px-History_Logo.svg.png" group-title="USA (DADDY LIVE)" streamId="290" channel-number="295",History
 https://dlhd.sx/stream/stream-322.php
 
-#EXTINF:-1 tvg-id="HLN.us" tvg-name="Headline News" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hln-us.png" group-title="USA (DADDY LIVE)" streamId="291" channel-number="294",Headline News
+#EXTINF:-1 tvg-id="HLN.us" tvg-name="Headline News" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hln-us.png" group-title="USA (DADDY LIVE)" streamId="291" channel-number="296",Headline News
 https://dlhd.sx/stream/stream-323.php
 
-#EXTINF:-1 tvg-id="HGTV.us" tvg-name="HGTV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hgtv-us.png" group-title="USA (DADDY LIVE)" streamId="292" channel-number="295",HGTV
+#EXTINF:-1 tvg-id="HGTV.us" tvg-name="HGTV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/hgtv-us.png" group-title="USA (DADDY LIVE)" streamId="292" channel-number="297",HGTV
 https://dlhd.sx/stream/stream-382.php
 
-#EXTINF:-1 tvg-id="InvestigationDiscovery.us" tvg-name="Investigation Discovery (ID)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/investigation-discovery-us.png" group-title="USA (DADDY LIVE)" streamId="293" channel-number="296",Investigation Discovery (ID)
+#EXTINF:-1 tvg-id="InvestigationDiscovery.us" tvg-name="Investigation Discovery (ID)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/investigation-discovery-us.png" group-title="USA (DADDY LIVE)" streamId="293" channel-number="298",Investigation Discovery (ID)
 https://dlhd.sx/stream/stream-324.php
 
-#EXTINF:-1 tvg-id="ION.us2" tvg-name="ION" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/ion-television-us.png" group-title="USA (DADDY LIVE)" streamId="294" channel-number="297",ION
+#EXTINF:-1 tvg-id="IONTelevision.us" tvg-name="ION" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/ion-television-us.png" group-title="USA (DADDY LIVE)" streamId="294" channel-number="299",ION
 https://dlhd.sx/stream/stream-325.php
 
-#EXTINF:-1 tvg-id="IFC.us" tvg-name="IFC TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/ifc-us.png" group-title="USA (DADDY LIVE)" streamId="295" channel-number="298",IFC TV
+#EXTINF:-1 tvg-id="IFC.us" tvg-name="IFC TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/ifc-us.png" group-title="USA (DADDY LIVE)" streamId="295" channel-number="300",IFC TV
 https://dlhd.sx/stream/stream-656.php
 
-#EXTINF:-1 tvg-id="Lifetime.us" tvg-name="Lifetime Network" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_Lifetime_2020.svg/2560px-Logo_Lifetime_2020.svg.png" group-title="USA (DADDY LIVE)" streamId="296" channel-number="299",Lifetime Network
+#EXTINF:-1 tvg-id="Lifetime.us" tvg-name="Lifetime Network" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Logo_Lifetime_2020.svg/2560px-Logo_Lifetime_2020.svg.png" group-title="USA (DADDY LIVE)" streamId="296" channel-number="301",Lifetime Network
 https://dlhd.sx/stream/stream-326.php
 
-#EXTINF:-1 tvg-id="LMN.us" tvg-name="Lifetime Movies Network" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/LMN_logo_2016.svg/1200px-LMN_logo_2016.svg.png" group-title="USA (DADDY LIVE)" streamId="297" channel-number="300",Lifetime Movies Network
+#EXTINF:-1 tvg-id="LMN.us" tvg-name="Lifetime Movies Network" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/LMN_logo_2016.svg/1200px-LMN_logo_2016.svg.png" group-title="USA (DADDY LIVE)" streamId="297" channel-number="302",Lifetime Movies Network
 https://dlhd.sx/stream/stream-389.php
 
-#EXTINF:-1 tvg-id="MSNBC.us" tvg-name="MSNBC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/msnbc-alt-us.png" group-title="USA (DADDY LIVE)" streamId="298" channel-number="301",MSNBC
+#EXTINF:-1 tvg-id="MSNBC.us" tvg-name="MSNBC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/msnbc-alt-us.png" group-title="USA (DADDY LIVE)" streamId="298" channel-number="303",MSNBC
 https://dlhd.sx/stream/stream-327.php
 
-#EXTINF:-1 tvg-id="MagnoliaNetwork.us" tvg-name="Magnolia Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/magnolia-network-us.png" group-title="USA (DADDY LIVE)" streamId="299" channel-number="302",Magnolia Network
+#EXTINF:-1 tvg-id="MagnoliaNetwork.us" tvg-name="Magnolia Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/magnolia-network-us.png" group-title="USA (DADDY LIVE)" streamId="299" channel-number="304",Magnolia Network
 https://dlhd.sx/stream/stream-299.php
 
-#EXTINF:-1 tvg-id="MTV.us" tvg-name="MTV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/mtv-us.png" group-title="USA (DADDY LIVE)" streamId="300" channel-number="303",MTV
+#EXTINF:-1 tvg-id="MTV.us" tvg-name="MTV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/mtv-us.png" group-title="USA (DADDY LIVE)" streamId="300" channel-number="305",MTV
 https://dlhd.sx/stream/stream-371.php
 
-#EXTINF:-1 tvg-id="MAVTVMotorsportsNetwork.us" tvg-name="MAVTV" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTowwKlIECbPIzGyK6WcOyg7FRXPP_7ips1MhqsUEk6&s" group-title="USA (DADDY LIVE)" streamId="301" channel-number="304",MAVTV
+#EXTINF:-1 tvg-id="MAVTVMotorsportsNetwork.us" tvg-name="MAVTV" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTowwKlIECbPIzGyK6WcOyg7FRXPP_7ips1MhqsUEk6&s" group-title="USA (DADDY LIVE)" streamId="301" channel-number="306",MAVTV
 https://dlhd.sx/stream/stream-646.php
 
-#EXTINF:-1 tvg-id="WWORTVChannel9(LocalNewYork).us" tvg-name="MY9TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/WWOR_NewJersey.svg/640px-WWOR_NewJersey.svg.png" group-title="USA (DADDY LIVE)" streamId="302" channel-number="305",MY9TV
+#EXTINF:-1 tvg-id="WWORTVChannel9(LocalNewYork).us" tvg-name="MY9TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/WWOR_NewJersey.svg/640px-WWOR_NewJersey.svg.png" group-title="USA (DADDY LIVE)" streamId="302" channel-number="307",MY9TV
 https://dlhd.sx/stream/stream-654.php
 
-#EXTINF:-1 tvg-id="MOTORTREND.us" tvg-name="Motor Trend" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/motor-trend-us.png" group-title="USA (DADDY LIVE)" streamId="303" channel-number="306",Motor Trend
+#EXTINF:-1 tvg-id="MOTORTREND.us" tvg-name="Motor Trend" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/motor-trend-us.png" group-title="USA (DADDY LIVE)" streamId="303" channel-number="308",Motor Trend
 https://dlhd.sx/stream/stream-661.php
 
-#EXTINF:-1 tvg-id="MeTVNetwork.us" tvg-name="METV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/me-tv-us.png" group-title="USA (DADDY LIVE)" streamId="304" channel-number="307",METV
+#EXTINF:-1 tvg-id="MeTVNetwork.us" tvg-name="METV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/me-tv-us.png" group-title="USA (DADDY LIVE)" streamId="304" channel-number="309",METV
 https://dlhd.sx/stream/stream-662.php
 
-#EXTINF:-1 tvg-id="WNBC.us" tvg-name="NBC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbc-us.png" group-title="USA (DADDY LIVE)" streamId="305" channel-number="308",NBC
+#EXTINF:-1 tvg-id="WNBC.us" tvg-name="NBC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbc-us.png" group-title="USA (DADDY LIVE)" streamId="305" channel-number="310",NBC
 https://dlhd.sx/stream/stream-53.php
 
-#EXTINF:-1 tvg-id="WNBC.us" tvg-name="NBCNY" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NBC_logo.svg/2077px-NBC_logo.svg.png" group-title="USA (DADDY LIVE)" streamId="306" channel-number="309",NBCNY
+#EXTINF:-1 tvg-id="WNBC.us" tvg-name="NBCNY" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NBC_logo.svg/2077px-NBC_logo.svg.png" group-title="USA (DADDY LIVE)" streamId="306" channel-number="311",NBCNY
 https://dlhd.sx/stream/stream-769.php
 
-#EXTINF:-1 tvg-id="NationalGeographic.us" tvg-name="National Geographic (NGC)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/national-geographic-us.png" group-title="USA (DADDY LIVE)" streamId="307" channel-number="310",National Geographic (NGC)
+#EXTINF:-1 tvg-id="NationalGeographic.us" tvg-name="National Geographic (NGC)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/national-geographic-us.png" group-title="USA (DADDY LIVE)" streamId="307" channel-number="312",National Geographic (NGC)
 https://dlhd.sx/stream/stream-328.php
 
-#EXTINF:-1 tvg-id="NickJr.us" tvg-name="NICK JR" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nick-jr-us.png" group-title="USA (DADDY LIVE)" streamId="308" channel-number="311",NICK JR
+#EXTINF:-1 tvg-id="NickJr.us" tvg-name="NICK JR" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nick-jr-us.png" group-title="USA (DADDY LIVE)" streamId="308" channel-number="313",NICK JR
 https://dlhd.sx/stream/stream-329.php
 
-#EXTINF:-1 tvg-id="Nickelodeon.us" tvg-name="NICK" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nick-us.png" group-title="USA (DADDY LIVE)" streamId="309" channel-number="312",NICK
+#EXTINF:-1 tvg-id="Nickelodeon.us" tvg-name="NICK" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nick-us.png" group-title="USA (DADDY LIVE)" streamId="309" channel-number="314",NICK
 https://dlhd.sx/stream/stream-330.php
 
-#EXTINF:-1 tvg-id="Nicktoons.us" tvg-name="Nicktoons" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/6e/Nicktoons.png" group-title="USA (DADDY LIVE)" streamId="310" channel-number="313",Nicktoons
+#EXTINF:-1 tvg-id="Nicktoons.us" tvg-name="Nicktoons" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/6e/Nicktoons.png" group-title="USA (DADDY LIVE)" streamId="310" channel-number="315",Nicktoons
 https://dlhd.sx/stream/stream-649.php
 
-#EXTINF:-1 tvg-id="NewsmaxTV.us" tvg-name="Newsmax" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/newsmax-tv-us.png" group-title="USA (DADDY LIVE)" streamId="311" channel-number="314",Newsmax
+#EXTINF:-1 tvg-id="NewsmaxTV.us" tvg-name="Newsmax" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/newsmax-tv-us.png" group-title="USA (DADDY LIVE)" streamId="311" channel-number="316",Newsmax
 https://dlhd.sx/stream/stream-613.php
 
-#EXTINF:-1 tvg-id="NationalGeographicWild.us" tvg-name="Nat Geo Wild" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nat-geo-wild-us.png" group-title="USA (DADDY LIVE)" streamId="312" channel-number="315",Nat Geo Wild
+#EXTINF:-1 tvg-id="NationalGeographicWild.us" tvg-name="Nat Geo Wild" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nat-geo-wild-us.png" group-title="USA (DADDY LIVE)" streamId="312" channel-number="317",Nat Geo Wild
 https://dlhd.sx/stream/stream-745.php
 
-#EXTINF:-1 tvg-id="WPIXDT.us" tvg-name="New! CWPIX 11" tvg-logo="https://pix11.com/wp-content/uploads/sites/25/2021/02/PIX11_White_600x248.png" group-title="USA (DADDY LIVE)" streamId="313" channel-number="316",New! CWPIX 11
-https://dlhd.sx/stream/stream-771.php
-
-#EXTINF:-1 tvg-id="OprahWinfreyNetwork.us" tvg-name="Oprah Winfrey Network (OWN)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/oprah-winfrey-network-us.png" group-title="USA (DADDY LIVE)" streamId="314" channel-number="317",Oprah Winfrey Network (OWN)
+#EXTINF:-1 tvg-id="OprahWinfreyNetwork.us" tvg-name="Oprah Winfrey Network (OWN)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/oprah-winfrey-network-us.png" group-title="USA (DADDY LIVE)" streamId="314" channel-number="319",Oprah Winfrey Network (OWN)
 https://dlhd.sx/stream/stream-331.php
 
-#EXTINF:-1 tvg-id="OxygenTrueCrime.us" tvg-name="Oxygen True Crime" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/oxygen-true-crime-us.png" group-title="USA (DADDY LIVE)" streamId="315" channel-number="318",Oxygen True Crime
+#EXTINF:-1 tvg-id="OxygenTrueCrime.us" tvg-name="Oxygen True Crime" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/oxygen-true-crime-us.png" group-title="USA (DADDY LIVE)" streamId="315" channel-number="320",Oxygen True Crime
 https://dlhd.sx/stream/stream-332.php
 
-#EXTINF:-1 tvg-id="ParamountNetwork.us" tvg-name="Paramount Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/paramount-network-us.png" group-title="USA (DADDY LIVE)" streamId="316" channel-number="319",Paramount Network
+#EXTINF:-1 tvg-id="ParamountNetwork.us" tvg-name="Paramount Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/paramount-network-us.png" group-title="USA (DADDY LIVE)" streamId="316" channel-number="321",Paramount Network
 https://dlhd.sx/stream/stream-334.php
 
-#EXTINF:-1 tvg-id="POP.us" tvg-name="POP TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/pop-us.png" group-title="USA (DADDY LIVE)" streamId="317" channel-number="320",POP TV
+#EXTINF:-1 tvg-id="POP.us" tvg-name="POP TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/pop-us.png" group-title="USA (DADDY LIVE)" streamId="317" channel-number="322",POP TV
 https://dlhd.sx/stream/stream-653.php
 
-#EXTINF:-1 tvg-id="ReelzChannel.us" tvg-name="Reelz Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/reelz-us.png" group-title="USA (DADDY LIVE)" streamId="318" channel-number="321",Reelz Channel
+#EXTINF:-1 tvg-id="ReelzChannel.us" tvg-name="Reelz Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/reelz-us.png" group-title="USA (DADDY LIVE)" streamId="318" channel-number="323",Reelz Channel
 https://dlhd.sx/stream/stream-293.php
 
-#EXTINF:-1 tvg-id="SECNetwork.us" tvg-name="SEC Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sec-network-us.png" group-title="USA (DADDY LIVE)" streamId="319" channel-number="322",SEC Network
+#EXTINF:-1 tvg-id="SECNetwork.us" tvg-name="SEC Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sec-network-us.png" group-title="USA (DADDY LIVE)" streamId="319" channel-number="324",SEC Network
 https://dlhd.sx/stream/stream-385.php
 
-#EXTINF:-1 tvg-id="ScienceChannel.us" tvg-name="Science Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/discovery-science-us.png" group-title="USA (DADDY LIVE)" streamId="320" channel-number="323",Science Channel
+#EXTINF:-1 tvg-id="ScienceChannel.us" tvg-name="Science Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/discovery-science-us.png" group-title="USA (DADDY LIVE)" streamId="320" channel-number="325",Science Channel
 https://dlhd.sx/stream/stream-294.php
 
-#EXTINF:-1 tvg-id="ParamountpluswithShowtime.us" tvg-name="Showtime" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/showtime-us.png" group-title="USA (DADDY LIVE)" streamId="321" channel-number="324",Showtime
+#EXTINF:-1 tvg-id="ParamountpluswithShowtime.us" tvg-name="Showtime" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/showtime-us.png" group-title="USA (DADDY LIVE)" streamId="321" channel-number="326",Showtime
 https://dlhd.sx/stream/stream-333.php
 
-#EXTINF:-1 tvg-id="Starz.us" tvg-name="Starz" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/starz-us.png" group-title="USA (DADDY LIVE)" streamId="322" channel-number="325",Starz
+#EXTINF:-1 tvg-id="SHOxBET.us" tvg-name="SHOxBET" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/sho-bet-us.png?raw=true" group-title="USA (DADDY LIVE)" streamId="501" channel-number="327",SHOxBET
+https://dlhd.sx/stream/stream-685.php
+
+#EXTINF:-1 tvg-id="Starz.us" tvg-name="Starz" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/starz-us.png" group-title="USA (DADDY LIVE)" streamId="322" channel-number="328",Starz
 https://dlhd.sx/stream/stream-335.php
 
-#EXTINF:-1 tvg-id="SYFY.us" tvg-name="SYFY" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/syfy-us.png" group-title="USA (DADDY LIVE)" streamId="323" channel-number="326",SYFY
+#EXTINF:-1 tvg-id="SYFY.us" tvg-name="SYFY" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/syfy-us.png" group-title="USA (DADDY LIVE)" streamId="323" channel-number="329",SYFY
 https://dlhd.sx/stream/stream-373.php
 
-#EXTINF:-1 tvg-id="SundanceTV.us" tvg-name="Sundance TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sundance-tv-us.png" group-title="USA (DADDY LIVE)" streamId="324" channel-number="327",Sundance TV
+#EXTINF:-1 tvg-id="SundanceTV.us" tvg-name="Sundance TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/sundance-tv-us.png" group-title="USA (DADDY LIVE)" streamId="324" channel-number="330",Sundance TV
 https://dlhd.sx/stream/stream-658.php
 
-#EXTINF:-1 tvg-id="TelemundoTelevisionNetwork(Spanish).us" tvg-name="Telemundo" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/telemundo-us.png" group-title="USA (DADDY LIVE)" streamId="325" channel-number="328",Telemundo
+#EXTINF:-1 tvg-id="TelemundoTelevisionNetwork(Spanish).us" tvg-name="Telemundo" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/telemundo-us.png" group-title="USA (DADDY LIVE)" streamId="325" channel-number="331",Telemundo
 https://dlhd.sx/stream/stream-131.php
 
-#EXTINF:-1 tvg-id="TBS.us" tvg-name="TBS" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tbs-us.png" group-title="USA (DADDY LIVE)" streamId="326" channel-number="329",TBS
+#EXTINF:-1 tvg-id="TBS.us" tvg-name="TBS" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tbs-us.png" group-title="USA (DADDY LIVE)" streamId="326" channel-number="332",TBS
 https://dlhd.sx/stream/stream-336.php
 
-#EXTINF:-1 tvg-id="TLC.us" tvg-name="TLC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tlc-us.png" group-title="USA (DADDY LIVE)" streamId="327" channel-number="330",TLC
+#EXTINF:-1 tvg-id="TLC.us" tvg-name="TLC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tlc-us.png" group-title="USA (DADDY LIVE)" streamId="327" channel-number="333",TLC
 https://dlhd.sx/stream/stream-337.php
 
-#EXTINF:-1 tvg-id="TNT.us" tvg-name="TNT" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tnt-us.png" group-title="USA (DADDY LIVE)" streamId="328" channel-number="331",TNT
+#EXTINF:-1 tvg-id="TNT.us" tvg-name="TNT" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tnt-us.png" group-title="USA (DADDY LIVE)" streamId="328" channel-number="334",TNT
 https://dlhd.sx/stream/stream-338.php
 
-#EXTINF:-1 tvg-id="TheTravelChannel.us" tvg-name="Travel Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/travel-channel-us.png" group-title="USA (DADDY LIVE)" streamId="329" channel-number="332",Travel Channel
+#EXTINF:-1 tvg-id="TheTravelChannel.us" tvg-name="Travel Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/travel-channel-us.png" group-title="USA (DADDY LIVE)" streamId="329" channel-number="335",Travel Channel
 https://dlhd.sx/stream/stream-340.php
 
-#EXTINF:-1 tvg-id="truTV.us" tvg-name="TruTV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/tru-tv-us.png" group-title="USA (DADDY LIVE)" streamId="330" channel-number="333",TruTV
+#EXTINF:-1 tvg-id="truTV.us" tvg-name="TruTV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/tru-tv-us.png" group-title="USA (DADDY LIVE)" streamId="330" channel-number="336",TruTV
 https://dlhd.sx/stream/stream-341.php
 
-#EXTINF:-1 tvg-id="TVLand.us" tvg-name="TVLAND" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Travel_Channel_-_Logo.svg/1200px-Travel_Channel_-_Logo.svg.png" group-title="USA (DADDY LIVE)" streamId="331" channel-number="334",TVLAND
+#EXTINF:-1 tvg-id="TVLand.us" tvg-name="TVLAND" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Travel_Channel_-_Logo.svg/1200px-Travel_Channel_-_Logo.svg.png" group-title="USA (DADDY LIVE)" streamId="331" channel-number="337",TVLAND
 https://dlhd.sx/stream/stream-342.php
 
-#EXTINF:-1 tvg-id="TurnerClassicMovies.us" tvg-name="TCM" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tcm-us.png" group-title="USA (DADDY LIVE)" streamId="332" channel-number="335",TCM
+#EXTINF:-1 tvg-id="TurnerClassicMovies.us" tvg-name="TCM" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tcm-us.png" group-title="USA (DADDY LIVE)" streamId="332" channel-number="338",TCM
 https://dlhd.sx/stream/stream-644.php
 
-#EXTINF:-1 tvg-id="TheMovieChannel.us" tvg-name="TMC Channel" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/5/54/TMC_logo.svg/1200px-TMC_logo.svg.png" group-title="USA (DADDY LIVE)" streamId="333" channel-number="336",TMC Channel
+#EXTINF:-1 tvg-id="TheMovieChannel.us" tvg-name="TMC Channel" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/5/54/TMC_logo.svg/1200px-TMC_logo.svg.png" group-title="USA (DADDY LIVE)" streamId="333" channel-number="339",TMC Channel
 https://dlhd.sx/stream/stream-698.php
 
-#EXTINF:-1 tvg-id="FoodNetwork.us" tvg-name="The Food Network" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Food_Network_logo.svg/1200px-Food_Network_logo.svg.png" group-title="USA (DADDY LIVE)" streamId="334" channel-number="337",The Food Network
+#EXTINF:-1 tvg-id="FoodNetwork.us" tvg-name="The Food Network" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Food_Network_logo.svg/1200px-Food_Network_logo.svg.png" group-title="USA (DADDY LIVE)" streamId="334" channel-number="340",The Food Network
 https://dlhd.sx/stream/stream-384.php
 
-#EXTINF:-1 tvg-id="TheWeatherChannel.us" tvg-name="The Weather Channel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Weather_Channel_logo_2005-present.svg/1200px-The_Weather_Channel_logo_2005-present.svg.png" group-title="USA (DADDY LIVE)" streamId="335" channel-number="338",The Weather Channel
+#EXTINF:-1 tvg-id="TheWeatherChannel.us" tvg-name="The Weather Channel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/The_Weather_Channel_logo_2005-present.svg/1200px-The_Weather_Channel_logo_2005-present.svg.png" group-title="USA (DADDY LIVE)" streamId="335" channel-number="341",The Weather Channel
 https://dlhd.sx/stream/stream-394.php
 
-#EXTINF:-1 tvg-id="TeenNick.us" tvg-name="TeenNick" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/teen-nick-us.png" group-title="USA (DADDY LIVE)" streamId="336" channel-number="339",TeenNick
+#EXTINF:-1 tvg-id="TeenNick.us" tvg-name="TeenNick" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/teen-nick-us.png" group-title="USA (DADDY LIVE)" streamId="336" channel-number="342",TeenNick
 https://dlhd.sx/stream/stream-650.php
 
-#EXTINF:-1 tvg-id="TVONE.us" tvg-name="TV ONE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/TV_One.svg/2560px-TV_One.svg.png" group-title="USA (DADDY LIVE)" streamId="337" channel-number="340",TV ONE
+#EXTINF:-1 tvg-id="TVONE.us" tvg-name="TV ONE" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/TV_One.svg/2560px-TV_One.svg.png" group-title="USA (DADDY LIVE)" streamId="337" channel-number="343",TV ONE
 https://dlhd.sx/stream/stream-660.php
 
-#EXTINF:-1 tvg-id="USANetwork.us" tvg-name="USA Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/usa-us.png" group-title="USA (DADDY LIVE)" streamId="338" channel-number="341",USA Network
+#EXTINF:-1 tvg-id="USANetwork.us" tvg-name="USA Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/usa-us.png" group-title="USA (DADDY LIVE)" streamId="338" channel-number="344",USA Network
 https://dlhd.sx/stream/stream-343.php
 
-#EXTINF:-1 tvg-id="UniversalKids.us" tvg-name="Universal Kids" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/universal-kids-us.png" group-title="USA (DADDY LIVE)" streamId="339" channel-number="342",Universal Kids
+#EXTINF:-1 tvg-id="UniversalKids.us" tvg-name="Universal Kids" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/universal-kids-us.png" group-title="USA (DADDY LIVE)" streamId="339" channel-number="345",Universal Kids
 https://dlhd.sx/stream/stream-668.php
 
-#EXTINF:-1 tvg-id="UnivisionNetwork(Spanish).us" tvg-name="Univision" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/univision-us.png" group-title="USA (DADDY LIVE)" streamId="340" channel-number="343",Univision
+#EXTINF:-1 tvg-id="UnivisionNetwork(Spanish).us" tvg-name="Univision" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/univision-us.png" group-title="USA (DADDY LIVE)" streamId="340" channel-number="346",Univision
 https://dlhd.sx/stream/stream-132.php
 
-#EXTINF:-1 tvg-id="UniMas(Spanish).us" tvg-name="Unimas" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/unimas-us.png" group-title="USA (DADDY LIVE)" streamId="341" channel-number="344",Unimas
+#EXTINF:-1 tvg-id="UniMas(Spanish).us" tvg-name="Unimas" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/unimas-us.png" group-title="USA (DADDY LIVE)" streamId="341" channel-number="347",Unimas
 https://dlhd.sx/stream/stream-133.php
 
-#EXTINF:-1 tvg-id="VH1.us" tvg-name="VH1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/vh1-us.png" group-title="USA (DADDY LIVE)" streamId="342" channel-number="345",VH1
+#EXTINF:-1 tvg-id="VH1.us" tvg-name="VH1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/vh1-us.png" group-title="USA (DADDY LIVE)" streamId="342" channel-number="348",VH1
 https://dlhd.sx/stream/stream-344.php
 
-#EXTINF:-1 tvg-id="WEtv.us" tvg-name="WETV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/we-tv-us.png" group-title="USA (DADDY LIVE)" streamId="343" channel-number="346",WETV
+#EXTINF:-1 tvg-id="Vice.us" tvg-name="VICE TV" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/vice-us.png?raw=true" group-title="USA (DADDY LIVE)" streamId="502" channel-number="349",VICE TV
+https://dlhd.sx/stream/stream-659.php
+
+#EXTINF:-1 tvg-id="WEtv.us" tvg-name="WETV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/we-tv-us.png" group-title="USA (DADDY LIVE)" streamId="343" channel-number="350",WETV
 https://dlhd.sx/stream/stream-655.php
 
-#EXTINF:-1 tvg-id="ACCNetwork.us" tvg-name="ACC Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/acc-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="345" channel-number="348",ACC Network
+#EXTINF:-1 tvg-id="ACCNetwork.us" tvg-name="ACC Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/acc-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="345" channel-number="351",ACC Network
 https://dlhd.sx/stream/stream-664.php
 
-#EXTINF:-1 tvg-id="beINSports.us" tvg-name="BeIN SPORTS" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-us.png" group-title="SPORTS (DADDY LIVE)" streamId="346" channel-number="349",BeIN SPORTS
+#EXTINF:-1 tvg-id="beINSports.us" tvg-name="BeIN SPORTS" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-us.png" group-title="SPORTS (DADDY LIVE)" streamId="346" channel-number="352",BeIN SPORTS
 https://dlhd.sx/stream/stream-425.php
 
-#EXTINF:-1 tvg-id="beINSportsEnEspanol(Spanish).us" tvg-name="beIN SPORTS en Espanol" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-espanol-us.png" group-title="SPORTS (DADDY LIVE)" streamId="347" channel-number="350",beIN SPORTS en Espanol
+#EXTINF:-1 tvg-id="beINSportsEnEspanol(Spanish).us" tvg-name="beIN SPORTS en Espanol" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/bein-sports-espanol-us.png" group-title="SPORTS (DADDY LIVE)" streamId="347" channel-number="353",beIN SPORTS en Espanol
 https://dlhd.sx/stream/stream-372.php
 
-#EXTINF:-1 tvg-id="BigTenNetwork.us" tvg-name="BIG TEN Network (BTN)" tvg-logo="https://btn.com/wp-content/uploads/2022/01/share-image.png" group-title="SPORTS (DADDY LIVE)" streamId="348" channel-number="351",BIG TEN Network (BTN)
+#EXTINF:-1 tvg-id="BigTenNetwork.us" tvg-name="BIG TEN Network (BTN)" tvg-logo="https://btn.com/wp-content/uploads/2022/01/share-image.png" group-title="SPORTS (DADDY LIVE)" streamId="348" channel-number="354",BIG TEN Network (BTN)
 https://dlhd.sx/stream/stream-397.php
 
-#EXTINF:-1 tvg-id="CBSSportsNetwork.us" tvg-name="CBS Sports Network (CBSSN)" tvg-logo="https://pbs.twimg.com/profile_images/1356268043941380099/QHq2W42n_400x400.jpg" group-title="SPORTS (DADDY LIVE)" streamId="349" channel-number="352",CBS Sports Network (CBSSN)
+#EXTINF:-1 tvg-id="CBSSportsNetwork.us" tvg-name="CBS Sports Network (CBSSN)" tvg-logo="https://pbs.twimg.com/profile_images/1356268043941380099/QHq2W42n_400x400.jpg" group-title="SPORTS (DADDY LIVE)" streamId="349" channel-number="355",CBS Sports Network (CBSSN)
 https://dlhd.sx/stream/stream-308.php
 
-#EXTINF:-1 tvg-id="ESPN.us" tvg-name="ESPN" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/espn-us.png" group-title="SPORTS (DADDY LIVE)" streamId="350" channel-number="353",ESPN
+#EXTINF:-1 tvg-id="ESPN.us" tvg-name="ESPN" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/espn-us.png" group-title="SPORTS (DADDY LIVE)" streamId="350" channel-number="356",ESPN
 https://dlhd.sx/stream/stream-44.php
 
-#EXTINF:-1 tvg-id="ESPN2(src01).us" tvg-name="ESPN 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/espn-2-us.png" group-title="SPORTS (DADDY LIVE)" streamId="351" channel-number="354",ESPN 2
+#EXTINF:-1 tvg-id="ESPN2(src01).us" tvg-name="ESPN 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/espn-2-us.png" group-title="SPORTS (DADDY LIVE)" streamId="351" channel-number="357",ESPN 2
 https://dlhd.sx/stream/stream-45.php
 
-#EXTINF:-1 tvg-id="ESPNU.us" tvg-name="ESPNU" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/ESPN_U_logo.svg/1200px-ESPN_U_logo.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="352" channel-number="355",ESPNU
+#EXTINF:-1 tvg-id="ESPNU.us" tvg-name="ESPNU" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/ESPN_U_logo.svg/1200px-ESPN_U_logo.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="352" channel-number="358",ESPNU
 https://dlhd.sx/stream/stream-316.php
 
-#EXTINF:-1 tvg-id="Eurosport1UnitedKingdom(src01).uk" tvg-name="EuroSport 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/eurosport-1-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="353" channel-number="356",EuroSport 1
+#EXTINF:-1 tvg-id="Eurosport1UnitedKingdom(src01).uk" tvg-name="EuroSport 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/eurosport-1-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="353" channel-number="359",EuroSport 1
 https://dlhd.sx/stream/stream-41.php
 
-#EXTINF:-1 tvg-id="Eurosport2UnitedKingdom(src01).uk" tvg-name="EuroSport 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/eurosport-2-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="354" channel-number="357",EuroSport 2
+#EXTINF:-1 tvg-id="Eurosport2UnitedKingdom(src01).uk" tvg-name="EuroSport 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/eurosport-2-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="354" channel-number="360",EuroSport 2
 https://dlhd.sx/stream/stream-42.php
 
-#EXTINF:-1 tvg-id="ESPNDeportes(Spanish).us" tvg-name="ESPN Deportes" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/espn-deportes-us.png" group-title="SPORTS (DADDY LIVE)" streamId="355" channel-number="358",ESPN Deportes
+#EXTINF:-1 tvg-id="ESPNDeportes(Spanish).us" tvg-name="ESPN Deportes" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/espn-deportes-us.png" group-title="SPORTS (DADDY LIVE)" streamId="355" channel-number="361",ESPN Deportes
 https://dlhd.sx/stream/stream-375.php
 
-#EXTINF:-1 tvg-id="ESPNEWS.us" tvg-name="ESPNews" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/espnews-us.png" group-title="SPORTS (DADDY LIVE)" streamId="356" channel-number="359",ESPNews
+#EXTINF:-1 tvg-id="ESPNEWS.us" tvg-name="ESPNews" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/espnews-us.png" group-title="SPORTS (DADDY LIVE)" streamId="356" channel-number="362",ESPNews
 https://dlhd.sx/stream/stream-288.php
 
-#EXTINF:-1 tvg-id="FS1.us" tvg-name="Fox Sports 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-sports-1-us.png" group-title="SPORTS (DADDY LIVE)" streamId="357" channel-number="360",Fox Sports 1
+#EXTINF:-1 tvg-id="FS1.us" tvg-name="Fox Sports 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-sports-1-us.png" group-title="SPORTS (DADDY LIVE)" streamId="357" channel-number="363",Fox Sports 1
 https://dlhd.sx/stream/stream-39.php
 
-#EXTINF:-1 tvg-id="FS2(Spanish).us" tvg-name="Fox Sports 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-sports-2-us.png" group-title="SPORTS (DADDY LIVE)" streamId="358" channel-number="361",Fox Sports 2
+#EXTINF:-1 tvg-id="FS2(Spanish).us" tvg-name="Fox Sports 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-sports-2-us.png" group-title="SPORTS (DADDY LIVE)" streamId="358" channel-number="364",Fox Sports 2
 https://dlhd.sx/stream/stream-758.php
 
-#EXTINF:-1 tvg-id="FoxSoccerPlus.us" tvg-name="FOX Soccer Plus" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-soccer-plus-us.png" group-title="SPORTS (DADDY LIVE)" streamId="359" channel-number="362",FOX Soccer Plus
+#EXTINF:-1 tvg-id="FoxSoccerPlus.us" tvg-name="FOX Soccer Plus" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/fox-soccer-plus-us.png" group-title="SPORTS (DADDY LIVE)" streamId="359" channel-number="365",FOX Soccer Plus
 https://dlhd.sx/stream/stream-756.php
 
-#EXTINF:-1 tvg-id="FOXCRICKET(src04).au" tvg-name="Fox Cricket" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/8c9d06e33d31b0ac3804acb5d5f2d1050f0c1384/countries/australia/fox-sports-cricket-501-au.png" group-title="SPORTS (DADDY LIVE)" streamId="360" channel-number="363",Fox Cricket
+#EXTINF:-1 tvg-id="FOXCRICKET(src04).au" tvg-name="Fox Cricket" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/8c9d06e33d31b0ac3804acb5d5f2d1050f0c1384/countries/australia/fox-sports-cricket-501-au.png" group-title="SPORTS (DADDY LIVE)" streamId="360" channel-number="366",Fox Cricket
 https://dlhd.sx/stream/stream-369.php
 
-#EXTINF:-1 tvg-id="FoxDeportes(Spanish).us" tvg-name="FOX Deportes" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/FOX_Deportes_logo.svg/800px-FOX_Deportes_logo.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="361" channel-number="364",FOX Deportes
+#EXTINF:-1 tvg-id="FoxDeportes(Spanish).us" tvg-name="FOX Deportes" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/FOX_Deportes_logo.svg/800px-FOX_Deportes_logo.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="361" channel-number="367",FOX Deportes
 https://dlhd.sx/stream/stream-643.php
 
-#EXTINF:-1 tvg-id="FOXLeague(src04).au" tvg-name="FOX Sports 502" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8c9d06e33d31b0ac3804acb5d5f2d1050f0c1384/countries/australia/fox-sports-league-502-au.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="362" channel-number="365",FOX Sports 502
+#EXTINF:-1 tvg-id="FOXLeague(src04).au" tvg-name="FOX Sports 502" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8c9d06e33d31b0ac3804acb5d5f2d1050f0c1384/countries/australia/fox-sports-league-502-au.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="362" channel-number="368",FOX Sports 502
 https://dlhd.sx/stream/stream-820.php
 
-#EXTINF:-1 tvg-id="FoxSports503(src04).au" tvg-name="FOX Sports 503" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8c9d06e33d31b0ac3804acb5d5f2d1050f0c1384/countries/australia/fox-sports-503-au.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="363" channel-number="366",FOX Sports 503
+#EXTINF:-1 tvg-id="FoxSports503(src04).au" tvg-name="FOX Sports 503" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8c9d06e33d31b0ac3804acb5d5f2d1050f0c1384/countries/australia/fox-sports-503-au.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="363" channel-number="369",FOX Sports 503
 https://dlhd.sx/stream/stream-821.php
 
-#EXTINF:-1 tvg-id="FOXFooty(src04).au" tvg-name="FOX Sports 504" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8c9d06e33d31b0ac3804acb5d5f2d1050f0c1384/countries/australia/fox-sports-footy-504-au.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="364" channel-number="367",FOX Sports 504
+#EXTINF:-1 tvg-id="FOXFooty(src04).au" tvg-name="FOX Sports 504" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8c9d06e33d31b0ac3804acb5d5f2d1050f0c1384/countries/australia/fox-sports-footy-504-au.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="364" channel-number="370",FOX Sports 504
 https://dlhd.sx/stream/stream-822.php
 
-#EXTINF:-1 tvg-id="FoxSports505(src04).au" tvg-name="FOX Sports 505" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/australia/fox-sports-505-au.png" group-title="SPORTS (DADDY LIVE)" streamId="365" channel-number="368",FOX Sports 505
+#EXTINF:-1 tvg-id="FoxSports505(src04).au" tvg-name="FOX Sports 505" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/australia/fox-sports-505-au.png" group-title="SPORTS (DADDY LIVE)" streamId="365" channel-number="371",FOX Sports 505
 https://dlhd.sx/stream/stream-823.php
 
-#EXTINF:-1 tvg-id="FoxSports506(src04).au" tvg-name="FOX Sports 506" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/2/2c/SPE_290x170.png/revision/latest?cb=20180916115509" group-title="SPORTS (DADDY LIVE)" streamId="366" channel-number="369",FOX Sports 506
+#EXTINF:-1 tvg-id="FoxSports506(src04).au" tvg-name="FOX Sports 506" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/2/2c/SPE_290x170.png/revision/latest?cb=20180916115509" group-title="SPORTS (DADDY LIVE)" streamId="366" channel-number="372",FOX Sports 506
 https://dlhd.sx/stream/stream-824.php
 
-#EXTINF:-1 tvg-id="FoxSportsMoreplus(src04).au" tvg-name="FOX Sports 507" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8c9d06e33d31b0ac3804acb5d5f2d1050f0c1384/countries/australia/fox-sports-507-au.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="367" channel-number="370",FOX Sports 507
+#EXTINF:-1 tvg-id="FoxSportsMoreplus(src04).au" tvg-name="FOX Sports 507" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8c9d06e33d31b0ac3804acb5d5f2d1050f0c1384/countries/australia/fox-sports-507-au.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="367" channel-number="373",FOX Sports 507
 https://dlhd.sx/stream/stream-825.php
 
-#EXTINF:-1 tvg-id="GolfChannel.us" tvg-name="GOLF Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbc-golf-us.png" group-title="SPORTS (DADDY LIVE)" streamId="368" channel-number="371",GOLF Channel
+#EXTINF:-1 tvg-id="GolfChannel.us" tvg-name="GOLF Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbc-golf-us.png" group-title="SPORTS (DADDY LIVE)" streamId="368" channel-number="374",GOLF Channel
 https://dlhd.sx/stream/stream-318.php
 
-#EXTINF:-1 tvg-id="LiverpoolTV(src01).uk" tvg-name="Liverpool TV (LFC TV)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/lfctv-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="369" channel-number="372",Liverpool TV (LFC TV)
+#EXTINF:-1 tvg-id="LiverpoolTV(src01).uk" tvg-name="Liverpool TV (LFC TV)" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/lfctv-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="369" channel-number="375",Liverpool TV (LFC TV)
 https://dlhd.sx/stream/stream-826.php
 
-#EXTINF:-1 tvg-id="LonghornNetwork.us" tvg-name="Longhorn Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/longhorn-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="370" channel-number="373",Longhorn Network
+#EXTINF:-1 tvg-id="LonghornNetwork.us" tvg-name="Longhorn Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/longhorn-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="370" channel-number="376",Longhorn Network
 https://dlhd.sx/stream/stream-667.php
 
-#EXTINF:-1 tvg-id="MSGZone1.us" tvg-name="MSG" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/msg-us.png" group-title="SPORTS (DADDY LIVE)" streamId="371" channel-number="374",MSG
+#EXTINF:-1 tvg-id="MSGZone1.us" tvg-name="MSG" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/msg-us.png" group-title="SPORTS (DADDY LIVE)" streamId="371" channel-number="377",MSG
 https://dlhd.sx/stream/stream-765.php
 
-#EXTINF:-1 tvg-id="MarqueeSportsNetwork.us" tvg-name="Marquee Sports Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/marquee-sports-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="372" channel-number="375",Marquee Sports Network
+#EXTINF:-1 tvg-id="MarqueeSportsNetwork.us" tvg-name="Marquee Sports Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/marquee-sports-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="372" channel-number="378",Marquee Sports Network
 https://dlhd.sx/stream/stream-770.php
 
-#EXTINF:-1 tvg-id="MLBNetwork.us" tvg-name="MLB Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/mlb-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="373" channel-number="376",MLB Network
+#EXTINF:-1 tvg-id="MLBNetwork.us" tvg-name="MLB Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/mlb-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="373" channel-number="379",MLB Network
 https://dlhd.sx/stream/stream-399.php
 
-#EXTINF:-1 tvg-id="MASN.us" tvg-name="MASN" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/masn-us.png" group-title="SPORTS (DADDY LIVE)" streamId="374" channel-number="377",MASN
+#EXTINF:-1 tvg-id="MASN.us" tvg-name="MASN" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/masn-us.png" group-title="SPORTS (DADDY LIVE)" streamId="374" channel-number="380",MASN
 https://dlhd.sx/stream/stream-829.php
 
-#EXTINF:-1 tvg-id="NHLNetwork.us" tvg-name="NHL Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nhl-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="375" channel-number="378",NHL Network
+#EXTINF:-1 tvg-id="NHLNetwork.us" tvg-name="NHL Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nhl-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="375" channel-number="381",NHL Network
 https://dlhd.sx/stream/stream-663.php
 
-#EXTINF:-1 tvg-id="NewEnglandSportsNetwork.us" tvg-name="NESN" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nesn-us.png" group-title="SPORTS (DADDY LIVE)" streamId="376" channel-number="379",NESN
+#EXTINF:-1 tvg-id="NewEnglandSportsNetwork.us" tvg-name="NESN" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nesn-us.png" group-title="SPORTS (DADDY LIVE)" streamId="376" channel-number="382",NESN
 https://dlhd.sx/stream/stream-762.php
 
-#EXTINF:-1 tvg-id="NBATV.us" tvg-name="NBA TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-tv-us.png" group-title="SPORTS (DADDY LIVE)" streamId="377" channel-number="380",NBA TV
+#EXTINF:-1 tvg-id="NBATV.us" tvg-name="NBA TV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nba-tv-us.png" group-title="SPORTS (DADDY LIVE)" streamId="377" channel-number="383",NBA TV
 https://dlhd.sx/stream/stream-404.php
 
-#EXTINF:-1 tvg-id="NBCSportsChicago.us" tvg-name="NBC Sports Chicago" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbc-sports-chicago-us.png" group-title="SPORTS (DADDY LIVE)" streamId="378" channel-number="381",NBC Sports Chicago
+#EXTINF:-1 tvg-id="NBCSportsChicago.us" tvg-name="NBC Sports Chicago" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nbc-sports-chicago-us.png" group-title="SPORTS (DADDY LIVE)" streamId="378" channel-number="384",NBC Sports Chicago
 https://dlhd.sx/stream/stream-776.php
 
-#EXTINF:-1 tvg-id="NBCSportsPhiladelphia.us2" tvg-name="NBC Sports Philadelphia" tvg-logo="https://yt3.googleusercontent.com/ytc/AOPolaR3dIX4Fk1CMsTddY38X33HXDShJi0YbLMVvtgJJA=s900-c-k-c0x00ffffff-no-rj" group-title="SPORTS (DADDY LIVE)" streamId="379" channel-number="382",NBC Sports Philadelphia
+#EXTINF:-1 tvg-id="9025" tvg-name="NBC Sports Philadelphia" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nbcsn-philadelphia-us.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="379" channel-number="385",NBC Sports Philadelphia
 https://dlhd.sx/stream/stream-777.php
 
-#EXTINF:-1 tvg-id="NBC.Sports.Washington.(NBCSWA).us" tvg-name="NBC Sports Washington" tvg-logo="https://pbs.twimg.com/profile_images/1367596860861542401/fdWpkAcK_400x400.jpg" group-title="SPORTS (DADDY LIVE)" streamId="380" channel-number="383",NBC Sports Washington
+#EXTINF:-1 tvg-id="8862" tvg-name="NBC Sports Washington" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nbcsn-washington-us.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="380" channel-number="386",NBC Sports Washington
 https://dlhd.sx/stream/stream-778.php
 
-#EXTINF:-1 tvg-id="NFLNetwork.us" tvg-name="NFL Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nfl-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="381" channel-number="384",NFL Network
+#EXTINF:-1 tvg-id="NFLNetwork.us" tvg-name="NFL Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/nfl-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="381" channel-number="387",NFL Network
 https://dlhd.sx/stream/stream-405.php
 
-#EXTINF:-1 tvg-id="NBCSportsBayArea.us" tvg-name="NBC Sports Bay Area" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nbc-sports-us.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="382" channel-number="385",NBC Sports Bay Area
+#EXTINF:-1 tvg-id="NBCSportsBayArea.us" tvg-name="NBC Sports Bay Area" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nbc-sports-us.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="382" channel-number="388",NBC Sports Bay Area
 https://dlhd.sx/stream/stream-753.php
 
-#EXTINF:-1 tvg-id="NBCSportsBoston.us" tvg-name="NBC Sports Boston" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nbc-sports-us.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="383" channel-number="386",NBC Sports Boston
+#EXTINF:-1 tvg-id="NBCSportsBoston.us" tvg-name="NBC Sports Boston" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nbc-sports-us.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="383" channel-number="389",NBC Sports Boston
 https://dlhd.sx/stream/stream-754.php
 
-#EXTINF:-1 tvg-id="NBCSportsCaliforniaSAT.us" tvg-name="NBC Sportslifornia" tvg-logo="https://cms.nhl.bamgrid.com/images/photos/288216018/1024x576/cut.jpg" group-title="SPORTS (DADDY LIVE)" streamId="384" channel-number="387",NBC Sports California
+#EXTINF:-1 tvg-id="NBCSportsCaliforniaSAT.us" tvg-name="NBC Sportslifornia" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/nbcsn-california-us.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="384" channel-number="390",NBC Sports California
 https://dlhd.sx/stream/stream-755.php
 
-#EXTINF:-1 tvg-id="RacingTV.uk" tvg-name="Racing Tv" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/racing-tv-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="385" channel-number="388",Racing Tv
+#EXTINF:-1 tvg-id="RacingTV.uk" tvg-name="Racing Tv" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/racing-tv-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="385" channel-number="391",Racing Tv
 https://dlhd.sx/stream/stream-555.php
 
-#EXTINF:-1 tvg-id="SkySpFball(src01).uk" tvg-name="Sky Sports Football" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-football-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="386" channel-number="389",Sky Sports Football
+#EXTINF:-1 tvg-id="SkySpFball(src01).uk" tvg-name="Sky Sports Football" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-football-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="386" channel-number="392",Sky Sports Football
 https://dlhd.sx/stream/stream-35.php
 
-#EXTINF:-1 tvg-id="SkySpArena(src01).uk" tvg-name="Sky Sports Arena" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-arena-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="387" channel-number="390",Sky Sports Arena
+#EXTINF:-1 tvg-id="SkySpArena(src01).uk" tvg-name="Sky Sports Arena" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-arena-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="387" channel-number="393",Sky Sports Arena
 https://dlhd.sx/stream/stream-36.php
 
-#EXTINF:-1 tvg-id="SkySportsAction(src01).uk" tvg-name="Sky Sports Action" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-action-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="388" channel-number="391",Sky Sports Action
+#EXTINF:-1 tvg-id="SkySportsAction(src01).uk" tvg-name="Sky Sports Action" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-action-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="388" channel-number="394",Sky Sports Action
 https://dlhd.sx/stream/stream-37.php
 
-#EXTINF:-1 tvg-id="SkySpMainEv(src01).uk" tvg-name="Sky Sports Main Event" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e8/Sky-sports-main-event.jpg" group-title="SPORTS (DADDY LIVE)" streamId="389" channel-number="392",Sky Sports Main Event
+#EXTINF:-1 tvg-id="SkySpMainEv(src01).uk" tvg-name="Sky Sports Main Event" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e8/Sky-sports-main-event.jpg" group-title="SPORTS (DADDY LIVE)" streamId="389" channel-number="395",Sky Sports Main Event
 https://dlhd.sx/stream/stream-38.php
 
-#EXTINF:-1 tvg-id="SkySPPL(src01).uk" tvg-name="Sky sports Premier League" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/sky-sports-premier-league-uk.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="390" channel-number="393",Sky sports Premier League
+#EXTINF:-1 tvg-id="SkySPPL(src01).uk" tvg-name="Sky sports Premier League" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/sky-sports-premier-league-uk.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="390" channel-number="396",Sky sports Premier League
 https://dlhd.sx/stream/stream-130.php
 
-#EXTINF:-1 tvg-id="SkysportsF1(src01).uk" tvg-name="Sky Sports F1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-f1-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="391" channel-number="394",Sky Sports F1
+#EXTINF:-1 tvg-id="SkysportsF1(src01).uk" tvg-name="Sky Sports F1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-f1-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="391" channel-number="397",Sky Sports F1
 https://dlhd.sx/stream/stream-60.php
 
-#EXTINF:-1 tvg-id="SkySportsCricket(src01).uk" tvg-name="Sky Sports Cricket" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/sky-sports-cricket-uk.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="392" channel-number="395",Sky Sports Cricket
+#EXTINF:-1 tvg-id="SkySportsCricket(src01).uk" tvg-name="Sky Sports Cricket" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/sky-sports-cricket-uk.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="392" channel-number="398",Sky Sports Cricket
 https://dlhd.sx/stream/stream-65.php
 
-#EXTINF:-1 tvg-id="SkyTheOpen(src01).uk" tvg-name="Sky Sports Golf" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-golf-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="393" channel-number="396",Sky Sports Golf
+#EXTINF:-1 tvg-id="SkyTheOpen(src01).uk" tvg-name="Sky Sports Golf" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-golf-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="393" channel-number="399",Sky Sports Golf
 https://dlhd.sx/stream/stream-70.php
 
-#EXTINF:-1 tvg-id="SkySportsNews(src01).uk" tvg-name="Sky Sports News" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-news-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="394" channel-number="397",Sky Sports News
+#EXTINF:-1 tvg-id="SkySportsNews(src01).uk" tvg-name="Sky Sports News" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-news-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="394" channel-number="400",Sky Sports News
 https://dlhd.sx/stream/stream-366.php
 
-#EXTINF:-1 tvg-id="SportsNetNewYork.us" tvg-name="SportsNet New York (SNY)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/SNY_logo.svg/1200px-SNY_logo.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="395" channel-number="398",SportsNet New York (SNY)
+#EXTINF:-1 tvg-id="SkySportsRacing.uk" tvg-name="Sky Sports Racing" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/sky-sports-racing-uk.png?raw=true" group-title="SPORTS (DADDY LIVE)" streamId="503" channel-number="401",Sky Sports Racing
+https://dlhd.sx/stream/stream-554.php
+
+#EXTINF:-1 tvg-id="SportsNetNewYork.us" tvg-name="SportsNet New York (SNY)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/SNY_logo.svg/1200px-SNY_logo.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="395" channel-number="402",SportsNet New York (SNY)
 https://dlhd.sx/stream/stream-759.php
 
-#EXTINF:-1 tvg-id="SportsnetOntario(English).ca" tvg-name="Sportsnet Ontario" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/b/be/Rogers_Sportsnet_Ontario_thumb.png/revision/latest?cb=20160514183500" group-title="SPORTS (DADDY LIVE)" streamId="396" channel-number="399",Sportsnet Ontario
+#EXTINF:-1 tvg-id="SportsnetOntario(English).ca" tvg-name="Sportsnet Ontario" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/b/be/Rogers_Sportsnet_Ontario_thumb.png/revision/latest?cb=20160514183500" group-title="SPORTS (DADDY LIVE)" streamId="396" channel-number="403",Sportsnet Ontario
 https://dlhd.sx/stream/stream-406.php
 
-#EXTINF:-1 tvg-id="SportsnetOne(English).ca" tvg-name="Sportsnet One" tvg-logo="https://cdn.tvpassport.com/image/station/240x135/v2/s68859_h15_ac.png" group-title="SPORTS (DADDY LIVE)" streamId="397" channel-number="400",Sportsnet One
+#EXTINF:-1 tvg-id="SportsnetOne(English).ca" tvg-name="Sportsnet One" tvg-logo="https://cdn.tvpassport.com/image/station/240x135/v2/s68859_h15_ac.png" group-title="SPORTS (DADDY LIVE)" streamId="397" channel-number="404",Sportsnet One
 https://dlhd.sx/stream/stream-411.php
 
-#EXTINF:-1 tvg-id="Sportsnet(West)(English).ca" tvg-name="Sportsnet West" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/9/95/Rogers_sportsnet_west.png/revision/latest?cb=20120212022740" group-title="SPORTS (DADDY LIVE)" streamId="398" channel-number="401",Sportsnet West
+#EXTINF:-1 tvg-id="Sportsnet(West)(English).ca" tvg-name="Sportsnet West" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/9/95/Rogers_sportsnet_west.png/revision/latest?cb=20120212022740" group-title="SPORTS (DADDY LIVE)" streamId="398" channel-number="405",Sportsnet West
 https://dlhd.sx/stream/stream-407.php
 
-#EXTINF:-1 tvg-id="SportsNetNewYork.us" tvg-name="Sportsnet East" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/3/3a/Rogers_sportsnet_east_thumb.png/revision/latest?cb=20160514183643" group-title="SPORTS (DADDY LIVE)" streamId="399" channel-number="402",Sportsnet East
+#EXTINF:-1 tvg-id="SportsNetNewYork.us" tvg-name="Sportsnet East" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/3/3a/Rogers_sportsnet_east_thumb.png/revision/latest?cb=20160514183643" group-title="SPORTS (DADDY LIVE)" streamId="399" channel-number="406",Sportsnet East
 https://dlhd.sx/stream/stream-408.php
 
-#EXTINF:-1 tvg-id="Sportsnet360(English).ca" tvg-name="Sportsnet 360" tvg-logo="https://w7.pngwing.com/pngs/746/852/png-transparent-sportsnet-360-cfac-calgary-flames-national-hockey-league-others-text-logo-world.png" group-title="SPORTS (DADDY LIVE)" streamId="400" channel-number="403",Sportsnet 360
+#EXTINF:-1 tvg-id="Sportsnet360(English).ca" tvg-name="Sportsnet 360" tvg-logo="https://w7.pngwing.com/pngs/746/852/png-transparent-sportsnet-360-cfac-calgary-flames-national-hockey-league-others-text-logo-world.png" group-title="SPORTS (DADDY LIVE)" streamId="400" channel-number="407",Sportsnet 360
 https://dlhd.sx/stream/stream-409.php
 
-#EXTINF:-1 tvg-id="SportsnetWorld(English).ca" tvg-name="Sportsnet World" tvg-logo="https://cdn.tvpassport.com/image/station/240x135/v2/s68946_h15_aa.png" group-title="SPORTS (DADDY LIVE)" streamId="401" channel-number="404",Sportsnet World
+#EXTINF:-1 tvg-id="SportsnetWorld(English).ca" tvg-name="Sportsnet World" tvg-logo="https://cdn.tvpassport.com/image/station/240x135/v2/s68946_h15_aa.png" group-title="SPORTS (DADDY LIVE)" streamId="401" channel-number="408",Sportsnet World
 https://dlhd.sx/stream/stream-410.php
 
-#EXTINF:-1 tvg-id="SpectrumSportsNetLA.us" tvg-name="Spectrum Sportsnet LA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/spectrum-sportsnet-la-us.png" group-title="SPORTS (DADDY LIVE)" streamId="402" channel-number="405",Spectrum Sportsnet LA
+#EXTINF:-1 tvg-id="SpectrumSportsNetLA.us" tvg-name="Spectrum Sportsnet LA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/spectrum-sportsnet-la-us.png" group-title="SPORTS (DADDY LIVE)" streamId="402" channel-number="409",Spectrum Sportsnet LA
 https://dlhd.sx/stream/stream-764.php
 
-#EXTINF:-1 tvg-id="TNTSport1(src01).uk" tvg-name="BT Sport 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bt-sport-1-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="403" channel-number="406",BT Sport 1
+#EXTINF:-1 tvg-id="TNTSport1(src01).uk" tvg-name="BT Sport 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bt-sport-1-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="403" channel-number="410",BT Sport 1
 https://dlhd.sx/stream/stream-31.php
 
-#EXTINF:-1 tvg-id="TNTSport2(src01).uk" tvg-name="BT Sport 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bt-sport-2-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="404" channel-number="407",BT Sport 2
+#EXTINF:-1 tvg-id="TNTSport2(src01).uk" tvg-name="BT Sport 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bt-sport-2-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="404" channel-number="411",BT Sport 2
 https://dlhd.sx/stream/stream-32.php
 
-#EXTINF:-1 tvg-id="TNTSport3(src01).uk" tvg-name="BT Sport 3" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bt-sport-3-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="405" channel-number="408",BT Sport 3
+#EXTINF:-1 tvg-id="TNTSport3(src01).uk" tvg-name="BT Sport 3" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bt-sport-3-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="405" channel-number="412",BT Sport 3
 https://dlhd.sx/stream/stream-33.php
 
-#EXTINF:-1 tvg-id="TNTSport4(src01).uk" tvg-name="BT Sport 4" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bt-sport-4-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="406" channel-number="409",BT Sport 4
+#EXTINF:-1 tvg-id="TNTSport4(src01).uk" tvg-name="BT Sport 4" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bt-sport-4-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="406" channel-number="413",BT Sport 4
 https://dlhd.sx/stream/stream-34.php
 
-#EXTINF:-1 tvg-id="TSN1(English).ca" tvg-name="TSN1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/TSN1.svg/2560px-TSN1.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="407" channel-number="410",TSN1
+#EXTINF:-1 tvg-id="TSN1(English).ca" tvg-name="TSN1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/TSN1.svg/2560px-TSN1.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="407" channel-number="414",TSN1
 https://dlhd.sx/stream/stream-111.php
 
-#EXTINF:-1 tvg-id="TSN2(English).ca" tvg-name="TSN2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/TSN2_New_Logo.svg/2560px-TSN2_New_Logo.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="408" channel-number="411",TSN2
+#EXTINF:-1 tvg-id="TSN2(English).ca" tvg-name="TSN2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/TSN2_New_Logo.svg/2560px-TSN2_New_Logo.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="408" channel-number="415",TSN2
 https://dlhd.sx/stream/stream-112.php
 
-#EXTINF:-1 tvg-id="TSN3(English).ca" tvg-name="TSN3" tvg-logo="https://cdn.tvpassport.com/image/station/240x135/v2/s90119_h15_aa.png" group-title="SPORTS (DADDY LIVE)" streamId="409" channel-number="412",TSN3
+#EXTINF:-1 tvg-id="TSN3(English).ca" tvg-name="TSN3" tvg-logo="https://cdn.tvpassport.com/image/station/240x135/v2/s90119_h15_aa.png" group-title="SPORTS (DADDY LIVE)" streamId="409" channel-number="416",TSN3
 https://dlhd.sx/stream/stream-113.php
 
-#EXTINF:-1 tvg-id="TSN4(English).ca" tvg-name="TSN4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/TSN4.svg/1280px-TSN4.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="410" channel-number="413",TSN4
+#EXTINF:-1 tvg-id="TSN4(English).ca" tvg-name="TSN4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/TSN4.svg/1280px-TSN4.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="410" channel-number="417",TSN4
 https://dlhd.sx/stream/stream-114.php
 
-#EXTINF:-1 tvg-id="TSN5(English).ca" tvg-name="TSN5" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/TSN5.svg/1200px-TSN5.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="411" channel-number="414",TSN5
+#EXTINF:-1 tvg-id="TSN5(English).ca" tvg-name="TSN5" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/TSN5.svg/1200px-TSN5.svg.png" group-title="SPORTS (DADDY LIVE)" streamId="411" channel-number="418",TSN5
 https://dlhd.sx/stream/stream-115.php
 
-#EXTINF:-1 tvg-id="TennisChannel.us" tvg-name="Tennis Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tennis-channel-us.png" group-title="SPORTS (DADDY LIVE)" streamId="412" channel-number="415",Tennis Channel
+#EXTINF:-1 tvg-id="TennisChannel.us" tvg-name="Tennis Channel" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tennis-channel-us.png" group-title="SPORTS (DADDY LIVE)" streamId="412" channel-number="419",Tennis Channel
 https://dlhd.sx/stream/stream-40.php
 
-#EXTINF:-1 tvg-id="TUDN(Spanish).us" tvg-name="TUDN" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tudn-us.png" group-title="SPORTS (DADDY LIVE)" streamId="413" channel-number="416",TUDN
+#EXTINF:-1 tvg-id="TUDN(Spanish).us" tvg-name="TUDN" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/tudn-us.png" group-title="SPORTS (DADDY LIVE)" streamId="413" channel-number="420",TUDN
 https://dlhd.sx/stream/stream-66.php
 
-#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 1" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="414" channel-number="417",Tennis+ 1
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 1" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="414" channel-number="421",Tennis+ 1
 https://dlhd.sx/stream/stream-700.php
 
-#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 2" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="415" channel-number="418",Tennis+ 2
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 2" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="415" channel-number="422",Tennis+ 2
 https://dlhd.sx/stream/stream-701.php
 
-#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 3" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="416" channel-number="419",Tennis+ 3
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 3" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="416" channel-number="423",Tennis+ 3
 https://dlhd.sx/stream/stream-702.php
 
-#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 4" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="417" channel-number="420",Tennis+ 4
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 4" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="417" channel-number="424",Tennis+ 4
 https://dlhd.sx/stream/stream-703.php
 
-#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 5" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="418" channel-number="421",Tennis+ 5
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 5" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="418" channel-number="425",Tennis+ 5
 https://dlhd.sx/stream/stream-704.php
 
-#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 6" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="419" channel-number="422",Tennis+ 6
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 6" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="419" channel-number="426",Tennis+ 6
 https://dlhd.sx/stream/stream-705.php
 
-#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 7" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="420" channel-number="423",Tennis+ 7
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 7" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="420" channel-number="427",Tennis+ 7
 https://dlhd.sx/stream/stream-706.php
 
-#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 8" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="421" channel-number="424",Tennis+ 8
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 8" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="421" channel-number="428",Tennis+ 8
 https://dlhd.sx/stream/stream-707.php
 
-#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 9" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="422" channel-number="425",Tennis+ 9
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 9" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="422" channel-number="429",Tennis+ 9
 https://dlhd.sx/stream/stream-708.php
 
-#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 10" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="423" channel-number="426",Tennis+ 10
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 10" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="423" channel-number="430",Tennis+ 10
 https://dlhd.sx/stream/stream-709.php
 
-#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 11" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="424" channel-number="427",Tennis+ 11
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 11" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="424" channel-number="431",Tennis+ 11
 https://dlhd.sx/stream/stream-710.php
 
-#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 12" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="425" channel-number="428",Tennis+ 12
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 12" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="425" channel-number="432",Tennis+ 12
 https://dlhd.sx/stream/stream-711.php
 
-#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 13" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="426" channel-number="429",Tennis+ 13
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 13" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="426" channel-number="433",Tennis+ 13
 https://dlhd.sx/stream/stream-712.php
 
-#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 14" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="427" channel-number="430",Tennis+ 14
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 14" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="427" channel-number="434",Tennis+ 14
 https://dlhd.sx/stream/stream-713.php
 
-#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 15" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="428" channel-number="431",Tennis+ 15
+#EXTINF:-1 tvg-id="(no tvg-id)" tvg-name="Tennis+ 15" tvg-logo="https://sbgi.net/wp-content/uploads/2022/09/tennis_channel_color_horz_wht-1.png" group-title="SPORTS (DADDY LIVE)" streamId="428" channel-number="435",Tennis+ 15
 https://dlhd.sx/stream/stream-714.php
 
-#EXTINF:-1 tvg-id="Viaplay1(src01).uk" tvg-name="Viaplay Sports 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/viaplay-sports-1-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="429" channel-number="432",Viaplay Sports 1
+#EXTINF:-1 tvg-id="Viaplay1(src01).uk" tvg-name="Viaplay Sports 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/viaplay-sports-1-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="429" channel-number="436",Viaplay Sports 1
 https://dlhd.sx/stream/stream-451.php
 
-#EXTINF:-1 tvg-id="Viaplay2(src01).uk" tvg-name="Viaplay Sports 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/viaplay-sports-2-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="430" channel-number="433",Viaplay Sports 2
+#EXTINF:-1 tvg-id="Viaplay2(src01).uk" tvg-name="Viaplay Sports 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/viaplay-sports-2-uk.png" group-title="SPORTS (DADDY LIVE)" streamId="430" channel-number="437",Viaplay Sports 2
 https://dlhd.sx/stream/stream-550.php
 
-#EXTINF:-1 tvg-id="WillowCricket.us" tvg-name="Willow Cricket" tvg-logo="https://aimages.willow.tv/wlo_logo_200_200.jpg" group-title="SPORTS (DADDY LIVE)" streamId="431" channel-number="434",Willow Cricket
+#EXTINF:-1 tvg-id="WillowCricket.us" tvg-name="Willow Cricket" tvg-logo="https://aimages.willow.tv/wlo_logo_200_200.jpg" group-title="SPORTS (DADDY LIVE)" streamId="431" channel-number="438",Willow Cricket
 https://dlhd.sx/stream/stream-346.php
 
-#EXTINF:-1 tvg-id="WillowXtra.us" tvg-name="Willow XTRA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/willow-xtra-us.png" group-title="SPORTS (DADDY LIVE)" streamId="432" channel-number="435",Willow XTRA
+#EXTINF:-1 tvg-id="WillowXtra.us" tvg-name="Willow XTRA" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/willow-xtra-us.png" group-title="SPORTS (DADDY LIVE)" streamId="432" channel-number="439",Willow XTRA
 https://dlhd.sx/stream/stream-598.php
 
-#EXTINF:-1 tvg-id="WWENetwork(English).ca" tvg-name="WWE Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/wwe-us.png" group-title="SPORTS (DADDY LIVE)" streamId="433" channel-number="436",WWE Network
+#EXTINF:-1 tvg-id="WWENetwork(English).ca" tvg-name="WWE Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/wwe-us.png" group-title="SPORTS (DADDY LIVE)" streamId="433" channel-number="440",WWE Network
 https://dlhd.sx/stream/stream-376.php
 
-#EXTINF:-1 tvg-id="YesNetwork.us" tvg-name="YES Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/yes-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="434" channel-number="437",YES Network
+#EXTINF:-1 tvg-id="YesNetwork.us" tvg-name="YES Network" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/yes-network-us.png" group-title="SPORTS (DADDY LIVE)" streamId="434" channel-number="441",YES Network
 https://dlhd.sx/stream/stream-763.php
 
-#EXTINF:-1 tvg-id="BBCWorldNews(MiddleEast)(src01).uk" tvg-name="BBC News Channel HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-news-uk.png" group-title="UK (DADDY LIVE)" streamId="435" channel-number="438",BBC News Channel HD
+#EXTINF:-1 tvg-id="BBCWorldNews(MiddleEast)(src01).uk" tvg-name="BBC News Channel HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-news-uk.png" group-title="UK (DADDY LIVE)" streamId="435" channel-number="442",BBC News Channel HD
 https://dlhd.sx/stream/stream-349.php
 
-#EXTINF:-1 tvg-id="BBC1(East)(src01).uk" tvg-name="BBC One" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-one-uk.png" group-title="UK (DADDY LIVE)" streamId="436" channel-number="439",BBC One
+#EXTINF:-1 tvg-id="BBC1(East)(src01).uk" tvg-name="BBC One" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-one-uk.png" group-title="UK (DADDY LIVE)" streamId="436" channel-number="443",BBC One
 https://dlhd.sx/stream/stream-356.php
 
-#EXTINF:-1 tvg-id="BBCTwo(src01).uk" tvg-name="BBC Two" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-two-uk.png" group-title="UK (DADDY LIVE)" streamId="437" channel-number="440",BBC Two
+#EXTINF:-1 tvg-id="BBCTwo.uk" tvg-name="BBC Two" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-two-uk.png" group-title="UK (DADDY LIVE)" streamId="437" channel-number="444",BBC Two
 https://dlhd.sx/stream/stream-357.php
 
-#EXTINF:-1 tvg-id="BBCThree(src01).uk" tvg-name="BBC Three" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-three-uk.png" group-title="UK (DADDY LIVE)" streamId="438" channel-number="441",BBC Three
+#EXTINF:-1 tvg-id="BBCThree.uk" tvg-name="BBC Three" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-three-uk.png" group-title="UK (DADDY LIVE)" streamId="438" channel-number="445",BBC Three
 https://dlhd.sx/stream/stream-358.php
 
-#EXTINF:-1 tvg-id="BBCFour(src01).uk" tvg-name="BBC Four" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-four-uk.png" group-title="UK (DADDY LIVE)" channel-number="442",BBC Four
+#EXTINF:-1 tvg-id="BBCFour(src01).uk" tvg-name="BBC Four" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/bbc-four-uk.png" group-title="UK (DADDY LIVE)" channel-number="446",BBC Four
 https://dlhd.sx/stream/stream-359.php
 
-#EXTINF:-1 tvg-id="Channel4(src01).uk" tvg-name="Channel 4" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/channel-4-uk.png" group-title="UK (DADDY LIVE)" streamId="440" channel-number="443",Channel 4
+#EXTINF:-1 tvg-id="Channel4(src01).uk" tvg-name="Channel 4" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/channel-4-uk.png" group-title="UK (DADDY LIVE)" streamId="440" channel-number="447",Channel 4
 https://dlhd.sx/stream/stream-354.php
 
-#EXTINF:-1 tvg-id="Channel5(src01).uk" tvg-name="Channel 5" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/channel-5-uk.png" group-title="UK (DADDY LIVE)" streamId="441" channel-number="444",Channel 5
+#EXTINF:-1 tvg-id="Channel5(src01).uk" tvg-name="Channel 5" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/channel-5-uk.png" group-title="UK (DADDY LIVE)" streamId="441" channel-number="448",Channel 5
 https://dlhd.sx/stream/stream-355.php
 
-#EXTINF:-1 tvg-id="Dave(src01).uk" tvg-name="Dave" tvg-logo="https://res.cloudinary.com/uktv/image/upload/v1390389612/nnjpehbj2a2qvyxoda0z.jpg" group-title="UK (DADDY LIVE)" streamId="442" channel-number="445",Dave
+#EXTINF:-1 tvg-id="Dave(src01).uk" tvg-name="Dave" tvg-logo="https://res.cloudinary.com/uktv/image/upload/v1390389612/nnjpehbj2a2qvyxoda0z.jpg" group-title="UK (DADDY LIVE)" streamId="442" channel-number="449",Dave
 https://dlhd.sx/stream/stream-348.php
 
-#EXTINF:-1 tvg-id="E4(src01).uk" tvg-name="E4 Channel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/0/06/E4_Logo.png" group-title="UK (DADDY LIVE)" streamId="443" channel-number="446",E4 Channel
+#EXTINF:-1 tvg-id="E4(src01).uk" tvg-name="E4 Channel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/0/06/E4_Logo.png" group-title="UK (DADDY LIVE)" streamId="443" channel-number="450",E4 Channel
 https://dlhd.sx/stream/stream-363.php
 
-#EXTINF:-1 tvg-id="Film4(src01).uk" tvg-name="Film4" tvg-logo="https://cdn.comedy.co.uk/images/channels/film4.jpg" group-title="UK (DADDY LIVE)" streamId="444" channel-number="447",Film4
+#EXTINF:-1 tvg-id="Film4(src01).uk" tvg-name="Film4" tvg-logo="https://cdn.comedy.co.uk/images/channels/film4.jpg" group-title="UK (DADDY LIVE)" streamId="444" channel-number="451",Film4
 https://dlhd.sx/stream/stream-688.php
 
-#EXTINF:-1 tvg-id="GOLD(src01).uk" tvg-name="Gold" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/gold-uk.png" group-title="UK (DADDY LIVE)" streamId="445" channel-number="448",Gold
+#EXTINF:-1 tvg-id="GOLD(src01).uk" tvg-name="Gold" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/gold-uk.png" group-title="UK (DADDY LIVE)" streamId="445" channel-number="452",Gold
 https://dlhd.sx/stream/stream-687.php
 
-#EXTINF:-1 tvg-id="ITV1(src01).uk" tvg-name="ITV 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/itv-1-uk.png" group-title="UK (DADDY LIVE)" streamId="446" channel-number="449",ITV 1
+#EXTINF:-1 tvg-id="ITV1(src01).uk" tvg-name="ITV 1" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/itv-1-uk.png" group-title="UK (DADDY LIVE)" streamId="446" channel-number="453",ITV 1
 https://dlhd.sx/stream/stream-350.php
 
-#EXTINF:-1 tvg-id="ITV2(src01).uk" tvg-name="ITV 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/itv-2-uk.png" group-title="UK (DADDY LIVE)" streamId="447" channel-number="450",ITV 2
+#EXTINF:-1 tvg-id="ITV2(src01).uk" tvg-name="ITV 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/itv-2-uk.png" group-title="UK (DADDY LIVE)" streamId="447" channel-number="454",ITV 2
 https://dlhd.sx/stream/stream-351.php
 
-#EXTINF:-1 tvg-id="ITV3(src01).uk" tvg-name="ITV 3" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/itv-3-uk.png" group-title="UK (DADDY LIVE)" streamId="448" channel-number="451",ITV 3
+#EXTINF:-1 tvg-id="ITV3(src01).uk" tvg-name="ITV 3" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/itv-3-uk.png" group-title="UK (DADDY LIVE)" streamId="448" channel-number="455",ITV 3
 https://dlhd.sx/stream/stream-352.php
 
 #EXTINF:-1 tvg-id="ITV4(src01).uk" tvg-name="ITV 4" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/itv-4-uk.png" group-title="UK (DADDY LIVE)" streamId="449" channel-number="323,ITV 4
 https://dlhd.sx/stream/stream-353.php
 
-#EXTINF:-1 tvg-id="MTV(src01).uk" tvg-name="MTV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/mtv-uk.png" group-title="UK (DADDY LIVE)" streamId="450" channel-number="453",MTV
+#EXTINF:-1 tvg-id="MTV(src01).uk" tvg-name="MTV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/mtv-uk.png" group-title="UK (DADDY LIVE)" streamId="450" channel-number="457",MTV
 https://dlhd.sx/stream/stream-367.php
 
-#EXTINF:-1 tvg-id="MUTV(src01).uk" tvg-name="MUTV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/mutv-uk.png" group-title="UK (DADDY LIVE)" streamId="451" channel-number="454",MUTV
+#EXTINF:-1 tvg-id="MUTV(src01).uk" tvg-name="MUTV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/mutv-uk.png" group-title="UK (DADDY LIVE)" streamId="451" channel-number="458",MUTV
 https://dlhd.sx/stream/stream-377.php
 
-#EXTINF:-1 tvg-id="RTEOne(src01).ie" tvg-name="RTE 1" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/5/53/RTE_One_Stacked.svg/revision/latest/scale-to-width-down/250?cb=20210310105314" group-title="UK (DADDY LIVE)" streamId="452" channel-number="455",RTE 1
+#EXTINF:-1 tvg-id="RTEOne(src01).ie" tvg-name="RTE 1" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/5/53/RTE_One_Stacked.svg/revision/latest/scale-to-width-down/250?cb=20210310105314" group-title="UK (DADDY LIVE)" streamId="452" channel-number="459",RTE 1
 https://dlhd.sx/stream/stream-364.php
 
-#EXTINF:-1 tvg-id="RTETwo(src01).ie" tvg-name="RTE 2" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/11/RT%C3%892_logo.svg/1200px-RT%C3%892_logo.svg.png" group-title="UK (DADDY LIVE)" streamId="453" channel-number="456",RTE 2
+#EXTINF:-1 tvg-id="RTETwo(src01).ie" tvg-name="RTE 2" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/11/RT%C3%892_logo.svg/1200px-RT%C3%892_logo.svg.png" group-title="UK (DADDY LIVE)" streamId="453" channel-number="460",RTE 2
 https://dlhd.sx/stream/stream-365.php
 
-#EXTINF:-1 tvg-id="S4C(src01).uk" tvg-name="S4C" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/s4c-uk.png" group-title="UK (DADDY LIVE)" streamId="454" channel-number="457",S4C
+#EXTINF:-1 tvg-id="S4C(src01).uk" tvg-name="S4C" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/s4c-uk.png" group-title="UK (DADDY LIVE)" streamId="454" channel-number="461",S4C
 https://dlhd.sx/stream/stream-670.php
 
-#EXTINF:-1 tvg-id="SkyCinemaPremiere(src01).uk" tvg-name="Sky Cinema Premiere" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-premiere-uk.png" group-title="UK (DADDY LIVE)" streamId="455" channel-number="458",Sky Cinema Premiere
+#EXTINF:-1 tvg-id="SkyCinemaPremiere(src01).uk" tvg-name="Sky Cinema Premiere" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-premiere-uk.png" group-title="UK (DADDY LIVE)" streamId="455" channel-number="462",Sky Cinema Premiere
 https://dlhd.sx/stream/stream-671.php
 
-#EXTINF:-1 tvg-id="SkyCinemaSelect.uk" tvg-name="Sky Cinema Select" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-select-uk.png" group-title="UK (DADDY LIVE)" streamId="456" channel-number="459",Sky Cinema Select
+#EXTINF:-1 tvg-id="SkyCinemaSelect.uk" tvg-name="Sky Cinema Select" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-select-uk.png" group-title="UK (DADDY LIVE)" streamId="456" channel-number="463",Sky Cinema Select
 https://dlhd.sx/stream/stream-672.php
 
-#EXTINF:-1 tvg-id="SkyCinemaHits(src01).uk" tvg-name="Sky Cinema Hits" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-hits-uk.png" group-title="UK (DADDY LIVE)" streamId="457" channel-number="460",Sky Cinema Hits
+#EXTINF:-1 tvg-id="SkyCinemaHits(src01).uk" tvg-name="Sky Cinema Hits" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-hits-uk.png" group-title="UK (DADDY LIVE)" streamId="457" channel-number="464",Sky Cinema Hits
 https://dlhd.sx/stream/stream-673.php
 
-#EXTINF:-1 tvg-id="SkyGreats(src01).uk" tvg-name="Sky Cinema Greats" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-greats-uk.png" group-title="UK (DADDY LIVE)" streamId="458" channel-number="461",Sky Cinema Greats
+#EXTINF:-1 tvg-id="SkyGreats(src01).uk" tvg-name="Sky Cinema Greats" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-greats-uk.png" group-title="UK (DADDY LIVE)" streamId="458" channel-number="465",Sky Cinema Greats
 https://dlhd.sx/stream/stream-674.php
 
-#EXTINF:-1 tvg-id="SkyAnimation(src01).uk" tvg-name="Sky Cinema Animation" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-animation-uk.png" group-title="UK (DADDY LIVE)" streamId="459" channel-number="462",Sky Cinema Animation
+#EXTINF:-1 tvg-id="SkyAnimation(src01).uk" tvg-name="Sky Cinema Animation" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-animation-uk.png" group-title="UK (DADDY LIVE)" streamId="459" channel-number="466",Sky Cinema Animation
 https://dlhd.sx/stream/stream-675.php
 
-#EXTINF:-1 tvg-id="SkyCinemaFamily(src01).uk" tvg-name="Sky Cinema Family" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-family-uk.png" group-title="UK (DADDY LIVE)" streamId="460" channel-number="463",Sky Cinema Family
+#EXTINF:-1 tvg-id="SkyCinemaFamily(src01).uk" tvg-name="Sky Cinema Family" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-family-uk.png" group-title="UK (DADDY LIVE)" streamId="460" channel-number="467",Sky Cinema Family
 https://dlhd.sx/stream/stream-676.php
 
-#EXTINF:-1 tvg-id="SkyCinemaAction(src01).uk" tvg-name="Sky Cinema Action" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-action-uk.png" group-title="UK (DADDY LIVE)" streamId="461" channel-number="464",Sky Cinema Action
+#EXTINF:-1 tvg-id="SkyCinemaAction(src01).uk" tvg-name="Sky Cinema Action" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-action-uk.png" group-title="UK (DADDY LIVE)" streamId="461" channel-number="468",Sky Cinema Action
 https://dlhd.sx/stream/stream-677.php
 
-#EXTINF:-1 tvg-id="SkyCinemaThriller(src01).uk" tvg-name="Sky Cinema Thriller" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-thriller-uk.png" group-title="UK (DADDY LIVE)" streamId="462" channel-number="465",Sky Cinema Thriller
+#EXTINF:-1 tvg-id="SkyCinemaDrama.uk" tvg-name="Sky Cinema Drama" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-kingdom/sky-cinema-drama-uk.png?raw=true" group-title="UK (DADDY LIVE)" streamId="504" channel-number="469",Sky Cinema Drama
+https://dlhd.sx/stream/stream-680.php
+
+#EXTINF:-1 tvg-id="SkyCinemaThriller(src01).uk" tvg-name="Sky Cinema Thriller" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-thriller-uk.png" group-title="UK (DADDY LIVE)" streamId="462" channel-number="470",Sky Cinema Thriller
 https://dlhd.sx/stream/stream-679.php
 
-#EXTINF:-1 tvg-id="SkyCinemaScifiHorror(src01).uk" tvg-name="Sky Cinema Sci-Fi Horror" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-sci-fi-and-horror-uk.png" group-title="UK (DADDY LIVE)" streamId="463" channel-number="466",Sky Cinema Sci-Fi Horror
+#EXTINF:-1 tvg-id="SkyCinemaScifiHorror(src01).uk" tvg-name="Sky Cinema Sci-Fi Horror" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-cinema-sci-fi-and-horror-uk.png" group-title="UK (DADDY LIVE)" streamId="463" channel-number="471",Sky Cinema Sci-Fi Horror
 https://dlhd.sx/stream/stream-681.php
 
-#EXTINF:-1 tvg-id="SkyShowcase(src01).uk" tvg-name="Sky Showcase" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-showcase-uk.png" group-title="UK (DADDY LIVE)" streamId="464" channel-number="467",Sky Showcase
+#EXTINF:-1 tvg-id="SkyShowcase(src01).uk" tvg-name="Sky Showcase" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-showcase-uk.png" group-title="UK (DADDY LIVE)" streamId="464" channel-number="472",Sky Showcase
 https://dlhd.sx/stream/stream-682.php
 
-#EXTINF:-1 tvg-id="SkyArts1(src01).uk" tvg-name="Sky Arts" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-arts-uk.png" group-title="UK (DADDY LIVE)" streamId="465" channel-number="468",Sky Arts
+#EXTINF:-1 tvg-id="SkyArts1(src01).uk" tvg-name="Sky Arts" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-arts-uk.png" group-title="UK (DADDY LIVE)" streamId="465" channel-number="473",Sky Arts
 https://dlhd.sx/stream/stream-683.php
 
-#EXTINF:-1 tvg-id="SkyComedy(src01).uk" tvg-name="Sky Comedy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-comedy-uk.png" group-title="UK (DADDY LIVE)" streamId="466" channel-number="469",Sky Comedy
+#EXTINF:-1 tvg-id="SkyComedy(src01).uk" tvg-name="Sky Comedy" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-comedy-uk.png" group-title="UK (DADDY LIVE)" streamId="466" channel-number="474",Sky Comedy
 https://dlhd.sx/stream/stream-684.php
 
-#EXTINF:-1 tvg-id="SkyCrime(src01).uk" tvg-name="Sky Crime" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-crime-uk.png" group-title="UK (DADDY LIVE)" streamId="467" channel-number="470",Sky Crime
-https://dlhd.sx/stream/stream-685.php
-
-#EXTINF:-1 tvg-id="SkyHistory(src01).uk" tvg-name="Sky History" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-history-uk.png" group-title="UK (DADDY LIVE)" streamId="468" channel-number="471",Sky History
+#EXTINF:-1 tvg-id="SkyCrime(src01).uk" tvg-name="Sky Crime" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-crime-uk.png" group-title="UK (DADDY LIVE)" streamId="467" channel-number="475",Sky Crime
+#EXTINF:-1 tvg-id="SkyHistory(src01).uk" tvg-name="Sky History" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-history-uk.png" group-title="UK (DADDY LIVE)" streamId="468" channel-number="476",Sky History
 https://dlhd.sx/stream/stream-686.php
 
-#EXTINF:-1 tvg-id="SkyWitness(src01).uk" tvg-name="Sky Witness HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-witness-uk.png" group-title="UK (DADDY LIVE)" streamId="469" channel-number="472",Sky Witness HD
+#EXTINF:-1 tvg-id="SkyWitness(src01).uk" tvg-name="Sky Witness HD" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-witness-uk.png" group-title="UK (DADDY LIVE)" streamId="469" channel-number="477",Sky Witness HD
 https://dlhd.sx/stream/stream-361.php
 
-#EXTINF:-1 tvg-id="SkyAtlantic(src01).uk" tvg-name="Sky Atlantic" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Sky_Atlantic_-_Logo_2020.svg/2560px-Sky_Atlantic_-_Logo_2020.svg.png" group-title="UK (DADDY LIVE)" streamId="470" channel-number="473",Sky Atlantic
+#EXTINF:-1 tvg-id="SkyAtlantic(src01).uk" tvg-name="Sky Atlantic" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Sky_Atlantic_-_Logo_2020.svg/2560px-Sky_Atlantic_-_Logo_2020.svg.png" group-title="UK (DADDY LIVE)" streamId="470" channel-number="478",Sky Atlantic
 https://dlhd.sx/stream/stream-362.php
 
-#EXTINF:-1 tvg-id="CTVToronto(English).ca" tvg-name="CTV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/ctv-ca.png" group-title="Canada (DADDY LIVE)" streamId="471" channel-number="474",CTV
+#EXTINF:-1 tvg-id="CTVToronto(English).ca" tvg-name="CTV" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/ctv-ca.png" group-title="Canada (DADDY LIVE)" streamId="471" channel-number="479",CTV
 https://dlhd.sx/stream/stream-602.php
 
-#EXTINF:-1 tvg-id="CTVTwoToronto(English).ca" tvg-name="CTV 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/ctv-2-ca.png" group-title="Canada (DADDY LIVE)" streamId="472" channel-number="475",CTV 2
+#EXTINF:-1 tvg-id="CTVTwoToronto(English).ca" tvg-name="CTV 2" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/ctv-2-ca.png" group-title="Canada (DADDY LIVE)" streamId="472" channel-number="480",CTV 2
 https://dlhd.sx/stream/stream-838.php
 
-#EXTINF:-1 tvg-id="CityTv(English).ca" tvg-name="Citytv" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/city-tv-ca.png" group-title="Canada (DADDY LIVE)" streamId="473" channel-number="476",Citytv
+#EXTINF:-1 tvg-id="CityTv(English).ca" tvg-name="Citytv" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/city-tv-ca.png" group-title="Canada (DADDY LIVE)" streamId="473" channel-number="481",Citytv
 https://dlhd.sx/stream/stream-831.php
 
-#EXTINF:-1 tvg-id="CBCToronto(English).ca" tvg-name="CBC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/cbc-ca.png" group-title="Canada (DADDY LIVE)" streamId="474" channel-number="477",CBC
+#EXTINF:-1 tvg-id="CBCToronto(English).ca" tvg-name="CBC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/cbc-ca.png" group-title="Canada (DADDY LIVE)" streamId="474" channel-number="482",CBC
 https://dlhd.sx/stream/stream-832.php
 
-#EXTINF:-1 tvg-id="CBCToronto(English).ca" tvg-name="CBC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/cbc-ca.png" group-title="Canada (DADDY LIVE)" streamId="475" channel-number="478",CBC
+#EXTINF:-1 tvg-id="CBCToronto(English).ca" tvg-name="CBC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/cbc-ca.png" group-title="Canada (DADDY LIVE)" streamId="475" channel-number="483",CBC
 https://dlhd.sx/stream/stream-699.php
 
-#EXTINF:-1 tvg-id="GlobalToronto(English).ca" tvg-name="Global" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/global-ca.png" group-title="Canada (DADDY LIVE)" streamId="476" channel-number="479",Global
+#EXTINF:-1 tvg-id="GlobalToronto(English).ca" tvg-name="Global" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/canada/global-ca.png" group-title="Canada (DADDY LIVE)" streamId="476" channel-number="484",Global
 https://dlhd.sx/stream/stream-836.php
 
-#EXTINF:-1 tvg-id="9244" tvg-name="Sky Sports MIX" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-mix-uk.png" group-title="SPORTS MISC (DADDY LIVE)" streamId="477" channel-number="480",Sky Sports MIX
+#EXTINF:-1 tvg-id="9244" tvg-name="Sky Sports MIX" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-sports-mix-uk.png" group-title="SPORTS MISC (DADDY LIVE)" streamId="477" channel-number="485",Sky Sports MIX
 https://dlhd.so/stream/stream-557.php
 
-#EXTINF:-1 tvg-id="SkySportTopEvent(src01).de" tvg-name="Sky Sport Top Event DE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/germany/sky-sport/sky-sport-top-event-de.png" group-title="SPORTS MISC (DADDY LIVE)" streamId="478" channel-number="481",Sky Sport Top Event DE
+#EXTINF:-1 tvg-id="SkySportTopEvent(src01).de" tvg-name="Sky Sport Top Event DE" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/germany/sky-sport/sky-sport-top-event-de.png" group-title="SPORTS MISC (DADDY LIVE)" streamId="478" channel-number="486",Sky Sport Top Event DE
 https://dlhd.sx/stream/stream-556.php
 
-#EXTINF:-1 tvg-id="8306" tvg-name="SuperSport Grandstand" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-grandstand-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="479" channel-number="482",SuperSport Grandstand
+#EXTINF:-1 tvg-id="8306" tvg-name="SuperSport Grandstand" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-grandstand-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="479" channel-number="487",SuperSport Grandstand
 https://dlhd.sx/stream/stream-412.php
 
-#EXTINF:-1 tvg-id="8220" tvg-name="SuperSport PSL" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-psl-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="480" channel-number="483",SuperSport PSL
+#EXTINF:-1 tvg-id="8220" tvg-name="SuperSport PSL" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-psl-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="480" channel-number="488",SuperSport PSL
 https://dlhd.sx/stream/stream-413.php
 
-#EXTINF:-1 tvg-id="50781" tvg-name="SuperSport Premier league" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-premier-league-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="481" channel-number="484",SuperSport Premier league
+#EXTINF:-1 tvg-id="50781" tvg-name="SuperSport Premier league" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-premier-league-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="481" channel-number="489",SuperSport Premier league
 https://dlhd.sx/stream/stream-414.php
 
-#EXTINF:-1 tvg-id="8327" tvg-name="SuperSport LaLiga" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-laliga-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="482" channel-number="485",SuperSport LaLiga
+#EXTINF:-1 tvg-id="8327" tvg-name="SuperSport LaLiga" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-laliga-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="482" channel-number="490",SuperSport LaLiga
 https://dlhd.sx/stream/stream-415.php
 
-#EXTINF:-1 tvg-id="8300" tvg-name="SuperSport Variety 1" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-variety1-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="483" channel-number="486",SuperSport Variety 1
+#EXTINF:-1 tvg-id="8300" tvg-name="SuperSport Variety 1" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-variety1-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="483" channel-number="491",SuperSport Variety 1
 https://dlhd.sx/stream/stream-416.php
 
-#EXTINF:-1 tvg-id="8258" tvg-name="SuperSport Variety 2" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-variety2-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="484" channel-number="487",SuperSport Variety 2
+#EXTINF:-1 tvg-id="8258" tvg-name="SuperSport Variety 2" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-variety2-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="484" channel-number="492",SuperSport Variety 2
 https://dlhd.sx/stream/stream-417.php
 
-#EXTINF:-1 tvg-id="8218" tvg-name="SuperSport Variety 3" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-variety3-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="485" channel-number="488",SuperSport Variety 3
+#EXTINF:-1 tvg-id="8218" tvg-name="SuperSport Variety 3" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-variety3-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="485" channel-number="493",SuperSport Variety 3
 https://dlhd.sx/stream/stream-418.php
 
-#EXTINF:-1 tvg-id="8259" tvg-name="SuperSport Variety 4" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-variety4-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="486" channel-number="489",SuperSport Variety 4
+#EXTINF:-1 tvg-id="8259" tvg-name="SuperSport Variety 4" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-variety4-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="486" channel-number="494",SuperSport Variety 4
 https://dlhd.sx/stream/stream-419.php
 
-#EXTINF:-1 tvg-id="8209" tvg-name="SuperSport Action" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-action-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="487" channel-number="490",SuperSport Action
+#EXTINF:-1 tvg-id="8209" tvg-name="SuperSport Action" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-action-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="487" channel-number="495",SuperSport Action
 https://dlhd.sx/stream/stream-420.php
 
-#EXTINF:-1 tvg-id="8233" tvg-name="SuperSport Rugby" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-rugby-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="488" channel-number="491",SuperSport Rugby
+#EXTINF:-1 tvg-id="8233" tvg-name="SuperSport Rugby" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-rugby-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="488" channel-number="496",SuperSport Rugby
 https://dlhd.sx/stream/stream-421.php
 
-#EXTINF:-1 tvg-id="8326" tvg-name="SuperSport Golf" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-golf-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="489" channel-number="492",SuperSport Golf
+#EXTINF:-1 tvg-id="8326" tvg-name="SuperSport Golf" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-golf-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="489" channel-number="497",SuperSport Golf
 https://dlhd.sx/stream/stream-422.php
 
-#EXTINF:-1 tvg-id="8305" tvg-name="SuperSport Tennis" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-tennis-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="490" channel-number="493",SuperSport Tennis
+#EXTINF:-1 tvg-id="8305" tvg-name="SuperSport Tennis" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-tennis-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="490" channel-number="498",SuperSport Tennis
 https://dlhd.sx/stream/stream-423.php
 
-#EXTINF:-1 tvg-id="8331" tvg-name="SuperSport Motorsport" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-motorsport-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="491" channel-number="494",SuperSport Motorsport
+#EXTINF:-1 tvg-id="8331" tvg-name="SuperSport Motorsport" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-motorsport-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="491" channel-number="499",SuperSport Motorsport
 https://dlhd.sx/stream/stream-424.php
 
-#EXTINF:-1 tvg-id="8236" tvg-name="Supersport Football" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-football-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="492" channel-number="495",Supersport Football
+#EXTINF:-1 tvg-id="8236" tvg-name="Supersport Football" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-football-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="492" channel-number="500",Supersport Football
 https://dlhd.sx/stream/stream-56.php
 
-#EXTINF:-1 tvg-id="8270" tvg-name="SuperSport Cricket" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-cricket-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="493" channel-number="496",SuperSport Cricket
+#EXTINF:-1 tvg-id="8270" tvg-name="SuperSport Cricket" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-cricket-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="493" channel-number="501",SuperSport Cricket
 https://dlhd.sx/stream/stream-368.php
 
-#EXTINF:-1 tvg-id="8228" tvg-name="SuperSport MaXimo 1" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-maximo1-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="494" channel-number="497",SuperSport MaXimo 1
+#EXTINF:-1 tvg-id="8228" tvg-name="SuperSport MaXimo 1" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-maximo1-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="494" channel-number="502",SuperSport MaXimo 1
 https://dlhd.sx/stream/stream-572.php
+
 #[PLUTO_TV]#
-#497 assigned streamId's
+#504 assigned streamId's
