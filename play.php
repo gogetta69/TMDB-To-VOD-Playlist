@@ -1440,7 +1440,7 @@ function torrentSites($movieId, $imdbId, $title, $year = null)
     // The order of lines must match the same order & number of 
     // lines in the $processingFunctions array or errors will occur.
     $requests = [];
-    $requests[] = initialize_bitsearch_to($movieId, $imdbId, $title, $year);	
+   // $requests[] = initialize_bitsearch_to($movieId, $imdbId, $title, $year);	
     $requests[] = initialize_torrents_csv_com($movieId, $imdbId, $title, $year);
     //$requests[] = initialize_MagnetDL_com($movieId, $imdbId, $title, $year);
     $requests[] = initialize_bitLordSearch_com($movieId, $imdbId, $title, $year);
@@ -1459,7 +1459,7 @@ function torrentSites($movieId, $imdbId, $title, $year = null)
     // Run additional threads to search for Season TV Pack.
     $seasonTitle = preg_replace('/s\d{2}e\d{2}/i', 'Season ' . $seasonNoPad, $title);
 
-    $requests[] = ($type == "series") ? initialize_bitsearch_to($movieId, $imdbId, $title, $year, true) : null;
+   //$requests[] = ($type == "series") ? initialize_bitsearch_to($movieId, $imdbId, $title, $year, true) : null;
     $requests[] = ($type == "series") ? initialize_rutor_info($movieId, $imdbId, $title, $year, true) : null;
     $requests[] = ($type == "series") ? initialize_torrents_csv_com($movieId, $imdbId, $title, $year, true) : null;
     //$requests[] = ($type == "series") ? initialize_MagnetDL_com($movieId, $imdbId, $seasonTitle, $year, true) : null;
@@ -1528,7 +1528,7 @@ function torrentSites($movieId, $imdbId, $title, $year = null)
 
     // Mapping the response processing functions
     $processingFunctions = [
-        'bitsearch_to' => 'bitsearch_to',	
+        //'bitsearch_to' => 'bitsearch_to',	
         'torrents_csv_com' => 'torrents_csv_com',
         //'magnetdl_com' => 'magnetdl_com',
         'bitLordSearch_com' => 'bitLordSearch_com',
@@ -1543,7 +1543,7 @@ function torrentSites($movieId, $imdbId, $title, $year = null)
         'ezTV_re' => ($type == "series") ? 'ezTV_re' : null,
         'yts_mx' => ($type == "movies") ? 'yts_mx' : null,
 		'rutor_info' => ($type == "movies") ? 'rutor_info' : null,
-		'bitsearch_to_TVPack' => ($type == "series") ? 'bitsearch_to' : null,		
+		//'bitsearch_to_TVPack' => ($type == "series") ? 'bitsearch_to' : null,		
         'rutor_info_TVPack' => ($type == "series") ? 'rutor_info' : null,		
         'torrents_csv_com_TVPack' => ($type == "series") ? 'torrents_csv_com' : null,
         //'magnetdl_com_TVPack' => ($type == "series") ? 'magnetdl_com' : null,
