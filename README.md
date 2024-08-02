@@ -8,8 +8,20 @@
 
 Generate dynamic playlists for Live TV, Movies and TV Series using a mock version of Xtream Codes. Create IPTV, Movies and Series playlists with comprehensive metadata. Streaming links located using TMDB, Real-Debrid, Premiumize and Direct Sources. Ideal for use with apps like iMplayer, Tivimate, IPTV Streamers Pro, XCIPTV Player and more.</p>
 
-[![Download ZIP](https://img.shields.io/badge/Download%20ZIP-latest-blue?style=for-the-badge&logo=github)](https://github.com/gogetta69/TMDB-To-VOD-Playlist/archive/refs/heads/main.zip)
-<br>
+<table style="border-collapse: collapse; border: none;">
+  <tr>
+    <td style="border: none;">
+      <a href="https://github.com/gogetta69/TMDB-To-VOD-Playlist/archive/refs/heads/main.zip">
+        <img src="https://img.shields.io/badge/Download%20ZIP-latest-blue?style=for-the-badge&logo=github" alt="Download ZIP">
+      </a>
+    </td>
+    <td style="border: none; padding-left: 10px;"> <!-- Adjust padding as needed -->
+      <a href="https://ko-fi.com/gogetta69">
+        <img src="https://www.ko-fi.com/img/githubbutton_sm.svg" alt="Ko-fi">
+      </a>
+    </td>
+  </tr>
+</table>
 
 ## Screenshots
 
