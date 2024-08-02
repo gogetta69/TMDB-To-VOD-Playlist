@@ -1,7 +1,12 @@
 # TMDB To VOD Playlist
-Create Live TV, Movies and TV Series Video on Demand (VOD) Playlist's using Xtream Codes or M3U8 Format.
 
-Generate dynamic playlists for Live TV, Movies and TV Series using a mock version of Xtream Codes. Create IPTV, Movies and Series playlists with comprehensive metadata. Streaming links located using TMDB, Real-Debrid, Premiumize and Direct Sources. Ideal for use with apps like iMplayer, Tivimate, IPTV Streamers Pro, XCIPTV Player and more.
+
+<img src="https://github.com/user-attachments/assets/7925cf0a-63b7-43ab-8a1e-d099306985fe" alt="Demo GIF" width="70%">
+<br><br>
+
+<p>Create Live TV, Movies and TV Series Video on Demand (VOD) Playlist's using Xtream Codes or M3U8 Format.
+
+Generate dynamic playlists for Live TV, Movies and TV Series using a mock version of Xtream Codes. Create IPTV, Movies and Series playlists with comprehensive metadata. Streaming links located using TMDB, Real-Debrid, Premiumize and Direct Sources. Ideal for use with apps like iMplayer, Tivimate, IPTV Streamers Pro, XCIPTV Player and more.</p>
 
 [![Download ZIP](https://img.shields.io/badge/Download%20ZIP-latest-blue?style=for-the-badge&logo=github)](https://github.com/gogetta69/TMDB-To-VOD-Playlist/archive/refs/heads/main.zip)
 <br>
@@ -52,13 +57,11 @@ Generate dynamic playlists for Live TV, Movies and TV Series using a mock versio
 
 ## Features
 
-- Dynamic playlist generation for movies and TV series
-- Integration with TMDB and Real Debrid for enhanced content retrieval
+- Dynamic playlist generation for live tv, movies and TV series
+- Integration with TMDB, Real Debrid, Premiumize and direct sources for enhanced content retrieval
 - Emulation of Xtream Codes apps for full metadata details
-- Inclusion of Daddylive HD and TheTVApp as a Live TV source.  
-  If you get a 403 error while playing the live tv try using an external player like the MxPlayer.
-- Support for configuring referrer for playing live streams
-- Automatic caching of found links for efficient playback
+- Inclusion of Daddylive, TheTVApp, MoveOnJoy and Pluto as a Live TV sources. 
+- Automatic caching of found streaming links for efficient playback
 
 ## Getting Started
 
