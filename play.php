@@ -1450,7 +1450,7 @@ function torrentSites($movieId, $imdbId, $title, $year = null)
     //$requests[] = initialize_torrentGalaxy_to($movieId, $imdbId, $title);
     $requests[] = initialize_glodls_to($movieId, $imdbId, $title, $year);
     $requests[] = initialize_limetorrents_cc($movieId, $imdbId, $title, $year);
-    //$requests[] = initialize_torrentz2_nz($movieId, $imdbId, $title, $year);
+    $requests[] = initialize_torrentz2_nz($movieId, $imdbId, $title, $year);
     $requests[] = initialize_knaben_eu($movieId, $imdbId, $title, $year);
     $requests[] = ($type == "series") ? initialize_ezTV_re($movieId, $imdbId, $title) : null;
     $requests[] = ($type == "movies") ? initialize_yts_mx($movieId, $imdbId, $title) : null;
@@ -1469,7 +1469,7 @@ function torrentSites($movieId, $imdbId, $title, $year = null)
     //$requests[] = ($type == "series") ? initialize_torrentGalaxy_to($movieId, $imdbId, $seasonTitle, true) : null;
     $requests[] = ($type == "series") ? initialize_glodls_to($movieId, $imdbId, $seasonTitle, $year, true) : null;
     $requests[] = ($type == "series") ? initialize_limetorrents_cc($movieId, $imdbId, $seasonTitle, $year, true) : null;
-    //$requests[] = ($type == "series") ? initialize_torrentz2_nz($movieId, $imdbId, $seasonTitle, $year, true) : null;
+    $requests[] = ($type == "series") ? initialize_torrentz2_nz($movieId, $imdbId, $seasonTitle, $year, true) : null;
     $requests[] = ($type == "series") ? initialize_knaben_eu($movieId, $imdbId, $seasonTitle, $year, true) : null;
     $requests[] = ($type == "series") ? initialize_ezTV_re($movieId, $imdbId, $seasonTitle, true) : null;
 
@@ -1538,7 +1538,7 @@ function torrentSites($movieId, $imdbId, $title, $year = null)
         //'torrentGalaxy_to' => 'torrentGalaxy_to',
         'glodls_to' => 'glodls_to',
         'limetorrents_cc' => 'limetorrents_cc',
-        //'torrentz2_nz' => 'torrentz2_nz',
+        'torrentz2_nz' => 'torrentz2_nz',
         'knaben_eu' => 'knaben_eu',
         'ezTV_re' => ($type == "series") ? 'ezTV_re' : null,
         'yts_mx' => ($type == "movies") ? 'yts_mx' : null,
@@ -1553,7 +1553,7 @@ function torrentSites($movieId, $imdbId, $title, $year = null)
         //'torrentGalaxy_to_TVPack' => ($type == "series") ? 'torrentGalaxy_to' : null,
         'glodls_to_TVPack' => ($type == "series") ? 'glodls_to' : null,
         'limetorrents_cc_TVPack' => ($type == "series") ? 'glodls_to' : null,
-        //'torrentz2_nz_TVPack' => ($type == "series") ? 'torrentz2_nz' : null,
+        'torrentz2_nz_TVPack' => ($type == "series") ? 'torrentz2_nz' : null,
         'knaben_eu_TVPack' => ($type == "series") ? 'knaben_eu' : null,
         'ezTV_re_TVPack' => ($type == "series") ? 'ezTV_re' : null,
     ];
