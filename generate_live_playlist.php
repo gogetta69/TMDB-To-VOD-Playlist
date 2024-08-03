@@ -399,10 +399,18 @@ function getDaddyLiveSource($url) {
 	// set a fallback url.
 	$liveUrl = 'https://webhdrus.onlinehdhls.ru/lb/premium302/index.m3u8';
 	
-	if (preg_match('/(?<=lonelilstopstealing \= ").*?(?=")/', $body, $matches)) {
+	/*echo $body;
+	 exit; */	 
+	
+	if (preg_match('#(?<=encryptedEmbed \= ").*?(?=")#', $body, $matches)) {
 		
 		$liveUrl = base64_decode($matches[0]);
+		
+	} elseif (preg_match('#http.*?premium[0-9]*/index\.m3u8#', $body, $matches)) {
+		
+		$liveUrl = $matches[0];
 	}
+
 
 	$m3u8_url = $liveUrl;
 	
@@ -431,7 +439,23 @@ function replaceDaddyLiveUrl($originalString, $replacementSource) {
 
 function runLivePlaylistGenerate(){
 
-$m3uContent = file_get_contents('channels/m3u_formatted.dat');
+$remoteUrl = 'https://raw.githubusercontent.com/gogetta69/public-files/main/m3u_formatted.dat';
+$localFilePath = 'channels/m3u_formatted.dat';
+
+$m3uContent = @file_get_contents($remoteUrl);
+
+if ($m3uContent === false) {
+
+    $m3uContent = file_get_contents($localFilePath);
+   
+    if ($m3uContent === false) {        
+        exit('Error: Unable to fetch m3u content.');
+    }
+} else {    
+    if (file_put_contents($localFilePath, $m3uContent) === false) {        
+        error_log('Failed to save the remote m3u content to the local file.');
+    }
+}
 
 $baseUrl = locateBaseURL();
 $m3uContent = str_replace('[XML_EPG]', $baseUrl . 'xmltv.php', $m3uContent);
