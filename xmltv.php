@@ -114,7 +114,6 @@ function fetchEPGContent($url) {
 function fixXMLIssues($xmlContent) {
     // Fix common encoding issues
     $xmlContent = str_replace('&amp;amp;', '&amp;', $xmlContent);
-    $xmlContent = str_replace('&', '&amp;', $xmlContent);
 
     // Ensure each <programme> tag is properly closed and separated
     $xmlContent = preg_replace('/<\/programme>\s*<programme/', "</programme>\n<programme", $xmlContent);
