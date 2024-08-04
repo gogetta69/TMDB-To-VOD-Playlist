@@ -130,18 +130,20 @@ function getViewportSize(userAgentString) {
             console.error('Request:', request.url());
         });
 
-        // Intercept responses to detect Cloudflare and capture cf_clearance cookie
+        // Intercept responses to detect Cloudflare and capture cf_clearance cookie only on initial navigation
         page.on('response', async response => {
-            const headers = response.headers();
-            if (headers['cf-chl-bypass'] || headers['cf-cache-status']) {
-                console.error('Cloudflare detected on:', response.url());
-            }
+            if (response.url() === targetUrlArg) {
+                const headers = response.headers();
+                if (headers['cf-chl-bypass'] || headers['cf-cache-status']) {
+                    console.error('Cloudflare detected on:', response.url());
+                }
 
-            const cookies = await context.cookies();
-            const cfClearance = cookies.find(cookie => cookie.name === 'cf_clearance');
-            if (cfClearance) {
-                console.error('CF Clearance Cookie:', cfClearance.value);
-                await saveCookies(context);
+                const cookies = await context.cookies();
+                const cfClearance = cookies.find(cookie => cookie.name === 'cf_clearance');
+                if (cfClearance) {
+                    console.error('CF Clearance Cookie:', cfClearance.value);
+                    await saveCookies(context);
+                }
             }
         });
 
@@ -150,10 +152,9 @@ function getViewportSize(userAgentString) {
             const requestUrl = request.url();
             if ((requestUrl.includes('.m3u8') || requestUrl.includes('expires')) && requestUrl.includes('thetvapp')) {
                 console.error('Matching URL found:', requestUrl);
-                clearTimeout(timeoutId); // Clear the timeout if a matching URL is found
+                clearTimeout(timeoutId); 
                 const response = { status: 'ok', url: requestUrl };
                 setCacheResponse(targetUrlArg, response);
-                await saveCookies(context);
                 await browser.close();
                 console.error('Browser closed.');
                 console.log(JSON.stringify(response));
@@ -189,7 +190,7 @@ function getViewportSize(userAgentString) {
             console.error('Browser closed after timeout.');
             console.log(JSON.stringify(errorResponse));
             process.exit(1);
-        }, 30000); // 30 seconds
+        }, 20000); 
 
     } catch (error) {
         console.error('An error occurred:', error);
