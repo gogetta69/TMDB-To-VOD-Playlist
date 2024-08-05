@@ -650,7 +650,7 @@ https://thetvapp.to/tv/reelzchannel-live-stream/
 #EXTINF:-1 tvg-id="Science.us" tvg-name="Science" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s16616_dark_360w_270h.png" group-title="Live TV (TheTVApp)" streamId="210" channel-number="216",Science
 https://thetvapp.to/tv/science-live-stream/
 
-#EXTINF:-1 tvg-id="Showtime.us" tvg-name="Showtime (E)" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11115_dark_360w_270h.png" group-title="Live TV (TheTVApp)" streamId="211" channel-number="217",Showtime (E)
+#EXTINF:-1 tvg-id="ParamountpluswithShowtime.us" tvg-name="Showtime (E)" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11115_dark_360w_270h.png" group-title="Live TV (TheTVApp)" streamId="211" channel-number="217",Showtime (E)
 https://thetvapp.to/tv/showtime-e-live-stream/
 
 #EXTINF:-1 tvg-id="Showtime2.us" tvg-name="SHOWTIME 2" tvg-logo="http://schedulesdirect-api20141201-logos.s3.dualstack.us-east-1.amazonaws.com/stationLogos/s11116_dark_360w_270h.png" group-title="Live TV (TheTVApp)" streamId="212" channel-number="218",SHOWTIME 2
