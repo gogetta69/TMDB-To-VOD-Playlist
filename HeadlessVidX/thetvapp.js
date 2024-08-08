@@ -5,6 +5,31 @@ const crypto = require('crypto');
 const UserAgent = require('user-agents');
 
 const COOKIES_FILE = path.resolve(__dirname, 'cookies.json');
+const CACHE_FILE = path.resolve(__dirname, 'cache.json');
+const CACHE_MAX_SIZE = 10 * 1024 * 1024; // 10 MB
+const CACHE_EXPIRY_MS = 60 * 60 * 1000; // 1 hour
+
+// Function to read cache
+function readCache() {
+    if (fs.existsSync(CACHE_FILE)) {
+        return JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8'));
+    }
+    return {};
+}
+
+// Function to write cache
+function writeCache(cache) {
+    fs.writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2));
+}
+
+// Function to check cache size
+function checkCacheSize() {
+    if (fs.existsSync(CACHE_FILE)) {
+        const stats = fs.statSync(CACHE_FILE);
+        return stats.size > CACHE_MAX_SIZE;
+    }
+    return false;
+}
 
 // Function to save cookies
 async function saveCookies(context) {
@@ -45,6 +70,36 @@ function getViewportSize(userAgentString) {
     let timeoutId;
 
     try {
+        const cache = readCache();
+
+        const now = Date.now();
+        let cacheEntry = cache[targetUrlArg];
+
+        // If the URL is cached and not expired, serve it
+        if (cacheEntry && now - cacheEntry.timestamp < CACHE_EXPIRY_MS) {
+            if (cacheEntry.status === 'finished') {
+                console.error('URL retrieved from cache:', targetUrlArg);
+                console.log(JSON.stringify({ status: 'ok', url: cacheEntry.url }));
+                process.exit(0);
+            } else if (cacheEntry.status === 'running') {
+                // Wait for the other request to finish
+                console.error('Another request is running for:', targetUrlArg);
+                while (cacheEntry.status === 'running') {
+                    await new Promise(resolve => setTimeout(resolve, 1000)); // Check every 1 second
+                    cacheEntry = readCache()[targetUrlArg]; // Reload cache entry
+                }
+                if (cacheEntry.status === 'finished') {
+                    console.error('URL retrieved from cache after waiting:', targetUrlArg);
+                    console.log(JSON.stringify({ status: 'ok', url: cacheEntry.url }));
+                    process.exit(0);
+                }
+            }
+        }
+
+        // Mark the URL as running in the cache
+        cache[targetUrlArg] = { status: 'running', timestamp: now };
+        writeCache(cache);
+
         console.error('Launching browser...');
         browser = await firefox.launch({
             headless: true,
@@ -98,6 +153,22 @@ function getViewportSize(userAgentString) {
             if ((requestUrl.includes('.m3u8') || requestUrl.includes('expires')) && requestUrl.includes('thetvapp')) {
                 console.error('Matching URL found:', requestUrl);
                 clearTimeout(timeoutId);
+
+                // Update cache entry with finished status and URL
+                cache[targetUrlArg] = {
+                    url: requestUrl,
+                    status: 'finished',
+                    timestamp: now
+                };
+
+                // Check and flush cache if necessary
+                if (checkCacheSize()) {
+                    writeCache({});
+                    console.error('Cache size exceeded, flushed cache.');
+                } else {
+                    writeCache(cache);
+                }
+
                 const response = { status: 'ok', url: requestUrl };
                 await browser.close();
                 console.error('Browser closed.');
@@ -126,6 +197,14 @@ function getViewportSize(userAgentString) {
         timeoutId = setTimeout(async () => {
             const errorResponse = { status: 'error', message: 'No matching URL found.' };
             console.error('No matching URL found within the timeout period.');
+
+            // Mark the URL as finished with an error status in the cache
+            cache[targetUrlArg] = {
+                status: 'error',
+                timestamp: now
+            };
+            writeCache(cache);
+
             await browser.close();
             console.error('Browser closed after timeout.');
             console.log(JSON.stringify(errorResponse));
@@ -134,6 +213,15 @@ function getViewportSize(userAgentString) {
 
     } catch (error) {
         console.error('An error occurred:', error);
+        
+        // Mark the URL as finished with an error status in the cache
+        const cache = readCache();
+        cache[targetUrlArg] = {
+            status: 'error',
+            timestamp: Date.now()
+        };
+        writeCache(cache);
+
         if (browser) {
             await browser.close();
             console.error('Browser closed due to error.');
