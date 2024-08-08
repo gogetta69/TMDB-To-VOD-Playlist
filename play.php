@@ -291,7 +291,7 @@ function movieDetails_TMDB($movieId, $apiKey, $useRealDebrid)
                 }
             }
 			if (!$GLOBALS['DEBUG']) {
-				writeToCache($key, '_failed_', '60', false);
+				writeToCache($key, '_failed_', '3600', false);
 			 }
             http_response_code(404);
             echo "The requested resource was not found.";
@@ -302,7 +302,7 @@ function movieDetails_TMDB($movieId, $apiKey, $useRealDebrid)
                 echo 'IMDb ID not found for the movie.' . "</br></br>";
             }
 			if (!$GLOBALS['DEBUG']) {
-				writeToCache($key, '_failed_', '60', false);
+				writeToCache($key, '_failed_', '3600', false);
 			 }
             http_response_code(404);
             echo "The requested resource was not found.";
@@ -313,7 +313,7 @@ function movieDetails_TMDB($movieId, $apiKey, $useRealDebrid)
             echo 'Error: Unable to retrieve movie details.' . "</br></br>";
         }
 		if (!$GLOBALS['DEBUG']) {
-			writeToCache($key, '_failed_', '60', false);
+			writeToCache($key, '_failed_', '3600', false);
 		}
         http_response_code(404);
         echo "The requested resource was not found.";
@@ -508,7 +508,7 @@ function seriesDetails_TMDB($movieId, $apiKey, $useRealDebrid, $episodeData)
                 }
             }
 			if (!$GLOBALS['DEBUG']) {
-				writeToCache($key, '_failed_', '60', false);
+				writeToCache($key, '_failed_', '3600', false);
 			}
             http_response_code(404);
             echo "The requested resource was not found.";
@@ -519,7 +519,7 @@ function seriesDetails_TMDB($movieId, $apiKey, $useRealDebrid, $episodeData)
                 echo 'IMDb ID not found for the movie.' . "</br></br>";
             }
 			if (!$GLOBALS['DEBUG']) {
-				writeToCache($key, '_failed_', '60', false);
+				writeToCache($key, '_failed_', '3600', false);
 			}
             http_response_code(404);
             echo "The requested resource was not found.";
@@ -530,7 +530,7 @@ function seriesDetails_TMDB($movieId, $apiKey, $useRealDebrid, $episodeData)
             echo 'Error: Unable to retrieve movie details.' . "</br></br>";
         }
 		if (!$GLOBALS['DEBUG']) {
-			writeToCache($key, '_failed_', '60', false);
+			writeToCache($key, '_failed_', '3600', false);
 		}
         http_response_code(404);
         echo "The requested resource was not found.";
@@ -588,7 +588,7 @@ function playAdultVideo($movieId) {
 			if ($GLOBALS['DEBUG']) {
 				echo "Adult movie not found";
 			} else {
-				writeToCache($key, '_failed_', '60', false);
+				writeToCache($key, '_failed_', '3600', false);
 			}
 			http_response_code(404);           
             exit;
@@ -604,7 +604,7 @@ function playAdultVideo($movieId) {
 			if ($GLOBALS['DEBUG']) {
 				echo "No sources found for adult video.";
 			} else {
-				writeToCache($key, '_failed_', '60', false);
+				writeToCache($key, '_failed_', '3600', false);
 			}
 			http_response_code(404);      
             exit();
@@ -629,7 +629,7 @@ function playAdultVideo($movieId) {
 		if ($GLOBALS['DEBUG']) {
 			echo "No valid sources found";
 		}  else {
-				writeToCache($key, '_failed_', '60', false);
+				writeToCache($key, '_failed_', '3600', false);
 			}
 		http_response_code(404);      
         exit();
@@ -637,12 +637,12 @@ function playAdultVideo($movieId) {
 		if ($GLOBALS['DEBUG']) {
 			echo "Error: " . $e->getMessage();
 		}  else {
-			writeToCache($key, '_failed_', '60', false);
+			writeToCache($key, '_failed_', '3600', false);
 		}
 		http_response_code(404);      
         exit();
     }
-	writeToCache($key, '_failed_', '60', false);
+	writeToCache($key, '_failed_', '3600', false);
 	http_response_code(404);      
 	exit();
 }
