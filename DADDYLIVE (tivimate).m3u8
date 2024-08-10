@@ -1,4 +1,4 @@
-#EXTM3U url-tvg="http://m3u4u.com/xml/jwmzn1wx72cj6m8dn721"
+#EXTM3U url-tvg="https://raw.githubusercontent.com/gogetta69/public-files/main/epg.xml"
 #EXTINF:-1 tvg-id="WABC.us2" tvg-name="ABC" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-states/abc-us.png" group-title="USA (DADDY LIVE)" streamId="112" channel-number="112",ABC
 https://webhdrunns.onlinehdhls.ru/lb/premium51/index.m3u8|Referer="https://lewblivehdplay.ru/"|User-Agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0"|Origin="https://lewblivehdplay.ru"'
 
