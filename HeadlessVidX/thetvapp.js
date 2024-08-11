@@ -58,6 +58,12 @@ function getViewportSize(userAgentString) {
     }
 }
 
+// Function to check if a cache entry is stale
+function isStale(cacheEntry) {
+    const now = Date.now();
+    return cacheEntry.status === 'running' && (now - cacheEntry.timestamp > 60000); // 60 seconds
+}
+
 (async () => {
     const targetUrlArg = process.argv[2];
 
@@ -74,6 +80,12 @@ function getViewportSize(userAgentString) {
 
         const now = Date.now();
         let cacheEntry = cache[targetUrlArg];
+
+        // Check if the entry is stale
+        if (cacheEntry && isStale(cacheEntry)) {
+            console.error('Stale cache entry detected, resetting status:', targetUrlArg);
+            cacheEntry = null; // Reset cache entry to allow the new request to proceed
+        }
 
         // If the URL is cached and not expired, serve it
         if (cacheEntry && now - cacheEntry.timestamp < CACHE_EXPIRY_MS) {
