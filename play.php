@@ -1440,7 +1440,8 @@ function torrentSites($movieId, $imdbId, $title, $year = null)
     // The order of lines must match the same order & number of 
     // lines in the $processingFunctions array or errors will occur.
     $requests = [];
-   // $requests[] = initialize_bitsearch_to($movieId, $imdbId, $title, $year);	
+	$requests[] = initialize_torrentio_strem_fun($movieId, $imdbId, $title, $year);
+    $requests[] = initialize_bitsearch_to($movieId, $imdbId, $title, $year);	
     $requests[] = initialize_torrents_csv_com($movieId, $imdbId, $title, $year);
     //$requests[] = initialize_MagnetDL_com($movieId, $imdbId, $title, $year);
     $requests[] = initialize_bitLordSearch_com($movieId, $imdbId, $title, $year);
@@ -1458,8 +1459,9 @@ function torrentSites($movieId, $imdbId, $title, $year = null)
 
     // Run additional threads to search for Season TV Pack.
     $seasonTitle = preg_replace('/s\d{2}e\d{2}/i', 'Season ' . $seasonNoPad, $title);
-
-   //$requests[] = ($type == "series") ? initialize_bitsearch_to($movieId, $imdbId, $title, $year, true) : null;
+	
+	$requests[] = ($type == "series") ?  initialize_torrentio_strem_fun($movieId, $imdbId, $title, $year, true) : null;
+    $requests[] = ($type == "series") ? initialize_bitsearch_to($movieId, $imdbId, $title, $year, true) : null;
     $requests[] = ($type == "series") ? initialize_rutor_info($movieId, $imdbId, $title, $year, true) : null;
     $requests[] = ($type == "series") ? initialize_torrents_csv_com($movieId, $imdbId, $title, $year, true) : null;
     //$requests[] = ($type == "series") ? initialize_MagnetDL_com($movieId, $imdbId, $seasonTitle, $year, true) : null;
@@ -1528,7 +1530,8 @@ function torrentSites($movieId, $imdbId, $title, $year = null)
 
     // Mapping the response processing functions
     $processingFunctions = [
-        //'bitsearch_to' => 'bitsearch_to',	
+		'torrentio_strem_fun' => 'torrentio_strem_fun', 
+        'bitsearch_to' => 'bitsearch_to',	
         'torrents_csv_com' => 'torrents_csv_com',
         //'magnetdl_com' => 'magnetdl_com',
         'bitLordSearch_com' => 'bitLordSearch_com',
@@ -1543,7 +1546,8 @@ function torrentSites($movieId, $imdbId, $title, $year = null)
         'ezTV_re' => ($type == "series") ? 'ezTV_re' : null,
         'yts_mx' => ($type == "movies") ? 'yts_mx' : null,
 		'rutor_info' => ($type == "movies") ? 'rutor_info' : null,
-		//'bitsearch_to_TVPack' => ($type == "series") ? 'bitsearch_to' : null,		
+		'torrentio_strem_fun_TVPack' => ($type == "series") ? 'torrentio_strem_fun' : null,
+		'bitsearch_to_TVPack' => ($type == "series") ? 'bitsearch_to' : null,		
         'rutor_info_TVPack' => ($type == "series") ? 'rutor_info' : null,		
         'torrents_csv_com_TVPack' => ($type == "series") ? 'torrents_csv_com' : null,
         //'magnetdl_com_TVPack' => ($type == "series") ? 'magnetdl_com' : null,
@@ -1732,7 +1736,7 @@ function checkLinkStatusCode($url, $verify = false)
         }
 
         // Check Content-Type for video formats
-		$videoExtensions = ['.mp4', '.m3u8', '.mkv', '.avi', '.mov', '.wmv', '.flv'];
+		$videoExtensions = ['.mp4', '.m3u8', '.mkv', '.mov'];
 
 		$isVideoExtension = false;
 		foreach ($videoExtensions as $extension) {
@@ -1768,6 +1772,28 @@ function checkLinkStatusCode($url, $verify = false)
 function selectHashByPreferences($torrents, $maxResolution, $tSite, $service)
 {
     global $PRIVATE_TOKEN, $usePremiumize, $useRealDebrid, $seasonNoPad;
+		
+	// Filter out torrents with "DTS" audio since Exo Player can't play them.
+	$filteredOutCount = 0;
+
+	$torrents = array_filter($torrents, function ($torrent) use (&$filteredOutCount) {
+		if (stripos($torrent['extracted_title'], 'DTS') !== false) {
+			$filteredOutCount++;
+			return false;
+		}
+		return true;
+	});
+
+	if ($GLOBALS['DEBUG']) {
+		echo "Total torrents filtered out due to DTS audio: " . $filteredOutCount . "</br></br>";
+	}
+
+	if (empty($torrents)) {
+		if ($GLOBALS['DEBUG']) {
+			echo "No torrents available after filtering out DTS audio.</br></br>";
+		}
+		return false;
+	}
 	
 	// Remove duplicate hashes from array.
 	$uniqueTorrents = [];
@@ -4680,6 +4706,109 @@ function theMovieArchive_site($movieId, $title)
 }
 
 ////////////////////////////// Torrents Movies & Tv Shows Websites ///////////////////////////////
+
+function initialize_torrentio_strem_fun($movieId, $imdbId, $title, $year, $tvpack=false)
+{	
+    global $timeOut, $maxResolution, $torrentData, $language, $languageMapping, $type, $season, $seasonNoPad, $episodeNoPad, $episode;
+
+    $tSite = 'torrentio_strem_fun';
+	
+	if ($GLOBALS['DEBUG']) {
+        echo 'Started running torrentio_strem_fun </br></br>';
+    }
+
+	if($type == "movies"){				
+		
+		$apiUrl = "https://torrentio.strem.fun/stream/movie/$imdbId.json";
+		
+	} else {
+			
+		$apiUrl = "https://torrentio.strem.fun/stream/series/$imdbId:$seasonNoPad:$episodeNoPad.json";
+	}
+
+	return $apiUrl;
+
+}
+
+function torrentio_strem_fun($response, $tvpack = false)
+{
+    global $timeOut, $maxResolution, $torrentData, $type, $season, $episode;
+    $tSite = 'torrentio_strem_fun';
+
+    try {
+        if ($response === false) {
+            throw new Exception('HTTP Error: torrentio_strem_fun');
+        }
+
+        $data = json_decode($response, true);
+
+        if (!isset($data['streams']) || !is_array($data['streams'])) {
+            return false;
+        }
+
+        $torrents = $data['streams'];
+
+        if ($type == 'series') {
+            $filtered = array_filter($torrents, function ($ep) use ($season, $episode) {
+                $seasonEpisodeStr = sprintf("S%02dE%02d", $season, $episode);
+                $seasonStr = sprintf("Season %d", $season);
+                return isset($ep['title']) && (strpos($ep['title'], $seasonEpisodeStr) !== false || strpos($ep['title'], $seasonStr) !== false);
+            });
+
+            if (empty($filtered)) {
+                return false;
+            }
+
+            $torrents = $filtered;
+        }
+
+        if ($tvpack) {
+            $title = preg_replace('/s\d{2}e\d{2}/i', 'Season ' . $GLOBALS['seasonNoPad'], $GLOBALS['globalTitle']);
+        } else {
+            $title = $GLOBALS['globalTitle'];
+        }
+
+        $totalAdded = 0;
+        if (is_array($torrents) && !empty($torrents)) {
+            foreach ($torrents as $torrentInfo) {
+                $extractedTitle = $torrentInfo['title'];
+                $matchedHash = $torrentInfo['infoHash'];
+
+                // Extract quality from the title using regex
+                preg_match('/(2160|1080|720|480|360|240)[pP]/i', $extractedTitle, $matches);
+                $quality = $tvpack ? 'unknown' : (isset($matches[1]) ? $matches[1] : '480');
+
+                if (isset($matchedHash) && isset($extractedTitle)) {
+                    if (filterCompareTitles($extractedTitle, $title, $tvpack)) {
+                        $torrentData[] = [
+                            'title_long' => $title,
+                            'hash' => $matchedHash,
+                            'quality' => $quality,
+                            'extracted_title' => $extractedTitle,
+                            'tvpack' => $tvpack
+                        ];
+                        $totalAdded++;
+                    }
+                }
+            }
+        } else {
+            throw new Exception('Data does not meet criteria');
+        }
+
+        if ($GLOBALS['DEBUG']) {
+            echo 'Finished running torrentio_strem_fun (' . $totalAdded . ') </br></br>';
+        }
+        return $totalAdded;
+
+    } catch (Exception $error) {
+        if ($GLOBALS['DEBUG']) {
+            echo 'Error: ' . $error->getMessage() . "</br></br>";
+            echo 'Finished running torrentio_strem_fun </br></br>';
+        }
+
+        return false;
+    }
+}
 
 function initialize_bitsearch_to($movieId, $imdbId, $title, $year, $tvpack=false)
 {	
