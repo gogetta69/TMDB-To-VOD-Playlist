@@ -72,7 +72,7 @@ Generate dynamic playlists for Live TV, Movies and TV Series using a mock versio
 - Dynamic playlist generation for live tv, movies and TV series
 - Integration with TMDB, Real Debrid, Premiumize and direct sources for enhanced content retrieval
 - Emulation of Xtream Codes apps for full metadata details
-- Inclusion of Daddylive, TheTVApp, MoveOnJoy and Pluto as a Live TV sources. 
+- Inclusion of [Daddylive](https://href.li/?https://dlhd.so/24-7-channels.php), [TheTVApp](https://href.li/?https://thetvapp.to/), MoveOnJoy and Pluto as a Live TV sources. 
 - Automatic caching of found streaming links for efficient playback
 
 ## Getting Started
