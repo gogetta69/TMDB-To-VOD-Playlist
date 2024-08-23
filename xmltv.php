@@ -14,7 +14,7 @@ if ($content === false) {
     if (!file_exists($lastUpdatedFile) || (time() - file_get_contents($lastUpdatedFile)) > 10800) {
         $epgUrls = [
             "http://m3u4u.com/xml/jwmzn1wx72cj6m8dn721",
-            "https://raw.githubusercontent.com/matthuisman/i.mjh.nz/master/PlutoTV/us.xml",
+            "https://raw.githubusercontent.com/gogetta69/public-files/main/Pluto-TV/us.xml",
             "https://epg.pw/xmltv/epg_ZA.xml",
             "https://epg.pw/api/epg.xml?channel_id=9025",
             "https://epg.pw/api/epg.xml?channel_id=8862",

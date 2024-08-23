@@ -6,7 +6,8 @@ if (!$GLOBALS['DEBUG']) {
 } 	
 
 function getPlutoTV($m3uContent) {
-    $plutoM3uContent = @file_get_contents('https://i.mjh.nz/PlutoTV/us.m3u8');
+    $plutoM3uContent = @file_get_contents('https://raw.githubusercontent.com/gogetta69/public-files/main/Pluto-TV/us.m3u8');
+	
     if (!$plutoM3uContent) {
         return false;
     }
@@ -17,7 +18,7 @@ function getPlutoTV($m3uContent) {
 	$newM3uContent ='';
     $streamId = 4000;
 
-    $pattern = '/#EXTINF:-1 channel-id="([^"]*)" tvg-id="([^"]*)" tvg-logo="([^"]*)" tvg-chno="([^"]*)" group-title="([^"]*)"\s*,\s*(.*)/';
+	$pattern = '/#EXTINF:0 tvg-id="([^"]*)" tvg-logo="([^"]*)" group-title="([^"]*)"\s*,\s*(.*)/';
 
     for ($i = 0; $i < count($lines); $i++) {
         $line = $lines[$i];
@@ -25,10 +26,10 @@ function getPlutoTV($m3uContent) {
             if (preg_match($pattern, $line, $matches)) {
                 $channelUrl = $lines[$i + 1] ?? ''; 
 				preg_match('/(?<=tvg-id=").*?(?=")/', $line, $tvgId);
-				$channelName = iconv('UTF-8', 'ASCII//TRANSLIT', $matches[6]);
+				$channelName = iconv('UTF-8', 'ASCII//TRANSLIT', $matches[4]);
 				$channelName = str_replace('"', "'", $channelName);
 
-                $newM3uContent .= "#EXTINF:-1 tvg-id=\"{$tvgId[0]}\" tvg-name=\"{$channelName}\" tvg-logo=\"{$matches[3]}\" group-title=\"{$matches[5]} (PlutoTV)\" streamId=\"$streamId\" channel-number=\"$streamId\",{$channelName}\n";
+                $newM3uContent .= "#EXTINF:-1 tvg-id=\"{$tvgId[0]}\" tvg-name=\"{$channelName}\" tvg-logo=\"{$matches[2]}\" group-title=\"{$matches[3]} (PlutoTV)\" streamId=\"$streamId\" channel-number=\"$streamId\",{$channelName}\n";
                 $newM3uContent .= $channelUrl . "\n\n";
 
                 $streamId++;
