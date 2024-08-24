@@ -1423,8 +1423,6 @@ https://dlhd.sx/stream/stream-683.php
 https://dlhd.sx/stream/stream-684.php
 
 #EXTINF:-1 tvg-id="SkyCrime(src01).uk" tvg-name="Sky Crime" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-crime-uk.png" group-title="UK (DADDY LIVE)" streamId="467" channel-number="475",Sky Crime
-https://dlhd.so/stream/stream-685.php
-
 #EXTINF:-1 tvg-id="SkyHistory(src01).uk" tvg-name="Sky History" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/sky-history-uk.png" group-title="UK (DADDY LIVE)" streamId="468" channel-number="476",Sky History
 https://dlhd.sx/stream/stream-686.php
 
@@ -1505,6 +1503,8 @@ https://dlhd.sx/stream/stream-368.php
 
 #EXTINF:-1 tvg-id="8228" tvg-name="SuperSport MaXimo 1" tvg-logo="https://github.com/tv-logo/tv-logos/blob/8d25ddd79ca2f9cd033b808c45cccd2b3da563ee/countries/south-africa/supersport-maximo1-za.png?raw=true" group-title="SPORTS MISC (DADDY LIVE)" streamId="494" channel-number="502",SuperSport MaXimo 1
 https://dlhd.sx/stream/stream-572.php
+
+#[TOP_EMBED_SPORTS]#
 
 #[PLUTO_TV]#
 #504 assigned streamId's
