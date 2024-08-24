@@ -40,17 +40,24 @@ function getLiveStream($streamId)
 		exit;
 	}
 	
-	if (stripos($urlParam, '.pluto.tv') !== false)   {
+	if (stripos($urlParam, '.pluto.tv') !== false) {
 		$parsedUrl = parse_url($urlParam);
-		parse_str($parsedUrl['query'], $queryParams);
-		$newDeviceId = generateUuidV4();
-		$queryParams['deviceId'] = $newDeviceId; 
-		$newQueryString = http_build_query($queryParams);
-		$newUrl = $parsedUrl['scheme'] . '://' . $parsedUrl['host'] . $parsedUrl['path'] . '?' . $newQueryString;
+		parse_str($parsedUrl['query'], $queryParams);		
 		
+		$newDeviceId = generateUuidV4();
+		$queryParams['deviceId'] = $newDeviceId;
+		
+		$newSid = generateShortHexSid();
+		$queryParams['sid'] = $newSid;
+		
+		$newQueryString = http_build_query($queryParams);
+		
+		$newUrl = $parsedUrl['scheme'] . '://' . $parsedUrl['host'] . $parsedUrl['path'] . '?' . $newQueryString;
+
 		header('Location: ' . $newUrl, true, 302);
 		exit;
 	}
+
 	
 	if (stripos($urlParam, 'DaddyLive|') !== false) {
 		$parts = explode('|', $urlParam);
@@ -316,13 +323,18 @@ function readFromCache($key, $report=true){
     return null;
 }
 
-function generateUuidV4() {
-    $data = random_bytes(16);
-    
-    $data[6] = chr(ord($data[6]) & 0x0f | 0x40);
-    $data[8] = chr(ord($data[8]) & 0x3f | 0x80);
-    return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
-}
+	function generateUuidV4() {
+		$data = random_bytes(16);
+		
+		$data[6] = chr(ord($data[6]) & 0x0f | 0x40);		
+		$data[8] = chr(ord($data[8]) & 0x3f | 0x80);
+		
+		return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
+	}
+
+	function generateShortHexSid($length = 12) {
+		return bin2hex(random_bytes($length / 2));
+	}
 
 
 getLiveStream($_GET['streamId']);
