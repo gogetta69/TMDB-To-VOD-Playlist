@@ -9,10 +9,10 @@ $GLOBALS['DEBUG'] = false; // Developer option.
 // This script no longer by default loads the user created playlist. If you would prefer to create your own playlist
 // change the setting $userCreatePlaylist = true;
 
-// Next, go into the HeadlessVidX/Install Instructions.txt and follow the instructions on setting up HeadlessVidX.
-// TheTvApp which is a Live TV playlist needs to have this installed before it can be used. 
+// Next, go into the HeadlessVidX/Install Instructions.txt and follow the instructions on setting up HeadlessVidX. TheTvApp // which is a Live TV playlist needs to have this installed before it can be used. 
 
-// Replace 'YOUR_API_KEY' with your TMDb API key - https://developer.themoviedb.org/docs/getting-started
+// Replace 'YOUR_API_KEY' with your TMDb API key - https://www.themoviedb.org/
+//Entering your key here may be visible through google drive. Check your sharing settings.
 $apiKey = '';
 
 // Replace this with your Real-Debrid Private API token - https://real-debrid.com/apitoken
@@ -30,10 +30,7 @@ $premiumizeApiKey = '';
 // address or if installing on a public accessibe server.
 $userSetHost = ''; // Example: 192.168.0.100 see the help file or video for more information.
 
-// Note: The $HTTP_PROXY is utilized only during the scraping of direct movie links.
-// This is particularly necessary if you are making a large number of requests to obtain 
-// streaming links, such as when running this script as a service. It is recommended to use
-// backconnect proxies from providers like stormproxies.com to avoid being blocked by streaming websites.
+// Note: The $HTTP_PROXY is utilized only during the scraping of direct movie links. This is particularly necessary if you are making a large number of requests to obtain streaming links, such as when running this script as a service. It is recommended to use backconnect proxies from providers like stormproxies.com to avoid being blocked by streaming websites.
 $HTTP_PROXY = "";
 
 //Enable or disable the $HTTP_PROXY setting.
@@ -107,6 +104,17 @@ $expirationHours = 3; // Default: 3 (numerical value only)
 // If you set this to low you might not get any links to return.
 // Example: 20 seconds is 20
 $timeOut = 20; // numerical value only
+
+// List of Live TV services that can be included in the Live TV Playlist.
+// - Set to true to include the service in the Live TV Playlist.
+// - Set to false to exclude the service from the Live TV Playlist.
+$LiveTVServices = [
+    "MoveOnJoy" => true,
+    "TheTVApp" => true,
+    "DaddyLive" => true,
+    "TopEmbed" => true,
+    "Pluto" => true,
+];
 
 // Change the run order here. This can be Used to speed up the process of finding a link.
 // Cut the entire line and paste it above or below another. The list is ran

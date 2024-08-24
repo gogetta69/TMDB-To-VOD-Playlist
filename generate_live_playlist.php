@@ -123,7 +123,8 @@ foreach ($curlHandles as $handle) {
                 $date->setTimezone(new DateTimeZone('America/New_York')); // EST timezone
 
                 // Format the date               
-				$formattedDate = $date->format('h:i A T - (m/d/Y)');
+				$formattedDate = $date->format('h:i A T - (m/d/Y)');				
+				$hourFormat = $date->format('g:iA');
 
 
                 $time = $formattedDate; // Use formatted time
@@ -193,7 +194,7 @@ foreach ($curlHandles as $handle) {
 				$logo = 'https://raw.githubusercontent.com/tv-logo/tv-logos/635e715cb2f2c6d28e9691861d3d331dd040285b/countries/united-states/nfl-icon-us.png';
 			}
 			
-			if(stripos($eventType, 'ncaaf') !== false){
+			if (stripos($eventType, 'ncaaf') !== false || stripos($eventType, 'College Football') !== false) {
 				$logo = 'https://raw.githubusercontent.com/gogetta69/TMDB-To-VOD-Playlist/main/images/ncaaf-transparent.png';
 			}
 
@@ -213,7 +214,7 @@ foreach ($curlHandles as $handle) {
 				$logo = 'https://raw.githubusercontent.com/gogetta69/TMDB-To-VOD-Playlist/main/images/live-tv-transparent.png';
 			}			
 			 
-			$m3uLine = "#EXTINF:-1 tvg-id=\"{$tvgId}\" tvg-name=\"{$text} - {$time}\" tvg-logo=\"{$logo}\" group-title=\"Sports (TheTVApp)\" streamId=\"{$channelId}\" channel-number=\"{$channelId}\",{$text} - {$time}\n{$fullUrl}";
+		$m3uLine = "#EXTINF:-1 tvg-id=\"{$tvgId}\" tvg-name=\"{$text} - {$time}\" tvg-logo=\"{$logo}\" group-title=\"Sports (TheTVApp)\" streamId=\"{$channelId}\" channel-number=\"{$channelId}\",{$hourFormat} - {$text} - {$time}\n{$fullUrl}";
 			
 			$sportsDataItems[] = $m3uLine;			
 			
@@ -248,9 +249,135 @@ return $m3uContent;
 
 }
 
+function getTopEmbedSports($m3uContent){
+    $url = "https://topembed.pw/old.php?exclude_tennis=true";
+
+    // Initialize cURL
+    $curl = curl_init($url);
+    $userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, Gecko) Chrome/58.0.3029.110 Safari/537.36';
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($curl, CURLOPT_USERAGENT, $userAgent);
+
+    // Execute cURL session
+    $htmlContent = curl_exec($curl);
+    curl_close($curl);
+
+    $sportsDataItems = [];
+    $channelId = 5000;
+
+    $doc = new DOMDocument();
+    @$doc->loadHTML($htmlContent);
+    $xpath = new DOMXPath($doc);
+
+    // Find the first date header
+    $firstDateHeader = $xpath->query("//tr[contains(@class, 'bg-gray-800 text-white')][1]")->item(0);
+
+    if ($firstDateHeader) {
+        $rows = $xpath->query("following-sibling::tr", $firstDateHeader);
+        foreach ($rows as $row) {
+            // Stop if another date header is encountered
+            if (strpos($row->getAttribute('class'), 'bg-gray-800 text-white') !== false) {
+                break;
+            }
+
+            $tds = $xpath->query('td', $row);
+            if ($tds->length == 5) {
+                // TIME
+                $timestamp = $tds->item(0)->getAttribute('data-timestamp');
+                $date = new DateTime("@$timestamp");
+                $date->setTimezone(new DateTimeZone('America/New_York'));
+                $hourFormat = $date->format('g:i A');
+
+                // CATEGORY
+                $category = trim($tds->item(1)->textContent);
+
+                // INFO
+                $info = trim($tds->item(2)->textContent);
+
+                // TITLE
+                $title = trim($tds->item(3)->textContent);
+
+                // URL
+                $inputField = $tds->item(4)->getElementsByTagName('input')->item(0);
+                $url = $inputField->getAttribute('value');
+
+                $group = 'TopEmbed (Other)';
+
+                // Set logo based on category
+                $logo = 'https://raw.githubusercontent.com/gogetta69/TMDB-To-VOD-Playlist/main/images/live-tv-transparent.png'; // Default logo
+                if ($category === 'Football') {
+                    $logo = 'https://i.imgur.com/yqrF43n.png';
+                    $group = 'TopEmbed (Football)';
+                }
+                
+                if (stripos($category, 'Basketball') !== false) {
+                    $logo = 'https://i.imgur.com/h9V9Ywc.png';
+                    $group = 'TopEmbed (Basketball)';
+                }
+                
+                if (stripos($category, 'Am. Football') !== false) {
+                    $logo = 'https://i.imgur.com/kO1j5Mb.png';
+                    $group = 'TopEmbed (Am. Football)';
+                }
+                
+                if (stripos($category, 'Rugby') !== false) {
+                    $logo = 'https://i.imgur.com/qkDx0or.png';
+                    $group = 'TopEmbed (Rugby)';
+                }
+                
+                if (stripos($category, 'Cricket') !== false) {
+                    $logo = 'https://i.imgur.com/2eR9C15.png';
+                    $group = 'TopEmbed (Cricket)';
+                }
+                
+                if (stripos($category, 'MMA') !== false) {
+                    $logo = 'https://i.imgur.com/hgeD1wK.png';
+                    $group = 'TopEmbed (MMA)';
+                }
+                
+                if (stripos($category, 'Baseball') !== false) {
+                    $logo = 'https://i.imgur.com/SkRCcl7.png';
+                    $group = 'TopEmbed (Baseball)';
+                }
+                
+                if (stripos($category, 'Aussie rules') !== false) {
+                    $logo = 'https://i.imgur.com/omHYtc7.png';
+                    $group = 'TopEmbed (Aussie rules)';
+                }
+                
+                if (stripos($category, 'Volleyball') !== false) {
+                    $logo = 'https://i.imgur.com/h1SxV7u.png';
+                    $group = 'TopEmbed (Volleyball)';
+                }
+                
+                if (stripos($category, 'Boxing') !== false) {
+                    $logo = 'https://i.imgur.com/HI2cjRZ.png';
+                    $group = 'TopEmbed (Boxing)';
+                }
+
+                $tvgId = substr(md5($title), 0, 10);
+                $formattedTime = $date->format('h:i A T - (m/d/Y)');
+                $m3uLine = "#EXTINF:-1 tvg-id=\"$tvgId\" tvg-name=\"$hourFormat $title - $formattedTime\" tvg-logo=\"$logo\" group-title=\"$group\" streamId=\"{$channelId}\" channel-number=\"{$channelId}\",$hourFormat - $title - $formattedTime\n$url";
+
+                $sportsDataItems[] = $m3uLine;
+                $channelId++;
+            }
+        }
+    }
+
+    if (!empty($sportsDataItems)) {
+        $sportsDataM3u = implode("\n\n", $sportsDataItems);
+        return str_replace('#[TOP_EMBED_SPORTS]#', "\n$sportsDataM3u\n", $m3uContent);
+    } else {
+        return str_replace('#[TOP_EMBED_SPORTS]#', '', $m3uContent);
+    }
+}
+
 function setupLiveStreams($m3uContent)
 {		
-
+	global $LiveTVServices;
+	
     $baseUrl = locateBaseURL();
 	$lastUpdatedFile = "channels/last_updated_channels.txt";
     $lines = explode("\n", $m3uContent);
@@ -285,8 +412,9 @@ function setupLiveStreams($m3uContent)
 	$parsedData = [];
 	$num = 0;
 	
-	$daddyData = getDaddyLiveSource('https://dlhd.so/embed/stream-303.php');
-	
+	if (!isset($LiveTVServices) || $LiveTVServices['DaddyLive'] === true) {
+		$daddyData = getDaddyLiveSource('https://dlhd.so/embed/stream-303.php');
+	}
 	
 	for ($i = 0; $i < count($lines); $i++) {
 		$line = $lines[$i];
@@ -299,9 +427,26 @@ function setupLiveStreams($m3uContent)
 				$categoryId = array_key_exists($categoryTitle, $groupTitleMapping) ? $groupTitleMapping[$categoryTitle] : 0;
 				$streamUrl = $baseUrl . 'live_play.php?streamId=' . (int)$matches[5];
 				$m3uContent = str_replace($urlLine, $streamUrl, $m3uContent);
-				if(stripos($urlLine, 'dlhd.sx')){
+				
+				if(stripos($urlLine, 'dlhd.') || stripos($categoryTitle, 'daddy')){					
+					if (isset($LiveTVServices) && $LiveTVServices['DaddyLive'] !== true) {
+						continue;
+					}
 					$urlLine = 'DaddyLive|' . replaceDaddyLiveUrl($daddyData['url'], $urlLine) . $daddyData['ref'];
-				}				
+				}
+
+				if(stripos($urlLine, 'thetvapp.') || stripos($categoryTitle, 'thetvapp')){					
+					if (isset($LiveTVServices) && $LiveTVServices['TheTVApp'] !== true) {
+						continue;
+					}
+				}	
+
+				if(stripos($urlLine, 'moveonjoy.') || stripos($categoryTitle, 'moveonjoy')){					
+					if (isset($LiveTVServices) && $LiveTVServices['MoveOnJoy'] !== true) {
+						continue;
+					}
+				}					
+								
 				$parsedData[] = [
 					'num' => (int)$num, 
 					'name' => trim($matches[7]),
@@ -440,6 +585,8 @@ function replaceDaddyLiveUrl($originalString, $replacementSource) {
 
 function runLivePlaylistGenerate(){
 
+global $LiveTVServices;
+
 $remoteUrl = 'https://raw.githubusercontent.com/gogetta69/public-files/main/m3u_formatted.dat';
 $localFilePath = 'channels/m3u_formatted.dat';
 
@@ -461,18 +608,38 @@ if ($m3uContent === false) {
 $baseUrl = locateBaseURL();
 $m3uContent = str_replace('[XML_EPG]', $baseUrl . 'xmltv.php', $m3uContent);
 
-$m3uAddSportsContent = getTheAppSports($m3uContent);
-
-
-if ($m3uAddSportsContent) {
-    $m3uContent = $m3uAddSportsContent;
-}	
-
-$plutoM3uContent = getPlutoTV($m3uContent);
-
-if($plutoM3uContent){
-	$m3uContent = $plutoM3uContent;	
+//Setup TheTVApp
+if (!isset($LiveTVServices) || $LiveTVServices['TheTVApp'] === true) {
+	$m3uAddSportsContent = getTheAppSports($m3uContent);
+	if ($m3uAddSportsContent) {
+		$m3uContent = $m3uAddSportsContent;
+	}	
 }
+
+//Setup TopEmbed.
+if (!isset($LiveTVServices) || $LiveTVServices['TopEmbed'] === true) {
+	$m3uAddSportsContent = getTopEmbedSports($m3uContent);
+	if ($m3uAddSportsContent) {
+		$m3uContent = $m3uAddSportsContent;
+	}
+}
+
+//Setup pluto.
+if (!isset($LiveTVServices) || $LiveTVServices['Pluto'] === true) {
+	$plutoM3uContent = getPlutoTV($m3uContent);
+	if($plutoM3uContent){
+		$m3uContent = $plutoM3uContent;	
+	}
+}
+
+//Setup TopEmbed.
+if (!isset($LiveTVServices) || $LiveTVServices['TopEmbed'] === true) {
+	$topEmbedContent = @file_get_contents('channels/top-embed.txt');
+	if (strpos($m3uContent, '#[TOP_EMBED]#') !== false && $topEmbedContent !== false) {
+	   $m3uContent = str_replace('#[TOP_EMBED]#', $topEmbedContent, $m3uContent);
+	}
+}
+
 $m3uContent = setupLiveStreams($m3uContent);
 
 return $m3uContent;
@@ -546,5 +713,6 @@ function DaddyLivedecrypt($h, $n, $t, $e) {
         return false; 
     }
 }
+
 
 ?>
