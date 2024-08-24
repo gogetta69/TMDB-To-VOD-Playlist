@@ -124,7 +124,7 @@ foreach ($curlHandles as $handle) {
 
                 // Format the date               
 				$formattedDate = $date->format('h:i A T - (m/d/Y)');				
-				$hourFormat = $date->format('g:iA');
+				$hourFormat = $date->format('g:i A');
 
 
                 $time = $formattedDate; // Use formatted time
