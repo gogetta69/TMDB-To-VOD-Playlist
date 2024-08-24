@@ -40,6 +40,19 @@ function getLiveStream($streamId)
 		exit;
 	}
 	
+	if (stripos($urlParam, '.pluto.tv') !== false)   {
+		$parsedUrl = parse_url($urlParam);
+		parse_str($parsedUrl['query'], $queryParams);
+		$newDeviceId = uniqid('', true);
+		$queryParams['deviceId'] = $newDeviceId;
+		$newQueryString = http_build_query($queryParams);
+		$newUrl = $parsedUrl['scheme'] . '://' . $parsedUrl['host'] . $parsedUrl['path'] . '?' . $newQueryString;
+
+		
+		header('Location: ' . $newUrl, true, 302);
+		exit;
+	}
+	
 	if (stripos($urlParam, 'DaddyLive|') !== false) {
 		$parts = explode('|', $urlParam);
 		
@@ -47,7 +60,7 @@ function getLiveStream($streamId)
 
 		$userAgent = $_SERVER['HTTP_USER_AGENT'];
 
-/* 		// Check if the User-Agent contains 'TiviMate' case-insensitively
+	/* 		// Check if the User-Agent contains 'TiviMate' case-insensitively
 		if (stripos($userAgent, 'TiviMate') !== false) {			
 			header("HTTP/1.0 500 Internal Server Error");
 			exit;
@@ -71,8 +84,48 @@ function getLiveStream($streamId)
 				header("HTTP/1.0 404 Not Found");
 			}
 			exit;
-		}
+	}
 
+	if (stripos($urlParam, 'topembed.') !== false) {
+
+		if (stripos($urlParam, 'topembed.pw') !== false) {
+			
+			$ch = curl_init($urlParam);
+    
+			$headers = [
+				'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/129.0',
+				'Referer: https://topembed.pw/'
+			];
+
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+
+			$response = curl_exec($ch);
+			if (curl_errno($ch)) {
+				return false;
+			}
+
+			preg_match("/source: '([^']+)'/", $response, $matches);
+			if (!isset($matches[1])) {
+				return false;
+			} else {
+				$urlParam = $matches[1];
+			}
+			
+		}		
+		
+		$headers = 'User-Agent="Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.1"';
+		$headers .= '|Origin="https://topembed.pw"';
+		$headers .= '|Referer="https://topembed.pw/"';
+
+		$base = locateBaseURL();        
+		$urlparts = $base . 'hls_proxy.php?url=' . urlencode($urlParam) . '&data=' . urlencode(base64_encode($headers)) . '&streamId=' . $streamId;  
+		
+		header('Location: ' . $urlparts, true, 302);
+		exit;
+		
+	}	
 
 	
     header('Location: ' . $urlParam, true, 302);
