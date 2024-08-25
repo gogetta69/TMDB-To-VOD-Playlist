@@ -128,7 +128,7 @@ $LiveTVServices = [
 
 $userDefinedOrder = [
 'torrentSites',
-'showBox_media',
+//'showBox_media',
 'vidsrc_to',
 'vidsrc_pro',
 'myfilestorage_xyz',
