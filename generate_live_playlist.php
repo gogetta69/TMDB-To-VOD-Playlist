@@ -57,7 +57,7 @@ $urls = [
 	"https://thetvapp.to/nfl",
 	"https://thetvapp.to/ncaaf",
 	"https://thetvapp.to/ncaab",
-	"https://thetvapp.to/mls",
+	"https://thetvapp.to/soccer",
 	"https://thetvapp.to/ppv"
 ];
 
