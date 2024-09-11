@@ -1,7 +1,7 @@
 # TMDB To VOD Playlist
 
 
-<img src="https://github.com/user-attachments/assets/7925cf0a-63b7-43ab-8a1e-d099306985fe" alt="Demo GIF" width="70%">
+<a href="https://rumble.com/embed/v561tkl/?pub=3rx19u"><img src="https://github.com/user-attachments/assets/7925cf0a-63b7-43ab-8a1e-d099306985fe" alt="Demo GIF" width="70%"></a>
 <br><br>
 
 <p>Create Live TV, Movies and TV Series Video on Demand (VOD) Playlist's using Xtream Codes or M3U8 Format.
