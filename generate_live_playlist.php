@@ -316,7 +316,7 @@ function getTopEmbedSports($m3uContent){
                     $group = 'TopEmbed (Basketball)';
                 }
                 
-                if (stripos($category, 'Am. Football') !== false) {
+                if (stripos($category, 'American Football') !== false) {
                     $logo = 'https://i.imgur.com/kO1j5Mb.png';
                     $group = 'TopEmbed (Am. Football)';
                 }
