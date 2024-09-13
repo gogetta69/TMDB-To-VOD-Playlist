@@ -1,4 +1,4 @@
-# TMDB To VOD Playlist
+# TMDB to VOD Playlist: Free Live TV, Movies & Series Generator
 
 <img src="https://github.com/user-attachments/assets/7925cf0a-63b7-43ab-8a1e-d099306985fe" alt="Demo GIF" width="70%">
 <br><br>
