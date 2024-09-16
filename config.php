@@ -128,25 +128,27 @@ $LiveTVServices = [
 
 $userDefinedOrder = [
 'torrentSites',
-//'showBox_media',
-'vidsrc_to',
-'vidsrc_pro',
+'showBox_media',
+'vidsrc_rip',
 'myfilestorage_xyz',
 'primewire_tf',
-'rive_vidsrc_scrapper',
+'autoembed_cc',
+'vidsrc_pro', 
 'twoembed_skin',
 'oneTwothreeEmbed_net',
-'HeadlessVidX',
 'superEmbed_stream',
 'frembed_pro',
-'smashyStream_com',
-'upMovies_to', 
+'upMovies_to',
+'HeadlessVidX',
  ];
  
 /* Archived list
 //'shegu_net_links',
 //'warezcdn_com',
 //'justBinge_site',
+//'vidsrc_to',
+//'rive_vidsrc_scrapper',
+//'smashyStream_com',
 */
  
 // On my todo list.

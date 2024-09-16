@@ -149,7 +149,7 @@ function movieDetails_TMDB($movieId, $apiKey, $useRealDebrid)
                 echo 'Year: ' . $year . "</br></br>";
             }
 
-            $predefinedFunctions = ['theMovieArchive_site', 'shegu_net_links', 'primewire_tf', 'torrentSites', 'goMovies_sx', 'upMovies_to', 'superEmbed_stream', 'smashyStream_com', 'tvembed_cc', 'blackvid_space', 'HeadlessVidX', 'justBinge_site', 'frembed_pro', 'warezcdn_com', 'twoembed_skin', 'showBox_media', 'myfilestorage_xyz', 'oneTwothreeEmbed_net', 'vidsrc_pro', 'vidsrc_to', 'rive_vidsrc_scrapper', 'watch_movies_com_pk'];
+            $predefinedFunctions = ['theMovieArchive_site', 'shegu_net_links', 'primewire_tf', 'torrentSites', 'goMovies_sx', 'upMovies_to', 'superEmbed_stream', 'smashyStream_com', 'tvembed_cc', 'blackvid_space', 'HeadlessVidX', 'justBinge_site', 'frembed_pro', 'warezcdn_com', 'twoembed_skin', 'showBox_media', 'myfilestorage_xyz', 'oneTwothreeEmbed_net', 'vidsrc_pro', 'vidsrc_to', 'rive_vidsrc_scrapper', 'watch_movies_com_pk', 'autoembed_cc', 'vidsrc_rip'];
 
             $successfulFunctionName = '';
 
@@ -250,6 +250,14 @@ function movieDetails_TMDB($movieId, $apiKey, $useRealDebrid)
 
 					if ($functionName == 'watch_movies_com_pk') {
                         $params = [$movieId, $title, $year];
+                    }	
+					
+					if ($functionName == 'autoembed_cc') {
+                        $params = [$movieId, $title];
+                    }	
+
+					if ($functionName == 'vidsrc_rip') {
+                        $params = [$movieId, $title];
                     }					
 
                     // Call the function with appropriate arguments
@@ -382,7 +390,7 @@ function seriesDetails_TMDB($movieId, $apiKey, $useRealDebrid, $episodeData)
             }	
 
             $predefinedFunctions = ['superEmbed_stream', 'shegu_net_links',
-                'torrentSites', 'goMovies_sx', 'smashyStream_com', 'upMovies_to', 'primewire_tf', 'tvembed_cc', 'blackvid_space', 'HeadlessVidX', 'justBinge_site', 'frembed_pro', 'warezcdn_com', 'twoembed_skin', 'showBox_media', 'oneTwothreeEmbed_net', 'vidsrc_pro', 'vidsrc_to'];
+                'torrentSites', 'goMovies_sx', 'smashyStream_com', 'upMovies_to', 'primewire_tf', 'tvembed_cc', 'blackvid_space', 'HeadlessVidX', 'justBinge_site', 'frembed_pro', 'warezcdn_com', 'twoembed_skin', 'showBox_media', 'oneTwothreeEmbed_net', 'vidsrc_pro', 'vidsrc_to', 'autoembed_cc', 'vidsrc_rip'];
 
             $successfulFunctionName = '';
 
@@ -471,6 +479,14 @@ function seriesDetails_TMDB($movieId, $apiKey, $useRealDebrid, $episodeData)
 					
 					if ($functionName == 'HeadlessVidX') {
                         $params = [$movieId, $imdbId, $title];
+                    }
+					
+					if ($functionName == 'autoembed_cc') {
+                        $params = [$movieId, $title];
+                    }
+					
+					if ($functionName == 'vidsrc_rip') {
+                        $params = [$movieId, $title];
                     }
 
                     // Call the function with appropriate arguments
@@ -1271,12 +1287,18 @@ function makePostRequest($url, $referer = null, $postData, $contentType = 'appli
     if (isset($HTTP_PROXY) && isset($USE_HTTP_PROXY) && $USE_HTTP_PROXY === true) {
         curl_setopt($ch, CURLOPT_PROXY, $HTTP_PROXY);       
     }
+	
+	if($contentType !== false){
+		$contentType = "Content-Type: $contentType";
+	} else {
+		$contentType = '';
+	}
 
     $headers = [
         "Accept: */*",
         "Accept-Language: en-US,en;q=0.5",
         "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/126.0",
-        "Content-Type: $contentType"
+        $contentType
     ];
 
     if ($referer) {
@@ -2332,6 +2354,65 @@ function rive_vidsrc_scrapper($movieId, $title) {
     return false;
 }
 
+function vidsrc_rip($movieId, $title) {
+    global $timeOut, $maxResolution, $type, $seasonNoPad, $episodeNoPad, $DEBUG, $logTitle;
+	
+	require_once 'libs/vidsrc_rip.php';
+
+    if ($DEBUG) {
+        echo 'Started running vidsrc_rip </br></br>';
+    }
+	
+    try {
+		$streamsData = [];
+		if ($type == 'movies') {
+			$urlSearch = "https://vidsrc.rip/embed/movie/$movieId";
+			$vidsrcReturn = getVidSrcRip($movieId, $type, $streamsData);
+		} else {
+			$urlSearch = "https://vidsrc.rip/embed/tv/$movieId/$seasonNoPad/$episodeNoPad";
+			$vidsrcReturn = getVidSrcRip($movieId, $type, $streamsData, $seasonNoPad, $episodeNoPad);
+		}
+		
+		if ($vidsrcReturn !== false && !empty($vidsrcReturn)){
+			
+			
+			foreach ($vidsrcReturn as $item) {
+				
+				if (!isset($item['link'])) {
+					continue;
+				}
+				
+				$sourceUrl = $item['link'];
+				$checkData = $sourceUrl;
+				$lCheck = checkLinkStatusCode($checkData, true);
+				if ($lCheck !== true) {
+					continue;
+				} else {
+					if ($GLOBALS['DEBUG']) {
+						echo "Video link: " . $sourceUrl . "<br><br>";
+					}
+					logDetails('vidsrc_rip', 'none', 'successful', $logTitle, $urlSearch, $sourceUrl, $type, $movieId, $type === 'series' ? $GLOBALS['seriesCode'] : 'n/a');
+					return $sourceUrl;
+				} 
+				
+			}
+		} else {
+			throw new Exception('No links found on vidsrc_rip');
+		}
+			
+			logDetails('vidsrc_rip', 'none', 'failed', $logTitle, $urlSearch, 'n/a', $type, $movieId, $type === 'series' ? $GLOBALS['seriesCode'] : 'n/a');
+			return false;	
+    } catch (Exception $error) {
+        if ($DEBUG) {
+            echo 'Error: ' . $error->getMessage() . "</br></br>";
+			echo 'Finished running vidsrc_rip </br></br>';
+        }
+
+		logDetails('vidsrc_rip', 'none', 'failed', $logTitle, $urlSearch, 'n/a', $type, $movieId, $type === 'series' ? $GLOBALS['seriesCode'] : 'n/a');
+        return false;
+    }
+}
+
 function vidsrc_to($movieId, $title) {
     global $timeOut, $maxResolution, $type, $seasonNoPad, $episodeNoPad, $DEBUG, $logTitle;
 	
@@ -2366,6 +2447,137 @@ function vidsrc_to($movieId, $title) {
         logDetails('vidsrc_to', 'vidplayExtract', 'failed', $logTitle, $urlSearch, 'n/a', $type, $movieId, $type === 'series' ? $GLOBALS['seriesCode'] : 'n/a');
         return false;
     }
+}
+
+function autoembed_cc($movieId, $title) {
+    global $timeOut, $maxResolution, $type, $seasonNoPad, $episodeNoPad, $DEBUG, $logTitle;
+
+    if ($DEBUG) {
+        echo 'Started running autoembed_cc </br></br>';
+    }
+    
+    try {
+        
+        if ($type == 'series') {
+            $urlSearch = "https://player.autoembed.cc/embed/tv/$movieId/$seasonNoPad/$episodeNoPad";
+           
+        } else {
+            $urlSearch = "https://player.autoembed.cc/embed/movie/$movieId";
+           
+        }        
+        
+        $baseUrl = 'https://player.autoembed.cc/embed/';
+        $allowedRegions = [];
+        $region = 'us';
+        
+        if ($region === 'en' || $region === 'gb' || $region === 'us') {
+            $allowedRegions = ['gb', 'us'];
+        } else {
+            $allowedRegions = [$region]; 
+        }
+
+        // Build the URL based on the type
+        if ($type === 'movies') {
+            $url = $baseUrl . "movie/$movieId?server=1";
+        } elseif ($type === 'series') {
+            $url = $baseUrl . "tv/$movieId/$seasonNoPad/$episodeNoPad?server=1";
+        } else {
+            throw new Exception('Invalid parameters for fetching file link.');
+        }
+		
+        
+        $response = @file_get_contents($url);
+        if ($response === FALSE) {
+            throw new Exception('Error fetching the URL: ' . $url);
+        }
+
+        // Match all data-server values
+        preg_match_all('/data-server="([^"]+)"/', $response, $serverMatches);
+        // Match all flag src values
+        preg_match_all('/<img src="([^"]+)"/', $response, $flagMatches);
+        // Check if matches are found
+        if (empty($serverMatches[1]) || empty($flagMatches[1])) {
+             throw new Exception('No links found for the selected region.');
+        }
+
+        // Process each server and filter based on region
+		foreach ($serverMatches[1] as $index => $server) {
+			$flagUrl = $flagMatches[1][$index];
+
+			// Extract the region using the new regex
+			preg_match('/(?<=flagsapi\.com\/).*?(?=\/)/', $flagUrl, $regionMatch);
+			$flagRegion = strtolower($regionMatch[0]);
+
+			// Skip if the flag's region is not allowed
+			if (!in_array($flagRegion, $allowedRegions)) {
+				if ($GLOBALS['DEBUG']) {
+					echo "Skipped Region: " . $flagRegion . "<br><br>";
+				}
+				continue;
+			}
+
+			// Decode the server link
+			$decodedUrl = base64_decode($server);
+			
+			if ($GLOBALS['DEBUG']) {
+				echo "Allowed Region: " . $flagRegion . "<br>";
+				echo "Checking Source: " . $decodedUrl . "<br><br>";
+			}
+			
+			$serverResponse = @file_get_contents($decodedUrl);
+
+			if ($serverResponse === FALSE) {
+				continue;
+			}
+
+			// Match the file link (both formats)
+			preg_match('/file:\s*"([^"]+)"|"file":\s*"([^"]+)"/', $serverResponse, $fileMatch);
+
+			$vLink = null; 
+			if (!empty($fileMatch[1])) {
+				$vLink = $fileMatch[1]; 
+			} elseif (!empty($fileMatch[2])) {
+				$vLink = $fileMatch[2];
+			}
+
+			if($vLink){
+				
+				if ($GLOBALS['DEBUG']) {
+					echo "Video link: " . $vLink . "<br><br>";
+				}
+				$combineHeaders = '';				
+				$combineHeaders .= '|Referer=' . $urlSearch;				
+				$combineHeaders .= '|Origin=https://player.autoembed.cc';
+				$combineHeaders .= '|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0';				
+
+				$sourceUrl = 'hls_proxy.php?url=' . urlencode($vLink) . '&data=' . base64_encode($combineHeaders);
+
+				$checkData = $sourceUrl;
+				$lCheck = checkLinkStatusCode($checkData, true);
+				if ($lCheck !== true) {
+					continue;
+				} else {
+					if ($GLOBALS['DEBUG']) {
+						echo "Video link: " . $sourceUrl . "<br><br>";
+					}
+					logDetails('autoembed_cc', 'none', 'successful', $logTitle, $urlSearch, $sourceUrl, $type, $movieId, $type === 'series' ? $GLOBALS['seriesCode'] : 'n/a');
+					return $sourceUrl;
+				}   
+			}            
+		}
+            
+        logDetails('autoembed_cc', 'none', 'failed', $logTitle, $urlSearch, 'n/a', $type, $movieId, $type === 'series' ? $GLOBALS['seriesCode'] : 'n/a');
+        return false;    
+            
+    } catch (Exception $error) {
+        if ($DEBUG) {
+            echo 'Error: ' . $error->getMessage() . "</br></br>";
+			echo 'Finished running autoembed_cc </br></br>';
+        }
+        logDetails('autoembed_cc', 'none', 'failed', $logTitle, $urlSearch, 'n/a', $type, $movieId, $type === 'series' ? $GLOBALS['seriesCode'] : 'n/a');
+        return false;
+    }
+                
 }
 
 function vidsrc_pro($movieId, $title) {
@@ -2475,7 +2687,9 @@ function vidsrc_pro($movieId, $title) {
 }
 
 function showBox_media($movieId, $title, $imdbId) {
-    global $timeOut, $maxResolution, $type, $seasonNoPad, $episodeNoPad, $DEBUG, $logTitle, $movieId, $seriesCode, $globalYear;
+    global $timeOut, $maxResolution, $type, $seasonNoPad, $episodeNoPad, $DEBUG, $logTitle, $movieId, $seriesCode, $globalYear, $HeadlessVidX_ServerPort;
+	
+	$cors = base64_decode('aHR0cHM6Ly9jcnMuMXByb3h5LndvcmtlcnMuZGV2Lz91cmw9');
 	
 	$url = "https://s.movieboxpro.app/api/api/index.html?srchtxt=" . $imdbId ."&srchmod=42&page=1&page_size=32&filter=&srchsort=&qf=1&language=en";	
 
@@ -2513,29 +2727,33 @@ function showBox_media($movieId, $title, $imdbId) {
 
     try {			
 	
-		$detailsPage = makeGetRequest($url, 'https://www.showbox.media/', $additionalHeaders);
+
+	
+        $detailsPage = makeGetRequest($url, 'https://www.showbox.media/');
+
+        if ($detailsPage === false) {
+            throw new Exception('HTTP Error: showBox_media details page.</br></br>');
+        }
 		
-		$data = json_decode($detailsPage, true);
-		
-		if (isset($data['data']['docs'][0]['id']) && !empty($data['data']['docs'][0]['id'])) {
-			$shareId = $data['data']['docs'][0]['id'];
-		   if (preg_match('/\d+/', $shareId, $matches)) {
-				$shareId = $matches[0];
+        if (preg_match('/"id":"(?:movie|tv)_(\d+)"/', $detailsPage, $matches)) {
+            $showId = $matches[1];
+        } else {
+            throw new Exception('Error: showBox_media couldn\'t locate the share id.</br></br>');
+        }
+
+        $febBoxUrl = $cors . urlencode("https://showbox.media/index/share_link?id={$showId}&type=" . $contentType);
+
+        $febBoxResult = makeGetRequest($febBoxUrl);		
+	
+        if ($febBoxResult === false) {
+            throw new Exception('HTTP Error: showBox_media febBox result</br></br>');
+        }	
+	
+		if (preg_match('/(?<=link":").*?(?=")/', $febBoxResult, $matches)) {				
+				$shareLink = str_replace('\\', '', $matches[0]);				
 			} else {
-				throw new Exception('Error: No digits found in the share id.');
-			}			
-		} else {
-			throw new Exception('HTTP Error: showBox_media couldn\'t get share id.</br></br>');
-		}		
-
-		// Google App Script used to bypass cloudflare.
-		$fetchFebBoxUrl = makeGetRequest('https://script.google.com/macros/s/AKfycbyjKFsi_alJwBKtd5qhKy_fEqTQBtIbAGisKgcvw2OwaN3F8vH_fZ5eb1zg45ZSAy_C/exec?id=' . $shareId . '&type=' . $contentType);		
-
-		if (strpos($fetchFebBoxUrl, 'http') !== false) {
-			$shareLink = $fetchFebBoxUrl;
-		} else {
-			throw new Exception('HTTP Error: Couldn\'t get febbox url for showBox_media.</br></br>');
-		}		
+				throw new Exception('Error fetching febBox data</br></br>');
+		}	
 
         $febBoxExtractedData = extractFebBox($shareLink, $seasonNoPad, $episodeNoPad);
 		
@@ -2587,7 +2805,7 @@ function showBox_media($movieId, $title, $imdbId) {
 			if ($GLOBALS['DEBUG']) {
 				echo "Video link: " . $urlData . "<br><br>";
 			}
-			logDetails('showBox_media', 'extractFebBox', 'successful', $logTitle, $fetchFebBoxUrl, $urlData, $type, $movieId, $type === 'series' ? $seriesCode : 'n/a');
+			logDetails('showBox_media', 'extractFebBox', 'successful', $logTitle, $shareLink, $urlData, $type, $movieId, $type === 'series' ? $seriesCode : 'n/a');
 			return $urlData;
 		} else {
 			throw new Exception('Link checker failed!</br></br>');
@@ -2673,11 +2891,11 @@ function oneTwothreeEmbed_net($movieId, $title) {
     }    
   
     if ($type == 'movies') {
-        $url = "https://play2.123embed.net/server/1?path=/movie/{$movieId}";
+        $url = "https://play2.123embed.net/server/3?path=/movie/{$movieId}";
     } else {
-        $url = "https://play2.123embed.net/server/1?path=/tv/{$movieId}/{$seasonNoPad}/{$episodeNoPad}";
+        $url = "https://play2.123embed.net/server/3?path=/tv/{$movieId}/{$seasonNoPad}/{$episodeNoPad}";
     }
-   
+	
     try {
 			
 		$response = makeGetRequest($url);
@@ -2691,8 +2909,25 @@ function oneTwothreeEmbed_net($movieId, $title) {
 		if (!isset($data['playlist'][0]['file'])) {
 			throw new Exception('123embed_net File not found in playlist');
 		}
-		$vurl = $data['playlist'][0]['file'];		
+		$vurl = $data['playlist'][0]['file'];	
+		parse_str(parse_url($vurl, PHP_URL_QUERY), $params);
+		$vurl = urldecode($params['url']);		
+		$Referer = urldecode($params['referer']);
 		sleep(1);		
+		
+		echo $Referer;
+
+		$combineHeaders = '';		
+		
+
+		if (isset($Referer)) {
+			$combineHeaders .= '|Referer=' . $Referer;
+			$combineHeaders .= '|Origin=' . $Referer;
+		}
+		$combineHeaders .= '|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0';			
+
+		$vurl = 'hls_proxy.php?url=' . urlencode($vurl) . '&data=' . base64_encode($combineHeaders);		
+		
 		
 		if (checkLinkStatusCode($vurl, false, false)) {
 			if ($GLOBALS['DEBUG']) {
@@ -2734,7 +2969,7 @@ function twoembed_skin($title, $year, $movieId, $imdbId)
     try {
 
         $response = makeGetRequest($apiUrl,$refer);
-
+		
         if ($response === false) {
             throw new Exception('HTTP Error: twoembed_skin');
         }
@@ -2755,7 +2990,7 @@ function twoembed_skin($title, $year, $movieId, $imdbId)
 		
 	if (preg_match("/(?<=swish\?id=)[0-9a-z]{12}/", $response, $matches)) {
 		
-		$refer = "https://streamsrcs.2embed.cc/swish?id=" . $matches[0];		
+		$refer = "https://streamsrcs.2embed.cc/swish?id=" . $matches[0];	
 
 		$extractorReturn = StreamwishExtract('https://streamwish.to/e/'.$matches[0], $tSite, $refer);	
 
@@ -3310,21 +3545,21 @@ function frembed_pro($title, $year, $movieId, $imdbId)
     $tSite = 'frembed_pro';
 	
 	if ($type == 'movies') {
-		$apiUrl = "https://frembed.pro/api/film.php?id=" . $movieId;
+		$apiUrl = "https://player.frembed.pro/api/films?id=$movieId";
+		$referer = "https://player.frembed.pro/films?id=$movieId";
 	} else {
-		$apiUrl = "https://frembed.pro/api/serie.php?id=" . $movieId . "&sa=" . $seasonNoPad . "&epi=" . $episodeNoPad;
-	}		
+		$apiUrl = "https://player.frembed.pro/api/series?id=$movieId&sa=$seasonNoPad&epi=$episodeNoPad&idType=tmdb";
+	}	$referer = "https://player.frembed.pro/series?id=$movieId&sa=$seasonNoPad&epi=$episodeNoPad";	
 
     try {	
 
-	$response = makeGetRequest($apiUrl);
+	$response = makeGetRequest($apiUrl, $referer);
 	
 	if ($response === false) {
             throw new Exception('HTTP Error: frembed_pro');
         }
 
-    }
-    catch (exception $error) {
+    } catch (exception $error) {
 
         if ($GLOBALS['DEBUG']) {
             echo 'Error: ' . $error->getMessage() . "</br></br>";
@@ -3335,34 +3570,44 @@ function frembed_pro($title, $year, $movieId, $imdbId)
 
     try {
 		
-	if (preg_match_all("/(?<=data-link=').*?(?=')/", $response, $matches)) {
-		foreach ($matches[0] as $nextHost) {
-			$nextHost = urldecode(base64_decode($nextHost));
-			$parsedUrl = parse_url($nextHost);
+		$data = json_decode($response, true);
+		if ($GLOBALS['DEBUG']) {
+			echo 'Json Reponse: ';
+			print_r($data);
+			echo '</br></br>';
+		}
+		
+		if ($data) {
+			foreach ($data as $key => $value) {				
+				if (strpos($key, 'link') === 0 && !empty($value)) {
+					$nextHost = $value;
+					$parsedUrl = parse_url($nextHost);
+					
+					
 
-			if (isset($parsedUrl['host']) && isset($parsedUrl['scheme'])) {
-				$hostDomain = $parsedUrl['host'];
-				$referer = $parsedUrl['scheme'] . '://' . $hostDomain;
-				$hostNameParts = explode('.', $hostDomain);
-				array_pop($hostNameParts);
-				$identifier = implode('.', $hostNameParts);
+					if (isset($parsedUrl['host']) && isset($parsedUrl['scheme'])) {
+						$hostDomain = $parsedUrl['host'];
+						$referer = $parsedUrl['scheme'] . '://' . $hostDomain;
+						$hostNameParts = explode('.', $hostDomain);
+						array_pop($hostNameParts);
+						$identifier = implode('.', $hostNameParts);
 
-				if ($GLOBALS['DEBUG']) {
-					echo "Looking for an extractor for " . $hostDomain . "</br></br>";
-				}
-				
-				$extractorReturn = FindVideoExtractor($nextHost, $tSite, $referer, $identifier);
+						if ($GLOBALS['DEBUG']) {
+							echo "Looking for an extractor for " . $hostDomain . "</br></br>";
+						}
 
-				if ($extractorReturn !== false) {
-					return $extractorReturn;
+						$extractorReturn = FindVideoExtractor($nextHost, $tSite, $referer, $identifier);
+
+						if ($extractorReturn !== false) {
+							return $extractorReturn;
+						}
+					}
 				}
 			}
+			throw new Exception("Couldn't locate an extractor for the provided links.");
 		}
-		throw new Exception("Couldn't locate an extractor for frembed_pro.");
-	}
-		throw new Exception("Couldn't locate a link on frembed_pro.");
-    }
-    catch (exception $error) {
+		throw new Exception("Invalid JSON response or no data found.");
+	} catch (exception $error) {
         if ($GLOBALS['DEBUG']) {           
 			echo 'Error: ' . $error->getMessage() . "</br></br>";
         }
@@ -3432,20 +3677,21 @@ function primewire_tf($title, $year, $movieId, $imdbId)
 $counter = 0; 
     // Define the two regex patterns
     $pattern1 = '/(?<=\#\d\s-\s).*?(?=[\s\(|"])/';
-    $pattern2 = '/(?<=\#\d{2}\s-\s).*?(?=[\s\(|"])/';
+    $pattern2 = '/(?<=\#\d{2}\s-\s).*?(?=[\s\(|"])/';	
+
 	
-if (!(preg_match($pattern1, $response, $matches) || preg_match($pattern2, $response, $matches))) {
+if (!(preg_match_all($pattern1, $response, $matches) || preg_match_all($pattern2, $response, $matches))) {
     throw new Exception("Couldn't find any host on primewire_tf.");
 }
 
 foreach ($keys as $divBlock) {
     
     if ($GLOBALS['DEBUG']) {
-        echo "Looking for an extractor for " . $matches[$counter] . "</br></br>";
+        echo "Looking for an extractor for " . $matches[0][$counter] . "</br></br>";
     } 
 	        
-	if (isset($keys[$counter]) && isset($matches[$counter])) {
-		$identifier = $matches[$counter];
+	if (isset($keys[$counter]) && isset($matches[0][$counter])) {
+		$identifier = $matches[0][$counter];
 		$hostUrl = $primeWireDomain . '/links/go/' . $keys[$counter];
 		$parsedUrl = parse_url($hostUrl);
 		$referer = $parsedUrl['scheme'] . '://' . $parsedUrl['host'];
@@ -4706,6 +4952,115 @@ function theMovieArchive_site($movieId, $title)
 }
 
 ////////////////////////////// Torrents Movies & Tv Shows Websites ///////////////////////////////
+
+function initialize_Jackett_webServer($movieId, $imdbId, $title, $year, $tvpack=false)
+{	
+    global $timeOut, $maxResolution, $torrentData, $language, $languageMapping, $type, $season, $seasonNoPad, $episode, $JACKETT_IP_PORT, $JACKETT_API_KEY;
+
+    $tSite = 'Jackett_webServer';
+	
+	if ($GLOBALS['DEBUG']) {
+        echo 'Started running Jackett_webServer </br></br>';
+    }
+	
+    $key = $movieId . 'Jackett_webServer';
+	$cleanedTitle = preg_replace('/[^a-zA-Z0-9 ]/', '', $title);
+	
+	if($type == "movies"){	
+			
+		$searchQuery = urlencode($cleanedTitle . ' ' . $year);		
+		$apiUrl = "http://$JACKETT_IP_PORT/api/v2.0/indexers/all/results?apikey=$JACKETT_API_KEY&Query=$searchQuery&Category%5B%5D=2040";
+		
+	} else {
+
+		$searchQuery = urlencode($cleanedTitle);			
+		$apiUrl = "http://$JACKETT_IP_PORT/api/v2.0/indexers/all/results?apikey=$JACKETT_API_KEY&Query=$searchQuery&Category%5B%5D=5000";
+	}
+
+	return $apiUrl;
+
+}
+
+function Jackett_webServer($response, $tvpack = false)
+{
+    global $timeOut, $maxResolution, $torrentData, $type, $season, $episode;
+    $tSite = 'Jackett_webServer';
+	
+
+    try {
+        if ($response === false) {
+            throw new Exception('HTTP Error: Jackett_webServer');
+        }
+
+        $data = json_decode($response, true);
+
+        if (!isset($data['Results']) || !is_array($data['Results'])) {
+            return false;
+        }
+
+        $torrents = $data['Results'];
+
+        if ($type == 'series') {
+            $filtered = array_filter($torrents, function ($ep) use ($season, $episode) {
+                $seasonEpisodeStr = sprintf("S%02dE%02d", $season, $episode);
+                $seasonStr = sprintf("Season %d", $season);
+                return isset($ep['Title']) && (strpos($ep['Title'], $seasonEpisodeStr) !== false || strpos($ep['Title'], $seasonStr) !== false);
+            });
+
+            if (empty($filtered)) {
+                return false;
+            }
+
+            $torrents = $filtered;
+        }
+
+        if ($tvpack) {
+            $title = preg_replace('/s\d{2}e\d{2}/i', 'Season ' . $GLOBALS['seasonNoPad'], $GLOBALS['globalTitle']);
+        } else {
+            $title = $GLOBALS['globalTitle'];
+        }
+
+        $totalAdded = 0;
+        if (is_array($torrents) && !empty($torrents)) {
+            foreach ($torrents as $torrentInfo) {
+                $extractedTitle = $torrentInfo['Title'];
+                $matchedHash = $torrentInfo['InfoHash'];
+
+                // Extract quality from the title using regex
+                preg_match('/(2160|1080|720|480|360|240)[pP]/i', $extractedTitle, $matches);
+                $quality = $tvpack ? 'unknown' : (isset($matches[1]) ? $matches[1] : '480');
+
+                if (isset($matchedHash) && isset($extractedTitle)) {
+                    if (filterCompareTitles($extractedTitle, $title, $tvpack)) {
+                        $torrentData[] = [
+                            'title_long' => $title,
+                            'hash' => $matchedHash,
+                            'quality' => $quality,
+                            'extracted_title' => $extractedTitle,
+                            'tvpack' => $tvpack
+                        ];
+                        $totalAdded++;
+                    }
+                }
+            }
+        } else {
+            throw new Exception('Data does not meet criteria');
+        }
+
+        if ($GLOBALS['DEBUG']) {
+            echo 'Finished running Jackett_webServer (' . $totalAdded . ') </br></br>';
+        }
+        return $totalAdded;
+
+    } catch (Exception $error) {
+        if ($GLOBALS['DEBUG']) {
+            echo 'Error: ' . $error->getMessage() . "</br></br>";
+            echo 'Finished running Jackett_webServer </br></br>';
+        }
+
+        return false;
+    }
+}
 
 function initialize_torrentio_strem_fun($movieId, $imdbId, $title, $year, $tvpack=false)
 {	
@@ -7051,7 +7406,7 @@ function VTubeExtract($url, $tSite, $subs = false) {
 			$unpackedCode = $unpacker->unpack($matches[0]);
 
 		} else {
-			throw new Exception('Couldn\'t find javscript code for MixdropExtract');
+			throw new Exception('Couldn\'t find javscript code for VTubeExtract');
 		}
 	
 	} catch (Exception $e) {
@@ -7179,13 +7534,13 @@ function DoodExtract($url, $tSite, $subs = false) {
 }
 
 function extractFebBox($url, $season = null, $episode = null) {
-    global $DEBUG, $type;
+    global $DEBUG, $type, $HTTP_PROXY, $timeOut, $USE_HTTP_PROXY;
 
     try {
 		$cookieFile = file_get_contents('sessions/showbox_media_cookies.txt');	
 		
 		$additionalHeaders = [
-			'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0',
+			'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/130.0',
 			'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
 			'Accept-Language: en-US,en;q=0.5',
 			'DNT: 1',
@@ -7202,71 +7557,78 @@ function extractFebBox($url, $season = null, $episode = null) {
 			'Cookie: ' . $cookieFile
 		];
 
-		
-		
+		$fid = '';
         $shareKey = explode('share/', $url)[1];
-        $streamsUrl = "https://febbox.com/file/file_share_list?share_key={$shareKey}&pwd=''";
-        $streamsResponse = makeGetRequest($streamsUrl);
-
-        if ($streamsResponse === false) {
-            throw new Exception('HTTP Error: extractFebBox streams</br></br>');
-        }
-
-        $streamsData = json_decode($streamsResponse, true);
-
-        if ($DEBUG) {
-			echo 'Share List: ' . print_r($streamsData, true) . "</br></br>";
-        }
-
-        if (!isset($streamsData['data']['file_list']) || !is_array($streamsData['data']['file_list'])) {
-            throw new Exception('Invalid file_list data structure');
-        }
-
-        // Ensure file_size_bytes exists and is numeric
-        $showData = array_reduce($streamsData['data']['file_list'], function ($prev, $curr) {
-            if (!isset($prev['file_size_bytes']) || !is_numeric($prev['file_size_bytes'])) {
-                return $curr;
-            }
-            if (!isset($curr['file_size_bytes']) || !is_numeric($curr['file_size_bytes'])) {
-                return $prev;
-            }
-            return $prev['file_size_bytes'] > $curr['file_size_bytes'] ? $prev : $curr;
-        });
+               
+		$streamsResponse = makeGetRequest($url);
 		
-		function addLeadingZero($num) {
-			return str_pad($num, 2, '0', STR_PAD_LEFT);
+		if ($streamsResponse === false) {
+			throw new Exception('HTTP Error: extractFebBox streams</br></br>');
+		}
+		
+		if($type === 'movies'){		
+			if (!preg_match_all('/(?<=div class="file " data-id=").*?(?=")/', $streamsResponse, $dataIds)) {
+				throw new Exception('Couldn\'t locate the fid\'s on extractFebBox.');
+			} 
+			$fid = $dataIds[0][0];
+		} else {
+			if (!preg_match_all('/data-id="(\d+)"\s+data-path="([^"]*)"/', $streamsResponse, $dataIds)) {
+				throw new Exception('Couldn\'t locate the fid\'s on extractFebBox.');
+			} 
+			
+
 		}
 				
 		if ($type === 'series' && $season && $episode) {
-			$seasonFid = null;
-
-			// Find the season folder ID (assuming the file name contains "season <season>")
-			foreach ($streamsData['data']['file_list'] as $file) {
-				if (stripos($file['file_name'], "season $season") !== false) {
-					$seasonFid = $file['fid'];
+			
+			for ($i = 0; $i < count($dataIds[1]); $i++) {
+				$id = $dataIds[1][$i];
+				$path = $dataIds[2][$i];		
+							
+				if (strcasecmp($path, "season $season") == 0) {
+					$parentId = $id;
 					break;
 				}
+			}		
+			
+			if (empty($parentId)) {
+				throw new Exception("Couldn't locate the seasons parent id.");
+			}
+			
+			$streamsUrl = "https://www.febbox.com/file/file_share_list?share_key={$shareKey}&pwd=&parent_id={$parentId}&is_html=0";
+			$streamsResponse = makeGetRequest($streamsUrl);
+			
+			if ($streamsResponse === false) {
+				throw new Exception('HTTP Error: extractFebBox streams</br></br>');
 			}
 
-			if (!$seasonFid) {
-				throw new Exception('Season file not found');
+			$streamsData = json_decode($streamsResponse, true);
+
+			if ($DEBUG) {
+				echo 'Share List: ' . print_r($streamsData, true) . "</br></br>";
+			}
+			
+			if (!isset($streamsData['data']['file_list']) || !is_array($streamsData['data']['file_list'])) {
+				throw new Exception('Invalid file_list data structure');
 			}
 
-			$fileShareListUrl = "https://febbox.com/file/file_share_list?share_key={$shareKey}&pwd=''&parent_id={$seasonFid}";
-			$fileShareListResponse = makeGetRequest($fileShareListUrl);
+			// Ensure file_size_bytes exists and is numeric
+			$showData = array_reduce($streamsData['data']['file_list'], function ($prev, $curr) {
+				if (!isset($prev['file_size_bytes']) || !is_numeric($prev['file_size_bytes'])) {
+					return $curr;
+				}
+				if (!isset($curr['file_size_bytes']) || !is_numeric($curr['file_size_bytes'])) {
+					return $prev;
+				}
+				return $prev['file_size_bytes'] > $curr['file_size_bytes'] ? $prev : $curr;
+			});
 
-			if ($fileShareListResponse === false) {
-				throw new Exception('HTTP Error: extractFebBox file share list</br></br>');
+			function addLeadingZero($num) {
+				return str_pad($num, 2, '0', STR_PAD_LEFT);
 			}
-
-			$fileShareListData = json_decode($fileShareListResponse, true);
-
-			if (!isset($fileShareListData['data']['file_list']) || !is_array($fileShareListData['data']['file_list'])) {
-				throw new Exception('Invalid season file_list data structure');
-			}
-
-			$showData = null;
-			foreach ($fileShareListData['data']['file_list'] as $file) {
+			
+			$showData = null; 
+			foreach ($streamsData['data']['file_list'] as $file) {
 				if (stripos($file['file_name'], "e" . addLeadingZero($episode)) !== false || stripos($file['file_name'], "episode $episode") !== false) {
 					$showData = $file;
 					break;
@@ -7276,16 +7638,44 @@ function extractFebBox($url, $season = null, $episode = null) {
 			if (!$showData) {
 				throw new Exception('Episode file not found');
 			}
+			
+			$fid = $showData['fid'];
+
+		}
+		
+        $playerUrl = "https://www.febbox.com/file/player";
+		$postData = "fid=$fid&share_key=$shareKey";
+		
+		$headers = [
+			'Host: www.febbox.com',
+			'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0',
+			'Accept: text/plain, */*; q=0.01',
+			'Accept-Language: en-US,en;q=0.5',
+			'Accept-Encoding: gzip, deflate, br, zstd',
+			'Content-Type: application/x-www-form-urlencoded; charset=UTF-8',
+			'X-Requested-With: XMLHttpRequest',
+			'Content-Length: ' . strlen($postData),
+			'Origin: https://www.febbox.com',
+			'Connection: keep-alive',
+			'Referer: https://www.febbox.com/share/BsnQY1oN',
+			'Cookie: ' . $cookieFile
+		];
+		
+		
+		$ch = curl_init($playerUrl);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
+		curl_setopt($ch, CURLOPT_POST, true);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers); 
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+		curl_setopt($ch, CURLOPT_ENCODING, "");
+		if (isset($HTTP_PROXY) && isset($USE_HTTP_PROXY) && $USE_HTTP_PROXY === true) {
+			curl_setopt($ch, CURLOPT_PROXY, $HTTP_PROXY);       
 		}
 
-
-        $playerUrl = "https://www.febbox.com/file/player";
-        $postData = ['fid' => $showData['fid'], 'share_key' => $shareKey];
-        $headers = [
-            'Content-Type' => 'application/x-www-form-urlencoded; charset=UTF-8',
-			'Cookie: ' . $cookieFile
-        ];
-        $playerResponse = makePostRequest($playerUrl, null, $postData, 'application/x-www-form-urlencoded', $headers);
+		$playerResponse = curl_exec($ch);
+		curl_close($ch); 
+	
 
         if ($DEBUG) {
             echo 'Post Data: ' . print_r($postData, true) . "</br></br>";
@@ -7302,7 +7692,7 @@ function extractFebBox($url, $season = null, $episode = null) {
 
         if ($playerResponse === false) {
             throw new Exception('HTTP Error: extractFebBox player</br></br>');
-        }
+        }		
 
         // Extract sources from the player response
         preg_match('/var\s+sources\s+=\s+(\[[^\]]*\])/', $playerResponse, $sourceMatches);
@@ -7326,6 +7716,12 @@ function extractFebBox($url, $season = null, $episode = null) {
 				'quality' => $quality
 			];
 		}, $sources);
+		
+		if ($DEBUG) {
+            echo 'Sources: ';
+			print_r($result);			
+			echo "</br></br>";
+        }
 
         return json_encode($result);
 
@@ -7532,8 +7928,19 @@ function StreamwishExtract($url, $tSite, $referer)
         if ($content === false) {
             throw new Exception('HTTP Error: StreamwishExtract');      
         }
+		
+		
+		if (preg_match('#\beval\(function\(p,a,c,k,e,d\).*?\)\)\)#', $content, $matches)) {
+            $unpacker = new JavaScriptUnpacker();
 
-       if (preg_match('/(?<=file:").*?(?=")/', $content, $matches)) {	
+            // Use the methods of the JavaScriptUnpacker class as needed
+            $unpackedCode = $unpacker->unpack($matches[0]);
+
+        } else {
+            throw new Exception('Couldn\'t find javscript code for StreamwishExtract');
+        }			
+
+       if (!empty($unpackedCode) && preg_match('/(?<=file:").*?(?=")/', $unpackedCode, $matches)){	
 
 			$StreamwishDirect = $matches[0];				
 		
@@ -7630,14 +8037,20 @@ function MixdropExtract($url, $tSite, $referer)
     global $timeOut;
 
     $url = str_replace('/f/', '/e/', $url);
-
-	//echo $url;
+	
+	$parsedUrl = parse_url($url);
+	$pReferer = $parsedUrl['scheme'] . '://' . $parsedUrl['host'];
 
     if ($GLOBALS['DEBUG']) {
         echo "Started MixdropExtract for $tSite. </br></br>";
     }
 
     try {
+		 throw new Exception('Skipped: MixdropExtract. ');
+		
+		$cors = base64_decode('aHR0cHM6Ly9jcnMuMXByb3h5LndvcmtlcnMuZGV2Lz91cmw9');
+		$url = $cors . urlencode($url);
+				
         $contextOptions = ['http' => ['timeout' => $timeOut, 'header' =>
             "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/126.0\r\n" .
             "Referer: " . $referer]];
@@ -7667,10 +8080,12 @@ function MixdropExtract($url, $tSite, $referer)
             $DirectLink = 'https:' . $matches[1];
 
             //Run link checker before returning.
-            $urlData = $DirectLink . "|Referer='" . $referer .
+            $urlData = $DirectLink . "|Referer='" . $pReferer .
+                "'|Origin='" . $pReferer .
                 "'|User-Agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/126.0'";
+				
 
-            $lCheck = checkLinkStatusCode($urlData);
+            $lCheck = checkLinkStatusCode('video_proxy.php?data=' . base64_encode($urlData));
             if ($lCheck == true) {
 
             if ($GLOBALS['DEBUG']) {
