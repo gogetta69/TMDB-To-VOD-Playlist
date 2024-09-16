@@ -100,18 +100,11 @@ This project started as a weekend experiment to learn how to code. I'm committed
 - Redesigned the Live TV and DaddyLive functions and playlist. (all of the images in the playlist are working)
 - Fixed a lot of bugs in the torrent search and filtering functions. (it finds links much more often now)
 - Fixed the sorting by resolution and more likely to get higher quality links (torrent sites)
+- Added adult movies to vod (disabled by default)<br>
 
+## Updated (09/15/2024):
 
-## Updated (07/11/2024):
-
-Added adult movies to vod (disabled by default)<br>
-Added more direct movie scrapers<br>
-Added more browsers to HeadlessVidX<br>
-Fixed some bugs in HeadlessVidX<br>
-Fixed Daddylive <br>
-Fixed EPG for DaddyLive<br>
-Fixed TheTVApp Sports section<br>
-Fixed showBox_media<br><br>
+- Fixed & added more direct movie scrapers<br>
 
 showBox_media requires a login and a cookie string to be added to sessions/showbox_media_cookies.txt
 in order to extract links. Taking the time to add these cookies is well worth it if you aren't using
