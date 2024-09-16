@@ -22,7 +22,7 @@ Generate dynamic playlists for Live TV, Movies and TV Series using a mock versio
   </tr>
 </table>
 
-## Screenshots
+# Screenshots
 
 <table>
   <tr>
@@ -66,15 +66,17 @@ Generate dynamic playlists for Live TV, Movies and TV Series using a mock versio
   </tr>
 </table>
 
-## Features
+# Features
 
 - Dynamic playlist generation for live tv, movies and TV series
 - Integration with TMDB, Real Debrid, Premiumize and direct sources for enhanced content retrieval
-- Emulation of Xtream Codes apps for full metadata details
-- Inclusion of [Daddylive](https://href.li/?https://dlhd.so/24-7-channels.php), [TheTVApp](https://href.li/?https://thetvapp.to/), MoveOnJoy and Pluto as a Live TV sources. 
+- Emulation of Xtream Codes software for full metadata details
+- Inclusion of [Daddylive](https://href.li/?https://dlhd.so/24-7-channels.php), [TheTVApp](https://href.li/?https://thetvapp.to/), [MoveOnJoy](https://i.imgur.com/dFazdys.png), [TopEmbed](https://href.li/?https://topembed.pw/old.php) and [Pluto TV](https://href.li/?https://downloads.pluto.tv/docs/pluto_tv_channels_listing.pdf) as a Live TV sources.
+- Most of the live TV channels include detailed TV Guide (EPG) information.
 - Automatic caching of found streaming links for efficient playback
+- 10K Full length adult movies added to the VOD (disabled by default)
 
-## Getting Started
+# Getting Started
 
 [![Video Thumbnail](https://raw.githubusercontent.com/gogetta69/TMDB-To-VOD-Playlist/main/images/thumb.PNG)](https://rumble.com/embed/v54v3nx/?pub=4)
 
@@ -88,9 +90,7 @@ Generate dynamic playlists for Live TV, Movies and TV Series using a mock versio
 
 5. **Local Hosting**: If you lack a hosting company to run this extremely lightweight script, you can install and run software on your desktop computer like Xampp.
 
-## Contribution and Feedback
-
-This project started as a weekend experiment to learn how to code. I'm committed to refining and expanding it if there's enough interest from users like you. Your feedback and support are invaluable!
+# Changes and Additions
 
 - Added the Premiumize service as an alternative to Real-Debrid. (used only with torrent sites)
 - Added threads when searching torrent sites for magnet links. (speeds up the time it takes to find a link)
@@ -110,7 +110,8 @@ showBox_media requires a login and a cookie string to be added to sessions/showb
 in order to extract links. Taking the time to add these cookies is well worth it if you aren't using
 a premium link service and are seeking the best quality possible. How to: videos/how_to_showbox_media_cookie.mp4
 
-## What is HeadlessVidX?​
+# What is HeadlessVidX?​
+
 HeadlessVidX is a tool designed to simplify the development of video extractors for streaming websites. It provides an easy-to-use solution for users, regardless of their programming skills, to quickly add video streaming sites to tools such as 'TMDB TO VOD'.
 <table>
   <tr>
@@ -123,7 +124,8 @@ HeadlessVidX is a tool designed to simplify the development of video extractors 
   </tr>
 </table>
 
-## Creating Playlist:​
+# Creating Playlist
+
 You no longer need to manually run create_playlist.php and create_tv_playlist.php. With the workflow set up on GitHub, these playlists are automatically generated twice a day. To create your own movies and series playlist, simply set $userCreatePlaylist to true in the config.php file.
 
 https://github.com/user-attachments/assets/c6af6149-c170-45fc-a6ac-32edd1b3405b
@@ -132,7 +134,7 @@ https://github.com/user-attachments/assets/c6af6149-c170-45fc-a6ac-32edd1b3405b
 
 
 
-## Legal Disclaimer
+# Legal Disclaimer
 
 This script retrieves movie information from TMDB and searches for related content on third-party websites. The legality of streaming or downloading content through these websites is uncertain. Please exercise caution and consider the legal and ethical implications of using this script to access and consume copyrighted content. Always respect copyright laws and the terms of service of the websites you visit.
 
