@@ -39,11 +39,11 @@ $USE_HTTP_PROXY = false;
 //When set to true your playist is created by running the 'create_playlist.php' and 'create_tv_playlist.php'
 //When set to false the the movie and tv show playlist will be loaded from github. The playlists on github 
 //are around 45k movies and around 12k series.
-$userCreatePlaylist = false; // Set to false if you don't want to create any playlist.
+$userCreatePlaylist = true; // Set to false if you don't want to create any playlist.
 
 // Adds approximately 10,000 full-length adult movies to the VOD Movie playlist
 //under the category 'XXX Adult Movies'. This playlist is refreshed every Sunday.
-$INCLUDE_ADULT_VOD = false; // Set to true to include adult content.
+$INCLUDE_ADULT_VOD = true; // Set to true to include adult content.
 
 // Set how many movies and TV series you want in your playlist. TMDB shows 20 items on each page.
 // For instance, setting $totalPages to 150 could fetch approximately 35,000 movies across various genres and categories.
@@ -76,7 +76,7 @@ $usePremiumize = false; // Requires a Premiumize API Key added above.
 // internet speed for higher quality you should select a lower resolution, or
 // you may experience constant freezing and buffering.
 // Example: 1080P is 1080
-$maxResolution = 1080; // numerical value only
+$maxResolution = 540; // numerical value only
 
 // HEADLESSVIDX_MAX_THREADS controls the maximum number of concurrent curl requests (threads) 
 // that the script will handle simultaneously. Being headless browser operations, higher 
