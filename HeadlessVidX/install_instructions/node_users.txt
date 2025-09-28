@@ -1,0 +1,23 @@
+HeadlessVidX - Node.js Setup Instructions
+
+If you prefer to run HeadlessVidX directly with Node.js instead of Docker:
+
+1. Install Node.js (v18 or later recommended) from https://nodejs.org/
+
+2. Extract the HeadlessVidX folder to a location of your choice
+   (e.g. C:\HeadlessVidX\ or ~/HeadlessVidX/).
+
+3. Open a terminal in that folder and install dependencies:
+   npm install
+
+4. Start the server:
+   node index.js
+
+5. The server will start on port 3202 by default.
+   Open http://localhost:3202 in your browser.
+
+Tips:
+- To keep the server running in the background, use a process manager like pm2:
+  npm install -g pm2
+  pm2 start index.js --name headlessvidx
+- Your site definitions will be stored in the project’s files directory.

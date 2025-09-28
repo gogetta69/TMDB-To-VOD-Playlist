@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeadlessVidX - Trainer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #17181b;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 100%;
+            height: 100vh;
+        }
+        .frame-container {
+            width: 33.33%;
+            height: 100vh;
+            background-color: #17181b;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .frame-header {
+            color: #bac2c6;
+            padding: 5px;
+            text-align: center;
+            font-size: 1.0em;
+            background-color: #17181b;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        iframe {
+            width: 100%;
+            height: calc(100% - 40px);
+            border: none;
+            overflow: hidden;
+            flex-grow: 1;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 0;
+            border: none;
+            transform: none;
+        }
+        .modal-content {
+            background-color: #17181b;
+            margin: 10% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%; 
+            max-width: 500px; 
+            color: #c9c8c8;
+            border-radius: 10px;
+            border: none;
+						margin-top: 5%;
+        }
+				.code {
+						color: #cccccc;
+						background-color: #242424;
+						padding: 5px;
+						font-size: 14px;
+						border-radius: 7px;
+						display: block;
+						overflow-x: auto;
+						white-space: pre-wrap;
+				}
+        .close {
+            color: #186cd7;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: -20px;
+        }
+        .close:hover,
+        .close:focus {
+            color: #145a9c;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="frame-container">
+            <div class="frame-header">Server Log</div>
+            <iframe id="logFrame" src="../ready"></iframe>
+        </div>
+        <div class="frame-container">
+            <div class="frame-header">Website Trainer</div>
+            <iframe id="trainerFrame" src="../trainer-form"></iframe>
+        </div>
+        <div class="frame-container">
+            <div class="frame-header">Response Data</div>
+            <iframe id="responseFrame" src="../ready"></iframe>
+        </div>
+    </div>
+    
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+<script>
+// Global state - accessible to all frames
+window.isSubmitting = false;
+
+// Main message handler
+window.addEventListener("message", function(event) {
+    // Security check
+    if (event.origin !== window.location.origin) {
+        console.warn(`[MAIN] Ignoring message from untrusted origin: ${event.origin}`);
+        return;
+    }
+
+    const { action, uniqueId } = event.data;
+    console.log(`[MAIN] Received message:`, event.data);
+
+    switch(action) {
+			case 'formSubmitted': {
+					// Prevent double submit
+					if (window.isSubmitting) {
+							alert("A request is already in progress. Please wait for it to complete.");
+							return;
+					}
+					window.isSubmitting = true;
+					console.log('[MAIN] Form submitted, processing...');
+
+					const logFrame = document.getElementById('logFrame');
+					const responseFrame = document.getElementById('responseFrame');
+					const ts = Date.now();
+
+					// 1) LEFT: reset log frame immediately (clears and reconnects WS)
+					logFrame.src = `../client?t=${ts}`;
+					console.log(`[MAIN] Log frame reset at ${new Date().toISOString()}`);
+
+					// 2) RIGHT: show instant placeholder so both panes say "Please wait..."
+					//    (you already have please-wait.html; add cache-buster to force refresh)
+					responseFrame.src = `../please-wait?t=${ts}`;
+					console.log('[MAIN] Response placeholder shown');
+
+					// Helper to actually kick the real request iframe
+					const kickRequest = () => {
+							if (event.data.requestUrl) {
+									responseFrame.src = event.data.requestUrl;
+									console.log(`[MAIN] Response frame loaded: ${event.data.requestUrl}`);
+							}
+							notifyTrainer('submissionStateChanged', { isSubmitting: true });
+					};
+
+					// ---- Handshake-with-timeout (same as before) ----
+					let proceeded = false;
+					const onLogSocketReady = (e) => {
+							if (e.source === logFrame.contentWindow && e.data && e.data.action === 'logSocketReady') {
+									window.removeEventListener('message', onLogSocketReady);
+									if (!proceeded) {
+											proceeded = true;
+											console.log('[MAIN] logSocketReady received — proceeding');
+											kickRequest();
+									}
+							}
+					};
+					window.addEventListener('message', onLogSocketReady);
+
+					const fallbackMs = 800; // tweak if you like
+					setTimeout(() => {
+							if (!proceeded) {
+									window.removeEventListener('message', onLogSocketReady);
+									proceeded = true;
+									console.debug(`[MAIN] logSocketReady not received in ${fallbackMs}ms — proceeding anyway`);
+									kickRequest();
+							}
+					}, fallbackMs);
+
+					break;
+			}
+
+            
+        case 'requestCompleted':
+        case 'requestError':
+            console.log(`[MAIN] Request finished: ${action}`);
+            window.isSubmitting = false;
+            
+            // Notify trainer of state change
+            notifyTrainer('submissionStateChanged', { isSubmitting: false });
+            break;
+            
+        case 'openModal':
+            openModal(event.data.content);
+            break;
+            
+        case 'siteAdded':
+            // Forward to trainer frame to reload sites
+            notifyTrainer('siteAdded', event.data);
+            break;
+            
+        default:
+            console.log(`[MAIN] Unhandled action: ${action}`);
+    }
+}, false);
+
+// Helper to notify trainer frame
+function notifyTrainer(action, data = {}) {
+    const trainerFrame = document.getElementById('trainerFrame');
+    if (trainerFrame && trainerFrame.contentWindow) {
+        trainerFrame.contentWindow.postMessage({
+            action,
+            ...data
+        }, window.location.origin);
+    }
+}
+
+// Modal management
+function openModal(content) {
+    const modal = document.getElementById("infoModal");
+    const modalText = document.getElementById("modal-text");
+    modalText.innerHTML = content;
+    modal.style.display = "block";
+}
+
+function closeModal() {
+  const modal = document.getElementById("infoModal");
+  const wrap  = document.getElementById("modal-text");
+  const v = wrap && wrap.querySelector('video');
+  if (v) { try { v.pause(); } catch(_){} }
+  modal.style.display = "none";
+}
+
+// Initialize on DOM ready
+document.addEventListener("DOMContentLoaded", function() {
+    console.log('[MAIN] Trainer dashboard initialized');
+    
+    // Set up modal close handlers
+    document.querySelector(".close").onclick = closeModal;
+    window.onclick = function(event) {
+        const modal = document.getElementById("infoModal");
+        if (event.target == modal) {
+            closeModal();
+        }
+    };
+});
+</script>
+
+</body>
+</html>

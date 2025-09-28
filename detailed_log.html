@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+        <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <title>Detailed Logs</title>
+            <style>
+        table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; overflow: hidden; text-overflow: ellipsis;}		
+        th { background-color: #f2f2f2; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        a { color: #0645ad; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .status-success { color: green; }
+        .status-failed { color: red; }
+		
+		</style>
+		<script>
+			setTimeout(function() {
+				location.reload();
+			}, 5000);
+
+			function openPopup(divId) {   
+				var content = document.getElementById(divId).innerHTML;    
+				var windowFeatures = "width=350,height=420,scrollbars=yes,resizable=no,toolbar=no,location=no,directories=no,status=no,menubar=no";    
+				var popupWindow = window.open("", "_blank", windowFeatures);
+				popupWindow.document.write("<html><head><title>Torrent Extractors<\/title><\/head><body>" + content + "<\/body><\/html>");
+				popupWindow.document.close();
+				if (window.focus) {
+					popupWindow.focus();
+				}
+			}
+		</script>
+
+        </head>
+        <body>
+            <table>
+                <thead><tr><th>Time</th><th>Site Function</th><th>Extractor</th><th>Status</th><th>Title</th><th>Page Url</th><th>Video URL</th><th>Access URL</th><th>Type</th><th>TMDB</th><th>Series Code</th></tr></thead>
+                <tbody></tbody>
+            </table>
+        </body>
+    </html>

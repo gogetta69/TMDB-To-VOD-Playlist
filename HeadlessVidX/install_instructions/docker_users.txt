@@ -1,0 +1,21 @@
+HeadlessVidX - Docker Setup Instructions
+
+Open a command prompt or terminal, navigate into the HeadlessVidX project directory (where docker-compose.yml is located), and run:
+
+docker compose up -d
+
+This will:
+- Build or pull the HeadlessVidX image
+- Expose the server on port 3202
+- Create a persistent volume (files:/app/dict) so your site definitions are not lost
+- Keep the container running with automatic restart
+
+If you prefer to run the container manually:
+
+Windows CMD / PowerShell:
+docker run -d --name headlessvidx -p 3202:3202 -v headlessvidx_files:/app/files --restart unless-stopped gogetta69/headlessvidx:latest
+
+Linux / macOS shell:
+docker run -d --name headlessvidx -p 3202:3202 \
+  -v headlessvidx_files:/app/files \
+  --restart unless-stopped gogetta69/headlessvidx:latest

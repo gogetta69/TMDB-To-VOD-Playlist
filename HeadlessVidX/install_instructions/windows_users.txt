@@ -1,0 +1,12 @@
+HeadlessVidX.exe - Windows Service Setup (setup_service.bat)
+
+To keep the HeadlessVidX server running in the background, you must run
+setup_service.bat. This sets up a Windows service so Playwright can
+locate your installed Chrome browser.
+
+During setup you will be asked for a Windows username and password.
+These credentials are required only to register the service with Windows.
+They are never stored, transmitted, or used for anything else.
+
+If you are concerned, you can open setup_service.bat in any text editor
+to review the code yourself.

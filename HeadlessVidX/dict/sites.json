@@ -1,0 +1,422 @@
+[
+  {
+    "site": "mapple.mov",
+    "submitted_data": {
+      "url": "https://mapple.mov/watch/movie/986056",
+      "showBrowser": false,
+      "timeout": 20000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": "",
+      "bruteClick": false,
+      "mustContain": "",
+      "notContain": "",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "adblock": true,
+      "frame": false
+    }
+  },
+  {
+    "site": "vidfast.pro",
+    "submitted_data": {
+      "url": "https://vidfast.pro/movie/1078605?autoPlay=true",
+      "showBrowser": false,
+      "timeout": 15000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": "",
+      "bruteClick": false,
+      "mustContain": "",
+      "notContain": "",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "frame": true,
+      "adblock": true
+    }
+  },
+  {
+    "site": "player.vidify.top",
+    "submitted_data": {
+      "url": "https://player.vidify.top/embed/movie/105?autoplay=true",
+      "showBrowser": false,
+      "timeout": 15000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": "",
+      "bruteClick": false,
+      "mustContain": "",
+      "notContain": "",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "adblock": true,
+      "frame": false
+    }
+  },
+  {
+    "site": "vidsrc.xyz",
+    "submitted_data": {
+      "url": "https://vidsrc.xyz/embed/movie/1078605?autoplay=1",
+      "showBrowser": false,
+      "timeout": 15000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": "#the_frame,#the_frame",
+      "bruteClick": "center",
+      "mustContain": "",
+      "notContain": "",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "adblock": true,
+      "frame": false
+    }
+  },
+  {
+    "site": "vidjoy.pro",
+    "submitted_data": {
+      "url": "https://vidjoy.pro/embed/movie/105",
+      "showBrowser": false,
+      "timeout": 20000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": "",
+      "bruteClick": false,
+      "mustContain": "",
+      "notContain": "",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "adblock": true,
+      "frame": false
+    }
+  },
+  {
+    "site": "willow.arlen.icu",
+    "submitted_data": {
+      "url": "https://willow.arlen.icu/movies/105",
+      "showBrowser": false,
+      "timeout": 20000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": "button[data-umami-event^=\"click load\"]",
+      "bruteClick": false,
+      "mustContain": "",
+      "notContain": "",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "adblock": true,
+      "frame": false
+    }
+  },
+  {
+    "site": "tvpass.org",
+    "submitted_data": {
+      "url": "https://tvpass.org/channel/univision-eastern-feed",
+      "showBrowser": false,
+      "timeout": 15000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": "#loadVideoHD,#loadVideoHD",
+      "bruteClick": false,
+      "mustContain": "",
+      "notContain": "",
+      "cusUseragent": "Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.8849.1539 Mobile Safari/537.36",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "frame": false,
+      "adblock": true
+    }
+  },
+  {
+    "site": "uniquestream.net",
+    "submitted_data": {
+      "url": "https://uniquestream.net/movies/weapons-2025/",
+      "showBrowser": false,
+      "timeout": 30000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": "",
+      "bruteClick": false,
+      "mustContain": "",
+      "notContain": "ads.com",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "frame": false,
+      "adblock": true
+    }
+  },
+  {
+    "site": "nunflix.org",
+    "submitted_data": {
+      "url": "https://nunflix.org/watch/movie/1078605",
+      "showBrowser": false,
+      "timeout": 30000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": "",
+      "bruteClick": false,
+      "mustContain": "",
+      "notContain": "",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "adblock": true,
+      "frame": false
+    }
+  },
+  {
+    "site": "spencerdevs.xyz",
+    "submitted_data": {
+      "url": "https://spencerdevs.xyz/movie/105?autoPlay=true",
+      "showBrowser": false,
+      "timeout": 30000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": "",
+      "bruteClick": false,
+      "mustContain": "",
+      "notContain": "",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "adblock": true,
+      "frame": false
+    }
+  },
+  {
+    "site": "111movies.com",
+    "submitted_data": {
+      "url": "https://111movies.com/movie/1078605",
+      "showBrowser": false,
+      "timeout": 15000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": "",
+      "bruteClick": false,
+      "mustContain": "",
+      "notContain": "",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "adblock": true,
+      "frame": false
+    }
+  },
+  {
+    "site": "vidsrc.cc",
+    "submitted_data": {
+      "url": "https://vidsrc.cc/v3/embed/movie/1233413",
+      "showBrowser": false,
+      "timeout": 15000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": "",
+      "bruteClick": false,
+      "mustContain": "",
+      "notContain": "",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "adblock": true,
+      "frame": true
+    }
+  },
+  {
+    "site": "player.videasy.net",
+    "submitted_data": {
+      "url": "https://player.videasy.net/movie/1061474",
+      "showBrowser": false,
+      "timeout": 15000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": ".play-icon-main",
+      "bruteClick": false,
+      "mustContain": "",
+      "notContain": "",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "frame": false,
+      "adblock": true
+    }
+  },
+  {
+    "site": "dlhd.dad",
+    "submitted_data": {
+      "url": "https://dlhd.dad/stream/stream-304.php",
+      "showBrowser": false,
+      "timeout": 25000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": "",
+      "bruteClick": false,
+      "mustContain": "",
+      "notContain": "amazonaws.",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "frame": true,
+      "adblock": true
+    }
+  },
+  {
+    "site": "tmovie.tv",
+    "submitted_data": {
+      "url": "https://tmovie.tv/movie/back-to-the-future-105?watch=1",
+      "showBrowser": false,
+      "timeout": 20000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": "",
+      "bruteClick": false,
+      "mustContain": "",
+      "notContain": "",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "frame": false,
+      "adblock": true
+    }
+  },
+  {
+    "site": "vidrock.net",
+    "submitted_data": {
+      "url": "https://vidrock.net/movie/1061474?autoplay=true",
+      "showBrowser": false,
+      "timeout": 15000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": "",
+      "bruteClick": false,
+      "mustContain": "",
+      "notContain": "demo",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "adblock": true,
+      "frame": false
+    }
+  },
+  {
+    "site": "vidapi.xyz",
+    "submitted_data": {
+      "url": "https://vidapi.xyz/embed/movie/617126",
+      "showBrowser": false,
+      "timeout": 20000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": "img[alt=\"play\"]",
+      "bruteClick": false,
+      "mustContain": "",
+      "notContain": "",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "frame": false,
+      "adblock": true
+    }
+  },
+  {
+    "site": "streamed.pk",
+    "submitted_data": {
+      "url": "https://streamed.pk/watch/seattle-mariners-vs-colorado-rockies-2314327",
+      "showBrowser": false,
+      "timeout": 20000,
+      "browserType": "Chrome",
+      "stealth": true,
+      "selectors": "(//h2[normalize-space(text())='Stream 1'])[1]",
+      "bruteClick": false,
+      "mustContain": "",
+      "notContain": "",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "frame": false,
+      "adblock": true
+    }
+  },
+  {
+    "site": "thetvapp.to",
+    "submitted_data": {
+      "url": "https://thetvapp.to/tv/amc-live-stream/",
+      "showBrowser": false,
+      "timeout": 15000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": "#loadVideoHD,#loadVideoHD",
+      "bruteClick": false,
+      "mustContain": "",
+      "notContain": "",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "frame": false,
+      "adblock": true
+    }
+  },
+  {
+    "site": "multiembed.mov",
+    "submitted_data": {
+      "url": "https://multiembed.mov/directstream.php?video_id=105&tmdb=1",
+      "showBrowser": false,
+      "timeout": 40000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": "img[alt=\"play\"]",
+      "bruteClick": "center",
+      "mustContain": "",
+      "notContain": "",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "frame": true,
+      "adblock": true
+    }
+  },
+  {
+    "site": "cinegram.net",
+    "submitted_data": {
+      "url": "https://cinegram.net/tv/40298-alien-earth#season=1-episode=1",
+      "showBrowser": false,
+      "timeout": 25000,
+      "browserType": "Firefox",
+      "stealth": true,
+      "selectors": "//a[normalize-space()=\"Play\"]",
+      "bruteClick": false,
+      "mustContain": "",
+      "notContain": "",
+      "cusUseragent": "random",
+      "ref": "",
+      "block": "",
+      "blistjs": false,
+      "frame": false,
+      "adblock": true
+    }
+  }
+]

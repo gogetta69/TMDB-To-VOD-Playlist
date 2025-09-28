@@ -1,0 +1,16 @@
+https://player.vidify.top/embed/tv/[[TMDB]]/[[S]]/[[E]]?autoplay=true
+https://mapple.mov/watch/tv/[[S]]-[[E]]/[[TMDB]]
+https://player.vidzee.wtf/embed/tv/[[TMDB]]/[[S]]/[[E]]
+https://vidfast.pro/tv/[[TMDB]]/[[S]]/[[E]]?autoPlay=true
+https://vidsrc.cc/v3/embed/tv/[[TMDB]]/[[S]]/[[E]]
+https://player.vidplus.to/embed/tv/[[TMDB]]/[[S]]/[[E]]?autoplay=true&server=2
+https://willow.arlen.icu/series/[[TMDB]]/[[S]]/[[E]]
+https://uniquestream.net/episodes/[[DASH-TITLE]]-season-[[S]]-episode-[[E]]/
+https://nunflix.org/watch/tv/[[TMDB]]/[[S]]/[[E]]
+https://spencerdevs.xyz/tv/[[TMDB]]/[[S]]/[[E]]?autoPlay=true
+https://111movies.com/tv/[[TMDB]]/[[S]]/[[E]]
+https://player.videasy.net/[[TMDB]]/[[S]]/[[E]]
+https://vidsrc.xyz/embed/tv/[[TMDB]]/[[S]]/[[E]]?autoplay=1
+https://tmovie.tv/tv/[[DASH-TITLE]]-[[TMDB]]?watch=1&season=[[S]]&episode=[[E]]
+https://vidrock.net/tv/[[TMDB]]/[[S]]/[[E]]?autoplay=true
+https://vidapi.xyz/embed/tv/[[TMDB]]&s=[[S]]&e=[[E]]

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeadlessVidX - Response</title>
+    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #17181b;
+        color: #b2b2b2;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100vh;
+        padding-top: 0px;
+        margin: 0;
+    }
+
+    .container {
+        background-color: #2a2e38;
+        padding: 0px;
+        border-radius: 8px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 800px;
+        position: relative;
+    }
+    .success, .error, .warning {
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 0px;
+    }
+    .success {
+        background-color: #0f68024a;
+        color: #e3dcdc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .error {
+        background-color: #fb00003b;
+        color: #e3dcdc;
+    }
+    .warning {
+        background-color: #d7721878;
+        color: #e3dcdc;
+    }
+    .response, .duration, .submitted-data, .video-container, .error-details {
+        background-color: #17181b;
+        padding: 10px;
+        border-radius: 4px;
+        overflow-x: auto;
+        margin-bottom: 3px;
+        color: #bac2c6;
+    }
+    .error-details {
+        margin-top: 5px;
+    }
+    .player-message {
+        font-size: 14px;
+    }
+    
+    .lrg-add-site-button {
+        background-color: #1c930b6b;
+        color: white;
+        border: none;
+        padding: 0px;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+        transition: background-color 0.3s, box-shadow 0.3s;
+        font-size: 14px;
+        margin-top: 15px;
+        margin-bottom: 0px;
+        padding: 7px;
+    }
+
+    .lrg-add-site-button:hover {
+        background-color: #167408;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    }
+    
+    .button {
+        background-color: #2f9b07b5;
+        color: white;
+        border: none;
+        padding: 5px;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+        transition: background-color 0.3s, box-shadow 0.3s;
+        font-size: 12px;
+    }
+
+    .button:hover {
+        background-color: #257f0599;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    }
+		.loading-message{
+			display:flex; justify-content:center; align-items:center;
+			position:fixed; inset:0; width:100%; height:100%;
+			background:#17181b; z-index:1000; flex-direction:column; color:#b2b2b2;
+		}
+
+		/* 3-dot fade, perfectly centered */
+		.spinner{
+			position:relative;
+			width:10px;                 /* center dot size */
+			height:10px;
+			margin:0 auto;              /* centers the dot bar */
+			background:#3498db;
+			border-radius:50%;
+			animation:fade 1.2s infinite;      /* center dot */
+		}
+
+		.spinner::before,
+		.spinner::after{
+			content:"";
+			position:absolute; top:0;
+			width:10px; height:10px;
+			background:#3498db; border-radius:50%;
+		}
+
+		.spinner::before{ left:-18px; animation:fade 1.2s infinite .2s; } /* left dot */
+		.spinner::after { left: 18px; animation:fade 1.2s infinite .4s; } /* right dot */
+
+		@keyframes fade{
+			0%,100%{ opacity:1; }
+			50%    { opacity:.5; }
+		}
+
+		.loading-message p{ margin-top:10px; }
+
+    .hint-text {
+        font-size: 12px;
+        color: #888;
+        font-style: italic;
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #17181b;
+        border-radius: 4px;
+    }
+    /* Scrollbar styling */
+    ::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #2e2f30;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #202122;
+        border-radius: 6px;
+        border: 2px solid #2e2f30;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #3a3b3c;
+    }
+
+    html {
+        scrollbar-color: #2e2f30 #202122;
+        scrollbar-width: thin;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="response-container"></div>
+    </div>
+    <div class="loading-message" id="loadingMessage" style="display: none;">
+        <div class="spinner"></div>
+        <p>Please wait...</p>
+    </div>
+    
+    <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
+<script>
+// Get parent origin for messaging
+const parentOrigin = document.referrer ? new URL(document.referrer).origin : window.location.origin;
+
+const isTrue = v => v === true || v === 'true';
+
+// Helper to notify parent
+function notifyParent(action, data = {}) {
+    const message = { action, ...data };
+    window.parent.postMessage(message, parentOrigin);
+    console.log(`[REQUEST] Sent to parent:`, message);
+}
+
+// Helper to hide spinner
+function hideSpinner() {
+    const spinner = document.getElementById('loadingMessage');
+    if (spinner) {
+        spinner.style.display = 'none';
+    }
+}
+
+// Helper to show spinner
+function showSpinner() {
+    const spinner = document.getElementById('loadingMessage');
+    if (spinner) {
+        spinner.style.display = 'flex';
+    }
+}
+
+// Helper to render error with full details
+function renderError(message, details = null, responseText = null) {
+    hideSpinner();
+    const container = document.querySelector('.response-container');
+    
+    let html = `<div class='error'>Error: ${message}</div>`;
+    
+    // Add detailed error information
+    if (responseText) {
+        // Try to extract meaningful error from the response text
+        let errorDetail = responseText;
+        
+        // Look for specific error patterns
+        if (responseText.includes('not found') || responseText.includes('not installed')) {
+            // Browser installation error
+            const browserMatch = responseText.match(/distribution '([^']+)' not found/);
+            if (browserMatch) {
+                errorDetail = `Browser "${browserMatch[1]}" is not installed. Please install it or select a different browser.`;
+            } else if (responseText.includes('chrome-canary')) {
+                errorDetail = 'Chrome Canary is not installed. Please install it or select a different browser.';
+            } else {
+                errorDetail = `Browser installation issue: ${responseText}`;
+            }
+            html += `<div class='error-details'>
+                <strong>Installation Error:</strong>
+                <pre>${errorDetail}</pre>
+            </div>`;
+            html += `<div class='hint-text'>💡 Hint: Check the "Select Browser" dropdown in the trainer and choose an installed browser (Firefox usually works).</div>`;
+        } else if (responseText.includes('Error launching Playwright')) {
+            // Playwright launch error
+            html += `<div class='error-details'>
+                <strong>Playwright Launch Error:</strong>
+                <pre>${responseText}<br>Check if the "Selected Browser" has been installed.</pre>
+            </div>`;
+            html += `<div class='hint-text'>💡 Check the Server Log pane for more details about what went wrong.</div>`;
+        } else {
+            // Generic error
+            html += `<div class='error-details'>
+                <strong>Server Response:</strong>
+                <pre>${responseText}</pre>
+            </div>`;
+        }
+    } else if (details) {
+        // JSON error response
+        if (typeof details === 'object' && details.error) {
+            html += `<div class='error-details'>
+                <strong>Error Details:</strong>
+                <pre>${details.error}</pre>
+            </div>`;
+        } else {
+            html += `<div class='error-details'>
+                <strong>Details:</strong>
+                <pre>${typeof details === 'string' ? details : JSON.stringify(details, null, 2)}</pre>
+            </div>`;
+        }
+    }
+    
+    // Add request information if available
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('url')) {
+        const requestData = Object.fromEntries(urlParams.entries());
+        html += `<div class='submitted-data'>
+            <strong>Request Parameters:</strong>
+            <pre>${JSON.stringify(requestData, null, 2)}</pre>
+        </div>`;
+    }
+    
+    container.innerHTML = html;
+}
+
+// Helper to render warning
+function renderWarning(message) {
+    hideSpinner();
+    const container = document.querySelector('.response-container');
+    container.innerHTML = `<div class='warning'>${message}</div>`;
+}
+
+// Main initialization
+document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const formData = Object.fromEntries(urlParams.entries());
+
+    console.log("[REQUEST] Form data received:", formData);
+    
+    // Check if we have URL parameter
+    if (!formData.url) {
+        renderWarning('Waiting for request...');
+        return;
+    }
+    
+    // Start the request
+    sendRequest(formData);
+});
+
+async function sendRequest(data) {
+    const uniqueId = 'requestData_' + Date.now();
+    data.uniqueId = uniqueId;
+    
+    // Notify parent that request is starting
+    notifyParent('requestStarted', { uniqueId });
+    
+    // Show spinner
+    showSpinner();
+    
+    const host = window.location.hostname;
+    const port = window.location.port;
+
+    if (!port) {
+        renderError('Port number is not specified in the URL.');
+        notifyParent('requestError', { uniqueId, error: 'No port specified' });
+        return;
+    }
+
+    console.log("[REQUEST] Data before conversion:", data);
+
+    // Convert and prepare data
+		data.timeout = parseInt(data.timeout, 10) * 1000;
+		data.stealth = isTrue(data.stealth);
+		data.showBrowser = isTrue(data.showBrowser);
+		data.frame = isTrue(data.frame);
+		data.blistjs = isTrue(data.blistjs);
+		if (data.bruteClick === 'false') {
+			data.bruteClick = false;
+		}
+
+		if (data.ablock !== undefined) {
+			data.adblock = isTrue(data.ablock);
+			delete data.ablock;
+		} else {
+			data.adblock = isTrue(data.adblock);
+		}
+		data.trainRequest = true;
+    console.log("[REQUEST] Data after conversion:", data);
+
+    const endpoint = `http://${host}:${port}/extract-video`;
+    const jsonData = JSON.stringify(data);
+
+    try {
+        const startTime = performance.now();
+
+        const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: jsonData
+        });
+
+        const endTime = performance.now();
+        const duration = (endTime - startTime) / 1000;
+
+        // Handle response as text first, then try to parse as JSON
+        const responseText = await response.text();
+        let responseData;
+        
+        try {
+            responseData = JSON.parse(responseText);
+        } catch (parseError) {
+            console.error('[REQUEST] Response is not JSON:', responseText);
+            
+            // Handle non-JSON responses with detailed error display
+            hideSpinner();
+            renderError('Server returned non-JSON response', null, responseText);
+            
+            notifyParent('requestError', { 
+                uniqueId, 
+                error: 'Non-JSON response',
+                details: responseText 
+            });
+
+            return;
+        }
+
+        // Hide spinner once we have response
+        hideSpinner();
+
+        // Handle successful video extraction
+        if (responseData.url) {
+            const { site, ...submittedData } = data;
+            const container = document.querySelector('.response-container');
+            
+            container.innerHTML = `
+                <div class='success'>Success! Found the video url. 
+                    <button class='button add-site-button' onclick="handleAddSiteButton('${site}', ${JSON.stringify(submittedData).replace(/"/g, '&quot;')})">Add Site Profile</button>
+                </div>
+            `;
+            
+            console.log('[REQUEST] Add Site button rendered.');
+
+            const videoType = responseData["Content-Type"] || 'video/mp4';
+            container.innerHTML += `
+                <div class='duration'><strong>Duration:</strong> ${duration.toFixed(2)} seconds</div>
+                <div class='response'><strong>Response:</strong><pre>${JSON.stringify(responseData, null, 2)}</pre></div> 
+                <div class="video-container">										
+                    <video id="video-player" class="video-js vjs-default-skin" controls muted width="560" height="315">
+                        <source src="${responseData.proxy}" type="${videoType}" />
+                    </video>
+                    
+                    <button class='lrg-add-site-button' onclick="handleAddSiteButton('${site}', ${JSON.stringify(submittedData).replace(/"/g, '&quot;')})">Add Site Profile</button>
+                    <p><span class="player-message">Please note that the m3u8 proxy may not function perfectly for all videos. This script was primarily designed for extraction purposes and may have limitations when used for proxying video streams.</span></p>
+                </div>
+            `;
+
+            try {
+                // Initialize Video.js
+                videojs('video-player', {
+                    autoplay: true,
+                    controls: true,
+                    muted: true,
+                    fluid: true
+                });
+            } catch (videoError) {
+                console.error('[REQUEST] Video.js initialization error:', videoError);
+                container.innerHTML += `<div class='error'>Couldn't load the video player.</div>`;
+            }
+            
+            notifyParent('requestCompleted', { uniqueId, responseData, duration });
+            
+        } else {
+            // Handle extraction failure with more detail
+            const errorMsg = responseData.error || responseData.message || 'Couldn\'t locate a video url';
+            const container = document.querySelector('.response-container');
+            
+            container.innerHTML = `
+                <div class='error'>Error: ${errorMsg}</div>
+                <div class='duration'><strong>Duration:</strong> ${duration.toFixed(2)} seconds</div>
+            `;
+            
+            // Show full response data for debugging
+            if (responseData) {
+                container.innerHTML += `
+                    <div class='response'><strong>Server Response:</strong><pre>${JSON.stringify(responseData, null, 2)}</pre></div>
+                `;
+            }
+            
+            // Show what was sent
+            container.innerHTML += `
+                <div class='submitted-data'><strong>Request Parameters:</strong><pre>${JSON.stringify(data, null, 2)}</pre></div>
+            `;
+            
+            notifyParent('requestError', { uniqueId, error: errorMsg, responseData });
+        }
+
+    } catch (error) {
+        console.error('[REQUEST] Fetch error:', error);
+        
+				//await new Promise(r => setTimeout(r, 1000));
+
+        hideSpinner();
+        renderError(`Network Error: ${error.message}`, { 
+            errorType: 'fetch_error',
+            message: error.message,
+            stack: error.stack 
+        });
+        
+        notifyParent('requestError', { uniqueId, error: error.message });
+    }
+}
+
+// Add site button handler
+async function handleAddSiteButton(site, submittedData) {
+    console.log('[REQUEST] Add Site button clicked');
+    
+    // Ensure showBrowser is always set to false for saved profiles
+    submittedData.showBrowser = false;
+
+    console.log('[REQUEST] Sending data to /trainer/add_site:', { site, submitted_data: submittedData });
+    
+    try {
+        const response = await fetch('/trainer/add_site', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ site: site, submitted_data: submittedData })
+        });
+        
+        const data = await response.json();
+        console.log('[REQUEST] Response from /trainer/add_site:', data);
+        
+        if (data.status === 'success') {
+            alert(data.message);
+            // Notify parent to refresh site list
+            notifyParent('siteAdded', { site });
+        } else {
+            alert('Failed to add site.');
+        }
+    } catch (error) {
+        console.error('[REQUEST] Error updating site:', error);
+        alert('Error adding site profile.');
+    }
+}
+
+// Make function available globally for onclick handlers
+window.handleAddSiteButton = handleAddSiteButton;
+</script>
+</body>
+</html>

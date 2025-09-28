@@ -1,0 +1,16 @@
+https://player.vidify.top/embed/movie/[[TMDB]]?autoplay=true
+https://mapple.mov/watch/movie/[[TMDB]]
+https://player.vidzee.wtf/embed/movie/[[TMDB]]
+https://vidfast.pro/movie/[[TMDB]]?autoPlay=true
+https://vidsrc.cc/v3/embed/movie/[[TMDB]]
+https://player.vidplus.to/embed/movie/[[TMDB]]?autoplay=true&server=2
+https://willow.arlen.icu/movies/[[TMDB]]
+https://uniquestream.net/movies/[[DASH-TITLE]]-[[YEAR]]/
+https://nunflix.org/watch/movie/[[TMDB]]
+https://spencerdevs.xyz/movie/[[TMDB]]?autoPlay=true
+https://111movies.com/movie/[[TMDB]]
+https://player.videasy.net/movie/[[TMDB]]
+https://vidsrc.xyz/embed/movie/[[TMDB]]?autoplay=1
+https://tmovie.tv/movie/[[DASH-TITLE]]-[[TMDB]]?watch=1
+https://vidrock.net/movie/[[TMDB]]?autoplay=true
+https://vidapi.xyz/embed/movie/[[TMDB]]

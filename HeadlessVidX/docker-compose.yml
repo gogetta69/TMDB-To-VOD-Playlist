@@ -1,0 +1,15 @@
+name: HeadlessVidX
+
+services:
+  headlessvidx:
+    build: .
+    image: gogetta69/headlessvidx:latest
+    container_name: HeadlessVidX
+    ports:
+      - "3202:3202"
+    restart: unless-stopped
+    volumes:
+      - files:/app/dict
+
+volumes:
+  files:

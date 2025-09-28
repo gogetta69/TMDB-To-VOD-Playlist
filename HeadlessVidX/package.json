@@ -1,0 +1,51 @@
+{
+  "name": "HeadlessVidX",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "date-fns": "^3.6.0",
+    "express": "^4.19.2",
+    "install-deps": "^1.1.0",
+    "javascript-obfuscator": "^4.1.1",
+    "playwright-extra": "^4.3.6",
+    "playwright-extra-plugin-stealth": "^0.0.1",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "user-agents": "^1.1.212",
+    "ws": "^8.17.0"
+  },
+  "engines": {
+    "node": ">=20.13.1 <21"
+  },
+  "pkg": {
+    "targets": [
+      "node18.19.0-win-x64"
+    ],
+    "no-bytecode": true,
+    "scripts": [
+      "node_modules/**/*.js",
+      "node_modules/**/*.cjs",
+      "node_modules/**/*.mjs"
+    ],
+    "assets": [
+      "node_modules/**/*",
+      "!node_modules/**/*.js",
+      "!node_modules/**/*.cjs",
+      "!node_modules/**/*.mjs",
+      "chromium/**/*",
+      "pages/**/*",
+      "trainer/**/*",
+      "dict/**/*",
+      "logs/**/*",
+      "blacklist/**/*"
+    ]
+  }
+}
