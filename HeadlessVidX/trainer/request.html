@@ -101,40 +101,40 @@
         background-color: #257f0599;
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
     }
-		.loading-message{
-			display:flex; justify-content:center; align-items:center;
-			position:fixed; inset:0; width:100%; height:100%;
-			background:#17181b; z-index:1000; flex-direction:column; color:#b2b2b2;
-		}
+    .loading-message{
+        display:flex; justify-content:center; align-items:center;
+        position:fixed; inset:0; width:100%; height:100%;
+        background:#17181b; z-index:1000; flex-direction:column; color:#b2b2b2;
+    }
 
-		/* 3-dot fade, perfectly centered */
-		.spinner{
-			position:relative;
-			width:10px;                 /* center dot size */
-			height:10px;
-			margin:0 auto;              /* centers the dot bar */
-			background:#3498db;
-			border-radius:50%;
-			animation:fade 1.2s infinite;      /* center dot */
-		}
+    /* 3-dot fade, perfectly centered */
+    .spinner{
+        position:relative;
+        width:10px;
+        height:10px;
+        margin:0 auto;
+        background:#3498db;
+        border-radius:50%;
+        animation:fade 1.2s infinite;
+    }
 
-		.spinner::before,
-		.spinner::after{
-			content:"";
-			position:absolute; top:0;
-			width:10px; height:10px;
-			background:#3498db; border-radius:50%;
-		}
+    .spinner::before,
+    .spinner::after{
+        content:"";
+        position:absolute; top:0;
+        width:10px; height:10px;
+        background:#3498db; border-radius:50%;
+    }
 
-		.spinner::before{ left:-18px; animation:fade 1.2s infinite .2s; } /* left dot */
-		.spinner::after { left: 18px; animation:fade 1.2s infinite .4s; } /* right dot */
+    .spinner::before{ left:-18px; animation:fade 1.2s infinite .2s; }
+    .spinner::after { left: 18px; animation:fade 1.2s infinite .4s; }
 
-		@keyframes fade{
-			0%,100%{ opacity:1; }
-			50%    { opacity:.5; }
-		}
+    @keyframes fade{
+        0%,100%{ opacity:1; }
+        50%    { opacity:.5; }
+    }
 
-		.loading-message p{ margin-top:10px; }
+    .loading-message p{ margin-top:10px; }
 
     .hint-text {
         font-size: 12px;
@@ -326,22 +326,22 @@ async function sendRequest(data) {
     console.log("[REQUEST] Data before conversion:", data);
 
     // Convert and prepare data
-		data.timeout = parseInt(data.timeout, 10) * 1000;
-		data.stealth = isTrue(data.stealth);
-		data.showBrowser = isTrue(data.showBrowser);
-		data.frame = isTrue(data.frame);
-		data.blistjs = isTrue(data.blistjs);
-		if (data.bruteClick === 'false') {
-			data.bruteClick = false;
-		}
+    data.timeout = parseInt(data.timeout, 10) * 1000;
+    data.stealth = isTrue(data.stealth);
+    data.showBrowser = isTrue(data.showBrowser);
+    data.frame = isTrue(data.frame);
+    data.blistjs = isTrue(data.blistjs);
+    if (data.bruteClick === 'false') {
+        data.bruteClick = false;
+    }
 
-		if (data.ablock !== undefined) {
-			data.adblock = isTrue(data.ablock);
-			delete data.ablock;
-		} else {
-			data.adblock = isTrue(data.adblock);
-		}
-		data.trainRequest = true;
+    if (data.ablock !== undefined) {
+        data.adblock = isTrue(data.ablock);
+        delete data.ablock;
+    } else {
+        data.adblock = isTrue(data.adblock);
+    }
+    data.trainRequest = true;
     console.log("[REQUEST] Data after conversion:", data);
 
     const endpoint = `http://${host}:${port}/extract-video`;
@@ -361,7 +361,7 @@ async function sendRequest(data) {
         const endTime = performance.now();
         const duration = (endTime - startTime) / 1000;
 
-        // Handle response as text first, then try to parse as JSON
+        // CRITICAL FIX: Handle response as text first, then try to parse as JSON
         const responseText = await response.text();
         let responseData;
         
@@ -370,10 +370,13 @@ async function sendRequest(data) {
         } catch (parseError) {
             console.error('[REQUEST] Response is not JSON:', responseText);
             
-            // Handle non-JSON responses with detailed error display
+            // ALWAYS hide spinner on any response
             hideSpinner();
+            
+            // Handle non-JSON responses with detailed error display
             renderError('Server returned non-JSON response', null, responseText);
             
+            // Notify parent about error
             notifyParent('requestError', { 
                 uniqueId, 
                 error: 'Non-JSON response',
@@ -456,9 +459,9 @@ async function sendRequest(data) {
     } catch (error) {
         console.error('[REQUEST] Fetch error:', error);
         
-				//await new Promise(r => setTimeout(r, 1000));
-
+        // ALWAYS hide spinner on error
         hideSpinner();
+        
         renderError(`Network Error: ${error.message}`, { 
             errorType: 'fetch_error',
             message: error.message,

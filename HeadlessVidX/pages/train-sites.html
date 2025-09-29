@@ -655,6 +655,29 @@ window.addEventListener("message", function(event) {
     }
 });
 
+window.addEventListener("message", function(event) {
+    if (event.origin !== window.location.origin) return;
+    
+    if (event.data.action === 'submissionStateChanged') {
+        // Update submission state based on parent's state
+        isSubmitting = event.data.isSubmitting;
+        updateFormState();
+        if (!isSubmitting) {
+            document.getElementById('statusMessage').innerText = 'Test completed';
+        }
+    } else if (event.data.action === 'siteAdded') {
+        isSubmitting = false;
+        updateFormState();
+        loadSiteNames();
+        document.getElementById('statusMessage').innerText = `${event.data.site} profile added successfully`;
+    } else if (event.data.action === 'showAlert') {
+        // Show alert when parent tells us to
+        alert(event.data.message);
+        // Also update status message
+        document.getElementById('statusMessage').innerText = 'Request already in progress...';
+    }
+});
+
 // Update form state based on submission status
 function updateFormState() {
     const submitBtn = document.querySelector('input[type="submit"]');
@@ -885,7 +908,7 @@ function deleteSite() {
 function handleFormSubmission(event) {
     if (event) event.preventDefault();
     
-    // Check submission state LOCALLY - this should trigger the alert
+    // LOCAL CHECK FIRST - this catches most duplicate submissions
     if (isSubmitting) {
         alert("A request is already in progress. Please wait for it to complete.");
         return;
@@ -911,7 +934,7 @@ function handleFormSubmission(event) {
         return;
     }
 
-    // Set submission state IMMEDIATELY - this prevents multiple submissions
+    // Set submission state IMMEDIATELY
     isSubmitting = true;
     updateFormState();
 
@@ -931,7 +954,7 @@ function handleFormSubmission(event) {
         requestUrl: requestUrl
     }, window.location.origin);
     
-    // Set a safety timeout to reset state if parent never responds
+    // Set a safety timeout to reset state if parent never responds (increase to 3 minutes)
     setTimeout(() => {
         if (isSubmitting) {
             console.warn('[TRAINER] Request timeout - resetting state');
@@ -939,9 +962,8 @@ function handleFormSubmission(event) {
             updateFormState();
             document.getElementById('statusMessage').innerText = 'Request timeout - please try again';
         }
-    }, 120000); // 2 minutes timeout
+    }, 180000); // 3 minutes timeout instead of 2
 }
-
 // Open video modal function
 async function openVideoModal() {
     try {
