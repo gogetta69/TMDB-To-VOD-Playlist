@@ -3,7 +3,7 @@
 ## Update 09/28/2025
 
 - <strong>Live TV:</strong> Fixed the Live TV section and added <a href="https://github.com/Drewski2423/DrewLive" target=_blank>DrewLive</a>, a massive all in one source of 7,000+ channels.
-- <strong>Read Debrid:</strong> Fixed Read Debrid cache checks and added Streamio Sites integration (support for more debrid services coming soon).
+- <strong>Read Debrid:</strong> Fixed Read Debrid cache checks and added Streamio Sites as a debrid source (support for more debrid services coming soon).
 - <strong>Stream sources:</strong> Cleaned up and removed several direct stream sources in both the main script and HeadlessVidX to improve reliability.
 - <strong>Adult VOD:</strong> Fixed the Adult VOD source, the 10,000 title adult movie library now refreshes automatically every Sunday.
 - <strong>HeadlessVidX:</strong> Major overhaul and bug fixes. The software had numerous issues and I spent several weeks stabilizing it and bringing it up to the standard I wanted.
