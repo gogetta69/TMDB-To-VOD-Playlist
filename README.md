@@ -1,7 +1,17 @@
 # TMDB to VOD: Free Live TV, Movies & Series Playlist \[Xtream Codes & M3U8\]
 
-<img src="https://github.com/user-attachments/assets/7925cf0a-63b7-43ab-8a1e-d099306985fe" alt="Demo GIF" width="70%">
-<br><br>
+# Update 09/28/2025
+
+- <strong>Live TV:</strong> Fixed the Live TV section and added <a href="https://github.com/Drewski2423/DrewLive" target=_blank>DrewLive</a>, a massive all in one source of 7,000+ channels .
+- <strong>Read Debrid:</strong> Fixed Read Debrid cache checks and added Streamio Sites integration (support for more debrid services coming soon).
+- <strong>Stream sources:</strong> Cleaned up and removed several direct stream sources in both the main script and HeadlessVidX to improve reliability.
+- <strong>Adult VOD:</strong> Fixed the Adult VOD source, the 10,000 title adult movie library now refreshes automatically every Sunday.
+- <strong>HeadlessVidX:</strong> Major overhaul and bug fixes. The software had numerous issues and I spent several weeks stabilizing it and bringing it up to the standard I wanted.
+- <strong>Overall:</strong> Much of the project had broken after more than a year without updates. Things are working much better now, and I’ve got plans to add more features in upcoming releases.
+
+---
+
+# Summary
 
 <p>Create Live TV, Movies and TV Series Video on Demand (VOD) Playlist's using Xtream Codes or M3U8 Format.
 
@@ -21,6 +31,11 @@ Generate dynamic playlists for Live TV, Movies and TV Series using a mock versio
     </td>
   </tr>
 </table>
+
+# Demo Video
+
+<img src="https://github.com/user-attachments/assets/7925cf0a-63b7-43ab-8a1e-d099306985fe" alt="Demo GIF" width="70%">
+<br><br>
 
 # Screenshots
 
@@ -71,7 +86,7 @@ Generate dynamic playlists for Live TV, Movies and TV Series using a mock versio
 - Dynamic playlist generation for live tv, movies and TV series
 - Integration with TMDB, Real Debrid, Premiumize and direct sources for enhanced content retrieval
 - Emulation of Xtream Codes software for full metadata details
-- Inclusion of [Daddylive](https://href.li/?https://dlhd.so/24-7-channels.php), [TheTVApp](https://href.li/?https://thetvapp.to/), [MoveOnJoy](https://i.imgur.com/dFazdys.png), [TopEmbed](https://href.li/?https://topembed.pw/old.php) and [Pluto TV](https://href.li/?https://downloads.pluto.tv/docs/pluto_tv_channels_listing.pdf) as a Live TV sources.
+- Inclusion of  Live TV sources such as [Daddylive](https://href.li/?https://dlhd.so/24-7-channels.php), [TheTVApp](https://href.li/?https://thetvapp.to/), [MoveOnJoy](https://i.imgur.com/dFazdys.png), [Streamed Su Sports](https://href.li/?https://streamed.pk/), [Pluto TV](https://href.li/?https://downloads.pluto.tv/docs/pluto_tv_channels_listing.pdf) and more.
 - Most of the live TV channels include detailed TV Guide (EPG) information.
 - Automatic caching of found streaming links for efficient playback
 - 10K Full length adult movies added to the VOD (disabled by default)
@@ -101,14 +116,6 @@ Generate dynamic playlists for Live TV, Movies and TV Series using a mock versio
 - Fixed a lot of bugs in the torrent search and filtering functions. (it finds links much more often now)
 - Fixed the sorting by resolution and more likely to get higher quality links (torrent sites)
 - Added adult movies to vod (disabled by default)<br>
-
-## Updated (09/15/2024):
-
-- Fixed & added more direct movie scrapers<br>
-
-showBox_media requires a login and a cookie string to be added to sessions/showbox_media_cookies.txt
-in order to extract links. Taking the time to add these cookies is well worth it if you aren't using
-a premium link service and are seeking the best quality possible. How to: videos/how_to_showbox_media_cookie.mp4
 
 # What is HeadlessVidX?​
 
