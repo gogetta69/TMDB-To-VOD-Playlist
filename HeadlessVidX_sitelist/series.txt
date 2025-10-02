@@ -1,5 +1,4 @@
 https://player.vidify.top/embed/tv/[[TMDB]]/[[S]]/[[E]]?autoplay=true
-https://mapple.mov/watch/tv/[[S]]-[[E]]/[[TMDB]]
 https://player.vidzee.wtf/embed/tv/[[TMDB]]/[[S]]/[[E]]
 https://vidfast.pro/tv/[[TMDB]]/[[S]]/[[E]]?autoPlay=true
 https://vidsrc.cc/v3/embed/tv/[[TMDB]]/[[S]]/[[E]]
