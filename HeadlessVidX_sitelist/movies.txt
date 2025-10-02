@@ -1,5 +1,4 @@
 https://player.vidify.top/embed/movie/[[TMDB]]?autoplay=true
-https://mapple.mov/watch/movie/[[TMDB]]
 https://player.vidzee.wtf/embed/movie/[[TMDB]]
 https://vidfast.pro/movie/[[TMDB]]?autoPlay=true
 https://vidsrc.cc/v3/embed/movie/[[TMDB]]
