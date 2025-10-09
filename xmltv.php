@@ -10,7 +10,7 @@ $daysForward = isset($_GET['days']) ? max(1, intval($_GET['days'])) : 3;
 $lastUpdatedFile  = __DIR__ . '/channels/last_updated_epg.txt';
 $cacheGzFile      = __DIR__ . '/channels/epg.xml.gz';
 $epgUrls = [
-    "https://raw.githubusercontent.com/lubby1234/epgs/main/merged2_epg.xml.gz"
+    "http://drewlive24.duckdns.org:8081/DrewLive.xml.gz"
 ];
 
 /* ---- Refresh every 3 h ---------------------------------------- */
