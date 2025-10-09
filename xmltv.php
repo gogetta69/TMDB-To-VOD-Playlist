@@ -13,8 +13,8 @@ $epgUrls = [
     "http://drewlive24.duckdns.org:8081/DrewLive.xml.gz"
 ];
 
-/* ---- Refresh every 3 h ---------------------------------------- */
-if (!file_exists($lastUpdatedFile) || (time() - file_get_contents($lastUpdatedFile)) > 10800) {
+/* ---- Block refresh for 5 minutes ---------------------------------------- */
+if (!file_exists($lastUpdatedFile) || (time() - file_get_contents($lastUpdatedFile)) > 300) {
 
     $tmpXml = tempnam(sys_get_temp_dir(), 'epg_'); // temp raw XML
     $writer = new XMLWriter();
