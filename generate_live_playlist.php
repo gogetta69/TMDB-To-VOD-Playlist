@@ -25,12 +25,6 @@ function runLivePlaylistGenerate() {
         die("Failed to fetch playlist");
     }
 
-    $playlist = preg_replace(
-        '#(?<=url-tvg=")[^"]+(?=")#',
-        'https://github.com/lubby1234/b/raw/refs/heads/main/merged2_epg.xml.gz',
-        $playlist
-    );
-
     file_put_contents('channels/live_playlist.m3u8', $playlist);
 
     $lines = explode("\n", $playlist);
