@@ -10,7 +10,7 @@ $daysForward = isset($_GET['days']) ? max(1, intval($_GET['days'])) : 3;
 $lastUpdatedFile  = __DIR__ . '/channels/last_updated_epg.txt';
 $cacheGzFile      = __DIR__ . '/channels/epg.xml.gz';
 $epgUrls = [
-    "https://raw.githubusercontent.com/DrewLiveTemp/DrewskiTemp24/main/DrewLive.xml.gz)"
+    "https://raw.githubusercontent.com/DrewLiveTemp/DrewskiTemp24/main/DrewLive.xml.gz"
 ];
 
 /* ---- Block refresh for 5 minutes ---------------------------------------- */
