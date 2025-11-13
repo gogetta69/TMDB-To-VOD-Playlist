@@ -15,8 +15,8 @@ function runLivePlaylistGenerate() {
     $include = filter_var($INCLUDE_ADULT_VOD ?? false, FILTER_VALIDATE_BOOLEAN);
 
     $playlistUrl = $include
-        ? 'https://raw.githubusercontent.com/Drewski2423/DrewLive/refs/heads/main/MergedPlaylist.m3u8'
-        : 'https://raw.githubusercontent.com/Drewski2423/DrewLive/refs/heads/main/MergedCleanPlaylist.m3u8';
+        ? 'http://drewlive24.duckdns.org:8081/DrewLive/MergedPlaylist.m3u8'
+        : 'http://drewlive24.duckdns.org:8081/DrewLive/MergedCleanPlaylist.m3u8';
 
     $categoriesFile = __DIR__ . "/channels/get_live_categories.json";
 
